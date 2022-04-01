@@ -506,6 +506,8 @@ div {
 #navigation .btn {
   /*padding: 8px;*/
   padding-top: 21px;
+  background: transparent;
+  border: none;
   /*padding-left: 2px;*/
   /*padding-bottom: 21px;*/
 }
@@ -633,5 +635,14 @@ div {
   border-bottom: 1px solid rgba(0,0,0,.05);
   border-top-left-radius: calc(.25rem - 1px);
   border-top-right-radius: calc(.25rem - 1px);
+}
+
+.AN {
+  /*text-decoration-style: dotted;*/
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  cursor: pointer;
+  text-underline-offset: 2px;
+  text-decoration-thickness: from-font;
 }
 
