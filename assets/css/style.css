@@ -78,7 +78,8 @@ body {
   position: fixed;
   opacity: 0.2;
   right: 0;
+  height: 100%;
   z-index: 9;
-  bottom: 15%;
+  bottom: 0;
 }
 
