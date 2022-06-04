@@ -22,7 +22,7 @@ $('#trans').on('click',function(){
 //MAINFRAME INFINITE TRIGGER HOR/VERT
 
 var INFINITE = false;
-$('#triggaProg').hide();
+//$('#triggaProg').hide();
 $('#totop').hide();
 
 $('#trigga').on('click',function(){     
@@ -107,6 +107,7 @@ $('#locker').on('click',function(){
                },
               observer: true,
         scrollbar: {
+                hide: true,
           el: ".swiper-scrollbar",
         },
         mousewheel: true,
@@ -198,6 +199,7 @@ swiper2.prependSlide('<div class="swiper-slide" id="A' + EPR + '"></div>');
               
               
         scrollbar: {
+                hide: true,
           el: ".swiper-scrollbar2",
         },
         mousewheel: true,

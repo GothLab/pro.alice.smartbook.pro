@@ -1,13 +1,13 @@
 ::-webkit-scrollbar {
   width: 6px;
   height: 1px;
-  background: rgba(0,0,0,.5);
+  background: rgba(0,0,0,0.06);
   border-radius: 11px;
   /*padding-left: 2px;*/
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #4d4d4d;
+  background: rgba(77,77,77,0.12);
   border-radius: 11px;
 }
 
@@ -18,6 +18,6 @@
 ::-webkit-scrollbar-track {
   /*background: transparent;*/
   border-radius: 15px;
-  box-shadow: inset 7px 10px 12px rgb(62,62,62);
+  box-shadow: inset 7px 10px 12px rgba(62,62,62,0.21);
 }
 

@@ -29,10 +29,116 @@
             <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
         </div>
     </div>
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="wiki">
-        <div class="btn-group" role="group" id="wiki_nav"><button class="btn btn-dark" type="button" onclick="swiper4.slideTo(1);"><i class="fa fa-wikipedia-w" onclick="swiper" style="color: rgb(116,116,116);"></i></button><button class="btn btn-dark" type="button" onclick="swiper4.slideTo(2);"><i class="fa fa-book" style="color: rgb(116,116,116);"></i></button><button class="btn btn-dark" type="button" onclick="swiper4.slideTo(3);"><i class="fa fa-photo" style="color: rgb(116,116,116);"></i></button><button class="btn btn-dark" type="button" onclick="swiper4.slideTo(1);" data-bs-target="#wiki" data-bs-toggle="offcanvas"><i class="fa fa-close" style="color: rgb(116,116,116);"></i></button></div>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="wiki">
+        <div class="btn-group d-flex" role="group" id="navigation3"><button class="btn btn-dark" type="button w-100" onclick="swiper4.slideTo(0);"><i class="fas fa-cog" style="font-size: 13px;"></i>settings</button><button class="btn btn-dark" type="button w-100" onclick="swiper4.slideTo(1);"><i class="fa fa-comment" style="font-size: 13px;"></i>anotations</button><button class="btn btn-dark" type="button w-100" onclick="swiper4.slideTo(2);"><i class="fas fa-font" style="font-size: 13px;"></i>dictionary</button><button class="btn btn-dark" type="button w-100" onclick="swiper4.slideTo(3);"><i class="far fa-image" style="font-size: 13px;"></i>gallery</button><button class="btn btn-dark" type="button w-100" onclick="swiper4.slideTo(4);"><i class="far fa-bookmark" style="font-size: 13px;"></i>chapters</button><button class="btn btn-dark" type="button w-100" onclick="swiper4.slideTo(5);"><i class="far fa-list-alt" style="font-size: 13px;"></i>translation</button><button class="btn btn-dark" type="button w-100" data-bs-target="#wiki" data-bs-toggle="offcanvas"><i class="fa fa-close" style="font-size: 20px;"></i>close</button></div>
         <div class="swiper mySwiper4 swiper-v">
             <div class="swiper-wrapper">
+                <div id="settings" class="swiper-slide settings" style="/*padding: 12px;*/">
+                    <div class="table-responsive">
+                        <table class="table table-dark table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td colspan="6" style="text-align: left;padding-left: 10px;font-family: Lora, serif;--bs-primary: rgb(101,188,225);--bs-primary-rgb: 101,188,225;color: rgb(101,188,225);">• Размер шрифта</td>
+                                </tr>
+                                <tr class="fontsize">
+                                    <td class="setting" style="font-size: 10px;" var="FSI" css="font-size" value="10px">10</td>
+                                    <td class="setting" style="font-size: 12px;" var="FSI" css="font-size" value="12px">12</td>
+                                    <td class="setting" style="font-size: 14px;" var="FSI" css="font-size" value="14px">14</td>
+                                    <td class="setting" style="font-size: 16px;" var="FSI" css="font-size" value="16px">16</td>
+                                    <td class="setting" style="font-size: 18px;" var="FSI" css="font-size" value="18px">18</td>
+                                    <td class="setting yo1" style="font-size: 20px;" var="FSI" css="font-size" value="20px">20</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6" style="text-align: left;padding-left: 10px;font-family: Lora, serif;--bs-primary: rgb(101,188,225);--bs-primary-rgb: 101,188,225;color: rgb(101,188,225);">• Тяжесть шрифта</td>
+                                </tr>
+                                <tr class="fontsize">
+                                    <td class="setting" style="font-size: 12px;/*font-family: 'Kis Text BT Web';*/" var="FWE" css="font-weight" value="100">100</td>
+                                    <td class="setting" style="font-size: 12px;" var="FWE" css="font-weight" value="200">200</td>
+                                    <td class="setting" style="font-size: 12px;" var="FWE" css="font-weight" value="400">400</td>
+                                    <td class="setting" style="font-size: 12px;" var="FWE" css="font-weight" value="600">600</td>
+                                    <td class="setting" style="font-size: 12px;" var="FWE" css="font-weight" value="800">800</td>
+                                    <td class="setting yo1" style="font-size: 12px;" var="FWE" css="font-weight" value="1000">1000</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6" style="text-align: left;padding-left: 10px;font-family: Lora, serif;--bs-primary: rgb(101,188,225);--bs-primary-rgb: 101,188,225;color: rgb(101,188,225);">• Цвет шрифта</td>
+                                </tr>
+                                <tr class="fontcolor">
+                                    <td class="setting" var="FCO" css="color" value="#000000" style="color: #000000;">черный</td>
+                                    <td class="setting" var="FCO" css="color" value="#21" style="color: #32363a;">т.серый</td>
+                                    <td class="setting" var="FCO" css="color" value="#6f7982" style="color: #6f7982;">серый</td>
+                                    <td class="setting" var="FCO" css="color" value="#ffd099" style="color: #ffd099;">ваниль</td>
+                                    <td class="setting" var="FCO" css="color" value="#afb6be" style="color: #afb6be;">светлый</td>
+                                    <td class="setting" var="FCO" css="color" value="white">белый</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6" style="text-align: left;padding-left: 10px;font-family: Lora, serif;--bs-primary: rgb(101,188,225);--bs-primary-rgb: 101,188,225;color: rgb(101,188,225);">• Тип шрифта</td>
+                                </tr>
+                                <tr class="fontstyle">
+                                    <td class="setting" var="FST" css="font-family" value="Lora" style="font-family: Lora, serif;font-size: 10px;">Lora</td>
+                                    <td class="setting" var="FST" css="font-family" value="Kis Text BT Web" style="font-family: 'Kis Text BT Web';">Kis</td>
+                                    <td class="setting" var="FST" css="font-family" value="Time New Roman" style="font-family: Time New Roman;font-size: 10px;">Times</td>
+                                    <td class="setting" var="FST" css="font-family" value="Fira sans" style="font-family: Fira sans;font-size: 10px;">Fira</td>
+                                    <td class="setting" var="FST" css="font-family" value="helvetica" style="font-family: helvetica;font-size: 10px;">Helvetica</td>
+                                    <td class="setting" var="FST" css="font-family" value="Verdana" style="font-family: Verdana;font-size: 10px;">Verdana</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6" style="text-align: left;padding-left: 10px;font-family: Lora, serif;--bs-primary: rgb(101,188,225);--bs-primary-rgb: 101,188,225;color: rgb(101,188,225);">• Расстояние между строк</td>
+                                </tr>
+                                <tr class="lineheight">
+                                    <td class="setting" var="LHE" css="line-height" value="0.9em">узко</td>
+                                    <td class="setting" var="LHE" css="line-height" value="0.95em">уже</td>
+                                    <td class="setting" var="LHE" css="line-height" value="1em">норма</td>
+                                    <td class="setting" var="LHE" css="line-height" value="1.2em">свободное</td>
+                                    <td class="setting" var="LHE" css="line-height" value="2em">средне</td>
+                                    <td class="setting" var="LHE" css="line-height" value="3em">широко</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6" style="text-align: left;padding-left: 10px;font-family: Lora, serif;--bs-primary: rgb(101,188,225);--bs-primary-rgb: 101,188,225;color: rgb(101,188,225);">• Расстояние между букв</td>
+                                </tr>
+                                <tr class="fontspacing">
+                                    <td class="setting" var="FSP" css="letter-spacing" value="-1px">узко</td>
+                                    <td class="setting" var="FSP" css="letter-spacing" value="-0.5px">уже</td>
+                                    <td class="setting" var="FSP" css="letter-spacing" value="0">норма</td>
+                                    <td class="setting" var="FSP" css="letter-spacing" value="1px">свободное</td>
+                                    <td class="setting" var="FSP" css="letter-spacing" value="1.5px">средне</td>
+                                    <td class="setting" var="FSP" css="letter-spacing" value="2px">широко</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6" style="text-align: left;padding-left: 10px;font-family: Lora, serif;--bs-primary: rgb(101,188,225);--bs-primary-rgb: 101,188,225;color: rgb(101,188,225);">• Цвет фона</td>
+                                </tr>
+                                <tr class="bgcolor">
+                                    <td class="setting" var="BGC" css="background-color" value="#212121" style="background: var(--bs-table-bg);">черный</td>
+                                    <td class="setting" var="BGC" css="background-color" value="var(--bs-table-striped-bg)" style="background: var(--bs-table-striped-bg);">т.серый</td>
+                                    <td class="setting" var="BGC" css="background-color" value="var(--bs-gray-700)" style="background: var(--bs-gray-700);">серый</td>
+                                    <td class="setting" var="BGC" css="background-color" value="#ffd099" style="background: #ffd099;">ваниль</td>
+                                    <td class="setting" var="BGC" css="background-color" value="var(--bs-gray-500)" style="background: var(--bs-gray-500);">светлый</td>
+                                    <td class="setting" var="BGC" css="background-color" value="rgb(231,231,231)" style="background: var(--bs-table-active-color);color: rgb(231,231,231);">белый</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6" style="text-align: left;padding-left: 10px;font-family: Lora, serif;--bs-primary: rgb(101,188,225);--bs-primary-rgb: 101,188,225;color: rgb(101,188,225);">• Рамка</td>
+                                </tr>
+                                <tr class="padding">
+                                    <td class="setting" var="PAD" css="padding" value="5px">узко</td>
+                                    <td class="setting" var="PAD" css="padding" value="10px">уже</td>
+                                    <td class="setting" var="PAD" css="padding" value="16px">норма</td>
+                                    <td class="setting" var="PAD" css="padding" value="24px">свободное</td>
+                                    <td class="setting" var="PAD" css="padding" value="32px">средне</td>
+                                    <td class="setting" var="PAD" css="padding" value="48px">широко</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6" style="text-align: left;padding-left: 10px;font-family: Lora, serif;--bs-primary: rgb(101,188,225);--bs-primary-rgb: 101,188,225;color: rgb(101,188,225);">• Загрузка</td>
+                                </tr>
+                                <tr>
+                                    <td id="triggaProg" colspan="2">Эпизоды</td>
+                                    <td colspan="2">Главы</td>
+                                    <td id="trigga" colspan="2">Постепенно</td>
+                                </tr>
+                                <tr></tr>
+                                <tr></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
                 <div id="anotations" class="swiper-slide anotations">
                     <div class="card">
                         <div class="card-body"><img class="img-fluid" src="assets/img/bw/1.webp">
@@ -827,522 +933,412 @@
                         </div>
                     </div>
                 </div>
+                <div id="chapters" class="swiper-slide chapters" style="/*padding: 12px;*/">
+                    <div class="table-responsive d-flex flex-wrap" id="chapters-1">
+                        <table class="table table-hover table-dark table-bordered">
+                            <thead>
+                                <tr></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p0 title">Вступление</td>
+                                </tr>
+                                <tr>
+                                    <td class="p2 title" style="/*background: var(--bs-table-bg);*/--bs-primary: rgb(101,188,225);--bs-primary-rgb: 101,188,225;">I. Down the Rabbit Hole</td>
+                                </tr>
+                                <tr>
+                                    <td>Паденье и варенье</td>
+                                </tr>
+                                <tr>
+                                    <td>Антиподы</td>
+                                </tr>
+                                <tr>
+                                    <td>Кошки и мошки</td>
+                                </tr>
+                                <tr>
+                                    <td>Дверца в сад</td>
+                                </tr>
+                                <tr>
+                                    <td>«Выпей меня», «Съешь меня»</td>
+                                </tr>
+                                <tr>
+                                    <td class="title" style="/*background: var(--bs-table-bg);*/">II. The Pool of Tears</td>
+                                </tr>
+                                <tr>
+                                    <td>«Бедные ножки!..»</td>
+                                </tr>
+                                <tr>
+                                    <td>«Малютка Крокодил…»</td>
+                                </tr>
+                                <tr>
+                                    <td>Алиса уменьшается и падает в море слез</td>
+                                </tr>
+                                <tr>
+                                    <td>Алиса знакомится с Мышью</td>
+                                </tr>
+                                <tr>
+                                    <td class="title">III. The Caucus Race and a Long Tale</td>
+                                </tr>
+                                <tr>
+                                    <td>Мокрая компания и «сухая» книга</td>
+                                </tr>
+                                <tr>
+                                    <td>Бег и награды</td>
+                                </tr>
+                                <tr>
+                                    <td>Хвостатая история</td>
+                                </tr>
+                                <tr>
+                                    <td>Все покидают Алису</td>
+                                </tr>
+                                <tr>
+                                    <td class="title">IV.</td>
+                                </tr>
+                                <tr>
+                                    <td>На побегушках у Кролика</td>
+                                </tr>
+                                <tr>
+                                    <td>Алиса растет в доме</td>
+                                </tr>
+                                <tr>
+                                    <td>Пат, Кролик и рука в окне</td>
+                                </tr>
+                                <tr>
+                                    <td>Кошки и мошки</td>
+                                </tr>
+                                <tr>
+                                    <td>Билль вылетает из трубы</td>
+                                </tr>
+                                <tr></tr>
+                                <tr></tr>
+                                <tr></tr>
+                                <tr></tr>
+                                <tr></tr>
+                                <tr></tr>
+                                <tr></tr>
+                                <tr></tr>
+                                <tr></tr>
+                                <tr></tr>
+                                <tr>
+                                    <td class="title">V.</td>
+                                </tr>
+                                <tr>
+                                    <td>Встреча с Гусеницей</td>
+                                </tr>
+                                <tr>
+                                    <td>«Папа Вильям»</td>
+                                </tr>
+                                <tr>
+                                    <td>Чудесный гриб</td>
+                                </tr>
+                                <tr>
+                                    <td>Длинношеяя Алиса</td>
+                                </tr>
+                                <tr>
+                                    <td class="title">VI.</td>
+                                </tr>
+                                <tr>
+                                    <td>Лакей-лягушонок</td>
+                                </tr>
+                                <tr>
+                                    <td>У Герцогини</td>
+                                </tr>
+                                <tr>
+                                    <td>«Лупите своего сынка!»</td>
+                                </tr>
+                                <tr>
+                                    <td>Поросенок</td>
+                                </tr>
+                                <tr>
+                                    <td>Беседа с Чеширским Котом</td>
+                                </tr>
+                                <tr>
+                                    <td>Улыбка без кота</td>
+                                </tr>
+                                <tr>
+                                    <td class="title">VII.</td>
+                                </tr>
+                                <tr>
+                                    <td>Загадка про ворона и конторку</td>
+                                </tr>
+                                <tr>
+                                    <td>Убить время</td>
+                                </tr>
+                                <tr>
+                                    <td>Рассказ Сони</td>
+                                </tr>
+                                <tr>
+                                    <td class="title">IIX.</td>
+                                </tr>
+                                <tr>
+                                    <td>Перекрашенные розы</td>
+                                </tr>
+                                <tr>
+                                    <td>Знакомство с Червоной Королевой</td>
+                                </tr>
+                                <tr>
+                                    <td>Пропавшие головы</td>
+                                </tr>
+                                <tr>
+                                    <td>Крокет</td>
+                                </tr>
+                                <tr>
+                                    <td>Появление Чеширского Кота</td>
+                                </tr>
+                                <tr>
+                                    <td>Кот и король</td>
+                                </tr>
+                                <tr>
+                                    <td class="title">IX.</td>
+                                </tr>
+                                <tr>
+                                    <td>Морали Герцогини</td>
+                                </tr>
+                                <tr>
+                                    <td>Грифон</td>
+                                </tr>
+                                <tr>
+                                    <td>Черепаха Квази</td>
+                                </tr>
+                                <tr>
+                                    <td>Морская школа</td>
+                                </tr>
+                                <tr>
+                                    <td class="title">X.</td>
+                                </tr>
+                                <tr>
+                                    <td>Как танцуют морскую кадриль</td>
+                                </tr>
+                                <tr>
+                                    <td>Танец и песня</td>
+                                </tr>
+                                <tr>
+                                    <td>О рыбах</td>
+                                </tr>
+                                <tr>
+                                    <td>Алиса читает стихи</td>
+                                </tr>
+                                <tr>
+                                    <td>«Вечерняя Еда»</td>
+                                </tr>
+                                <tr>
+                                    <td class="title">XI.</td>
+                                </tr>
+                                <tr>
+                                    <td>Судья и присяжные</td>
+                                </tr>
+                                <tr>
+                                    <td>Показания Болванщика</td>
+                                </tr>
+                                <tr>
+                                    <td>Показания Кухарки</td>
+                                </tr>
+                                <tr>
+                                    <td class="title">XII</td>
+                                </tr>
+                                <tr>
+                                    <td>Алиса опрокинула присяжных</td>
+                                </tr>
+                                <tr>
+                                    <td>Допрос Алисы</td>
+                                </tr>
+                                <tr>
+                                    <td>Еще улика</td>
+                                </tr>
+                                <tr>
+                                    <td>Письмо</td>
+                                </tr>
+                                <tr>
+                                    <td>Король трактует письмо</td>
+                                </tr>
+                                <tr>
+                                    <td>Пробуждение Алисы</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="translations" class="swiper-slide translations" style="/*padding: 12px;*/"><span class="title" style="padding: 10px;display: block;margin-top: 13px;">• Оригинал:</span>
+                    <div class="table-responsive" id="original-1" style="margin-top: 6px;">
+                        <table class="table table-striped table-hover table-dark table-borderless">
+                            <tbody>
+                                <tr data-bs-toggle="tooltip" data-bss-tooltip="">
+                                    <td>Alice's adventures in Wonderland</td>
+                                    <td class="float-start">Тиражируемая копия 1895 года редакции</td>
+                                    <td class="float-end" style="color: #808080;">1785</td>
+                                </tr>
+                                <tr>
+                                    <td>Alice's adventures Underground</td>
+                                    <td>Первоначальная версия приключений</td>
+                                    <td style="color: #808080;">1782</td>
+                                </tr>
+                                <tr>
+                                    <td>Nurcery Alice</td>
+                                    <td>Адаптированная версия для маленьких детей</td>
+                                    <td style="color: #808080;">1790</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><span class="title" style="padding: 10px;">• Перевод:</span>
+                    <div class="table-responsive" id="translation-1" style="margin-top: 17px;">
+                        <table class="table table-striped table-hover table-dark table-borderless">
+                            <thead>
+                                <tr style="/*position: sticky;*//*top: 0;*/"></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Smartbook.pro</td>
+                                    <td>«Приключения Алисы в Стране Чудес»</td>
+                                    <td>2021&nbsp;Пересказ</td>
+                                </tr>
+                                <tr>
+                                    <td>Ю.Изотов </td>
+                                    <td>«Алиса в Стране Чудес»</td>
+                                    <td>2020</td>
+                                </tr>
+                                <tr>
+                                    <td>В.Бутромеев</td>
+                                    <td>«Алиса в Стране Чудес»</td>
+                                    <td>2019 /&nbsp;Пересказ</td>
+                                </tr>
+                                <tr>
+                                    <td>Л.Гурбановская</td>
+                                    <td>«Алиса в Стране Чудес»</td>
+                                    <td>2018</td>
+                                </tr>
+                                <tr>
+                                    <td>Е.Клюев</td>
+                                    <td>«Алиса в стране чудес»</td>
+                                    <td>2018</td>
+                                </tr>
+                                <tr>
+                                    <td>Д.Ермолович</td>
+                                    <td>«Приключения Алисы в стране чудес»</td>
+                                    <td>2016</td>
+                                </tr>
+                                <tr>
+                                    <td>С.Семёнов</td>
+                                    <td>«Алиса в стране чудес»</td>
+                                    <td>2016</td>
+                                </tr>
+                                <tr>
+                                    <td>А.Притуляк</td>
+                                    <td>«Приключения Алисы в стране чудес»</td>
+                                    <td>2012</td>
+                                </tr>
+                                <tr>
+                                    <td>М.Блехман</td>
+                                    <td>«Приключения Алисы в Стране Чудес или Странствие в Странную Страну»</td>
+                                    <td>2005</td>
+                                </tr>
+                                <tr>
+                                    <td>А.Флоря</td>
+                                    <td> «Алиса в Стране Чудес»</td>
+                                    <td>1992,2003</td>
+                                </tr>
+                                <tr>
+                                    <td>О.Хаславский</td>
+                                    <td> «Алиса в Стране Чудес»</td>
+                                    <td>2002</td>
+                                </tr>
+                                <tr>
+                                    <td>А.Кононенко</td>
+                                    <td> «Алиса в Стране Чудес»</td>
+                                    <td>Cell 3</td>
+                                </tr>
+                                <tr>
+                                    <td>Н.Старилов</td>
+                                    <td> «Алиса в Стране Чудес»</td>
+                                    <td>Cell 3</td>
+                                </tr>
+                                <tr>
+                                    <td>Ю.Нестеренко</td>
+                                    <td> «Алиса в Стране Чудес»</td>
+                                    <td>Cell 3</td>
+                                </tr>
+                                <tr>
+                                    <td>Б. Балтер</td>
+                                    <td>«Приключения Алисы в стране чудес»</td>
+                                    <td>1997</td>
+                                </tr>
+                                <tr>
+                                    <td>Ю.Лифшиц</td>
+                                    <td>«Алиса в стране чудес»</td>
+                                    <td>1991</td>
+                                </tr>
+                                <tr>
+                                    <td>Л.Яхнин</td>
+                                    <td>«Приключения Алисы в стране чудес»</td>
+                                    <td>1991</td>
+                                </tr>
+                                <tr>
+                                    <td>В.Орёл</td>
+                                    <td>«Приключения Алисы в стране чудес»</td>
+                                    <td>1988</td>
+                                </tr>
+                                <tr>
+                                    <td>А.Щербаков </td>
+                                    <td>«Приключения Алисы в стране чудес»</td>
+                                    <td>1977</td>
+                                </tr>
+                                <tr>
+                                    <td>Б.Заходер </td>
+                                    <td>«Приключения Алисы в стране чудес»</td>
+                                    <td>1972</td>
+                                </tr>
+                                <tr>
+                                    <td>Н.Демурова</td>
+                                    <td>«Приключения Алисы в стране чудес»</td>
+                                    <td>1978</td>
+                                </tr>
+                                <tr>
+                                    <td>А.Оленич-Гнененко</td>
+                                    <td>«Приключения Ани в мире чудес»</td>
+                                    <td>1940</td>
+                                </tr>
+                                <tr>
+                                    <td>А.Д’Актиль </td>
+                                    <td>«Приключения Алисы в стране чудес»</td>
+                                    <td>1923</td>
+                                </tr>
+                                <tr>
+                                    <td>В.Набоков </td>
+                                    <td>«Аня в Стране Чудес»</td>
+                                    <td>1923</td>
+                                </tr>
+                                <tr>
+                                    <td>М.П.Чехов (предположительно) </td>
+                                    <td>«Алиса в волшебной стране»</td>
+                                    <td>1913</td>
+                                </tr>
+                                <tr>
+                                    <td>П.Соловьёва</td>
+                                    <td>«Приключения Алисы в стране чудес»</td>
+                                    <td>1909</td>
+                                </tr>
+                                <tr>
+                                    <td>А.Рождественская</td>
+                                    <td>«Приключения Алисы в волшебной стране»</td>
+                                    <td>1908</td>
+                                </tr>
+                                <tr>
+                                    <td>М.Гранстрем</td>
+                                    <td>«Приключения Ани в мире чудес»</td>
+                                    <td>1908</td>
+                                </tr>
+                                <tr>
+                                    <td>Анонимный перевод</td>
+                                    <td>«Соня в Царстве Дива»</td>
+                                    <td>1879&nbsp;Пересказ</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="chapters">
-        <div class="offcanvas-body" style="/*width: 706px;*/">
-            <div class="table-responsive d-flex flex-wrap" id="chapters-1">
-                <table class="table table-hover table-dark table-bordered">
-                    <thead>
-                        <tr></tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="p0 title">Вступление</td>
-                        </tr>
-                        <tr>
-                            <td class="p2 title" style="/*background: var(--bs-table-bg);*/--bs-primary: rgb(101,188,225);--bs-primary-rgb: 101,188,225;">I. Down the Rabbit Hole</td>
-                        </tr>
-                        <tr>
-                            <td>Паденье и варенье</td>
-                        </tr>
-                        <tr>
-                            <td>Антиподы</td>
-                        </tr>
-                        <tr>
-                            <td>Кошки и мошки</td>
-                        </tr>
-                        <tr>
-                            <td>Дверца в сад</td>
-                        </tr>
-                        <tr>
-                            <td>«Выпей меня», «Съешь меня»</td>
-                        </tr>
-                        <tr>
-                            <td class="title" style="/*background: var(--bs-table-bg);*/">II. The Pool of Tears</td>
-                        </tr>
-                        <tr>
-                            <td>«Бедные ножки!..»</td>
-                        </tr>
-                        <tr>
-                            <td>«Малютка Крокодил…»</td>
-                        </tr>
-                        <tr>
-                            <td>Алиса уменьшается и падает в море слез</td>
-                        </tr>
-                        <tr>
-                            <td>Алиса знакомится с Мышью</td>
-                        </tr>
-                        <tr>
-                            <td class="title">III. The Caucus Race and a Long Tale</td>
-                        </tr>
-                        <tr>
-                            <td>Мокрая компания и «сухая» книга</td>
-                        </tr>
-                        <tr>
-                            <td>Бег и награды</td>
-                        </tr>
-                        <tr>
-                            <td>Хвостатая история</td>
-                        </tr>
-                        <tr>
-                            <td>Все покидают Алису</td>
-                        </tr>
-                        <tr>
-                            <td class="title">IV.</td>
-                        </tr>
-                        <tr>
-                            <td>На побегушках у Кролика</td>
-                        </tr>
-                        <tr>
-                            <td>Алиса растет в доме</td>
-                        </tr>
-                        <tr>
-                            <td>Пат, Кролик и рука в окне</td>
-                        </tr>
-                        <tr>
-                            <td>Кошки и мошки</td>
-                        </tr>
-                        <tr>
-                            <td>Билль вылетает из трубы</td>
-                        </tr>
-                        <tr></tr>
-                        <tr></tr>
-                        <tr></tr>
-                        <tr></tr>
-                        <tr></tr>
-                        <tr></tr>
-                        <tr></tr>
-                        <tr></tr>
-                        <tr></tr>
-                        <tr></tr>
-                        <tr>
-                            <td class="title">V.</td>
-                        </tr>
-                        <tr>
-                            <td>Встреча с Гусеницей</td>
-                        </tr>
-                        <tr>
-                            <td>«Папа Вильям»</td>
-                        </tr>
-                        <tr>
-                            <td>Чудесный гриб</td>
-                        </tr>
-                        <tr>
-                            <td>Длинношеяя Алиса</td>
-                        </tr>
-                        <tr>
-                            <td class="title">VI.</td>
-                        </tr>
-                        <tr>
-                            <td>Лакей-лягушонок</td>
-                        </tr>
-                        <tr>
-                            <td>У Герцогини</td>
-                        </tr>
-                        <tr>
-                            <td>«Лупите своего сынка!»</td>
-                        </tr>
-                        <tr>
-                            <td>Поросенок</td>
-                        </tr>
-                        <tr>
-                            <td>Беседа с Чеширским Котом</td>
-                        </tr>
-                        <tr>
-                            <td>Улыбка без кота</td>
-                        </tr>
-                        <tr>
-                            <td class="title">VII.</td>
-                        </tr>
-                        <tr>
-                            <td>Загадка про ворона и конторку</td>
-                        </tr>
-                        <tr>
-                            <td>Убить время</td>
-                        </tr>
-                        <tr>
-                            <td>Рассказ Сони</td>
-                        </tr>
-                        <tr>
-                            <td class="title">IIX.</td>
-                        </tr>
-                        <tr>
-                            <td>Перекрашенные розы</td>
-                        </tr>
-                        <tr>
-                            <td>Знакомство с Червоной Королевой</td>
-                        </tr>
-                        <tr>
-                            <td>Пропавшие головы</td>
-                        </tr>
-                        <tr>
-                            <td>Крокет</td>
-                        </tr>
-                        <tr>
-                            <td>Появление Чеширского Кота</td>
-                        </tr>
-                        <tr>
-                            <td>Кот и король</td>
-                        </tr>
-                        <tr>
-                            <td class="title">IX.</td>
-                        </tr>
-                        <tr>
-                            <td>Морали Герцогини</td>
-                        </tr>
-                        <tr>
-                            <td>Грифон</td>
-                        </tr>
-                        <tr>
-                            <td>Черепаха Квази</td>
-                        </tr>
-                        <tr>
-                            <td>Морская школа</td>
-                        </tr>
-                        <tr>
-                            <td class="title">X.</td>
-                        </tr>
-                        <tr>
-                            <td>Как танцуют морскую кадриль</td>
-                        </tr>
-                        <tr>
-                            <td>Танец и песня</td>
-                        </tr>
-                        <tr>
-                            <td>О рыбах</td>
-                        </tr>
-                        <tr>
-                            <td>Алиса читает стихи</td>
-                        </tr>
-                        <tr>
-                            <td>«Вечерняя Еда»</td>
-                        </tr>
-                        <tr>
-                            <td class="title">XI.</td>
-                        </tr>
-                        <tr>
-                            <td>Судья и присяжные</td>
-                        </tr>
-                        <tr>
-                            <td>Показания Болванщика</td>
-                        </tr>
-                        <tr>
-                            <td>Показания Кухарки</td>
-                        </tr>
-                        <tr>
-                            <td class="title">XII</td>
-                        </tr>
-                        <tr>
-                            <td>Алиса опрокинула присяжных</td>
-                        </tr>
-                        <tr>
-                            <td>Допрос Алисы</td>
-                        </tr>
-                        <tr>
-                            <td>Еще улика</td>
-                        </tr>
-                        <tr>
-                            <td>Письмо</td>
-                        </tr>
-                        <tr>
-                            <td>Король трактует письмо</td>
-                        </tr>
-                        <tr>
-                            <td>Пробуждение Алисы</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="translations" style="background: #212121;">
-        <div class="offcanvas-body"><span class="title" style="padding: 10px;display: block;margin-top: 13px;">• Оригинал:</span>
-            <div class="table-responsive" id="original-1" style="margin-top: 6px;">
-                <table class="table table-striped table-hover table-dark table-borderless">
-                    <tbody>
-                        <tr data-bs-toggle="tooltip" data-bss-tooltip="">
-                            <td>Alice's adventures in Wonderland</td>
-                            <td class="float-start">Тиражируемая копия 1895 года редакции</td>
-                            <td class="float-end" style="color: #808080;">1785</td>
-                        </tr>
-                        <tr>
-                            <td>Alice's adventures Underground</td>
-                            <td>Первоначальная версия приключений</td>
-                            <td style="color: #808080;">1782</td>
-                        </tr>
-                        <tr>
-                            <td>Nurcery Alice</td>
-                            <td>Адаптированная версия для маленьких детей</td>
-                            <td style="color: #808080;">1790</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div><span class="title" style="padding: 10px;">• Перевод:</span>
-            <div class="table-responsive" id="translation-1" style="margin-top: 17px;">
-                <table class="table table-striped table-hover table-dark table-borderless">
-                    <thead>
-                        <tr style="/*position: sticky;*//*top: 0;*/"></tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Smartbook.pro</td>
-                            <td>«Приключения Алисы в Стране Чудес»</td>
-                            <td>2021&nbsp;Пересказ</td>
-                        </tr>
-                        <tr>
-                            <td>Ю.Изотов </td>
-                            <td>«Алиса в Стране Чудес»</td>
-                            <td>2020</td>
-                        </tr>
-                        <tr>
-                            <td>В.Бутромеев</td>
-                            <td>«Алиса в Стране Чудес»</td>
-                            <td>2019 /&nbsp;Пересказ</td>
-                        </tr>
-                        <tr>
-                            <td>Л.Гурбановская</td>
-                            <td>«Алиса в Стране Чудес»</td>
-                            <td>2018</td>
-                        </tr>
-                        <tr>
-                            <td>Е.Клюев</td>
-                            <td>«Алиса в стране чудес»</td>
-                            <td>2018</td>
-                        </tr>
-                        <tr>
-                            <td>Д.Ермолович</td>
-                            <td>«Приключения Алисы в стране чудес»</td>
-                            <td>2016</td>
-                        </tr>
-                        <tr>
-                            <td>С.Семёнов</td>
-                            <td>«Алиса в стране чудес»</td>
-                            <td>2016</td>
-                        </tr>
-                        <tr>
-                            <td>А.Притуляк</td>
-                            <td>«Приключения Алисы в стране чудес»</td>
-                            <td>2012</td>
-                        </tr>
-                        <tr>
-                            <td>М.Блехман</td>
-                            <td>«Приключения Алисы в Стране Чудес или Странствие в Странную Страну»</td>
-                            <td>2005</td>
-                        </tr>
-                        <tr>
-                            <td>А.Флоря</td>
-                            <td> «Алиса в Стране Чудес»</td>
-                            <td>1992,2003</td>
-                        </tr>
-                        <tr>
-                            <td>О.Хаславский</td>
-                            <td> «Алиса в Стране Чудес»</td>
-                            <td>2002</td>
-                        </tr>
-                        <tr>
-                            <td>А.Кононенко</td>
-                            <td> «Алиса в Стране Чудес»</td>
-                            <td>Cell 3</td>
-                        </tr>
-                        <tr>
-                            <td>Н.Старилов</td>
-                            <td> «Алиса в Стране Чудес»</td>
-                            <td>Cell 3</td>
-                        </tr>
-                        <tr>
-                            <td>Ю.Нестеренко</td>
-                            <td> «Алиса в Стране Чудес»</td>
-                            <td>Cell 3</td>
-                        </tr>
-                        <tr>
-                            <td>Б. Балтер</td>
-                            <td>«Приключения Алисы в стране чудес»</td>
-                            <td>1997</td>
-                        </tr>
-                        <tr>
-                            <td>Ю.Лифшиц</td>
-                            <td>«Алиса в стране чудес»</td>
-                            <td>1991</td>
-                        </tr>
-                        <tr>
-                            <td>Л.Яхнин</td>
-                            <td>«Приключения Алисы в стране чудес»</td>
-                            <td>1991</td>
-                        </tr>
-                        <tr>
-                            <td>В.Орёл</td>
-                            <td>«Приключения Алисы в стране чудес»</td>
-                            <td>1988</td>
-                        </tr>
-                        <tr>
-                            <td>А.Щербаков </td>
-                            <td>«Приключения Алисы в стране чудес»</td>
-                            <td>1977</td>
-                        </tr>
-                        <tr>
-                            <td>Б.Заходер </td>
-                            <td>«Приключения Алисы в стране чудес»</td>
-                            <td>1972</td>
-                        </tr>
-                        <tr>
-                            <td>Н.Демурова</td>
-                            <td>«Приключения Алисы в стране чудес»</td>
-                            <td>1978</td>
-                        </tr>
-                        <tr>
-                            <td>А.Оленич-Гнененко</td>
-                            <td>«Приключения Ани в мире чудес»</td>
-                            <td>1940</td>
-                        </tr>
-                        <tr>
-                            <td>А.Д’Актиль </td>
-                            <td>«Приключения Алисы в стране чудес»</td>
-                            <td>1923</td>
-                        </tr>
-                        <tr>
-                            <td>В.Набоков </td>
-                            <td>«Аня в Стране Чудес»</td>
-                            <td>1923</td>
-                        </tr>
-                        <tr>
-                            <td>М.П.Чехов (предположительно) </td>
-                            <td>«Алиса в волшебной стране»</td>
-                            <td>1913</td>
-                        </tr>
-                        <tr>
-                            <td>П.Соловьёва</td>
-                            <td>«Приключения Алисы в стране чудес»</td>
-                            <td>1909</td>
-                        </tr>
-                        <tr>
-                            <td>А.Рождественская</td>
-                            <td>«Приключения Алисы в волшебной стране»</td>
-                            <td>1908</td>
-                        </tr>
-                        <tr>
-                            <td>М.Гранстрем</td>
-                            <td>«Приключения Ани в мире чудес»</td>
-                            <td>1908</td>
-                        </tr>
-                        <tr>
-                            <td>Анонимный перевод</td>
-                            <td>«Соня в Царстве Дива»</td>
-                            <td>1879&nbsp;Пересказ</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="settings">
-        <div class="offcanvas-body">
-            <div class="table-responsive">
-                <table class="table table-dark">
-                    <tbody>
-                        <tr>
-                            <td colspan="6" style="text-align: left;padding-left: 10px;font-family: Lora, serif;--bs-primary: rgb(101,188,225);--bs-primary-rgb: 101,188,225;color: rgb(101,188,225);">• Размер шрифта</td>
-                        </tr>
-                        <tr class="fontsize">
-                            <td class="setting" style="font-size: 10px;" var="FSI" css="font-size" value="10px">10</td>
-                            <td class="setting" style="font-size: 12px;" var="FSI" css="font-size" value="12px">12</td>
-                            <td class="setting" style="font-size: 14px;" var="FSI" css="font-size" value="14px">14</td>
-                            <td class="setting" style="font-size: 16px;" var="FSI" css="font-size" value="16px">16</td>
-                            <td class="setting" style="font-size: 18px;" var="FSI" css="font-size" value="18px">18</td>
-                            <td class="setting yo1" style="font-size: 20px;" var="FSI" css="font-size" value="20px">20</td>
-                        </tr>
-                        <tr>
-                            <td colspan="6" style="text-align: left;padding-left: 10px;font-family: Lora, serif;--bs-primary: rgb(101,188,225);--bs-primary-rgb: 101,188,225;color: rgb(101,188,225);">• Тяжесть шрифта</td>
-                        </tr>
-                        <tr class="fontsize">
-                            <td class="setting" style="font-size: 12px;/*font-family: 'Kis Text BT Web';*/" var="FWE" css="font-weight" value="100">100</td>
-                            <td class="setting" style="font-size: 12px;" var="FWE" css="font-weight" value="200">200</td>
-                            <td class="setting" style="font-size: 12px;" var="FWE" css="font-weight" value="400">400</td>
-                            <td class="setting" style="font-size: 12px;" var="FWE" css="font-weight" value="600">600</td>
-                            <td class="setting" style="font-size: 12px;" var="FWE" css="font-weight" value="800">800</td>
-                            <td class="setting yo1" style="font-size: 12px;" var="FWE" css="font-weight" value="1000">1000</td>
-                        </tr>
-                        <tr>
-                            <td colspan="6" style="text-align: left;padding-left: 10px;font-family: Lora, serif;--bs-primary: rgb(101,188,225);--bs-primary-rgb: 101,188,225;color: rgb(101,188,225);">• Цвет шрифта</td>
-                        </tr>
-                        <tr class="fontcolor">
-                            <td class="setting" var="FCO" css="color" value="#000000" style="color: #000000;">черный</td>
-                            <td class="setting" var="FCO" css="color" value="#21" style="color: #32363a;">т.серый</td>
-                            <td class="setting" var="FCO" css="color" value="#6f7982" style="color: #6f7982;">серый</td>
-                            <td class="setting" var="FCO" css="color" value="#ffd099" style="color: #ffd099;">ваниль</td>
-                            <td class="setting" var="FCO" css="color" value="#afb6be" style="color: #afb6be;">светлый</td>
-                            <td class="setting" var="FCO" css="color" value="white">белый</td>
-                        </tr>
-                        <tr>
-                            <td colspan="6" style="text-align: left;padding-left: 10px;font-family: Lora, serif;--bs-primary: rgb(101,188,225);--bs-primary-rgb: 101,188,225;color: rgb(101,188,225);">• Тип шрифта</td>
-                        </tr>
-                        <tr class="fontstyle">
-                            <td class="setting" var="FST" css="font-family" value="Lora" style="font-family: Lora, serif;font-size: 10px;">Lora</td>
-                            <td class="setting" var="FST" css="font-family" value="Kis Text BT Web" style="font-family: 'Kis Text BT Web';">Kis</td>
-                            <td class="setting" var="FST" css="font-family" value="Time New Roman" style="font-family: Time New Roman;font-size: 10px;">Times</td>
-                            <td class="setting" var="FST" css="font-family" value="Fira sans" style="font-family: Fira sans;font-size: 10px;">Fira</td>
-                            <td class="setting" var="FST" css="font-family" value="helvetica" style="font-family: helvetica;font-size: 10px;">Helvetica</td>
-                            <td class="setting" var="FST" css="font-family" value="Verdana" style="font-family: Verdana;font-size: 10px;">Verdana</td>
-                        </tr>
-                        <tr>
-                            <td colspan="6" style="text-align: left;padding-left: 10px;font-family: Lora, serif;--bs-primary: rgb(101,188,225);--bs-primary-rgb: 101,188,225;color: rgb(101,188,225);">• Расстояние между строк</td>
-                        </tr>
-                        <tr class="lineheight">
-                            <td class="setting" var="LHE" css="line-height" value="0.9em">узко</td>
-                            <td class="setting" var="LHE" css="line-height" value="0.95em">уже</td>
-                            <td class="setting" var="LHE" css="line-height" value="1em">норма</td>
-                            <td class="setting" var="LHE" css="line-height" value="1.2em">свободное</td>
-                            <td class="setting" var="LHE" css="line-height" value="2em">средне</td>
-                            <td class="setting" var="LHE" css="line-height" value="3em">широко</td>
-                        </tr>
-                        <tr>
-                            <td colspan="6" style="text-align: left;padding-left: 10px;font-family: Lora, serif;--bs-primary: rgb(101,188,225);--bs-primary-rgb: 101,188,225;color: rgb(101,188,225);">• Расстояние между букв</td>
-                        </tr>
-                        <tr class="fontspacing">
-                            <td class="setting" var="FSP" css="letter-spacing" value="-1px">узко</td>
-                            <td class="setting" var="FSP" css="letter-spacing" value="-0.5px">уже</td>
-                            <td class="setting" var="FSP" css="letter-spacing" value="0">норма</td>
-                            <td class="setting" var="FSP" css="letter-spacing" value="1px">свободное</td>
-                            <td class="setting" var="FSP" css="letter-spacing" value="1.5px">средне</td>
-                            <td class="setting" var="FSP" css="letter-spacing" value="2px">широко</td>
-                        </tr>
-                        <tr>
-                            <td colspan="6" style="text-align: left;padding-left: 10px;font-family: Lora, serif;--bs-primary: rgb(101,188,225);--bs-primary-rgb: 101,188,225;color: rgb(101,188,225);">• Цвет фона</td>
-                        </tr>
-                        <tr class="bgcolor">
-                            <td class="setting" var="BGC" css="background-color" value="#212121" style="background: var(--bs-table-bg);">черный</td>
-                            <td class="setting" var="BGC" css="background-color" value="var(--bs-table-striped-bg)" style="background: var(--bs-table-striped-bg);">т.серый</td>
-                            <td class="setting" var="BGC" css="background-color" value="var(--bs-gray-700)" style="background: var(--bs-gray-700);">серый</td>
-                            <td class="setting" var="BGC" css="background-color" value="#ffd099" style="background: #ffd099;">ваниль</td>
-                            <td class="setting" var="BGC" css="background-color" value="var(--bs-gray-500)" style="background: var(--bs-gray-500);">светлый</td>
-                            <td class="setting" var="BGC" css="background-color" value="rgb(231,231,231)" style="background: var(--bs-table-active-color);color: rgb(231,231,231);">белый</td>
-                        </tr>
-                        <tr>
-                            <td colspan="6" style="text-align: left;padding-left: 10px;font-family: Lora, serif;--bs-primary: rgb(101,188,225);--bs-primary-rgb: 101,188,225;color: rgb(101,188,225);">• Рамка</td>
-                        </tr>
-                        <tr class="padding">
-                            <td class="setting" var="PAD" css="padding" value="5px">узко</td>
-                            <td class="setting" var="PAD" css="padding" value="10px">уже</td>
-                            <td class="setting" var="PAD" css="padding" value="16px">норма</td>
-                            <td class="setting" var="PAD" css="padding" value="24px">свободное</td>
-                            <td class="setting" var="PAD" css="padding" value="32px">средне</td>
-                            <td class="setting" var="PAD" css="padding" value="48px">широко</td>
-                        </tr>
-                        <tr>
-                            <td colspan="6" style="text-align: left;padding-left: 10px;font-family: Lora, serif;--bs-primary: rgb(101,188,225);--bs-primary-rgb: 101,188,225;color: rgb(101,188,225);">• Загрузка</td>
-                        </tr>
-                        <tr>
-                            <td id="triggaProg" colspan="2">Эпизоды</td>
-                            <td colspan="2">Главы</td>
-                            <td id="trigga" colspan="2">Постепенно</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-    <div id="translation" style="padding: 16px;"><button class="btn btn-dark btn-lg" id="locker" type="button" style="/*padding-right: 12px;*//*padding-left: 12px;*/margin-top: -2px;margin-right: 18px;"><i class="fas fa-unlock" style="font-size: 13px;"></i></button>
+    <div id="translation" style="/*padding: 16px;*/"><button class="btn btn-dark btn-lg" id="locker" type="button" style="/*padding-right: 12px;*//*padding-left: 12px;*/margin-top: -2px;margin-right: 18px;"><i class="fas fa-unlock" style="font-size: 13px;"></i></button>
         <div class="swiper mySwiper3 swiper-h" style="/*margin-bottom: 40px;*/">
             <div class="swiper-wrapper">
                 <div id="translationC" class="swiper-slide translationC"><select class="form-select-lg select">
@@ -1406,6 +1402,7 @@
                     </div>
                 </div>
             </div>
+            <div class="swiper-pagination pagination2"></div>
         </div>
     </div>
     <div class="swiper mySwiper2 swiper-v">
@@ -1416,8 +1413,7 @@
         </div>
         <div class="swiper-scrollbar"></div>
     </div>
-    <div class="btn-group-vertical" role="group" id="navigation"><button class="btn btn-dark sub_btn" type="button" data-bs-target="#settings" data-bs-toggle="offcanvas"><i class="fas fa-cog" style="font-size: 13px;"></i></button><button class="btn btn-dark sub_btn" type="button" data-bs-target="#translations" data-bs-toggle="offcanvas"><i class="far fa-list-alt" style="font-size: 13px;"></i></button><button class="btn btn-dark sub_btn" type="button" data-bs-target="#chapters" data-bs-toggle="offcanvas"><i class="far fa-bookmark" style="font-size: 13px;"></i></button><button class="btn btn-dark sub_btn" id="wiki" type="button" data-bs-target="#wiki" data-bs-toggle="offcanvas" onclick="Ginit()"><i class="fas fa-star"></i></button><button class="btn btn-dark" id="totop" type="button" onclick="swiper2.slideTo(0);" style="--bs-dark: rgba(33,37,41,0.11);--bs-dark-rgb: 33,37,41;"><i class="fas fa-chevron-up"></i></button><button class="btn btn-dark" id="prev" type="button" onclick="loadPrev();"><i class="fas fa-chevron-left"></i></button><button class="btn btn-dark" type="button" onclick="loadNext();"><i class="fas fa-chevron-right"></i></button><button class="btn btn-dark" id="tool" type="button"><i class="far fa-comment-alt"></i></button><button class="btn btn-dark" id="trans" type="button"><i class="fas fa-book"></i></button></div>
-    <div class="btn-group" role="group" id="navigation2"></div>
+    <div class="btn-group-vertical" role="group" id="navigation"><button class="btn btn-dark sub_btn" id="wiki" type="button" data-bs-target="#wiki" data-bs-toggle="offcanvas" onclick="Ginit()"><i class="fas fa-star"></i></button><button class="btn btn-dark" id="totop" type="button" onclick="swiper2.slideTo(0);" style="--bs-dark: rgba(33,37,41,0.11);--bs-dark-rgb: 33,37,41;"><i class="fas fa-chevron-up"></i></button><button class="btn btn-dark" id="prev" type="button" onclick="loadPrev();"><i class="fas fa-chevron-left"></i></button><button class="btn btn-dark" type="button" onclick="loadNext();"><i class="fas fa-chevron-right"></i></button><button class="btn btn-dark" id="tool" type="button"><i class="far fa-comment-alt"></i></button><button class="btn btn-dark" id="trans" type="button"><i class="fas fa-book"></i></button></div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/core/jquery.js"></script>

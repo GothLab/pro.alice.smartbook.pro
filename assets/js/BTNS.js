@@ -1,4 +1,4 @@
-
+$('#locker').click();
 
 var TXT = 'ORIG'
 var EPR = -1;
@@ -63,3 +63,31 @@ $('#T-3').load('./res/' + TXT3 + '.html #A-' + EPR, function(){swiper3.update();
         
 }
    loadNext();
+
+
+function scroll_lock() {
+  
+        $('#M-1').addClass('linked2');
+        
+  $('#translationC, #translationC-1, #translationC-2').addClass('linked');      
+        
+};
+
+function scroll_unlock() {
+  
+        $('#M-1').removeClass('linked2');
+        
+  $('#translationC, #translationC-1, #translationC-2').removeClass('linked');      
+        
+};
+
+function scroll_locker(){
+
+    $('.linked').scroll(function(){
+        $('.linked').scrollTop($(this).scrollTop());    
+    })
+
+    $('.linked2').scroll(function(){
+        $('.linked2').scrollTop($(this).scrollTop());    
+    })
+};
