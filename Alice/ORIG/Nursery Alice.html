@@ -1,0 +1,1339 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Nursery Alice</title>
+        <meta charset='utf-8'/>
+        <style>
+ .ͼ1.cm-editor.cm-focused {outline: 1px dotted #212121;}
+.ͼ1.cm-editor {position: relative !important; box-sizing: border-box; display: flex !important; flex-direction: column;}
+.ͼ1 .cm-scroller {display: flex !important; align-items: flex-start !important; font-family: monospace; line-height: 1.4; height: 100%; overflow-x: auto; position: relative; z-index: 0;}
+.ͼ1 .cm-content[contenteditable=true] {-webkit-user-modify: read-write-plaintext-only;}
+.ͼ1 .cm-content {margin: 0; flex-grow: 2; flex-shrink: 0; display: block; white-space: pre; word-wrap: normal; box-sizing: border-box; padding: 4px 0; outline: none;}
+.ͼ1 .cm-lineWrapping {white-space: pre-wrap; white-space: break-spaces; word-break: break-word; overflow-wrap: anywhere; flex-shrink: 1;}
+.ͼ2 .cm-content {caret-color: black;}
+.ͼ3 .cm-content {caret-color: white;}
+.ͼ1 .cm-line {display: block; padding: 0 2px 0 6px;}
+.ͼ1 .cm-layer > * {position: absolute;}
+.ͼ1 .cm-layer {contain: size style;}
+.ͼ2 .cm-selectionBackground {background: #d9d9d9;}
+.ͼ3 .cm-selectionBackground {background: #222;}
+.ͼ2.cm-focused .cm-selectionBackground {background: #d7d4f0;}
+.ͼ3.cm-focused .cm-selectionBackground {background: #233;}
+.ͼ1 .cm-cursorLayer {pointer-events: none;}
+.ͼ1.cm-focused .cm-cursorLayer {animation: steps(1) cm-blink 1.2s infinite;}
+@keyframes cm-blink {50% {opacity: 0;}}
+@keyframes cm-blink2 {50% {opacity: 0;}}
+.ͼ1 .cm-cursor, .ͼ1 .cm-dropCursor {border-left: 1.2px solid black; margin-left: -0.6px; pointer-events: none;}
+.ͼ1 .cm-cursor {display: none;}
+.ͼ3 .cm-cursor {border-left-color: #444;}
+.ͼ1.cm-focused .cm-cursor {display: block;}
+.ͼ2 .cm-activeLine {background-color: #cceeff44;}
+.ͼ3 .cm-activeLine {background-color: #99eeff33;}
+.ͼ2 .cm-specialChar {color: red;}
+.ͼ3 .cm-specialChar {color: #f78;}
+.ͼ1 .cm-gutters {flex-shrink: 0; display: flex; height: 100%; box-sizing: border-box; left: 0; z-index: 200;}
+.ͼ2 .cm-gutters {background-color: #f5f5f5; color: #6c6c6c; border-right: 1px solid #ddd;}
+.ͼ3 .cm-gutters {background-color: #333338; color: #ccc;}
+.ͼ1 .cm-gutter {display: flex !important; flex-direction: column; flex-shrink: 0; box-sizing: border-box; min-height: 100%; overflow: hidden;}
+.ͼ1 .cm-gutterElement {box-sizing: border-box;}
+.ͼ1 .cm-lineNumbers .cm-gutterElement {padding: 0 3px 0 5px; min-width: 20px; text-align: right; white-space: nowrap;}
+.ͼ2 .cm-activeLineGutter {background-color: #e2f2ff;}
+.ͼ3 .cm-activeLineGutter {background-color: #222227;}
+.ͼ1 .cm-panels {box-sizing: border-box; position: sticky; left: 0; right: 0;}
+.ͼ2 .cm-panels {background-color: #f5f5f5; color: black;}
+.ͼ2 .cm-panels-top {border-bottom: 1px solid #ddd;}
+.ͼ2 .cm-panels-bottom {border-top: 1px solid #ddd;}
+.ͼ3 .cm-panels {background-color: #333338; color: white;}
+.ͼ1 .cm-tab {display: inline-block; overflow: hidden; vertical-align: bottom;}
+.ͼ1 .cm-widgetBuffer {vertical-align: text-top; height: 1em; width: 0; display: inline;}
+.ͼ1 .cm-placeholder {color: #888; display: inline-block; vertical-align: top;}
+.ͼ1 .cm-highlightSpace:before {content: attr(data-display); position: absolute; pointer-events: none; color: #888;}
+.ͼ1 .cm-highlightTab {background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="20"><path stroke="%23888" stroke-width="1" fill="none" d="M1 10H196L190 5M190 15L196 10M197 4L197 16"/></svg>'); background-size: auto 100%; background-position: right 90%; background-repeat: no-repeat;}
+.ͼ1 .cm-trailingSpace {background-color: #ff332255;}
+.ͼ1 .cm-button {vertical-align: middle; color: inherit; font-size: 70%; padding: .2em 1em; border-radius: 1px;}
+.ͼ2 .cm-button:active {background-image: linear-gradient(#b4b4b4, #d0d3d6);}
+.ͼ2 .cm-button {background-image: linear-gradient(#eff1f5, #d9d9df); border: 1px solid #888;}
+.ͼ3 .cm-button:active {background-image: linear-gradient(#111, #333);}
+.ͼ3 .cm-button {background-image: linear-gradient(#393939, #111); border: 1px solid #888;}
+.ͼ1 .cm-textfield {vertical-align: middle; color: inherit; font-size: 70%; border: 1px solid silver; padding: .2em .5em;}
+.ͼ2 .cm-textfield {background-color: white;}
+.ͼ3 .cm-textfield {border: 1px solid #555; background-color: inherit;}
+.ͼ1 .cm-foldPlaceholder {background-color: #eee; border: 1px solid #ddd; color: #888; border-radius: .2em; margin: 0 1px; padding: 0 1px; cursor: pointer;}
+.ͼ1 .cm-foldGutter span {padding: 0 1px; cursor: pointer;}
+.ͼq .cm-content {white-space: pre-wrap; word-break: break-word; overflow-wrap: anywhere; padding: 0;}
+ .custom-frames-view {
+	padding: 0 !important;
+	overflow: hidden !important;
+}
+
+.custom-frames-view-file {
+	padding: 0;
+	overflow: auto;
+}
+
+.custom-frames-frame {
+	width: 100%;
+	height: 100%;
+	border: none;
+	background-color: white;
+	background-clip: content-box;
+}
+
+.custom-frames-add {
+	margin-left: 10px;
+}
+
+.custom-frames-show {
+	margin-bottom: 18px;
+}
+
+.custom-frames-support {
+	max-width: 50%;
+	width: 400px;
+	height: auto;
+}
+ .setting-item.ex-setting-item {
+    border-top: unset;
+    padding-top: 0;
+}
+
+*[hidden] {
+    display: none;
+} 
+.pandoc-plugin-error {
+    color: red;
+}
+ /* 
+ *  Originally copied from dist/tippy.css in the tippy.js package.
+ *
+ *  Modifications were made to implement compatibility with
+ *  Obsidian themes.   
+ */
+
+.theme-light {
+  --link-tooltip-background: #333;
+  --link-tooltip-text: #fff;
+}
+
+.theme-dark {
+  --link-tooltip-background: #ccc;
+  --link-tooltip-text: #000;
+}
+
+.tippy-box[data-animation="fade"][data-state="hidden"] {
+  opacity: 0;
+}
+
+[data-tippy-root] {
+  max-width: calc(100vw - 10px);
+}
+
+.tippy-box {
+  position: relative;
+  background-color: var(--link-tooltip-background);
+  color: var(--link-tooltip-text);
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.4;
+  outline: 0;
+  transition-property: transform, visibility, opacity;
+}
+
+.tippy-box[data-placement^="top"] > .tippy-arrow {
+  bottom: 0;
+}
+
+.tippy-box[data-placement^="top"] > .tippy-arrow:before {
+  bottom: -7px;
+  left: 0;
+  border-width: 8px 8px 0;
+  border-top-color: initial;
+  transform-origin: center top;
+}
+
+.tippy-box[data-placement^="bottom"] > .tippy-arrow {
+  top: 0;
+}
+
+.tippy-box[data-placement^="bottom"] > .tippy-arrow:before {
+  top: -7px;
+  left: 0;
+  border-width: 0 8px 8px;
+  border-bottom-color: initial;
+  transform-origin: center bottom;
+}
+
+.tippy-box[data-placement^="left"] > .tippy-arrow {
+  right: 0;
+}
+
+.tippy-box[data-placement^="left"] > .tippy-arrow:before {
+  border-width: 8px 0 8px 8px;
+  border-left-color: initial;
+  right: -7px;
+  transform-origin: center left;
+}
+
+.tippy-box[data-placement^="right"] > .tippy-arrow {
+  left: 0;
+}
+
+.tippy-box[data-placement^="right"] > .tippy-arrow:before {
+  left: -7px;
+  border-width: 8px 8px 8px 0;
+  border-right-color: initial;
+  transform-origin: center right;
+}
+
+.tippy-box[data-inertia][data-state="visible"] {
+  transition-timing-function: cubic-bezier(0.54, 1.5, 0.38, 1.11);
+}
+
+.tippy-arrow {
+  width: 16px;
+  height: 16px;
+  color: var(--link-tooltip-background);
+}
+
+.tippy-arrow:before {
+  content: "";
+  position: absolute;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.tippy-content {
+  position: relative;
+  padding: 10px 15px;
+  z-index: 1;
+  overflow-wrap: anywhere;
+}
+ 
+
+#cMenuToolbarModalBar {
+  width: auto;
+  height: auto;
+  padding: 3px;
+  display: grid;
+  user-select: none;
+  border-radius: 6px;
+  position: absolute;
+  transition: 100ms cubic-bezier(0.92, -0.53, 0.65, 1.21);
+  -webkit-transition: 100ms cubic-bezier(0.92, -0.53, 0.65, 1.21);
+  min-width: fit-content;
+  justify-content: space-around;
+  z-index: var(--layer-status-bar);
+  box-shadow: 0px 3px 32px rgb(31 38 135 / 15%);
+  border: 1px solid var(--background-modifier-border);
+}
+#cMenuToolbarModalBar.cMenuToolbarFlex {
+  display: flex;
+}
+#cMenuToolbarModalBar.cMenuToolbarFlex :is(.cMenuToolbarCommandItem,button[class^=cMenuToolbarCommandsubItem]) {
+  min-width: 20px;
+}
+#cMenuToolbarModalBar .cMenuToolbarCommandItem {
+  margin: 2px;
+  border: none;
+  display: flex;
+  cursor: pointer;
+  padding: 5px 6px;
+  box-shadow: none;
+  margin-left: 3px;
+  margin-right: 3px;
+  position: relative;
+  border-radius: 3px;
+  font-size: initial !important;
+  background-color: var(--background-primary-alt);
+  height: auto;
+}
+
+#cMenuToolbarModalBar button.cMenuToolbarCommandItem:hover {
+  background-color: var(--background-secondary);
+}
+
+/* #cMenuToolbarModalBar button.cMenuToolbarCommandItem svg {
+  width: 1.3em;
+  height: 1.3em;
+} */
+
+/*----------------------------------------------------------------
+cMenuToolbar SETTINGS BUTTONS
+----------------------------------------------------------------*/
+
+.modal.mod-settings
+  button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsButton.cMenuToolbarSettingsButtonAdd,
+button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsButton.cMenuToolbarSettingsButtonAdd {
+  background-color: var(--interactive-accent);
+}
+
+.modal.mod-settings
+  button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsButton.cMenuToolbarSettingsButtonDelete,
+button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsButton.cMenuToolbarSettingsButtonDelete {
+  background-color: #989cab;
+}
+
+.modal.mod-settings
+  button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsButton.cMenuToolbarSettingsButtonRefresh,
+button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsButton.cMenuToolbarSettingsButtonRefresh {
+  background-color: var(--text-accent);
+}
+
+button.cMenuToolbarSettingsButton {
+  padding: 4px 14px;
+  border-radius: 6px;
+}
+
+
+
+/*----------------------------------------------------------------
+cMenuToolbar SETTING ITEMS
+----------------------------------------------------------------*/
+.setting-item.cMenuToolbarCommandItem:first-child {
+  padding-top: 18px;
+}
+
+.cMenuToolbarCommandItem {
+  cursor: grab;
+  padding: 18px 0 18px 0;
+}
+
+.sortable-fallback {
+  cursor: grabbing;
+  box-shadow: 0px 3px 32px rgb(31 38 135 / 15%);
+}
+
+.sortable-grab {
+  cursor: grabbing !important;
+}
+
+.sortable-ghost {
+  opacity: 0.4;
+  cursor: grabbing;
+}
+
+.sortable-chosen {
+  cursor: grabbing;
+  padding: 18px 0 18px 18px;
+  background-color: var(--background-primary);
+}
+
+.sortable-drag {
+  cursor: grabbing;
+  box-shadow: 0px 3px 32px rgb(31 38 135 / 15%);
+}
+
+.cMenuToolbarSettingsTabsContainer {
+  border-top: 1px solid var(--background-modifier-border);
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+/*----------------------------------------------------------------
+cMenuToolbar CLASS CHANGES
+----------------------------------------------------------------*/
+
+#cMenuToolbarModalBar.cMenuToolbarDefaultAesthetic
+{
+border: 1px solid var(--background-modifier-border);
+}
+#cMenuToolbarModalBar.cMenuToolbarDefaultAesthetic:not(.top) :is(.cMenuToolbarCommandItem,button[class^=cMenuToolbarCommandsubItem])
+{
+min-height:28px ;
+}
+#cMenuToolbarModalBar.cMenuToolbarDefaultAesthetic:not(.top) button[class^=cMenuToolbarCommandsubItem]  {
+  margin: auto;
+  padding: 6px;
+box-shadow: none;
+ border: none;
+  background-color: transparent;
+
+  place-items: center;
+
+}
+.cMenuToolbarDefaultAesthetic {
+background-color: var(--background-primary);
+}
+
+
+#cMenuToolbarModalBar.cMenuToolbarGlassAesthetic ,#cMenuToolbarModalBar.cMenuToolbarGlassAesthetic ~#cMenuToolbarPopoverBar {
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow:none;
+  background-color: transparent;
+}
+
+  #cMenuToolbarModalBar.cMenuToolbarGlassAesthetic:not(.top) button[class^=cMenuToolbarCommandsubItem]  {
+    margin: auto;
+    padding: 0px;
+    box-shadow: none;
+    border: none;
+    display: flex;
+    border-radius: 3px;
+  font-size: 10px;
+    margin-right: 0px;
+    position: relative;
+    background-color: transparent;
+    place-items: center;
+    clear: both;
+    max-width: 28px;
+    max-height: 23px;
+  }
+
+/*----------------------------------------------------------------
+cMenuToolbar ICONS
+----------------------------------------------------------------*/
+
+.cMenuToolbarIconPick {
+  line-height: normal;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.cMenuToolbarIconPick svg {
+  width: 17px;
+  height: 17px;
+}
+
+/*----------------------------------------------------------------
+cMenuToolbar STATUS BAR MENU
+----------------------------------------------------------------*/
+
+.cMenuToolbar-statusbar-menu {
+  text-align: center;
+  width: 200px;
+}
+
+
+.cMenuToolbar-statusbar-menu .menu-item {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.cMenuToolbar-statusbar-menu .menu-item.settings-item {
+  font-size: 12px;
+  text-align: center;
+  line-height: 1;
+  border-radius: 5px;
+  height: auto;
+  padding: 8px 5px 0px 5px;
+  margin: 0 auto;
+  width: fit-content;
+  color: var(--text-faint);
+}
+
+.cMenuToolbar-statusbar-menu .menu-item.settings-item .menu-item-title {
+  text-align: center;
+}
+
+.cMenuToolbar-statusbar-menu .menu-item:hover,
+.cMenuToolbar-statusbar-menu .menu-item .selected:hover,
+.cMenuToolbar-statusbar-menu .menu-item.selected:not(.is-disabled):not(.is-label) {
+  background-color: transparent;
+}
+
+.cMenuToolbar-statusbar-menu .menu-item-title {
+  margin-right: 10px;
+}
+
+.cMenuToolbar-statusbar-menu .slider {
+  width: 100%;
+}
+
+.cMenuToolbar-statusbar-menu .menu-item.buttonitem {
+  padding-top: 10px;
+  padding-bottom: 4px;
+  height: fit-content;
+}
+
+.cMenuToolbar-statusbar-menu .menu-item.buttonitem button.cMenuToolbarSettingsButton {
+  margin: 0;
+}
+
+.cMenuToolbar-statusbar-menu  .menu-item-icon svg  path   {
+    fill: var(--text-muted);
+}
+.cMenuToolbar-statusbar-menu  .menu-item-icon svg    {
+  stroke: var(--text-muted);
+}
+.cMenuToolbar-statusbar-menu  > .menu-item:is([data-section="ButtonAdd"]) {
+    display: inline-flex;
+    padding: 0px 0px 5px 5px;
+    align-items: center;
+}
+
+.cMenuToolbar-statusbar-menu  > .menu-item {
+  display: inline-flex;
+  padding: 0px 0px 5px 5px;
+  align-items: center;
+}
+.cMenuToolbar-statusbar-menu  > .menu-item:is([data-section="ButtonAdd"]) .menu-item-icon{
+  text-align: center;
+}
+ 
+
+/*----------------------------------------------------------------
+cMenuToolbar STATUS BAR BUTTONS
+----------------------------------------------------------------*/
+
+.cMenuToolbar-statusbar-button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.cMenuToolbar-statusbar-button svg {
+  display: flex;
+  width: 1.3em;
+  height: 1.3em;
+}
+
+/*----------------------------------------------------------------
+cMenuToolbar SUPPORT
+---------------------------------------------`-------------------*/
+
+.cDonationSection {
+  width: 60%;
+  height: 50vh;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--text-normal);
+}
+ 
+
+#cMenuToolbarModalBar{
+  align-items: center;
+  justify-items: center;  
+  border: none;
+  backdrop-filter: none;
+}
+
+#cMenuToolbarModalBar.cMenuToolbarGlassAesthetic .cMenuToolbarCommandItem{
+	
+background-color:#ffffff00;
+}	
+
+#cMenuToolbarModalBar.cMenuToolbarGlassAesthetic [class^=cMenuToolbarCommandsubItem]{
+	
+  background-color:#ffffff00;
+  }	
+#cMenuToolbarModalBar .cMenuToolbarCommandItem{
+  justify-content: center;
+  align-content: center;
+  place-items: center;
+
+  }	
+  
+
+/*  #cMenuToolbarModalBar.cMenuToolbarTinyAesthetic .cMenuToolbarCommandItem svg{
+     width: 1em;
+     height: 1em;
+ } */
+
+
+ 
+div.modal-container.cMenuToolbar-Modal:not(.changename)  .modal-bg
+{
+  background-color:transparent!important;
+  backdrop-filter: none!important;
+position: relative;
+}
+.modal-container.cMenuToolbar-Modal:not(.changename)  .modal {
+  padding: 10px 30px;
+  min-width: 130px;
+  position: absolute;
+  bottom: 2em;
+  right: 0.5em;
+  background-color: rgb(var(--mono-rgb-0),0.8);
+  backdrop-filter: blur(4px);
+}
+.modal-container.cMenuToolbar-Modal  .modal-title
+{
+  display: none;
+}
+
+.modal-container.cMenuToolbar-Modal  .modal  input[type='range'] {
+  width: 90%;
+ 
+}
+body.theme-dark .modal-container.cMenuToolbar-Modal  .modal  input[type='range'] {
+ background-color: var(--background-secondary);
+}
+/*tiny 样式*/
+#cMenuToolbarModalBar.cMenuToolbarTinyAesthetic {
+  align-items: center;
+  justify-items: center;  
+  border: none;
+  backdrop-filter: none;
+  background-color: var(--background-primary);
+  box-shadow: 0 3px 6px -4px rgb(0 0 0 / 12%), 0 6px 16px 0 rgb(0 0 0 / 8%), 0 9px 28px 8px rgb(0 0 0 / 5%);
+ }
+
+
+ #cMenuToolbarModalBar.cMenuToolbarTinyAesthetic .cMenuToolbarCommandItem {
+  margin: auto;
+  padding: 0px;
+  box-shadow: none;
+  margin-left: 0px;
+  margin-right: 0px;
+  position: relative; 
+  background-color:transparent;
+    backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+}
+ #cMenuToolbarModalBar .cMenuToolbarCommandItem {
+   margin: auto;
+
+   padding: 0px;
+   box-shadow: none;
+
+   margin-left: 4px;
+   margin-right: 0px;
+   position: relative; 
+   background-color:transparent;
+     backdrop-filter: blur(8px);
+   -webkit-backdrop-filter: blur(8px);
+ 
+ }
+
+
+:is(#cMenuToolbarModalBar).cMenuToolbarTinyAesthetic:not(.top) button[class^=cMenuToolbarCommandsubItem]  {
+  margin: auto;
+  padding: 0px;
+  box-shadow: none;
+  border: none;
+  display: flex;
+  border-radius: 3px;
+font-size: 10px;
+  margin-right: 0px;
+  position: relative;
+  background-color: transparent;
+ 
+  place-items: center;
+  clear: both;
+  max-width: 28px;
+  max-height: 23px;
+   
+}
+ button[class^=cMenuToolbarCommandsubItem]::after {
+
+  content:  url("data:image/svg+xml,%3Csvg width='4' height='4' version='1.1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024' enable-background='new 0 0 1024 1024' xml:space='preserve'%3E%3Cpath fill='%23666' d='M13.24 80.11 l461.75 560.8 q14.56 16.02 36.41 16.02 q21.85 0 36.42 -16.02 l463.2 -560.8 q10.2 -10.19 12.38 -24.75 q2.18 -14.57 -3.64 -27.68 q-5.82 -13.11 -18.21 -20.39 q-12.39 -7.29 -26.95 -7.29 l-924.95 0 q-20.4 0 -34.23 13.11 q-13.84 13.11 -15.29 32.77 q-1.46 19.66 13.11 34.23 Z'/%3E%3C/svg%3E");
+  
+ margin-left: 1px;
+ margin-top:6px;
+
+}
+
+
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar)  button[class^=cMenuToolbarCommandsubItem]  >.subitem
+{
+    background-color: var(--background-primary);
+    border-radius: 4px;
+    border: 1px solid var(--background-modifier-border);
+    box-shadow: 0 2px 8px var(--background-modifier-box-shadow);
+    position: absolute;
+    z-index: var(--layer-menu);
+    user-select: none;
+    transform: translateY(90%) translateX(0%);
+    -webkit-transform: translateY(90%) translateX(0%);
+    display: flex;
+    
+}
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button[class^=cMenuToolbarCommandsubItem]  >.subitem svg
+{
+  max-width: 1.3em;
+  max-height: 1.3em;
+}
+
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button[class^=cMenuToolbarCommandsubItem]  >.subitem button.menu-item
+{
+    background-color: var(--background-secondary);
+    line-height:2em;
+    display: inline-flex;
+    box-shadow: none;
+    align-items: center;
+}
+
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button[class^=cMenuToolbarCommandsubItem]  >.subitem button:hover
+{
+    background-color: var(--interactive-hover);
+    box-shadow: var(--input-shadow-hover);
+}
+
+
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button[class^=cMenuToolbarCommandsubItem]  >.subitem .menu-item {
+  margin-left: 2px;
+  margin-right: 2px;
+  padding: 0px 4px 0px 4px;
+}
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button[class^=cMenuToolbarCommandsubItem] >.subitem  {
+ 
+ visibility:hidden;
+ transition: all 0.3s linear;
+ -webkit-transition:  all 0.3s linear;
+}
+
+
+
+
+
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar)  button.cMenuToolbarCommandsubItem-font-color .triangle-icon
+{
+  position: absolute;
+  margin-left: 18px;
+  bottom: 8%;
+background-size: 4px 4px;
+background-image: url("data:image/svg+xml,%3Csvg width='4' height='4' version='1.1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024' enable-background='new 0 0 1024 1024' xml:space='preserve'%3E%3Cpath fill='%23666' d='M13.24 80.11 l461.75 560.8 q14.56 16.02 36.41 16.02 q21.85 0 36.42 -16.02 l463.2 -560.8 q10.2 -10.19 12.38 -24.75 q2.18 -14.57 -3.64 -27.68 q-5.82 -13.11 -18.21 -20.39 q-12.39 -7.29 -26.95 -7.29 l-924.95 0 q-20.4 0 -34.23 13.11 q-13.84 13.11 -15.29 32.77 q-1.46 19.66 13.11 34.23 Z'/%3E%3C/svg%3E");
+
+    width: 16px;
+    height: 20px;
+    background-position: center;
+ 
+    background-repeat: no-repeat;
+    min-width: unset;
+    border-left: 2px solid  transparent;
+ }
+
+ :is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar):not(.top) button.cMenuToolbarCommandsubItem-font-color .triangle-icon 
+ {
+  margin-left: 16px;
+  
+ }
+ 
+ :is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar):not(.top) button.cMenuToolbarCommandsubItem-font-color .x-color-picker-wrapper
+{
+  top:auto;
+bottom:calc(100% + 1.8em);
+}
+
+ 
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button.cMenuToolbarCommandsubItem-font-color .subitem
+{
+  visibility:hidden;
+  transition: all 0.3s linear;
+  -webkit-transition:  all 0.3s linear;
+ }
+
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button.cMenuToolbarCommandsubItem-font-color .subitem:hover  {
+  visibility:visible;
+  transition: all 0.3s linear;
+  -webkit-transition:  all 0.3s linear;
+ }
+
+
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button[class^=cMenuToolbarCommandsubItem]:hover >.subitem  {
+ 
+  visibility:visible;
+ transition: all 0.3s linear;
+ -webkit-transition:  all 0.3s linear;
+}
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button[class^=cMenuToolbarCommandsubItem] >.subitem:hover  {
+  visibility:visible;
+  transition: all 0.3s linear;
+  -webkit-transition:  all 0.3s linear;
+ }
+
+ .cMenuToolbarCommandsubItem-font-color button
+{
+ background-color: transparent;
+}
+.cMenuToolbarCommandsubItem-font-color button:hover
+{
+  background-color: var(--interactive-normal);
+}
+
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbarCommandItem .setting-item-info {
+  
+  flex:30%;
+margin: 0;
+}
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbarSettingsTabsContainer_sub
+ {
+  border-left: 1px solid var(--background-modifier-border);
+  flex-flow: column;
+  min-height: 45px;
+  display: flex;
+  padding: 0;
+ margin-left: 10px;
+  flex: 70%;
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbarSettingsTabsContainer_sub:empty
+ {
+ border: 2px dashed rgba(var(--interactive-accent-rgb),0.5);
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbarSettingsTabsContainer_sub:empty::before {
+  content: "✖️Drag it here";
+  margin: auto;
+  font-size: 12px;
+}
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbarSettingsTabsContainer_sub .cMenuToolbarCommandItem
+ {
+  flex: auto;
+  margin-left: 2em;;
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbarSettingsTabsContainer_sub .setting-item-control
+ {
+flex: 0;
+ }
+
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbarCommandSubItem>.setting-item-info
+ {
+ flex: 70px;
+ }
+ .cMenuToolbarCommandSubItem>.setting-item-control
+{
+
+  justify-content: flex-start;
+}
+ .modal.mod-settings button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsButton.cMenuToolbarSettingsButtonaddsub {
+   background-color: var(--background-secondary-alt);
+}
+
+
+.setting-item button.cMenuToolbarSettingsIcon{
+  display: block;
+  transform: translateX(-30%); 
+  -webkit-transform: translateX(-30%); 
+}
+.setting-item button.cMenuToolbarSettingsIcon:empty::before{
+ content: "❗";
+}
+.setting-item button.cMenuToolbarSettingsIcon svg{
+  max-width: 1.5em;
+  max-height: 1.5em;
+}
+.modal.mod-settings button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsIcon:hover{
+  background-color: var(--interactive-accent-hover);
+}
+.modal.mod-settings button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsIcon
+{
+  background-color: transparent;
+  box-shadow: 0 1px 1px 0px var(--background-modifier-border);
+}
+@media screen and (min-width: 781px){
+  .cMenuToolbar-Modal .wideInputPromptInputEl {
+  width: 40rem;
+  max-width: 100%;
+  height: 20rem;
+  background-color: rgb(var(--mono-rgb-0),0.8);
+}
+}
+
+.cMenuToolbarcustomIcon svg {
+  max-width: 1.3em;
+  max-height: 1.3em;
+  display: flex;
+}
+
+
+.cMenuToolbarSettingsButton  svg {
+  max-width: 1.3em;
+  max-height: 1.3em;
+  display: flex;
+}
+
+.cmdr-page-header
+{
+  min-width: 1em;;
+}
+
+
+.x-color-picker-wrapper {
+  right: 0px;
+  top:1.8em;
+  min-width: 1px;
+  padding: 10px;
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14);
+  position: absolute;
+  width: fit-content;
+  font-weight: 400;
+  font-family: Source Sans Pro,sans-serif;
+  border-radius: 4px;
+  background-color: var(--background-primary);
+}
+.markdown-source-view.mod-cm6 .x-color-picker-wrapper table.x-color-picker-table#x-color-picker-table {
+  width: unset;
+  border-collapse: separate;
+  border-spacing: 6px;
+  margin: auto !important;
+}
+.x-color-picker-wrapper table.x-color-picker-table#x-backgroundcolor-picker-table {
+  width: unset;
+  border-collapse: separate;
+  border-spacing: 6px;
+  margin: auto !important;
+}
+.x-color-picker-wrapper .x-color-picker-table th {
+  border: 0;
+  text-align: left;
+  font-weight: normal;
+  background: transparent !important;
+  color: #718096;
+}
+.x-color-picker-wrapper #x-color-picker-table td {
+  font-size: 1px;
+  padding: 9px;
+  cursor: pointer;
+  border: solid 1px var(--background-modifier-border);
+}
+.x-color-picker-wrapper #x-backgroundcolor-picker-table td {
+  font-size: 1px;
+  border-radius: 50%;
+  padding: 9px;
+  cursor: pointer;
+  border: solid 1px var(--background-modifier-border);
+}
+.x-color-picker-wrapper .x-color-picker-table tr td:hover {
+  box-shadow: 0 3px 6px -4px rgba(0,0,0,.12),0 6px 16px 0 rgba(0,0,0,.08),0 9px 28px 8px rgba(0,0,0,.05);
+}
+.x-color-picker-wrapper tbody>tr:hover
+{
+background-color:transparent !important;
+}
+/**top**/
+#cMenuToolbarModalBar.top {
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    height: 38px;
+    align-items: center;
+    transition: all 0.2s linear;
+    -webkit-transition:  all 0.2s linear;
+    
+}
+
+#cMenuToolbarModalBar.top :is(.cMenuToolbarCommandItem,button[class^=cMenuToolbarCommandsubItem]):not(.cMenuToolbar-Divider-Line)
+{
+font-size: 10px;
+  margin-right: 0px;
+  clear: both;  
+  opacity: 1;
+  flex-shrink:0;
+    height: 26px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+    border-radius: 2px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s linear;
+    -webkit-transition:  all 0.2s linear;
+
+ 
+
+    
+}
+#cMenuToolbarModalBar.top button.cMenuToolbarCommandItem:hover {
+  background-color: var(--interactive-hover);
+}
+
+ 
+
+#cMenuToolbarPopoverBar{
+  
+    padding: 0 10px;
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    z-index: var(--layer-status-bar); 
+    background-color: var(--background-primary);
+      background-clip: padding-box;
+      border-radius: 6px;
+      box-shadow: 0 3px 6px -4px rgba(0,0,0,.12),0 6px 16px 0 rgba(0,0,0,.08),0 9px 28px 8px rgba(0,0,0,.05);
+      box-shadow: 0 0 8px rgba(0,0,0,.15)\9;
+      margin-left: auto;
+      margin-right: 25px;
+      transition: all 0.1s linear;
+      -webkit-transition:  all 0.1s linear;
+      margin-top: 32px;
+    position: absolute;
+    right: 0;
+}
+
+#cMenuToolbarPopoverBar :is(.cMenuToolbarCommandItem,button[class^=cMenuToolbarCommandsubItem]){
+
+    height: 26px;
+margin-left: 4px;
+    font-size: 10px;
+  margin-right: 4px;
+  clear: both;  
+  opacity: 1;
+  flex-shrink:0;
+    height: 26px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+    border-radius: 2px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s linear;
+    -webkit-transition:  all 0.2s linear;
+   
+}
+#cMenuToolbarPopoverBar :is(.cMenuToolbarCommandItem,button[class^=cMenuToolbarCommandsubItem]):hover{
+  background-color: var(--interactive-hover);
+}
+
+#cMenuToolbarModalBar .more-menu {
+  display: flex;
+  align-items: center;
+  box-shadow:none;
+  margin-left: 4px;
+  border-left: 1px inset var( --background-modifier-form-field);
+  height: 24px;
+  opacity: 0.8;
+}
+ /*Divider-Line**/
+
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbar-Divider-Line
+ {
+  padding: 0;
+   
+  line-height: 0px;
+  border-left: 200px solid rgba(var(--interactive-accent-rgb),0.05);
+  border-right: 200px solid rgba(var(--interactive-accent-rgb),0.05);
+  text-align: center;
+  background: rgba(var(--interactive-accent-rgb),0.2);
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbar-Divider-Line .setting-item-control button:not(:last-child)
+ {
+   display: none;
+ }
+
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbar-Divider-Line .setting-item-info 
+ {
+  flex: 1 1 auto;
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbar-Divider-Line .setting-item-control 
+ {
+  justify-content: flex-start;
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbar-Divider-Line .setting-item-info .setting-item-name
+ {
+  font-size: 12px;
+ text-align: right;
+
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbar-Divider-Line .setting-item-control button:last-child
+ {
+  padding: 0;
+   background-color: transparent!important;
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbar-Divider-Line .setting-item-control button:last-child svg
+ {
+   display: none;
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbar-Divider-Line .setting-item-control button:last-child::before
+ {
+  content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M511.674077 66.707284c-246.52265 0-446.347744 199.835328-446.347744 446.347744s199.825095 446.356954 446.347744 446.356954c246.50423 0 446.348768-199.844537 446.348768-446.356954S758.177284 66.707284 511.674077 66.707284zM744.967424 667.159826c21.8701 21.8701 21.8701 57.310264 0 79.199807-21.8701 21.851681-57.30924 21.851681-79.198783-0.019443L511.674077 592.264045 357.56007 746.359632c-21.8701 21.8701-57.30924 21.851681-79.17934-0.019443s-21.8701-57.290821 0-79.160921L432.493713 513.065262 278.379707 358.950232c-21.8701-21.86089-21.8701-57.328683 0-79.18855 21.8701-21.87931 57.30924-21.87931 79.17934 0l154.114007 154.104797 154.095587-154.104797c21.889543-21.87931 57.32766-21.87931 79.198783-0.010233 21.8701 21.8701 21.8701 57.348126 0 79.207993L590.89128 513.065262 744.967424 667.159826z' fill='%23666666'/%3E%3C/svg%3E");
+ }
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button.cMenuToolbarCommandItem.cMenuToolbar-Divider-Line
+{
+  min-width:unset;
+    flex-shrink: 0;
+    display: inline-flex;
+    width: 0.6px;
+    background-color: var(--background-modifier-border);
+    height: 22px;
+    opacity: 0.8;
+    margin: 0;
+}
+.theme-dark :is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar)  button.cMenuToolbarCommandItem.cMenuToolbar-Divider-Line
+{
+
+    background-color: #4f4f5188;
+ 
+}
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar)  button.cMenuToolbarCommandItem.cMenuToolbar-Divider-Line svg
+{
+ display: none;
+}
+
+.workspace-tabs.mod-stacked  .workspace-tab-header:not(.is-active) + .workspace-leaf #cMenuToolbarModalBar
+{
+  opacity: 0;
+}
+ undefined
+</style>
+    </head>
+    <body>
+<ul>
+<li><a aria-label-position="top" aria-label="A Nursery Darling." data-href="#A Nursery Darling." href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\ORIG\index.html#A%20Nursery%20Darling." class="internal-link" target="_blank" rel="noopener">A Nursery Darling.</a></li>
+<li><a aria-label-position="top" aria-label="PREFACE." data-href="#PREFACE." href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\ORIG\index.html#PREFACE." class="internal-link" target="_blank" rel="noopener">PREFACE.</a></li>
+<li><a aria-label-position="top" aria-label="I.  THE WHITE RABBIT." data-href="#I.  THE WHITE RABBIT." href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\ORIG\index.html#I.%20%20THE%20WHITE%20RABBIT." class="internal-link" target="_blank" rel="noopener">I.  THE WHITE RABBIT.</a></li>
+<li><a aria-label-position="top" aria-label="II.  HOW ALICE GREW TALL." data-href="#II.  HOW ALICE GREW TALL." href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\ORIG\index.html#II.%20%20HOW%20ALICE%20GREW%20TALL." class="internal-link" target="_blank" rel="noopener">II.  HOW ALICE GREW TALL.</a></li>
+<li><a aria-label-position="top" aria-label="III.  THE POOL OF TEARS." data-href="#III.  THE POOL OF TEARS." href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\ORIG\index.html#III.%20%20THE%20POOL%20OF%20TEARS." class="internal-link" target="_blank" rel="noopener">III.  THE POOL OF TEARS.</a></li>
+<li><a aria-label-position="top" aria-label="IV.  THE CAUCUS-RACE." data-href="#IV.  THE CAUCUS-RACE." href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\ORIG\index.html#IV.%20%20THE%20CAUCUS-RACE." class="internal-link" target="_blank" rel="noopener">IV.  THE CAUCUS-RACE.</a></li>
+<li><a aria-label-position="top" aria-label="V.  BILL, THE LIZARD." data-href="#V.  BILL, THE LIZARD." href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\ORIG\index.html#V.%20%20BILL,%20THE%20LIZARD." class="internal-link" target="_blank" rel="noopener">V.  BILL, THE LIZARD.</a></li>
+<li><a aria-label-position="top" aria-label="VI.  THE DEAR LITTLE PUPPY." data-href="#VI.  THE DEAR LITTLE PUPPY." href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\ORIG\index.html#VI.%20%20THE%20DEAR%20LITTLE%20PUPPY." class="internal-link" target="_blank" rel="noopener">VI.  THE DEAR LITTLE PUPPY.</a></li>
+<li><a aria-label-position="top" aria-label="VII. THE BLUE CATERPILLAR." data-href="#VII. THE BLUE CATERPILLAR." href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\ORIG\index.html#VII.%20THE%20BLUE%20CATERPILLAR." class="internal-link" target="_blank" rel="noopener">VII. THE BLUE CATERPILLAR.</a></li>
+<li><a aria-label-position="top" aria-label="VIII. THE PIG-BABY." data-href="#VIII. THE PIG-BABY." href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\ORIG\index.html#VIII.%20THE%20PIG-BABY." class="internal-link" target="_blank" rel="noopener">VIII. THE PIG-BABY.</a></li>
+<li><a aria-label-position="top" aria-label="IX. THE CHESHIRE-CAT." data-href="#IX. THE CHESHIRE-CAT." href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\ORIG\index.html#IX.%20THE%20CHESHIRE-CAT." class="internal-link" target="_blank" rel="noopener">IX. THE CHESHIRE-CAT.</a></li>
+<li><a aria-label-position="top" aria-label="X. THE MAD TEA-PARTY." data-href="#X. THE MAD TEA-PARTY." href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\ORIG\index.html#X.%20THE%20MAD%20TEA-PARTY." class="internal-link" target="_blank" rel="noopener">X. THE MAD TEA-PARTY.</a></li>
+<li><a aria-label-position="top" aria-label="XI.  THE QUEEN’S GARDEN." data-href="#XI.  THE QUEEN’S GARDEN." href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\ORIG\index.html#XI.%20%20THE%20QUEEN%E2%80%99S%20GARDEN." class="internal-link" target="_blank" rel="noopener">XI.  THE QUEEN’S GARDEN.</a></li>
+<li><a aria-label-position="top" aria-label="XII. THE LOBSTER-QUADRILLE." data-href="#XII. THE LOBSTER-QUADRILLE." href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\ORIG\index.html#XII.%20THE%20LOBSTER-QUADRILLE." class="internal-link" target="_blank" rel="noopener">XII. THE LOBSTER-QUADRILLE.</a></li>
+<li><a aria-label-position="top" aria-label="XIII. WHO STOLE THE TARTS?" data-href="#XIII. WHO STOLE THE TARTS?" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\ORIG\index.html#XIII.%20WHO%20STOLE%20THE%20TARTS?" class="internal-link" target="_blank" rel="noopener">XIII. WHO STOLE THE TARTS?</a></li>
+<li><a aria-label-position="top" aria-label="XIV. THE SHOWER OF CARDS." data-href="#XIV. THE SHOWER OF CARDS." href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\ORIG\index.html#XIV.%20THE%20SHOWER%20OF%20CARDS." class="internal-link" target="_blank" rel="noopener">XIV. THE SHOWER OF CARDS.</a></li>
+<li><a aria-label-position="top" aria-label="AN EASTER GREETING TO EVERY CHILD WHO LOVES “ALICE.”" data-href="#AN EASTER GREETING TO EVERY CHILD WHO LOVES “ALICE.”" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\ORIG\index.html#AN%20EASTER%20GREETING%20TO%20EVERY%20CHILD%20WHO%20LOVES%20%E2%80%9CALICE.%E2%80%9D" class="internal-link" target="_blank" rel="noopener">AN EASTER GREETING TO EVERY CHILD WHO LOVES “ALICE.”</a></li>
+<li><a aria-label-position="top" aria-label="CHRISTMAS GREETINGS." data-href="#CHRISTMAS GREETINGS." href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\ORIG\index.html#CHRISTMAS%20GREETINGS." class="internal-link" target="_blank" rel="noopener">CHRISTMAS GREETINGS.</a></li>
+</ul>
+<h2 data-heading="A Nursery Darling.">A Nursery Darling.</h2>
+<p>*A Mother’s breast:<br>
+Safe refuge from her childish fears,<br>
+From childish troubles, childish tears,<br>
+Mists that enshroud her dawning years!<br>
+See how in sleep she seems to sing<br>
+A voiceless psalm—an offering<br>
+Raised, to the glory of her King,<br>
+In Love: for Love is Rest.</p>
+<p>A Darling’s kiss:<br>
+Dearest of all the signs that fleet<br>
+From lips that lovingly repeat<br>
+Again, again, their message sweet!<br>
+Full to the brim with girlish glee,<br>
+A child, a very child is she,<br>
+Whose dream of Heaven is still to be<br>
+A: Home: for Home is Bliss.*</p>
+<hr>
+<h2 data-heading="PREFACE.">PREFACE.</h2>
+<p>(<em>ADDRESSED TO ANY MOTHER.</em>)</p>
+<p>I have&nbsp;reason to believe that “Alice’s Adventures in Wonderland” has been read by some hundreds of English Children, aged from Five to Fifteen: also by Children, aged from Fifteen to Twenty-five: yet again by Children, aged from Twenty-five to Thirty-five: and even by Children—for there&nbsp;<em>are</em>&nbsp;such—Children in whom no waning of health and strength, no weariness of the solemn mockery, and the gaudy glitter, and the hopeless misery, of Life has availed to parch the pure fountain of joy that wells up in all child-like hearts—Children of a “certain” age, whose tale of years must be left untold, and buried in respectful silence.</p>
+<p>And my ambition&nbsp;<em>now</em>&nbsp;is (is it a vain one?) to be read by Children aged from Nought to Five. To be read? Nay, not so! Say rather to be thumbed, to be cooed over, to be dogs’-eared, to be rumpled, to be kissed, by the illiterate, ungrammatical, dimpled Darlings, that fill your Nursery with merry uproar, and your inmost heart of hearts with a restful gladness!</p>
+<p>Such, for instance, as a child I once knew, who—having been carefully instructed that&nbsp;<em>one</em>&nbsp;of any earthly thing was enough for any little girl; and that to ask for&nbsp;<em>two</em>&nbsp;buns,&nbsp;<em>two</em>&nbsp;oranges,&nbsp;<em>two</em>&nbsp;of anything, would certainly bring upon her the awful charge of being “greedy”—was found one morning sitting up in bed, solemnly regarding her&nbsp;<em>two</em>&nbsp;little naked feet, and murmuring to herself, softly and penitently, “deedy!”</p>
+<p><em>Eastertide, 1889.</em></p>
+<h2 data-heading="I.  THE WHITE RABBIT.">I.  THE WHITE RABBIT.</h2>
+<p>Once&nbsp;upon a time, there was a little girl called Alice: and she had a very curious dream.</p>
+<p>Would you like to hear what it was that she dreamed about?</p>
+<p>Well, this was the&nbsp;<em>first</em>&nbsp;thing that happened. A White Rabbit came running by, in a great hurry; and, just as it passed Alice, it stopped, and took its watch out of its pocket.</p>
+<p>Wasn’t&nbsp;<em>that</em>&nbsp;a funny thing? Did&nbsp;<em>you</em>&nbsp;ever see a Rabbit that had a watch, and a pocket to put it in? Of course, when a Rabbit has a watch, it&nbsp;<em>must</em>&nbsp;have a pocket to put it in: it would never do to carry it about in its mouth——and it wants its hands sometimes, to run about with.</p>
+<p>Hasn’t it got pretty pink eyes (I think&nbsp;<em>all</em>&nbsp;White Rabbits have pink eyes); and pink ears; and a nice brown coat; and you can just see its red pocket-handkerchief peeping out of its coat-pocket: and, what with its blue neck-tie and its yellow waistcoat, it really is&nbsp;<em>very</em>&nbsp;nicely dressed.</p>
+<p>“Oh dear, oh dear!” said the Rabbit. “I shall be too late!”&nbsp;<em>What</em>&nbsp;would it be too late&nbsp;<em>for</em>, I wonder? Well, you see, it had to go and visit the Duchess (you’ll see a picture of the Duchess, soon, sitting in her kitchen): and the Duchess was a very cross old lady: and the Rabbit&nbsp;<em>knew</em>&nbsp;she’d be very angry indeed if he kept her waiting. So the poor thing was as frightened as frightened could be (Don’t you see how he’s trembling? Just shake the book a little,&nbsp;from side to side, and you’ll soon see him tremble), because he thought the Duchess would have his head cut off, for a punishment. That was what the Queen of Hearts used to do, when&nbsp;<em>she</em>&nbsp;was angry with people (you’ll see a picture of&nbsp;<em>her</em>, soon): at least she used to&nbsp;<em>order</em>&nbsp;their heads to be cut off, and she always&nbsp;<em>thought</em>&nbsp;it was done, though they never&nbsp;<em>really</em>&nbsp;did it.</p>
+<p>And so, when the White Rabbit ran away, Alice wanted to see what would happen to it: so she ran after it: and she ran, and she ran, till she tumbled right down the rabbit-hole.</p>
+<p>And then she had a very long fall indeed. Down, and down, and down, till she began to wonder if she was going right&nbsp;<em>through</em>&nbsp;the World, so as to come out on the other side!</p>
+<p>It was just like a very deep well: only there was no water in it. If anybody&nbsp;<em>really</em>&nbsp;had such a fall as that, it would kill them, most likely: but you know it doesn’t hurt a bit to fall in a&nbsp;<em>dream</em>, because, all the time you&nbsp;<em>think</em>&nbsp;you’re falling, you really&nbsp;<em>are</em>&nbsp;lying somewhere, safe and sound, and fast asleep!</p>
+<p>However, this terrible fall came to an end at last, and down came Alice on a heap of sticks and dry leaves. But she wasn’t a bit hurt, and up she jumped, and ran after the Rabbit again.</p>
+<p>And so that was the beginning of Alice’s curious dream. And, next time you see a White Rabbit, try and fancy&nbsp;<em>you’re</em>&nbsp;going to have a curious dream, just like dear little Alice.</p>
+<h2 data-heading="II.  HOW ALICE GREW TALL.">II.  HOW ALICE GREW TALL.</h2>
+<p>And&nbsp;so, after Alice had tumbled down the rabbit-hole, and had run a long long way underground, all of a sudden she found herself in a great hall, with doors all round it.</p>
+<p>But all the doors were locked: so, you see, poor Alice couldn’t get out of the hall: and that made her very sad.</p>
+<p>However, after a little while, she came to a little table, all made of glass, with three legs (There are&nbsp;<em>two</em>&nbsp;of the legs in the picture, and just the&nbsp;<em>beginning</em>&nbsp;of the other leg, do you see?), and on the table was a little key: and she went round the hall, and tried if she could unlock any of the doors with it.</p>
+<p>Poor Alice! The key wouldn’t unlock&nbsp;<em>any</em>&nbsp;of the doors. But at last she came upon a tiny little door: and oh, how glad she was, when she found the key would fit it!</p>
+<p>So she unlocked the tiny little door, and she stooped down and looked through it, and what do you think she saw? Oh, such a beautiful garden! And she did so&nbsp;<em>long</em>&nbsp;to go into it! But the door was&nbsp;<em>far</em>&nbsp;too small. She couldn’t squeeze herself through, any more than&nbsp;<em>you</em>&nbsp;could squeeze yourself into a mouse-hole!</p>
+<p>So poor little Alice locked up the door, and took the key back to the table again: and&nbsp;<em>this</em>&nbsp;time she found quite a new thing on it (now look at the picture again), and what do you think it was? It was a little bottle, with a label&nbsp;tied to it, with the words “DRINK ME” on the label.</p>
+<p>So she tasted it: and it was&nbsp;<em>very</em>&nbsp;nice: so she set to work, and drank it up. And then&nbsp;<em>such</em>&nbsp;a curious thing happened to her! You’ll never guess what it was: so I shall have to tell you. She got smaller, and smaller, till at last she was just the size of a little doll!</p>
+<p>Then she said to herself “<em>Now</em>&nbsp;I’m the right size to get through the little door!” And away she ran. But, when she got there, the door was locked, and the key was on the top of the table, and she couldn’t reach it!&nbsp;<em>Wasn’t</em>&nbsp;it a pity she had locked up the door again?</p>
+<p>Well, the next thing she found was a little cake: and it had the words “EAT ME” marked on it. So of course she set to work and ate it up. And&nbsp;<em>then</em>&nbsp;what do you think happened to her? No, you’ll never guess! I shall have to tell you again.</p>
+<p>She grew, and she grew, and she grew. Taller than she was before! Taller than&nbsp;<em>any</em>&nbsp;child! Taller than any grown-up person! Taller,&nbsp;and taller, and taller! Just look at the picture, and you’ll&nbsp;<em>see</em>&nbsp;how tall she got!</p>
+<p>Which would&nbsp;<em>you</em>&nbsp;have liked the best, do you think, to be a little tiny Alice, no larger than a kitten, or a great tall Alice, with your head always knocking against the ceiling?</p>
+<h2 data-heading="III.  THE POOL OF TEARS.">III.  THE POOL OF TEARS.</h2>
+<p>Perhaps&nbsp;you think Alice must have been very much pleased, when she had eaten the little cake, to find herself growing so tremendously tall? Because of course it would be easy enough,&nbsp;<em>now</em>, to reach the little key off the glass table, and to open the little tiny door.</p>
+<p>Well, of course she could do&nbsp;<em>that</em>: but what good was it to get the door open, when she couldn’t get&nbsp;<em>through</em>? She was worse off than ever, poor thing! She could just manage, by putting her head down, close to the ground, to&nbsp;<em>look</em>&nbsp;through with one eye! But that was&nbsp;<em>all</em>&nbsp;she could do. No wonder the poor tall child sat down and cried as if her heart would break.</p>
+<p>So she cried, and she cried. And her tears ran down the middle of the hall, like a deep&nbsp;river. And very soon there was quite a large Pool of Tears, reaching half-way down the hall.</p>
+<p>And there she might have staid, till this very day, if the White Rabbit hadn’t happened to come through the hall, on his way to visit the Duchess. He was dressed up as grand as grand could be, and he had a pair of white kid gloves in one hand, and a little fan in the other hand: and he kept on muttering to himself “Oh, the Duchess, the Duchess! Oh,&nbsp;<em>won’t</em>&nbsp;she be savage if I’ve kept her waiting!”</p>
+<p>But he didn’t see Alice, you know. So, when she began to say “If you please, Sir——” her voice seemed to come from the top of the hall, because her head was so high up. And the Rabbit was dreadfully frightened: and he dropped the gloves and the fan, and ran away as hard as he could go.</p>
+<p>Then a&nbsp;<em>very</em>&nbsp;curious thing indeed happened. Alice took up the fan, and began to fan herself with it: and, lo and behold, she got quite small again, and, all in a minute, she was just about the size of a mouse!</p>
+<p>Now look at the picture, and you’ll soon guess what happened next. It looks just like the sea, doesn’t it? But it&nbsp;<em>really</em>&nbsp;is the Pool of Tears——all made of&nbsp;<em>Alice’s</em>&nbsp;tears, you know!</p>
+<p>And Alice has tumbled into the Pool: and the Mouse has tumbled in: and there they are, swimming about together.</p>
+<p>Doesn’t Alice look pretty, as she swims across the picture? You can just see her blue stockings, far away under the water.</p>
+<p>But why is the Mouse swimming away from Alice in such a hurry? Well, the reason is, that Alice began talking about cats and dogs: and a Mouse always&nbsp;<em>hates</em>&nbsp;talking about cats and dogs!</p>
+<p>Suppose&nbsp;<em>you</em>&nbsp;were swimming about, in a Pool of your own Tears: and suppose somebody began talking to&nbsp;<em>you</em>&nbsp;about lesson-books and bottles of medicine, wouldn’t&nbsp;<em>you</em>&nbsp;swim away as hard as you could go?</p>
+<h2 data-heading="IV.  THE CAUCUS-RACE.">IV.  THE CAUCUS-RACE.</h2>
+<p>When&nbsp;Alice and the Mouse had got out of the Pool of Tears, of course they were very wet: and so were a lot of other curious creatures, that had tumbled in as well. There was a Dodo (that’s the great bird, in front, leaning on a walking-stick); and a Duck; and a Lory (that’s just behind the Duck, looking over its head); and an Eaglet (that’s on the left-hand side of the Lory); and several others.</p>
+<p>Well, and so they didn’t know how in the world they were to get dry again. But the Dodo——who was a very wise bird——told them the right way was to have a Caucus-Race. And what do you think&nbsp;<em>that</em>&nbsp;was?</p>
+<p><em>You don’t know?</em>&nbsp;Well, you&nbsp;<em>are</em>&nbsp;an ignorant child! Now, be very attentive, and I’ll soon cure you of your ignorance!</p>
+<p>First, you must have a&nbsp;<em>racecourse</em>. It ought to be a&nbsp;<em>sort</em>&nbsp;of circle, but it doesn’t much matter&nbsp;<em>what</em>&nbsp;shape it is, so long as it goes a good way round, and joins on to itself again.</p>
+<p>Then, you must put all the&nbsp;<em>racers</em>&nbsp;on the course, here and there: it doesn’t matter&nbsp;<em>where</em>, so long as you don’t crowd them too much together.</p>
+<p>Then, you needn’t say “One, two, three, and away!” but let them all set off running just when they like, and leave off just when they like.</p>
+<p>So all these creatures, Alice and all, went on running round and round, till they were all quite dry again. And then the Dodo said&nbsp;<em>everybody</em>&nbsp;had won, and&nbsp;<em>everybody</em>&nbsp;must have prizes!</p>
+<p>Of course&nbsp;<em>Alice</em>&nbsp;had to give them their prizes. And she had nothing to give them but a few comfits she happened to have in her pocket. And there was just one a-piece, all round. And there was no prize for Alice!</p>
+<p>So what do you think they did? Alice had nothing left but her thimble. Now look at the picture, and you’ll see what happened.</p>
+<p>“Hand it over here!” said the Dodo.</p>
+<p>Then the Dodo took the thimble and handed it back to Alice, and said “We beg your acceptance of this elegant thimble!” And then all the other creatures cheered.</p>
+<p>Wasn’t&nbsp;<em>that</em>&nbsp;a curious sort of present to give her? Suppose they wanted to give&nbsp;<em>you</em>&nbsp;a birthday-present, would you rather they should go to your toy-cupboard, and pick out your nicest doll, and say “Here, my love, here’s a lovely birthday-present for you!” or would you like them to give you something&nbsp;<em>new</em>, something that&nbsp;<em>didn’t</em>&nbsp;belong to you before?</p>
+<h2 data-heading="V.  BILL, THE LIZARD.">V.  BILL, THE LIZARD.</h2>
+<p>Now&nbsp;I’m going to tell you about Alice’s Adventures in the White Rabbit’s house.</p>
+<p>Do you remember how the Rabbit dropped his gloves and his fan, when he was so frightened at hearing Alice’s voice, that seemed to come down from the sky? Well, of course he couldn’t go to visit the Duchess&nbsp;<em>without</em>&nbsp;his gloves and his fan: so, after a bit, he came back again to look for them.</p>
+<p>By this time the Dodo and all the other curious creatures had gone away, and Alice was wandering about all alone.</p>
+<p>So what do you think he did? Actually he thought she was his housemaid, and began&nbsp;ordering her about! “Mary Ann!” he said. “Go home this very minute, and fetch me a pair of gloves and a fan! Quick, now!”</p>
+<p>Perhaps he couldn’t see very clearly with his pink eyes: for I’m sure Alice doesn’t look very&nbsp;<em>like</em>&nbsp;a housemaid,&nbsp;<em>does</em>&nbsp;she? However she was a very good-natured little girl: so she wasn’t a bit offended, but ran off to the Rabbit’s house as quick as she could.</p>
+<p>It was lucky she found the door open: for, if she had had to ring, I suppose the&nbsp;<em>real</em>&nbsp;Mary Ann would have come to open the door: and she would&nbsp;<em>never</em>&nbsp;have let Alice come in. And I’m sure it was&nbsp;<em>very</em>&nbsp;lucky she didn’t meet the real Mary Ann, as she trotted upstairs: for I’m afraid she would have taken Alice for a robber!</p>
+<p>So at last she found her way into the Rabbit’s room: and there was a pair of gloves lying on the table, and she was just going to take them up and go away, when she happened to see a little bottle on the table. And of course it had the words “DRINK ME!” on the label. And of course Alice drank some!</p>
+<p>Well, I think that was&nbsp;<em>rather</em>&nbsp;lucky, too: don’t&nbsp;<em>you</em>? For, if she&nbsp;<em>hadn’t</em>&nbsp;drunk any, all this wonderful adventure, that I’m going to tell you about, wouldn’t have happened at all. And wouldn’t&nbsp;<em>that</em>&nbsp;have been a pity?</p>
+<p>You’re getting so used to Alice’s Adventures, that I daresay you can guess what happened next? If you can’t, I’ll tell you.</p>
+<p>She grew, and she grew, and she grew. And in a very short time the room was full of&nbsp;<em>Alice</em>: just in the same way as a jar is full of jam! There was&nbsp;<em>Alice</em>&nbsp;all the way up to the ceiling: and&nbsp;<em>Alice</em>&nbsp;in every corner of the room!</p>
+<p>The door opened inwards: so of course there wasn’t any room to open it: so when the Rabbit got tired of waiting, and came to fetch his gloves for himself, of course he couldn’t get in.</p>
+<p>So what do you think he did? (Now we come to the picture). He sent Bill, the Lizard, up to the roof of the house, and told him to get down the chimney. But Alice happened to have one of her feet in the fire-place: so, when she heard Bill coming down the chimney, she just gave a little tiny kick, and away went Bill, flying up into the sky!</p>
+<p>Poor little Bill! Don’t you pity him very much? How frightened he must have been!</p>
+<h2 data-heading="VI.  THE DEAR LITTLE PUPPY.">VI.  THE DEAR LITTLE PUPPY.</h2>
+<p>Well, it doesn’t look such a very&nbsp;<em>little</em>&nbsp;Puppy, does it? But then, you see, Alice had grown very small indeed: and&nbsp;<em>that’s</em>&nbsp;what makes the Puppy look so large. When Alice had eaten one of those little magic cakes, that she found in the White Rabbit’s house, it made her get quite small, directly, so that she could get through the door: or else she could&nbsp;<em>never</em>&nbsp;have got out of the house again. Wouldn’t&nbsp;<em>that</em>&nbsp;have been a pity? Because then she wouldn’t have dreamed all the other curious things that we’re going to read about.</p>
+<p>So it really&nbsp;<em>was</em>&nbsp;a&nbsp;<em>little</em>&nbsp;Puppy, you see. And isn’t it a little&nbsp;<em>pet</em>? And look at the way&nbsp;it’s barking at the little stick that Alice is holding out for it! You can see she was a&nbsp;<em>little</em>&nbsp;afraid of it, all the time, because she’s got behind that great thistle, for fear it should run over her. That would have been just about as bad, for&nbsp;<em>her</em>, as it would be for&nbsp;<em>you</em>&nbsp;to be run over by a waggon and four horses!</p>
+<p>Have you got a little pet puppy at&nbsp;<em>your</em>&nbsp;home? If you have, I hope you’re always kind to it, and give it nice things to eat.</p>
+<p>Once upon a time, I knew some little children, about as big as you; and they had a little pet dog of their own; and it was called&nbsp;<em>Dash</em>. And this is what they told me about its birthday-treat.</p>
+<p>“Do you know, one day we remembered it was Dash’s birthday that day. So we said ‘Let’s give Dash a nice birthday-treat, like what we have on&nbsp;<em>our</em>&nbsp;birthdays!’ So we thought and we thought ‘Now, what is it&nbsp;<em>we</em>&nbsp;like best of all, on&nbsp;<em>our</em>&nbsp;birthdays?’ And we thought and we thought. And at last we all called out together “Why, its&nbsp;<em>oatmeal-porridge</em>, of course!” So of&nbsp;course we thought Dash would be&nbsp;<em>quite</em>&nbsp;sure to like it very much, too.</p>
+<p>“So we went to the cook, and we got her to make a saucerful of nice oatmeal-porridge. And then we called Dash into the house, and we said ‘Now, Dash, you’re going to have your birthday-treat!’ We expected Dash would jump for joy: but it didn’t, one bit!</p>
+<p>“So we put the saucer down before it, and we said ‘Now, Dash, don’t be greedy! Eat it nicely, like a good dog!’</p>
+<p>“So Dash just tasted it with the tip of its tongue: and then it made, oh, such a horrid face! And then, do you know, it did&nbsp;<em>hate</em>&nbsp;it so, it wouldn’t eat a bit more of it! So we had to put it all down its throat with a spoon!”</p>
+<p>I wonder if Alice will give&nbsp;<em>this</em>&nbsp;little Puppy some porridge? I don’t think she&nbsp;<em>can</em>, because she hasn’t got any with her. I can’t see any saucer in the picture.</p>
+<h2 data-heading="VII. THE BLUE CATERPILLAR.">VII. THE BLUE CATERPILLAR.</h2>
+<p>Would&nbsp;you like to know what happened to Alice, after she had got away from the Puppy? It was far too large an animal, you know, for&nbsp;<em>her</em>&nbsp;to play with. (I don’t suppose&nbsp;<em>you</em>&nbsp;would much enjoy playing with a young Hippopotamus, would you? You would always be expecting to be crushed as flat as a pancake under its great heavy feet!) So Alice was very glad to run away, while it wasn’t looking.</p>
+<p>Well, she wandered up and down, and didn’t know what in the world to do, to make herself grow up to her right size again. Of course she knew that she had to eat or drink&nbsp;<em>something</em>: that was the regular rule, you know: but she couldn’t guess&nbsp;<em>what</em>&nbsp;thing.</p>
+<p>However, she soon came to a great mushroom, that was so tall that she couldn’t see over the top of it without standing on tip-toe. And what do you think she saw? Something that I’m sure&nbsp;<em>you</em>&nbsp;never talked to, in all your life!</p>
+<p>It was a large Blue Caterpillar.</p>
+<p>I’ll tell you, soon, what Alice and the Caterpillar talked about: but first let us have a good look at the picture.</p>
+<p>That curious thing, standing in front of the Caterpillar, is called a “hookah”: and it’s used for smoking. The smoke comes through that long tube, that winds round and round like a serpent.</p>
+<p>And do you see its long nose and chin? At least, they&nbsp;<em>look</em>&nbsp;exactly like a nose and chin, don’t they? But they really&nbsp;<em>are</em>&nbsp;two of its legs. You know a Caterpillar has got&nbsp;<em>quantities</em>&nbsp;of legs: you can see some more of them, further down.</p>
+<p>What a bother it must be to a Caterpillar, counting over such a lot of legs, every night, to make sure it hasn’t lost any of them!</p>
+<p>And&nbsp;<em>another</em>&nbsp;great bother must be, having to settle&nbsp;<em>which</em>&nbsp;leg it had better move first. I think, if&nbsp;<em>you</em>&nbsp;had forty or fifty legs, and if you wanted to go a walk, you’d be such a time in settling which leg to begin with, that you’d never go a walk at all!</p>
+<p>And what did Alice and the Caterpillar&nbsp;<em>talk</em>&nbsp;about, I wonder?</p>
+<p>Well, Alice told it how&nbsp;<em>very</em>&nbsp;confusing it was, being first one size and then another.</p>
+<p>And the Caterpillar asked her if she liked the size she was, just then.</p>
+<p>And Alice said she would like to be just a&nbsp;<em>little</em>&nbsp;bit larger——three inches was such a&nbsp;<em>wretched</em>&nbsp;height to be! (Just mark off three inches on the wall, about the length of your middle finger, and you’ll see what size she was.)</p>
+<p>And the Caterpillar told her one side of the mushroom would make her grow&nbsp;<em>taller</em>, and the other side would make her grow&nbsp;<em>shorter</em>.</p>
+<p>So Alice took two little bits of it with her to nibble, and managed to make herself quite a nice comfortable height, before she went on to visit the Duchess.</p>
+<h2 data-heading="VIII. THE PIG-BABY.">VIII. THE PIG-BABY.</h2>
+<p>Would&nbsp;you like to hear about Alice’s visit to the Duchess? It was a very interesting visit indeed, I can assure you.</p>
+<p>Of course she knocked at the door to begin with: but nobody came: so she had to open it for herself.</p>
+<p>Now, if you look at the picture, you’ll see exactly what Alice saw when she got inside.</p>
+<p>The door led right into the kitchen, you see. The Duchess sat in the middle of the room, nursing the Baby. The Baby was howling. The soup was boiling. The Cook was stirring the soup. The Cat——it was a&nbsp;<em>Cheshire</em>&nbsp;Cat——was grinning, as Cheshire Cats always do. All these things were happening just as Alice went in.</p>
+<p>The Duchess has a beautiful cap and gown, hasn’t she? But I’m afraid she&nbsp;<em>hasn’t</em>&nbsp;got a very beautiful&nbsp;<em>face</em>.</p>
+<p>The Baby——well, I daresay you’ve seen&nbsp;<em>several</em>&nbsp;nicer babies than&nbsp;<em>that</em>: and more good-tempered ones, too. However, take a good look at it, and we’ll see if you know it again, next time you meet it!</p>
+<p>The Cook——well, you&nbsp;<em>may</em>&nbsp;have seen nicer cooks, once or twice.</p>
+<p>But I’m nearly sure you’ve&nbsp;<em>never</em>&nbsp;seen a nicer&nbsp;<em>Cat</em>! Now&nbsp;<em>have</em>&nbsp;you? And&nbsp;<em>wouldn’t</em>&nbsp;you like to have a Cat of your own, just like that one, with lovely green eyes, and smiling so sweetly?</p>
+<p>The Duchess was very rude to Alice. And no wonder. Why, she even called her own&nbsp;<em>Baby</em>&nbsp;“Pig!” And it&nbsp;<em>wasn’t</em>&nbsp;a Pig,&nbsp;<em>was</em>&nbsp;it? And she ordered the Cook to chop off Alice’s head: though of course the Cook didn’t do it: and at last she threw the Baby at her! So Alice caught the Baby, and took it away with her: and I think that was about the best thing she could do.</p>
+<p>So she wandered away, through the wood, carrying the ugly little thing with her. And a great job it was to keep hold of it, it wriggled about so. But at last she found out that the&nbsp;<em>proper</em>&nbsp;way was, to keep tight hold of its left foot and its right ear.</p>
+<p>But don’t&nbsp;<em>you</em>&nbsp;try to hold on to a Baby like that, my Child! There are not many babies that&nbsp;<em>like</em>&nbsp;being nursed in&nbsp;<em>that</em>&nbsp;way!</p>
+<p>Well, and so the Baby kept grunting, and grunting so that Alice had to say to it, quite seriously, “If you’re going to turn into a&nbsp;<em>Pig</em>, my dear, I’ll have nothing more to do with you. Mind now!”</p>
+<p>And at last she looked down into its face, and what&nbsp;<em>do</em>&nbsp;you think had happened to it? Look at the picture, and see if you can guess.</p>
+<p>“Why,&nbsp;<em>that’s</em>&nbsp;not the Baby that Alice was nursing, is it?”</p>
+<p>Ah, I&nbsp;<em>knew</em>&nbsp;you wouldn’t know it again, though I told you to take a good look at it! Yes, it&nbsp;<em>is</em>&nbsp;the Baby. And it’s turned into a little&nbsp;<em>Pig</em>!</p>
+<p>So Alice put it down, and let it trot away into the wood. And she said to herself “It was a&nbsp;<em>very</em>&nbsp;ugly&nbsp;<em>Baby</em>: but it makes rather a handsome&nbsp;<em>Pig</em>, I think.”</p>
+<p>Don’t you think she was right?</p>
+<h2 data-heading="IX. THE CHESHIRE-CAT.">IX. THE CHESHIRE-CAT.</h2>
+<p>All&nbsp;alone, all alone! Poor Alice! No Baby, not even a&nbsp;<em>Pig</em>&nbsp;to keep her company!</p>
+<p>So you may be sure she was very glad indeed, when she saw the Cheshire-Cat, perched up in a tree, over her head.</p>
+<p>The Cat has a very nice smile, no doubt: but just look what a lot of teeth it’s got! Isn’t Alice just a&nbsp;<em>little</em>&nbsp;shy of it?</p>
+<p>Well, yes, a&nbsp;<em>little</em>. But then, it couldn’t help having teeth, you know: and it&nbsp;<em>could</em>&nbsp;have helped smiling, supposing it had been cross. So, on the whole, she was&nbsp;<em>glad</em>.</p>
+<p>Doesn’t Alice look very prim, holding her head so straight up, and with her hands behind her, just as if she were going to say her lessons to the Cat!</p>
+<p>And that reminds me. There’s a little lesson I want to teach&nbsp;<em>you</em>, while we’re looking at this picture of Alice and the Cat. Now don’t be in a bad temper about it, my dear Child! It’s a very&nbsp;<em>little</em>&nbsp;lesson indeed!</p>
+<p>Do you see that Fox-Glove growing close to the tree? And do you know why it’s called a&nbsp;<em>Fox</em>-Glove? Perhaps you&nbsp;think it’s got something to do with a Fox? No indeed!&nbsp;<em>Foxes</em>&nbsp;never wear Gloves!</p>
+<p>The right word is “<em>Folk’s</em>-Gloves.” Did you ever hear that Fairies used to be called “the good&nbsp;<em>Folk</em>”?</p>
+<p>Now we’ve finished the lesson, and we’ll wait a minute, till you’ve got your temper again.</p>
+<p>Well? Do you feel quite good-natured again? No temper-ache? No crossness about the corners of the mouth? Then we’ll go on.</p>
+<p>“Cheshire Puss!” said Alice. (<em>Wasn’t</em>&nbsp;that a pretty name for a Cat?) “Would you tell me which way I ought to go from here?”</p>
+<p>And so the Cheshire-Cat told her which way she ought to go, if she wanted to visit the Hatter, and which way to go, to visit the March Hare. “They’re both mad!” said the Cat.</p>
+<p>And then the Cat vanished away, just like the flame of a candle when it goes out!</p>
+<p>So Alice set off, to visit the March Hare. And as she went along, there was the Cat again! And she told it she didn’t&nbsp;<em>like</em>&nbsp;it coming and going so quickly.</p>
+<p>So this time the Cat vanished quite slowly, beginning with the tail, and ending with the grin. Wasn’t&nbsp;<em>that</em>&nbsp;a curious thing, a Grin without any Cat? Would you like to see one?</p>
+<p>If you turn up the corner of this leaf, you’ll have Alice looking at the Grin: and she doesn’t look a bit more frightened than when she was looking at the Cat,&nbsp;<em>does</em>&nbsp;she?</p>
+<h2 data-heading="X. THE MAD TEA-PARTY.">X. THE MAD TEA-PARTY.</h2>
+<p>This&nbsp;is the Mad Tea-Party. You see Alice had left the Cheshire-Cat, and had gone off to see the March Hare and the Hatter, as the Cheshire-Cat had advised her: and she found them having tea under a great tree, with a Dormouse sitting between them.</p>
+<p>There were only those three at the table, but there were quantities of tea-cups set all along it. You ca’n’t see all the table, you know, and even in the bit you&nbsp;<em>can</em>&nbsp;see there are nine cups, counting the one the March Hare has got in his hand.</p>
+<p>That’s the March Hare, with the long ears, and straws mixed up with his hair. The straws&nbsp;showed he was mad——I don’t know why. Never twist up straws among&nbsp;<em>your</em>&nbsp;hair, for fear people should think you’re mad!</p>
+<p>There was a nice green arm-chair at the end of the table, that looked as if it was just meant for Alice: so she went and sat down in it.</p>
+<p>Then she had quite a long talk with the March Hare and the Hatter. The Dormouse didn’t say much. You see it was fast asleep generally, and it only just woke up for a moment, now and then.</p>
+<p>As long as it was asleep, it was very useful to the March Hare and the Hatter, because it had a nice round soft head, just like a pillow: so they could put their elbows on it, and lean across it, and talk to each other quite comfortably. You wouldn’t like people to use&nbsp;<em>your</em>&nbsp;head for a pillow,&nbsp;<em>would</em>&nbsp;you? But if you were fast asleep, like the Dormouse, you wouldn’t feel it: so I suppose you wouldn’t care about it.</p>
+<p>I’m afraid they gave Alice&nbsp;<em>very</em>&nbsp;little to eat and drink. However, after a bit, she helped herself to some tea and bread-and-butter: only&nbsp;I don’t quite see where she&nbsp;<em>got</em>&nbsp;the bread-and-butter: and she had no plate for it. Nobody seems to have a plate except the Hatter. I believe the March Hare must have had one as well: because, when they all moved one place on (that was the rule at this curious tea-party), and Alice had to go into the place of the March Hare, she found he had just upset the milk-jug into his plate. So I suppose&nbsp;his plate and the milk-jug are hidden behind that large tea-pot.</p>
+<p>The Hatter used to carry about hats to sell: and even the one that he’s got on his head is meant to be sold. You see it’s got its price marked on it——a “10” and a “6”——that means “ten shillings and sixpence.” Wasn’t that a funny way of selling hats? And hasn’t he got a beautiful neck-tie on? Such a lovely yellow tie, with large red spots.</p>
+<p>He has just got up to say to Alice “Your hair wants cutting!” That was a rude thing to say,&nbsp;<em>wasn’t</em>&nbsp;it? And do you think her hair&nbsp;<em>does</em>&nbsp;want cutting?&nbsp;<em>I</em>&nbsp;think it’s a very pretty length——just the right length.</p>
+<h2 data-heading="XI.  THE QUEEN’S GARDEN.">XI.  THE QUEEN’S GARDEN.</h2>
+<p>This&nbsp;is a little bit of the beautiful garden I told you about. You see Alice had managed at last to get quite small, so that she could go through the little door. I suppose she was about as tall as a mouse, if it stood on its hind-legs: so of course this was a&nbsp;<em>very</em>&nbsp;tiny rose-tree: and these are&nbsp;<em>very</em>&nbsp;tiny gardeners.</p>
+<p>What funny little men they are! But&nbsp;<em>are</em>&nbsp;they men, do you think? I think they must be live cards, with just a head, and arms, and legs, so as to&nbsp;<em>look</em>&nbsp;like little men. And what&nbsp;<em>are</em>&nbsp;they doing with that red paint, I wonder? Well, you see, this is what they told Alice&nbsp;The Queen of Hearts wanted to have a&nbsp;<em>red</em>&nbsp;rose-tree just in that corner: and these poor little gardeners had made a great mistake, and had put in a&nbsp;<em>white</em>&nbsp;one instead: and they were so frightened about it, because the Queen was&nbsp;<em>sure</em>&nbsp;to be angry, and then she would order all their heads to be cut off!</p>
+<p>She was a dreadfully savage Queen, and that was the way she always did, when she was angry with people. “Off with their heads!” They didn’t&nbsp;<em>really</em>&nbsp;cut their heads off, you know: because nobody ever obeyed her: but that was what she always&nbsp;<em>said</em>.</p>
+<p><em>Now</em>&nbsp;ca’n’t you guess what the poor little gardeners are trying to do? They’re trying to paint the roses&nbsp;<em>red</em>, and they’re in a great hurry to get it done before the Queen comes. And then&nbsp;<em>perhaps</em>&nbsp;the Queen won’t find out it was a&nbsp;<em>white</em>&nbsp;rose-tree to begin with: and then&nbsp;<em>perhaps</em>&nbsp;the little men won’t get their heads cut off!</p>
+<p>You see there were&nbsp;<em>five</em>&nbsp;large white roses on the tree——such a job to get them all painted red! But they’ve got three and a half done, now, and if only they wouldn’t stop to talk——work away, little men,&nbsp;<em>do</em>&nbsp;work away! Or the Queen will be coming before it’s done! And if she finds any&nbsp;<em>white</em>&nbsp;roses on the tree, do you know what will happen? It will be “Off with their heads!” Oh, work away, my little men! Hurry, hurry!</p>
+<p><em>The Queen has come!</em>&nbsp;And&nbsp;<em>isn’t</em>&nbsp;she angry? Oh, my poor little Alice!</p>
+<h2 data-heading="XII. THE LOBSTER-QUADRILLE.">XII. THE LOBSTER-QUADRILLE.</h2>
+<p>Did&nbsp;you ever play at Croquet? There are large wooden balls, painted with different colours, that you have to roll about; and arches of wire, that you have to send them through; and great wooden mallets, with long handles, to knock the balls about with.</p>
+<p>Now look at the picture, and you’ll see that&nbsp;<em>Alice</em>&nbsp;has just been playing a Game of Croquet.</p>
+<p>“But she&nbsp;<em>couldn’t</em>&nbsp;play, with that great red what’s-its-name in her arms! Why, how could she hold the mallet?”</p>
+<p>Why, my dear Child, that great red what’s-its-name (its&nbsp;<em>real</em>&nbsp;name is “<em>a Flamingo</em>”)&nbsp;<em>is</em>&nbsp;the mallet! In this Croquet-Game, the balls were&nbsp;live&nbsp;<em>Hedge-hogs</em>——you know a hedge-hog can roll itself up into a ball?——and the mallets were live&nbsp;<em>Flamingos</em>!</p>
+<p>So Alice is just resting from the Game, for a minute, to have a chat with that dear old thing, the Duchess: and of course she keeps her mallet under her arm, so as not to lose it.</p>
+<p>“But I don’t think she&nbsp;<em>was</em>&nbsp;a dear old thing, one bit! To call her Baby a&nbsp;<em>Pig</em>, and to want to chop off Alice’s head!”</p>
+<p>Oh, that was only a joke, about chopping off Alice’s head: and as to the Baby——why, it&nbsp;<em>was</em>&nbsp;a Pig, you know! And just look at her&nbsp;<em>smile</em>! Why, it’s wider than all Alice’s head: and yet you can only see half of it!</p>
+<p>Well, they’d only had a&nbsp;<em>very</em>&nbsp;little chat, when the Queen came and took Alice away, to see the Gryphon and the Mock Turtle.</p>
+<p><em>You don’t know what a Gryphon is?</em>&nbsp;Well! Do you know&nbsp;<em>anything</em>? That’s the question. However, look at the picture. That creature with a red head, and red claws, and green scales, is the&nbsp;<em>Gryphon</em>. Now you know.</p>
+<p>And the other’s the&nbsp;<em>Mock Turtle</em>. It’s got a calf’s-head, because calf’s head is used to make&nbsp;<em>Mock Turtle Soup</em>. Now you know.</p>
+<p>“But what are they&nbsp;<em>doing</em>, going round and round Alice like that?”</p>
+<p>Why, I thought of&nbsp;<em>course</em>&nbsp;you’d know&nbsp;<em>that</em>! They’re dancing&nbsp;<em>a Lobster-Quadrille</em>.</p>
+<p>And next time&nbsp;<em>you</em>&nbsp;meet a Gryphon and a Mock Turtle, I daresay they’ll dance it for&nbsp;<em>you</em>, if you ask them prettily. Only don’t let them come&nbsp;<em>quite</em>&nbsp;close, or they’ll be treading on your toes, as they did on poor Alice’s.</p>
+<h2 data-heading="XIII. WHO STOLE THE TARTS?">XIII. WHO STOLE THE TARTS?</h2>
+<p>Did&nbsp;you ever hear how the Queen of Hearts made some tarts? And can you tell me what became of them?</p>
+<p>“Why, of&nbsp;<em>course</em>&nbsp;I can! Doesn’t the song tell all about it?</p>
+<p><em>The Queen of Hearts, she made some tarts:</em></p>
+<p><em>All on a summer day:</em></p>
+<p><em>The Knave of Hearts, he stole those tarts,</em></p>
+<p><em>And took them quite away!</em>”</p>
+<p>Well, yes, the&nbsp;<em>Song</em>&nbsp;says so. But it would never do to punish the poor Knave, just because there was a&nbsp;<em>Song</em>&nbsp;about him. They had to take&nbsp;him prisoner, and put chains on his wrists, and bring him before the King of Hearts, so that there might be a regular trial.</p>
+<p>Now, if you look at the big picture, at the beginning of this book, you’ll see what a grand thing a trial is, when the Judge is a King!</p>
+<p>The King is very grand,&nbsp;<em>isn’t</em>&nbsp;he? But he doesn’t look very&nbsp;<em>happy</em>. I think that big crown, on the top of his wig, must be&nbsp;<em>very</em>&nbsp;heavy and uncomfortable. But he had to wear them&nbsp;<em>both</em>, you see, so that people might know he was a Judge&nbsp;<em>and</em>&nbsp;a King.</p>
+<p>And&nbsp;<em>doesn’t</em>&nbsp;the Queen look cross? She can see the dish of tarts on the table, that she had taken such trouble to make. And she can see the bad Knave (do you see the chains hanging from his wrists?) that stole them away from her: so I don’t think it’s any wonder if she&nbsp;<em>does</em>&nbsp;feel a&nbsp;<em>little</em>&nbsp;cross.</p>
+<p>The White Rabbit is standing near the King, reading out the Song, to tell everybody what a bad Knave he is: and the Jury (you can just see two of them, up in the Jury-box,&nbsp;the Frog and the Duck) have to settle whether he’s “guilty” or “not guilty.”</p>
+<p>Now I’ll tell you about the accident that happened to Alice.</p>
+<p>You see, she was sitting close by the Jury-box: and she was called as a witness. You know what a “witness” is? A “witness” is a person who has seen the prisoner do whatever he’s accused of, or at any rate knows&nbsp;<em>something</em>&nbsp;that’s important in the trial.</p>
+<p>But&nbsp;<em>Alice</em>&nbsp;hadn’t seen the Queen&nbsp;<em>make</em>&nbsp;the tarts: and she hadn’t seen the Knave&nbsp;<em>take</em>&nbsp;the tarts: and, in fact, she didn’t know anything about it: so why in the world they wanted&nbsp;<em>her</em>&nbsp;to be a witness, I’m sure&nbsp;<em>I</em>&nbsp;ca’n’t tell you!</p>
+<p>Anyhow, they&nbsp;<em>did</em>&nbsp;want her. And the White Rabbit blew his big trumpet, and shouted out “Alice!” And so Alice jumped up in a great hurry. And then——</p>
+<p>And then what&nbsp;<em>do</em>&nbsp;you think happened? Why, her skirt caught against the Jury-box, and tipped it over, and all the poor little Jurors came tumbling out of it!</p>
+<p>Let’s try if we can make out all the twelve. You know there ought to be twelve to make up&nbsp;a Jury. I see the Frog, and the Dormouse, and the Rat and the Ferret, and the Hedgehog, and the Lizard, and the Bantam-Cock, and the Mole, and the Duck, and the Squirrel, and a screaming bird, with a long beak, just behind the Mole.</p>
+<p>But that only makes eleven: we must find one more creature.</p>
+<p>Oh, do you see a little white head, coming out behind the Mole, and just under the Duck’s beak? That makes up the twelve.</p>
+<p>Mr. Tenniel says the screaming bird is a&nbsp;<em>Storkling</em>&nbsp;(of course you know what&nbsp;<em>that</em>&nbsp;is?) and the little white head is a&nbsp;<em>Mouseling</em>. Isn’t it a little&nbsp;<em>darling</em>?</p>
+<p>Alice picked them all up again, very carefully, and I hope they weren’t&nbsp;<em>much</em>&nbsp;hurt!</p>
+<h2 data-heading="XIV. THE SHOWER OF CARDS.">XIV. THE SHOWER OF CARDS.</h2>
+<p>Oh&nbsp;dear, oh dear! What&nbsp;<em>is</em>&nbsp;it all about? And what’s happening to Alice?</p>
+<p>Well, I’ll tell you all about it, as well I can. The way the trial ended was this. The King wanted the Jury to settle whether the Knave of Hearts was&nbsp;<em>guilty</em>&nbsp;or&nbsp;<em>not guilty</em>——that means that they were to settle whether&nbsp;<em>he</em>&nbsp;had stolen the Tarts, or if somebody else had taken them. But the wicked&nbsp;<em>Queen</em>&nbsp;wanted to have his&nbsp;<em>punishment</em>&nbsp;settled, first of all. That wasn’t at all fair,&nbsp;<em>was</em>&nbsp;it? Because, you know, supposing he never&nbsp;<em>took</em>&nbsp;the Tarts, then of course he oughtn’t to be punished. Would&nbsp;<em>you</em>&nbsp;like to be punished for something you hadn’t done?</p>
+<p>So Alice said “Stuff and nonsense!”</p>
+<p>So the Queen said “Off with her head!” (Just what she always said, when she was angry.)</p>
+<p>So Alice said “Who cares for&nbsp;<em>you</em>? You’re nothing but a pack of cards!”</p>
+<p>So they were&nbsp;<em>all</em>&nbsp;very angry, and flew up into the air, and came tumbling down again, all over Alice, just like a shower of rain.</p>
+<p>And I think you’ll&nbsp;<em>never</em>&nbsp;guess what happened next. The next thing was, Alice woke up out of her curious dream. And she found that the cards were only some leaves off the tree, that the wind had blown down upon her face.</p>
+<p><em>Wouldn’t</em>&nbsp;it be a nice thing to have a curious dream, just like Alice?</p>
+<p>The best plan is this. First lie down under a tree, and wait till a White Rabbit runs by, with a watch in his hand: then shut your eyes, and pretend to be dear little Alice.</p>
+<p>Good-bye, Alice dear, good-bye!</p>
+<p>THE END.</p>
+<h2 data-heading="AN EASTER GREETING TO EVERY CHILD WHO LOVES “ALICE.”">AN EASTER GREETING TO EVERY CHILD WHO LOVES “ALICE.”</h2>
+<hr>
+<p>My dear Child,</p>
+<p><em>Please to fancy, if you can, that you are reading a real letter, from a real friend whom you have seen, and whose voice you can seem to yourself to hear, wishing you, as I do now with all my heart, a happy Easter.</em></p>
+<p><em>Do you know that delicious dreamy feeling, when one first wakes on a summer morning, with the twitter of birds in the air, and the fresh breeze coming in at the open window——when, lying lazily with eyes half shut, one sees as in a dream green boughs waving, or waters rippling in a golden light? It is a pleasure very near to sadness, bringing tears to one’s eyes like a beautiful&nbsp;picture or poem. And is not that a Mother’s gentle hand that undraws your curtains, and a Mother’s sweet voice that summons you to rise? To rise and forget, in the bright sunlight, the ugly dreams that frightened you so when all was dark——to rise and enjoy another happy day, first kneeling to thank that unseen Friend who sends you the beautiful sun?</em></p>
+<p><em>Are these strange words from a writer of such tales as “Alice”? And is this a strange letter to find in a book of nonsense? It may be so. Some perhaps may blame me for thus mixing together things grave and gay; others may smile and think it odd that any one should speak of solemn things at all, except in Church and on a Sunday: but I think——nay, I am sure——that some children will read this gently and lovingly, and in the spirit in which I have written it.</em></p>
+<p><em>For I do not believe God means us thus to divide life into two halves——to wear a grave face on Sunday, and to think it out-of-place to even so much as mention Him on a week-day. Do you think He cares to see only kneeling figures and to hear only tones of prayer——and that He does not also love to see the lambs leaping in the sunlight, and to hear the merry voices of the children, as they roll among the hay? Surely their innocent laughter is as sweet in His ears as the grandest anthem that ever rolled up from the “dim religious light” of some solemn cathedral?</em></p>
+<p><em>And if I have written anything to add to those stores of innocent and healthy amusement that are laid up in books for the&nbsp;children I love so well, it is surely something I may hope to look back upon without shame and sorrow (as how much of life must then be recalled!) when my turn comes to walk through the valley of shadows.</em></p>
+<p><em>This Easter sun will rise on you, dear child, “feeling your life in every limb,” and eager to rush out into the fresh morning air——and many an Easter-day will come and go, before it finds you feeble and grey-headed, creeping wearily out to bask once more in the sunlight——but it is good, even now, to think sometimes of that great morning when “the Sun of righteousness” shall “arise with healing in his wings.”</em></p>
+<p><em>Surely your gladness need not be the less for the thought that you will one day see a brighter dawn than this——when lovelier sights will meet your eyes than any waving trees or rippling waters——when angel-hands shall undraw your curtains, and sweeter tones than ever loving Mother breathed shall wake you to a new and glorious day——and when all the sadness, and the sin, that darkened life on this little earth, shall be forgotten like the dreams of a night that is past!</em></p>
+<p><em>Your affectionate Friend</em>,</p>
+<p><em>LEWIS CARROLL</em>.</p>
+<h2 data-heading="CHRISTMAS GREETINGS.">CHRISTMAS GREETINGS.</h2>
+<p>(<em>FROM A FAIRY TO A CHILD.</em>)</p>
+<p>*Lady&nbsp;dear, if Fairies may<br>
+For a moment lay aside<br>
+Cunning tricks and elfish play,<br>
+’Tis at happy Christmas-tide.</p>
+<p><em>We have heard the children say—<br>
+Gentle children, whom we love—<br>
+Long ago, on Christmas Day,<br>
+Came a message from above.</em></p>
+<p><em>Still, as Christmas-tide comes round,<br>
+They remember it again—<br>
+Echo still the joyful sound<br>
+“Peace on earth, good-will to men!”</em></p>
+<p><em>Yet the hearts must childlike be<br>
+Where such heavenly guests abide:<br>
+Unto children, in their glee,<br>
+All the year is Christmas-tide!</em></p>
+<p><em>Thus, forgetting tricks and play<br>
+For a moment, Lady dear,<br>
+We would wish you, if we may,<br>
+Merry Christmas, glad New Year!</em></p>
+<p><em>LEWIS CARROLL</em></p>
+    </body>
+</html>

@@ -1,0 +1,1529 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Chehov</title>
+        <meta charset='utf-8'/>
+        <style>
+ .ͼ1.cm-editor.cm-focused {outline: 1px dotted #212121;}
+.ͼ1.cm-editor {position: relative !important; box-sizing: border-box; display: flex !important; flex-direction: column;}
+.ͼ1 .cm-scroller {display: flex !important; align-items: flex-start !important; font-family: monospace; line-height: 1.4; height: 100%; overflow-x: auto; position: relative; z-index: 0;}
+.ͼ1 .cm-content[contenteditable=true] {-webkit-user-modify: read-write-plaintext-only;}
+.ͼ1 .cm-content {margin: 0; flex-grow: 2; flex-shrink: 0; display: block; white-space: pre; word-wrap: normal; box-sizing: border-box; padding: 4px 0; outline: none;}
+.ͼ1 .cm-lineWrapping {white-space: pre-wrap; white-space: break-spaces; word-break: break-word; overflow-wrap: anywhere; flex-shrink: 1;}
+.ͼ2 .cm-content {caret-color: black;}
+.ͼ3 .cm-content {caret-color: white;}
+.ͼ1 .cm-line {display: block; padding: 0 2px 0 6px;}
+.ͼ1 .cm-layer > * {position: absolute;}
+.ͼ1 .cm-layer {contain: size style;}
+.ͼ2 .cm-selectionBackground {background: #d9d9d9;}
+.ͼ3 .cm-selectionBackground {background: #222;}
+.ͼ2.cm-focused .cm-selectionBackground {background: #d7d4f0;}
+.ͼ3.cm-focused .cm-selectionBackground {background: #233;}
+.ͼ1 .cm-cursorLayer {pointer-events: none;}
+.ͼ1.cm-focused .cm-cursorLayer {animation: steps(1) cm-blink 1.2s infinite;}
+@keyframes cm-blink {50% {opacity: 0;}}
+@keyframes cm-blink2 {50% {opacity: 0;}}
+.ͼ1 .cm-cursor, .ͼ1 .cm-dropCursor {border-left: 1.2px solid black; margin-left: -0.6px; pointer-events: none;}
+.ͼ1 .cm-cursor {display: none;}
+.ͼ3 .cm-cursor {border-left-color: #444;}
+.ͼ1.cm-focused .cm-cursor {display: block;}
+.ͼ2 .cm-activeLine {background-color: #cceeff44;}
+.ͼ3 .cm-activeLine {background-color: #99eeff33;}
+.ͼ2 .cm-specialChar {color: red;}
+.ͼ3 .cm-specialChar {color: #f78;}
+.ͼ1 .cm-gutters {flex-shrink: 0; display: flex; height: 100%; box-sizing: border-box; left: 0; z-index: 200;}
+.ͼ2 .cm-gutters {background-color: #f5f5f5; color: #6c6c6c; border-right: 1px solid #ddd;}
+.ͼ3 .cm-gutters {background-color: #333338; color: #ccc;}
+.ͼ1 .cm-gutter {display: flex !important; flex-direction: column; flex-shrink: 0; box-sizing: border-box; min-height: 100%; overflow: hidden;}
+.ͼ1 .cm-gutterElement {box-sizing: border-box;}
+.ͼ1 .cm-lineNumbers .cm-gutterElement {padding: 0 3px 0 5px; min-width: 20px; text-align: right; white-space: nowrap;}
+.ͼ2 .cm-activeLineGutter {background-color: #e2f2ff;}
+.ͼ3 .cm-activeLineGutter {background-color: #222227;}
+.ͼ1 .cm-panels {box-sizing: border-box; position: sticky; left: 0; right: 0;}
+.ͼ2 .cm-panels {background-color: #f5f5f5; color: black;}
+.ͼ2 .cm-panels-top {border-bottom: 1px solid #ddd;}
+.ͼ2 .cm-panels-bottom {border-top: 1px solid #ddd;}
+.ͼ3 .cm-panels {background-color: #333338; color: white;}
+.ͼ1 .cm-tab {display: inline-block; overflow: hidden; vertical-align: bottom;}
+.ͼ1 .cm-widgetBuffer {vertical-align: text-top; height: 1em; width: 0; display: inline;}
+.ͼ1 .cm-placeholder {color: #888; display: inline-block; vertical-align: top;}
+.ͼ1 .cm-highlightSpace:before {content: attr(data-display); position: absolute; pointer-events: none; color: #888;}
+.ͼ1 .cm-highlightTab {background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="20"><path stroke="%23888" stroke-width="1" fill="none" d="M1 10H196L190 5M190 15L196 10M197 4L197 16"/></svg>'); background-size: auto 100%; background-position: right 90%; background-repeat: no-repeat;}
+.ͼ1 .cm-trailingSpace {background-color: #ff332255;}
+.ͼ1 .cm-button {vertical-align: middle; color: inherit; font-size: 70%; padding: .2em 1em; border-radius: 1px;}
+.ͼ2 .cm-button:active {background-image: linear-gradient(#b4b4b4, #d0d3d6);}
+.ͼ2 .cm-button {background-image: linear-gradient(#eff1f5, #d9d9df); border: 1px solid #888;}
+.ͼ3 .cm-button:active {background-image: linear-gradient(#111, #333);}
+.ͼ3 .cm-button {background-image: linear-gradient(#393939, #111); border: 1px solid #888;}
+.ͼ1 .cm-textfield {vertical-align: middle; color: inherit; font-size: 70%; border: 1px solid silver; padding: .2em .5em;}
+.ͼ2 .cm-textfield {background-color: white;}
+.ͼ3 .cm-textfield {border: 1px solid #555; background-color: inherit;}
+.ͼ1 .cm-foldPlaceholder {background-color: #eee; border: 1px solid #ddd; color: #888; border-radius: .2em; margin: 0 1px; padding: 0 1px; cursor: pointer;}
+.ͼ1 .cm-foldGutter span {padding: 0 1px; cursor: pointer;}
+.ͼq .cm-content {white-space: pre-wrap; word-break: break-word; overflow-wrap: anywhere; padding: 0;}
+ .custom-frames-view {
+	padding: 0 !important;
+	overflow: hidden !important;
+}
+
+.custom-frames-view-file {
+	padding: 0;
+	overflow: auto;
+}
+
+.custom-frames-frame {
+	width: 100%;
+	height: 100%;
+	border: none;
+	background-color: white;
+	background-clip: content-box;
+}
+
+.custom-frames-add {
+	margin-left: 10px;
+}
+
+.custom-frames-show {
+	margin-bottom: 18px;
+}
+
+.custom-frames-support {
+	max-width: 50%;
+	width: 400px;
+	height: auto;
+}
+ .setting-item.ex-setting-item {
+    border-top: unset;
+    padding-top: 0;
+}
+
+*[hidden] {
+    display: none;
+} 
+.pandoc-plugin-error {
+    color: red;
+}
+ /* 
+ *  Originally copied from dist/tippy.css in the tippy.js package.
+ *
+ *  Modifications were made to implement compatibility with
+ *  Obsidian themes.   
+ */
+
+.theme-light {
+  --link-tooltip-background: #333;
+  --link-tooltip-text: #fff;
+}
+
+.theme-dark {
+  --link-tooltip-background: #ccc;
+  --link-tooltip-text: #000;
+}
+
+.tippy-box[data-animation="fade"][data-state="hidden"] {
+  opacity: 0;
+}
+
+[data-tippy-root] {
+  max-width: calc(100vw - 10px);
+}
+
+.tippy-box {
+  position: relative;
+  background-color: var(--link-tooltip-background);
+  color: var(--link-tooltip-text);
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.4;
+  outline: 0;
+  transition-property: transform, visibility, opacity;
+}
+
+.tippy-box[data-placement^="top"] > .tippy-arrow {
+  bottom: 0;
+}
+
+.tippy-box[data-placement^="top"] > .tippy-arrow:before {
+  bottom: -7px;
+  left: 0;
+  border-width: 8px 8px 0;
+  border-top-color: initial;
+  transform-origin: center top;
+}
+
+.tippy-box[data-placement^="bottom"] > .tippy-arrow {
+  top: 0;
+}
+
+.tippy-box[data-placement^="bottom"] > .tippy-arrow:before {
+  top: -7px;
+  left: 0;
+  border-width: 0 8px 8px;
+  border-bottom-color: initial;
+  transform-origin: center bottom;
+}
+
+.tippy-box[data-placement^="left"] > .tippy-arrow {
+  right: 0;
+}
+
+.tippy-box[data-placement^="left"] > .tippy-arrow:before {
+  border-width: 8px 0 8px 8px;
+  border-left-color: initial;
+  right: -7px;
+  transform-origin: center left;
+}
+
+.tippy-box[data-placement^="right"] > .tippy-arrow {
+  left: 0;
+}
+
+.tippy-box[data-placement^="right"] > .tippy-arrow:before {
+  left: -7px;
+  border-width: 8px 8px 8px 0;
+  border-right-color: initial;
+  transform-origin: center right;
+}
+
+.tippy-box[data-inertia][data-state="visible"] {
+  transition-timing-function: cubic-bezier(0.54, 1.5, 0.38, 1.11);
+}
+
+.tippy-arrow {
+  width: 16px;
+  height: 16px;
+  color: var(--link-tooltip-background);
+}
+
+.tippy-arrow:before {
+  content: "";
+  position: absolute;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.tippy-content {
+  position: relative;
+  padding: 10px 15px;
+  z-index: 1;
+  overflow-wrap: anywhere;
+}
+ 
+
+#cMenuToolbarModalBar {
+  width: auto;
+  height: auto;
+  padding: 3px;
+  display: grid;
+  user-select: none;
+  border-radius: 6px;
+  position: absolute;
+  transition: 100ms cubic-bezier(0.92, -0.53, 0.65, 1.21);
+  -webkit-transition: 100ms cubic-bezier(0.92, -0.53, 0.65, 1.21);
+  min-width: fit-content;
+  justify-content: space-around;
+  z-index: var(--layer-status-bar);
+  box-shadow: 0px 3px 32px rgb(31 38 135 / 15%);
+  border: 1px solid var(--background-modifier-border);
+}
+#cMenuToolbarModalBar.cMenuToolbarFlex {
+  display: flex;
+}
+#cMenuToolbarModalBar.cMenuToolbarFlex :is(.cMenuToolbarCommandItem,button[class^=cMenuToolbarCommandsubItem]) {
+  min-width: 20px;
+}
+#cMenuToolbarModalBar .cMenuToolbarCommandItem {
+  margin: 2px;
+  border: none;
+  display: flex;
+  cursor: pointer;
+  padding: 5px 6px;
+  box-shadow: none;
+  margin-left: 3px;
+  margin-right: 3px;
+  position: relative;
+  border-radius: 3px;
+  font-size: initial !important;
+  background-color: var(--background-primary-alt);
+  height: auto;
+}
+
+#cMenuToolbarModalBar button.cMenuToolbarCommandItem:hover {
+  background-color: var(--background-secondary);
+}
+
+/* #cMenuToolbarModalBar button.cMenuToolbarCommandItem svg {
+  width: 1.3em;
+  height: 1.3em;
+} */
+
+/*----------------------------------------------------------------
+cMenuToolbar SETTINGS BUTTONS
+----------------------------------------------------------------*/
+
+.modal.mod-settings
+  button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsButton.cMenuToolbarSettingsButtonAdd,
+button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsButton.cMenuToolbarSettingsButtonAdd {
+  background-color: var(--interactive-accent);
+}
+
+.modal.mod-settings
+  button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsButton.cMenuToolbarSettingsButtonDelete,
+button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsButton.cMenuToolbarSettingsButtonDelete {
+  background-color: #989cab;
+}
+
+.modal.mod-settings
+  button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsButton.cMenuToolbarSettingsButtonRefresh,
+button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsButton.cMenuToolbarSettingsButtonRefresh {
+  background-color: var(--text-accent);
+}
+
+button.cMenuToolbarSettingsButton {
+  padding: 4px 14px;
+  border-radius: 6px;
+}
+
+
+
+/*----------------------------------------------------------------
+cMenuToolbar SETTING ITEMS
+----------------------------------------------------------------*/
+.setting-item.cMenuToolbarCommandItem:first-child {
+  padding-top: 18px;
+}
+
+.cMenuToolbarCommandItem {
+  cursor: grab;
+  padding: 18px 0 18px 0;
+}
+
+.sortable-fallback {
+  cursor: grabbing;
+  box-shadow: 0px 3px 32px rgb(31 38 135 / 15%);
+}
+
+.sortable-grab {
+  cursor: grabbing !important;
+}
+
+.sortable-ghost {
+  opacity: 0.4;
+  cursor: grabbing;
+}
+
+.sortable-chosen {
+  cursor: grabbing;
+  padding: 18px 0 18px 18px;
+  background-color: var(--background-primary);
+}
+
+.sortable-drag {
+  cursor: grabbing;
+  box-shadow: 0px 3px 32px rgb(31 38 135 / 15%);
+}
+
+.cMenuToolbarSettingsTabsContainer {
+  border-top: 1px solid var(--background-modifier-border);
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+/*----------------------------------------------------------------
+cMenuToolbar CLASS CHANGES
+----------------------------------------------------------------*/
+
+#cMenuToolbarModalBar.cMenuToolbarDefaultAesthetic
+{
+border: 1px solid var(--background-modifier-border);
+}
+#cMenuToolbarModalBar.cMenuToolbarDefaultAesthetic:not(.top) :is(.cMenuToolbarCommandItem,button[class^=cMenuToolbarCommandsubItem])
+{
+min-height:28px ;
+}
+#cMenuToolbarModalBar.cMenuToolbarDefaultAesthetic:not(.top) button[class^=cMenuToolbarCommandsubItem]  {
+  margin: auto;
+  padding: 6px;
+box-shadow: none;
+ border: none;
+  background-color: transparent;
+
+  place-items: center;
+
+}
+.cMenuToolbarDefaultAesthetic {
+background-color: var(--background-primary);
+}
+
+
+#cMenuToolbarModalBar.cMenuToolbarGlassAesthetic ,#cMenuToolbarModalBar.cMenuToolbarGlassAesthetic ~#cMenuToolbarPopoverBar {
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow:none;
+  background-color: transparent;
+}
+
+  #cMenuToolbarModalBar.cMenuToolbarGlassAesthetic:not(.top) button[class^=cMenuToolbarCommandsubItem]  {
+    margin: auto;
+    padding: 0px;
+    box-shadow: none;
+    border: none;
+    display: flex;
+    border-radius: 3px;
+  font-size: 10px;
+    margin-right: 0px;
+    position: relative;
+    background-color: transparent;
+    place-items: center;
+    clear: both;
+    max-width: 28px;
+    max-height: 23px;
+  }
+
+/*----------------------------------------------------------------
+cMenuToolbar ICONS
+----------------------------------------------------------------*/
+
+.cMenuToolbarIconPick {
+  line-height: normal;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.cMenuToolbarIconPick svg {
+  width: 17px;
+  height: 17px;
+}
+
+/*----------------------------------------------------------------
+cMenuToolbar STATUS BAR MENU
+----------------------------------------------------------------*/
+
+.cMenuToolbar-statusbar-menu {
+  text-align: center;
+  width: 200px;
+}
+
+
+.cMenuToolbar-statusbar-menu .menu-item {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.cMenuToolbar-statusbar-menu .menu-item.settings-item {
+  font-size: 12px;
+  text-align: center;
+  line-height: 1;
+  border-radius: 5px;
+  height: auto;
+  padding: 8px 5px 0px 5px;
+  margin: 0 auto;
+  width: fit-content;
+  color: var(--text-faint);
+}
+
+.cMenuToolbar-statusbar-menu .menu-item.settings-item .menu-item-title {
+  text-align: center;
+}
+
+.cMenuToolbar-statusbar-menu .menu-item:hover,
+.cMenuToolbar-statusbar-menu .menu-item .selected:hover,
+.cMenuToolbar-statusbar-menu .menu-item.selected:not(.is-disabled):not(.is-label) {
+  background-color: transparent;
+}
+
+.cMenuToolbar-statusbar-menu .menu-item-title {
+  margin-right: 10px;
+}
+
+.cMenuToolbar-statusbar-menu .slider {
+  width: 100%;
+}
+
+.cMenuToolbar-statusbar-menu .menu-item.buttonitem {
+  padding-top: 10px;
+  padding-bottom: 4px;
+  height: fit-content;
+}
+
+.cMenuToolbar-statusbar-menu .menu-item.buttonitem button.cMenuToolbarSettingsButton {
+  margin: 0;
+}
+
+.cMenuToolbar-statusbar-menu  .menu-item-icon svg  path   {
+    fill: var(--text-muted);
+}
+.cMenuToolbar-statusbar-menu  .menu-item-icon svg    {
+  stroke: var(--text-muted);
+}
+.cMenuToolbar-statusbar-menu  > .menu-item:is([data-section="ButtonAdd"]) {
+    display: inline-flex;
+    padding: 0px 0px 5px 5px;
+    align-items: center;
+}
+
+.cMenuToolbar-statusbar-menu  > .menu-item {
+  display: inline-flex;
+  padding: 0px 0px 5px 5px;
+  align-items: center;
+}
+.cMenuToolbar-statusbar-menu  > .menu-item:is([data-section="ButtonAdd"]) .menu-item-icon{
+  text-align: center;
+}
+ 
+
+/*----------------------------------------------------------------
+cMenuToolbar STATUS BAR BUTTONS
+----------------------------------------------------------------*/
+
+.cMenuToolbar-statusbar-button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.cMenuToolbar-statusbar-button svg {
+  display: flex;
+  width: 1.3em;
+  height: 1.3em;
+}
+
+/*----------------------------------------------------------------
+cMenuToolbar SUPPORT
+---------------------------------------------`-------------------*/
+
+.cDonationSection {
+  width: 60%;
+  height: 50vh;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--text-normal);
+}
+ 
+
+#cMenuToolbarModalBar{
+  align-items: center;
+  justify-items: center;  
+  border: none;
+  backdrop-filter: none;
+}
+
+#cMenuToolbarModalBar.cMenuToolbarGlassAesthetic .cMenuToolbarCommandItem{
+	
+background-color:#ffffff00;
+}	
+
+#cMenuToolbarModalBar.cMenuToolbarGlassAesthetic [class^=cMenuToolbarCommandsubItem]{
+	
+  background-color:#ffffff00;
+  }	
+#cMenuToolbarModalBar .cMenuToolbarCommandItem{
+  justify-content: center;
+  align-content: center;
+  place-items: center;
+
+  }	
+  
+
+/*  #cMenuToolbarModalBar.cMenuToolbarTinyAesthetic .cMenuToolbarCommandItem svg{
+     width: 1em;
+     height: 1em;
+ } */
+
+
+ 
+div.modal-container.cMenuToolbar-Modal:not(.changename)  .modal-bg
+{
+  background-color:transparent!important;
+  backdrop-filter: none!important;
+position: relative;
+}
+.modal-container.cMenuToolbar-Modal:not(.changename)  .modal {
+  padding: 10px 30px;
+  min-width: 130px;
+  position: absolute;
+  bottom: 2em;
+  right: 0.5em;
+  background-color: rgb(var(--mono-rgb-0),0.8);
+  backdrop-filter: blur(4px);
+}
+.modal-container.cMenuToolbar-Modal  .modal-title
+{
+  display: none;
+}
+
+.modal-container.cMenuToolbar-Modal  .modal  input[type='range'] {
+  width: 90%;
+ 
+}
+body.theme-dark .modal-container.cMenuToolbar-Modal  .modal  input[type='range'] {
+ background-color: var(--background-secondary);
+}
+/*tiny 样式*/
+#cMenuToolbarModalBar.cMenuToolbarTinyAesthetic {
+  align-items: center;
+  justify-items: center;  
+  border: none;
+  backdrop-filter: none;
+  background-color: var(--background-primary);
+  box-shadow: 0 3px 6px -4px rgb(0 0 0 / 12%), 0 6px 16px 0 rgb(0 0 0 / 8%), 0 9px 28px 8px rgb(0 0 0 / 5%);
+ }
+
+
+ #cMenuToolbarModalBar.cMenuToolbarTinyAesthetic .cMenuToolbarCommandItem {
+  margin: auto;
+  padding: 0px;
+  box-shadow: none;
+  margin-left: 0px;
+  margin-right: 0px;
+  position: relative; 
+  background-color:transparent;
+    backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+}
+ #cMenuToolbarModalBar .cMenuToolbarCommandItem {
+   margin: auto;
+
+   padding: 0px;
+   box-shadow: none;
+
+   margin-left: 4px;
+   margin-right: 0px;
+   position: relative; 
+   background-color:transparent;
+     backdrop-filter: blur(8px);
+   -webkit-backdrop-filter: blur(8px);
+ 
+ }
+
+
+:is(#cMenuToolbarModalBar).cMenuToolbarTinyAesthetic:not(.top) button[class^=cMenuToolbarCommandsubItem]  {
+  margin: auto;
+  padding: 0px;
+  box-shadow: none;
+  border: none;
+  display: flex;
+  border-radius: 3px;
+font-size: 10px;
+  margin-right: 0px;
+  position: relative;
+  background-color: transparent;
+ 
+  place-items: center;
+  clear: both;
+  max-width: 28px;
+  max-height: 23px;
+   
+}
+ button[class^=cMenuToolbarCommandsubItem]::after {
+
+  content:  url("data:image/svg+xml,%3Csvg width='4' height='4' version='1.1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024' enable-background='new 0 0 1024 1024' xml:space='preserve'%3E%3Cpath fill='%23666' d='M13.24 80.11 l461.75 560.8 q14.56 16.02 36.41 16.02 q21.85 0 36.42 -16.02 l463.2 -560.8 q10.2 -10.19 12.38 -24.75 q2.18 -14.57 -3.64 -27.68 q-5.82 -13.11 -18.21 -20.39 q-12.39 -7.29 -26.95 -7.29 l-924.95 0 q-20.4 0 -34.23 13.11 q-13.84 13.11 -15.29 32.77 q-1.46 19.66 13.11 34.23 Z'/%3E%3C/svg%3E");
+  
+ margin-left: 1px;
+ margin-top:6px;
+
+}
+
+
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar)  button[class^=cMenuToolbarCommandsubItem]  >.subitem
+{
+    background-color: var(--background-primary);
+    border-radius: 4px;
+    border: 1px solid var(--background-modifier-border);
+    box-shadow: 0 2px 8px var(--background-modifier-box-shadow);
+    position: absolute;
+    z-index: var(--layer-menu);
+    user-select: none;
+    transform: translateY(90%) translateX(0%);
+    -webkit-transform: translateY(90%) translateX(0%);
+    display: flex;
+    
+}
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button[class^=cMenuToolbarCommandsubItem]  >.subitem svg
+{
+  max-width: 1.3em;
+  max-height: 1.3em;
+}
+
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button[class^=cMenuToolbarCommandsubItem]  >.subitem button.menu-item
+{
+    background-color: var(--background-secondary);
+    line-height:2em;
+    display: inline-flex;
+    box-shadow: none;
+    align-items: center;
+}
+
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button[class^=cMenuToolbarCommandsubItem]  >.subitem button:hover
+{
+    background-color: var(--interactive-hover);
+    box-shadow: var(--input-shadow-hover);
+}
+
+
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button[class^=cMenuToolbarCommandsubItem]  >.subitem .menu-item {
+  margin-left: 2px;
+  margin-right: 2px;
+  padding: 0px 4px 0px 4px;
+}
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button[class^=cMenuToolbarCommandsubItem] >.subitem  {
+ 
+ visibility:hidden;
+ transition: all 0.3s linear;
+ -webkit-transition:  all 0.3s linear;
+}
+
+
+
+
+
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar)  button.cMenuToolbarCommandsubItem-font-color .triangle-icon
+{
+  position: absolute;
+  margin-left: 18px;
+  bottom: 8%;
+background-size: 4px 4px;
+background-image: url("data:image/svg+xml,%3Csvg width='4' height='4' version='1.1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024' enable-background='new 0 0 1024 1024' xml:space='preserve'%3E%3Cpath fill='%23666' d='M13.24 80.11 l461.75 560.8 q14.56 16.02 36.41 16.02 q21.85 0 36.42 -16.02 l463.2 -560.8 q10.2 -10.19 12.38 -24.75 q2.18 -14.57 -3.64 -27.68 q-5.82 -13.11 -18.21 -20.39 q-12.39 -7.29 -26.95 -7.29 l-924.95 0 q-20.4 0 -34.23 13.11 q-13.84 13.11 -15.29 32.77 q-1.46 19.66 13.11 34.23 Z'/%3E%3C/svg%3E");
+
+    width: 16px;
+    height: 20px;
+    background-position: center;
+ 
+    background-repeat: no-repeat;
+    min-width: unset;
+    border-left: 2px solid  transparent;
+ }
+
+ :is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar):not(.top) button.cMenuToolbarCommandsubItem-font-color .triangle-icon 
+ {
+  margin-left: 16px;
+  
+ }
+ 
+ :is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar):not(.top) button.cMenuToolbarCommandsubItem-font-color .x-color-picker-wrapper
+{
+  top:auto;
+bottom:calc(100% + 1.8em);
+}
+
+ 
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button.cMenuToolbarCommandsubItem-font-color .subitem
+{
+  visibility:hidden;
+  transition: all 0.3s linear;
+  -webkit-transition:  all 0.3s linear;
+ }
+
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button.cMenuToolbarCommandsubItem-font-color .subitem:hover  {
+  visibility:visible;
+  transition: all 0.3s linear;
+  -webkit-transition:  all 0.3s linear;
+ }
+
+
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button[class^=cMenuToolbarCommandsubItem]:hover >.subitem  {
+ 
+  visibility:visible;
+ transition: all 0.3s linear;
+ -webkit-transition:  all 0.3s linear;
+}
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button[class^=cMenuToolbarCommandsubItem] >.subitem:hover  {
+  visibility:visible;
+  transition: all 0.3s linear;
+  -webkit-transition:  all 0.3s linear;
+ }
+
+ .cMenuToolbarCommandsubItem-font-color button
+{
+ background-color: transparent;
+}
+.cMenuToolbarCommandsubItem-font-color button:hover
+{
+  background-color: var(--interactive-normal);
+}
+
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbarCommandItem .setting-item-info {
+  
+  flex:30%;
+margin: 0;
+}
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbarSettingsTabsContainer_sub
+ {
+  border-left: 1px solid var(--background-modifier-border);
+  flex-flow: column;
+  min-height: 45px;
+  display: flex;
+  padding: 0;
+ margin-left: 10px;
+  flex: 70%;
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbarSettingsTabsContainer_sub:empty
+ {
+ border: 2px dashed rgba(var(--interactive-accent-rgb),0.5);
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbarSettingsTabsContainer_sub:empty::before {
+  content: "✖️Drag it here";
+  margin: auto;
+  font-size: 12px;
+}
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbarSettingsTabsContainer_sub .cMenuToolbarCommandItem
+ {
+  flex: auto;
+  margin-left: 2em;;
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbarSettingsTabsContainer_sub .setting-item-control
+ {
+flex: 0;
+ }
+
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbarCommandSubItem>.setting-item-info
+ {
+ flex: 70px;
+ }
+ .cMenuToolbarCommandSubItem>.setting-item-control
+{
+
+  justify-content: flex-start;
+}
+ .modal.mod-settings button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsButton.cMenuToolbarSettingsButtonaddsub {
+   background-color: var(--background-secondary-alt);
+}
+
+
+.setting-item button.cMenuToolbarSettingsIcon{
+  display: block;
+  transform: translateX(-30%); 
+  -webkit-transform: translateX(-30%); 
+}
+.setting-item button.cMenuToolbarSettingsIcon:empty::before{
+ content: "❗";
+}
+.setting-item button.cMenuToolbarSettingsIcon svg{
+  max-width: 1.5em;
+  max-height: 1.5em;
+}
+.modal.mod-settings button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsIcon:hover{
+  background-color: var(--interactive-accent-hover);
+}
+.modal.mod-settings button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsIcon
+{
+  background-color: transparent;
+  box-shadow: 0 1px 1px 0px var(--background-modifier-border);
+}
+@media screen and (min-width: 781px){
+  .cMenuToolbar-Modal .wideInputPromptInputEl {
+  width: 40rem;
+  max-width: 100%;
+  height: 20rem;
+  background-color: rgb(var(--mono-rgb-0),0.8);
+}
+}
+
+.cMenuToolbarcustomIcon svg {
+  max-width: 1.3em;
+  max-height: 1.3em;
+  display: flex;
+}
+
+
+.cMenuToolbarSettingsButton  svg {
+  max-width: 1.3em;
+  max-height: 1.3em;
+  display: flex;
+}
+
+.cmdr-page-header
+{
+  min-width: 1em;;
+}
+
+
+.x-color-picker-wrapper {
+  right: 0px;
+  top:1.8em;
+  min-width: 1px;
+  padding: 10px;
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14);
+  position: absolute;
+  width: fit-content;
+  font-weight: 400;
+  font-family: Source Sans Pro,sans-serif;
+  border-radius: 4px;
+  background-color: var(--background-primary);
+}
+.markdown-source-view.mod-cm6 .x-color-picker-wrapper table.x-color-picker-table#x-color-picker-table {
+  width: unset;
+  border-collapse: separate;
+  border-spacing: 6px;
+  margin: auto !important;
+}
+.x-color-picker-wrapper table.x-color-picker-table#x-backgroundcolor-picker-table {
+  width: unset;
+  border-collapse: separate;
+  border-spacing: 6px;
+  margin: auto !important;
+}
+.x-color-picker-wrapper .x-color-picker-table th {
+  border: 0;
+  text-align: left;
+  font-weight: normal;
+  background: transparent !important;
+  color: #718096;
+}
+.x-color-picker-wrapper #x-color-picker-table td {
+  font-size: 1px;
+  padding: 9px;
+  cursor: pointer;
+  border: solid 1px var(--background-modifier-border);
+}
+.x-color-picker-wrapper #x-backgroundcolor-picker-table td {
+  font-size: 1px;
+  border-radius: 50%;
+  padding: 9px;
+  cursor: pointer;
+  border: solid 1px var(--background-modifier-border);
+}
+.x-color-picker-wrapper .x-color-picker-table tr td:hover {
+  box-shadow: 0 3px 6px -4px rgba(0,0,0,.12),0 6px 16px 0 rgba(0,0,0,.08),0 9px 28px 8px rgba(0,0,0,.05);
+}
+.x-color-picker-wrapper tbody>tr:hover
+{
+background-color:transparent !important;
+}
+/**top**/
+#cMenuToolbarModalBar.top {
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    height: 38px;
+    align-items: center;
+    transition: all 0.2s linear;
+    -webkit-transition:  all 0.2s linear;
+    
+}
+
+#cMenuToolbarModalBar.top :is(.cMenuToolbarCommandItem,button[class^=cMenuToolbarCommandsubItem]):not(.cMenuToolbar-Divider-Line)
+{
+font-size: 10px;
+  margin-right: 0px;
+  clear: both;  
+  opacity: 1;
+  flex-shrink:0;
+    height: 26px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+    border-radius: 2px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s linear;
+    -webkit-transition:  all 0.2s linear;
+
+ 
+
+    
+}
+#cMenuToolbarModalBar.top button.cMenuToolbarCommandItem:hover {
+  background-color: var(--interactive-hover);
+}
+
+ 
+
+#cMenuToolbarPopoverBar{
+  
+    padding: 0 10px;
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    z-index: var(--layer-status-bar); 
+    background-color: var(--background-primary);
+      background-clip: padding-box;
+      border-radius: 6px;
+      box-shadow: 0 3px 6px -4px rgba(0,0,0,.12),0 6px 16px 0 rgba(0,0,0,.08),0 9px 28px 8px rgba(0,0,0,.05);
+      box-shadow: 0 0 8px rgba(0,0,0,.15)\9;
+      margin-left: auto;
+      margin-right: 25px;
+      transition: all 0.1s linear;
+      -webkit-transition:  all 0.1s linear;
+      margin-top: 32px;
+    position: absolute;
+    right: 0;
+}
+
+#cMenuToolbarPopoverBar :is(.cMenuToolbarCommandItem,button[class^=cMenuToolbarCommandsubItem]){
+
+    height: 26px;
+margin-left: 4px;
+    font-size: 10px;
+  margin-right: 4px;
+  clear: both;  
+  opacity: 1;
+  flex-shrink:0;
+    height: 26px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+    border-radius: 2px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s linear;
+    -webkit-transition:  all 0.2s linear;
+   
+}
+#cMenuToolbarPopoverBar :is(.cMenuToolbarCommandItem,button[class^=cMenuToolbarCommandsubItem]):hover{
+  background-color: var(--interactive-hover);
+}
+
+#cMenuToolbarModalBar .more-menu {
+  display: flex;
+  align-items: center;
+  box-shadow:none;
+  margin-left: 4px;
+  border-left: 1px inset var( --background-modifier-form-field);
+  height: 24px;
+  opacity: 0.8;
+}
+ /*Divider-Line**/
+
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbar-Divider-Line
+ {
+  padding: 0;
+   
+  line-height: 0px;
+  border-left: 200px solid rgba(var(--interactive-accent-rgb),0.05);
+  border-right: 200px solid rgba(var(--interactive-accent-rgb),0.05);
+  text-align: center;
+  background: rgba(var(--interactive-accent-rgb),0.2);
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbar-Divider-Line .setting-item-control button:not(:last-child)
+ {
+   display: none;
+ }
+
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbar-Divider-Line .setting-item-info 
+ {
+  flex: 1 1 auto;
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbar-Divider-Line .setting-item-control 
+ {
+  justify-content: flex-start;
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbar-Divider-Line .setting-item-info .setting-item-name
+ {
+  font-size: 12px;
+ text-align: right;
+
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbar-Divider-Line .setting-item-control button:last-child
+ {
+  padding: 0;
+   background-color: transparent!important;
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbar-Divider-Line .setting-item-control button:last-child svg
+ {
+   display: none;
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbar-Divider-Line .setting-item-control button:last-child::before
+ {
+  content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M511.674077 66.707284c-246.52265 0-446.347744 199.835328-446.347744 446.347744s199.825095 446.356954 446.347744 446.356954c246.50423 0 446.348768-199.844537 446.348768-446.356954S758.177284 66.707284 511.674077 66.707284zM744.967424 667.159826c21.8701 21.8701 21.8701 57.310264 0 79.199807-21.8701 21.851681-57.30924 21.851681-79.198783-0.019443L511.674077 592.264045 357.56007 746.359632c-21.8701 21.8701-57.30924 21.851681-79.17934-0.019443s-21.8701-57.290821 0-79.160921L432.493713 513.065262 278.379707 358.950232c-21.8701-21.86089-21.8701-57.328683 0-79.18855 21.8701-21.87931 57.30924-21.87931 79.17934 0l154.114007 154.104797 154.095587-154.104797c21.889543-21.87931 57.32766-21.87931 79.198783-0.010233 21.8701 21.8701 21.8701 57.348126 0 79.207993L590.89128 513.065262 744.967424 667.159826z' fill='%23666666'/%3E%3C/svg%3E");
+ }
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button.cMenuToolbarCommandItem.cMenuToolbar-Divider-Line
+{
+  min-width:unset;
+    flex-shrink: 0;
+    display: inline-flex;
+    width: 0.6px;
+    background-color: var(--background-modifier-border);
+    height: 22px;
+    opacity: 0.8;
+    margin: 0;
+}
+.theme-dark :is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar)  button.cMenuToolbarCommandItem.cMenuToolbar-Divider-Line
+{
+
+    background-color: #4f4f5188;
+ 
+}
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar)  button.cMenuToolbarCommandItem.cMenuToolbar-Divider-Line svg
+{
+ display: none;
+}
+
+.workspace-tabs.mod-stacked  .workspace-tab-header:not(.is-active) + .workspace-leaf #cMenuToolbarModalBar
+{
+  opacity: 0;
+}
+ undefined
+</style>
+    </head>
+    <body>
+<h2 data-heading="Алиса в волшебной стране">Алиса в волшебной стране</h2>
+<p>Перевод: Михаил Павлович Чехов, 1913</p>
+<p>Алисе надоело сидеть с сестрой на бережку и ничего не делать; раз или два она хотела было заглянуть к сестре в книгу, но там не было разговоров, а книга без разговоров казалась ей неинтересной. Тогда она стала думать, не пойти ли ей нарвать анютиных глазок и не сплести ли из них венок? Но было очень жарко, не хотелось вставать и клонило ко сну. Как вдруг мимо Алисы пробежал белый кролик с красными глазами.</p>
+<p>– Ай-ай! – сказал Кролик на человеческом языке. – Уже поздно; я, кажется, уже опоздал!</p>
+<p>Почему-то Алисе не показалось тогда странным именно то, что он говорил, как человек, хотя впоследствии она долго думала об этом и всякий раз удивлялась, что он мог говорить. Но когда он вынул из жилетного кармана часы и, взглянув на них, поспешил дальше, то Алиса вскочила от удивления на ноги: она никогда ещё не видела, чтобы кролики носили жилетки и сюртуки, да ещё имели при себе и часы. Сгорая от удивления, она побежала за ним через поле и вдруг увидела, что он юркнул в норку под живой изгородью. Не подумав даже о том, как она выберется потом обратно, Алиса тоже юркнула вслед за ним.</p>
+<p>Норка круто спускалась вниз и так неожиданно, что Алиса сорвалась и полетела куда-то вниз, точно в глубокий колодец.</p>
+<p>Был ли этот колодец очень глубок или же сама Алиса летела очень медленно, но только она успела рассмотреть по пути всё. Сначала было очень темно, а затем стали проясняться стенки норы. Все они были уставлены книжными полками и шкафами с посудой; висели и географические карты и картины. Пролетая мимо одной из полок, Алиса схватила с неё банку, на которой было написано: «Апельсинный мармелад», но, к сожалению, банка оказалась пустой. Алиса хотела было бросить её, но побоялась разбить ею голову кому-нибудь, находящемуся внизу.</p>
+<p>Она всё падала, падала и падала и стала наконец терять терпение.</p>
+<p>«Да, когда же наконец я долечу до места? – подумала она. – Пролетела уже целые вёрсты и скоро, вероятно, попаду в самый центр земли!..»</p>
+<p>Она совершенно не знала, что такое «центр Земли», но всегда любила говорить самые серьёзные слова.</p>
+<p>«А что если я пролечу так сквозь весь земной шар? – продолжала она думать. – Как интересно тогда будет увидеть там людей, которые ходят вверх ногами и вниз головой!».</p>
+<p>И она всё ещё продолжала падать, так что ей даже захотелось спать.</p>
+<p>«Накормят ли без меня кошку Дину? – вздохнула она. – Дадут ли ей молока? Как жаль, что её нет здесь со мной!.. А, впрочем, чтобы она здесь ела в воздухе? Ведь в воздухе мыши не водятся! (Тут Алисе ещё больше захотелось спать.) Разве вот летучих мышей? Но едят ли кошки летучих мышей?.. Едят ли кошки летучих мышей?..»</p>
+<p>Почему-то, уже совсем сонная, она стала повторять эту фразу и вдруг незаметно для самой себя сбилась и стала повторять её так:</p>
+<p>– Едят ли летучие мыши кошек?</p>
+<p>Глаза её почти уже совсем слиплись, она совсем уже готова была заснуть, как вдруг – хлоп! – и она упала наконец на дно, выстланное сухими листьями и травой.</p>
+<p>Она нисколько не ушиблась и тотчас же вскочила на ноги и огляделась. Всё над нею утопало в темноте, перед нею же виднелся новый проход, и она увидела в нём белого кролика, который всё ещё важно шествовал куда-то вперёд. Она тотчас же украдкой побежала за ним.</p>
+<p>– О, как я опоздал! – проговорил он и повернул за угол.</p>
+<p>Она тоже повернула вслед за ним, но он уже куда-то исчез. Сделав два шага вперёд, она очутилась в длинном низком зале, освещённом целыми рядами ламп, висевших у потолка. Вокруг зала было множество дверей и все они были заперты. Потолкавшись и не находя выхода, она грустно вернулась на середину зала и стала придумывать способ, как ей выбраться на волю. Случайно она наткнулась на трёхногий столик, весь сделанный из стекла. На нём оказался маленький золотой ключик. Алиса подумала, что он от какой-нибудь из дверей, но или ключик был мал, или же скважины у дверей были велики, – но только ключик не пришёлся ни к одной из них. В стороне спускался занавес. Алиса отдёрнула его и увидела за ним маленькую дверцу. Она всунула в неё ключик, и он оказался как раз от неё. Дверца была всего в пол-аршина высотой.</p>
+<p>Алиса отворила её и увидела узенький коридорчик, шириной не больше мышиной норки. Она нагнулась и заглянула в него. И вдруг она увидела сквозь него прелестный сад, лучше и красивее которого не видела никогда. Ей ужасно захотелось побывать в нём, выбраться из этого зала и побегать по его аллеям и около цветов и фонтанов, но она была так велика, а норка была так мала и узка, что она не могла бы даже просунуть в неё голову.</p>
+<p>– Как жаль, что я не умею сжиматься, как губка! – с горечью проговорила Алиса и вернулась обратно в зал.</p>
+<p>И вдруг она увидела на стеклянном столике маленькую бутылочку, которой раньше на нём не было. На бутылочке висела этикетка, на которой было написано: «Выпей меня!».</p>
+<p>Но Алиса не была так легкомысленна, чтобы выпить всё то, что ей предлагалось.</p>
+<p>«А что если это яд?» – подумала она.</p>
+<p>Но искушение было велико и на бутылочке не было написано слово «Яд», – и она попробовала. Жидкость оказалась очень вкусной: от неё пахло лимонной коркой, корицей, гвоздикой и ванилью. Тогда она выпила её всю.</p>
+<p>– Что за диковина? – удивилась она. – Я, кажется, начинаю сжиматься, как губка!</p>
+<p>И, действительно, не прошло и минуты, как вдруг она сделалась такой маленькой, как мышка. Она обрадовалась, что теперь сможет пролезть сквозь норку в сад. Но увы! Оказалось, что она позабыла золотой ключик на стеклянном столе, а дверцу она нечаянно опять заперла. Как быть? Что оставалось делать? Как теперь достать ключик со стола? Она хотела было заползти на стол по ножке, но ножка оказалась очень скользкой. Она скоро утомилась, выбилась из сил, вползая на неё, села на пол и стала плакать.</p>
+<p>Как вдруг взгляд Алисы упал на маленькую коробочку, лежавшую под столом, на которой было написано: «Съешь меня!». Она открыла её, и в ней оказался пряник.</p>
+<p>«Если я съем его, – решила она, – и стану от этого больше, то достану со стола ключик, а если сделаюсь ещё меньше, то всё равно пролезу сквозь щель под дверью и попаду в сад».</p>
+<p>И она съела пряник.</p>
+<p>Вдруг, к удивлению своему, она в один момент выросла так, что ударилась головой о потолок, и увидела, что её ноги оказались вдруг где-то далеко-далеко внизу.</p>
+<p>– Прощайте, мои бедные ножки! – крикнула она им. – Увидимся ли мы с вами когда-нибудь опять?</p>
+<p>И она нагнулась, взяла со стола золотой ключик и направилась снова к двери. Но пролезть сквозь дырочку теперь было для неё уже невозможно. Она опять села на пол и снова стала плакать. Слёзы ручьями лились у неё из глаз, и скоро вокруг неё образовалось из слёз целое озеро, аршина в полтора глубиной, которое всё поднималось и поднималось, по мере того как Алиса плакала, и поднялось наконец до половины стены.</p>
+<p>Через какое-то время она услышала чьи-то шаги, раздававшиеся вдалеке, и быстро осушила глаза, чтобы увидеть, кто это идёт. Это возвращался уже Белый кролик, отлично одетый, с парой белых перчаток в одной лапке и с веером в другой. Он по-прежнему куда-то спешил и бормотал:</p>
+<p>– Ах, Трефовая дама, Трефовая дама! Она ужасно обидится, что я заставил её так долго ждать!</p>
+<p>Алиса была в таком отчаянии, что готова была обратиться к каждому; поэтому когда её слезы протекли вниз сквозь щели пола и стало сухо и кролик проходил мимо неё, то она обратилась к нему тихим, робким голосом:</p>
+<p>– Милостивый государь, простите, что я вас побеспокою...</p>
+<p>Кролик вздрогнул, уронил от страха перчатки и веер и со всех ног удрал куда-то в темноту.</p>
+<p>Алиса подняла с пола перчатки и веер, и так как под землёй было довольно жарко, то она стала обмахиваться веером.</p>
+<p>– Какие всё странные вещи стали со мной случаться, – проговорила она. – Давно ли я была я, а теперь вдруг стала совсем какая-то чужая. А ну-ка постараюсь проверить, действительно ли это я или вместо меня кто-нибудь другой? Я отлично знаю таблицу умножения. Если я отвечу верно, то это я, а если неверно, то не я. Четырежды четыре – сколько? – Двадцать пять! А дважды два? – Тринадцать! А сколько будет семью семь? – Тридцать два!</p>
+<p>И вдруг, испугавшись своих ответов, Алиса стала горько плакать.</p>
+<p>– Попробую проверить себя на баснях, – решила она. – Быть может, я басни отвечу лучше!</p>
+<p>И она стала декламировать:</p>
+<p><strong>Очкишка и марты.</strong><br>
+_Старишка в мартости слаза глабами стала!.._1</p>
+<p>– Что за чепуха! – воскликнула она. – И этого не знаю!.. Значит, я действительно уже не я, а кто-то другой!</p>
+<p>Она испугалась и захотела домой.</p>
+<p>– Хоть бы кто-нибудь заглянул сюда ко мне! – вздохнула она. – Мне так надоело здесь быть одной!</p>
+<p>Она и не заметила в своём горе, как вертя в руке перчатки, она нечаянно надела одну из них себе на руку.</p>
+<p>«Как это могло случиться? – подумала Алиса. – Ведь я была большая, а перчатка маленькая. Неужели я опять сделалась крошкой?»</p>
+<p>Она подошла к стеклянному столику и измерила по нему свой рост. Оказалось, что она была теперь ростом всего 2 фута и всё ещё продолжала уменьшаться. Скоро она поняла, что причиной такого быстрого её уменьшения был веер. Боясь, как бы не уменьшиться настолько, что её нельзя будет увидеть даже и в микроскоп, она быстро отшвырнула веер от себя подальше.</p>
+<p>– Едва догадалась! – обрадовалась она. – А то было бы уже поздно и я обратилась бы в ничто. Так пустое место вместо меня и оказалось бы. А теперь можно уже побежать и в сад!</p>
+<p>Она со всех ног побежала к маленькой дверце, но – увы! – дверца опять оказалась запертой и золотой ключик всё ещё оставался на стеклянном столике.</p>
+<p>– Опять беда! – воскликнула она. – Стало ещё хуже, чем было. А ведь я сделалась ещё меньше, чем была раньше!</p>
+<p>Не успела она произнести эти слова, как вдруг поскользнулась и – бух! – упала по самый подбородок в какую-то солёную воду. Первой её мыслью было, что она упала в море и плывёт к другому берегу.</p>
+<p>«Ну что ж, – подумала она, – я могу вернуться домой и по железной дороге!»</p>
+<p>Однако она скоро убедилась, что провалилась в то самое озеро из слёз, которое наплакала сама же, когда была великаншей.</p>
+<p>Алиса стала барахтаться в нём, стараясь выбраться из него на берег.</p>
+<p>«Это мне в наказание за то, – подумала она, – что я такая рёва!»</p>
+<p>Послышался всплеск воды, и кто-то ещё другой забарахтался в озере. Чтобы лучше увидеть, кто это такой, Алиса поплыла в том направлении, откуда доносился всплеск, и скоро увидела, что это была мышь, которая не знала, как спастись, и тоже плыла куда-то в сторону.</p>
+<p>«Разве заговорить с ней?» – подумала Алиса.</p>
+<p>И, набравшись храбрости, она подплыла к ней и спросила:</p>
+<p>– Не знаешь ли ты, Мышка, как выбраться из этого озера? Я уже устала в нём барахтаться!</p>
+<p>Мышь пытливо, как показалось Алисе, оглядела её, подмигнула ей одним глазом, но не ответила ничего.</p>
+<p>«Быть может, она не говорит по-нашему, – подумала Алиса, – и не училась иностранным языкам».</p>
+<p>Мышь испугалась её и поплыла от неё прочь, так сильно загребая лапками, что по озеру пошли волны и поднялась даже целая буря. Алиса стала её умолять:</p>
+<p>– Милая Мышка, – сказала она, – вернись ко мне! Я не буду разговаривать с тобой ни о кошках, ни о собаках, которых ты, вероятно, боишься, а просто хочу тебя попросить: выведи меня на берег!</p>
+<p>Услышав эти её слова, Мышь повернулась и поплыла к ней.</p>
+<p>– Пойдём на берег! – сказала она Алисе.</p>
+<p>И это было как раз кстати, потому что озеро стало наполняться всевозможными птицами и животными, которые случайно стали в него попадать. Тут оказались и утка, и удивительная птица додо, и попугай, и орлёнок, и всякого рода другие потешные создания. Алиса поплыла за мышкой вперёд, и все эти звери последовали за ней.</p>
+<p>Вся эта весёлая компания барахтавшихся птиц и зверей вылезла наконец из солёной воды и собралась кучкой на берегу этого озера слёз. Но все они были мокры и надо было просушиться. Тогда мышь, которая, по-видимому, пользовалась среди этих животных особым влиянием, стало страшно сухим тоном рассказывать сухие по содержанию истории. Но никто от этого не обсох.</p>
+<p>Решили пробежаться наперегонки, но так от этого вспотели, что стали ещё мокрее.</p>
+<p>– Знаете что? – предложила Алиса. – Давайте просто сидеть так, ничего не делая, на берегу и ждать, когда всё высохнет на нас само собой. А чтобы не было скучно, я расскажу вам сейчас историю о моих кошке Дине и собаке фокстерьере!</p>
+<p>Как только звери услышали слово «кошка» и «собака», так тотчас же бросились бежать сломя голову, кто куда мог.</p>
+<p>– Спасайся, кто может! – закричали они в ужасе.</p>
+<p>Алиса осталась одна. Ей стало скучно.</p>
+<p>Как вдруг послышались чьи-то деликатные шаги лапками. Алиса подумала, что это, может быть, возвращается к ней обратно Мышь, и обернулась. Но это оказался Белый Кролик, важно выступавший на задних лапках и с беспокойством оглядывавшийся так, точно что-нибудь потерял.</p>
+<p>– Трефовая дама, Трефовая дама! – бормотал он. – Что-то она теперь со мной сделает! О, мои лапки, о, моя шкурка и усики! Теперь она прикажет меня казнить! Это так же верно, как и то, что дважды два пять. И где только я мог потерять их?</p>
+<p>Алиса тотчас же догадалась, что он искал веер и перчатки, и стала озираться по сторонам, чтобы найти их и отдать их ему, но они куда-то исчезли. Всё утонуло в озере слёз: и веер, и перчатки, и большой зал, и стеклянный столик, и маленькая дверь.</p>
+<p>Заметив Алису, безнадёжно оглядывавшуюся кругом, он кликнул её к себе.</p>
+<p>– Что ты тут делаешь, Мэри-Анна? – строго обратился он к ней. – Беги сейчас же домой и принеси мне пару перчаток и веер! Живо!</p>
+<p>Алиса так испугалась этого его тона, что тотчас же со всех ног помчалась по указанному направлению, даже и не успев Кролику объяснить, что он принял её за кого-то другого.</p>
+<p>«Должно быть, он не узнал меня, – подумала она по пути, – и принял меня за свою горничную! Воображаю, как он удивится потом, когда узнает, кто я такая! Я постараюсь принести ему веер и перчатки, если только мне удастся их найти!»</p>
+<p>Скоро она пришла к маленькому домику, на двери которого была прибита медная дощечка с надписью: «Белый кролик». Не позвонив и не постучавшись, Алиса вошла в него, боясь, как бы не встретиться с настоящей Мэри-Анной и не быть изгнанной ею из домика раньше, чем она найдёт в нём веер и перчатки.</p>
+<p>«Как интересно быть на посылках у Кролика», – подумала Алиса, входя в маленькую, опрятную комнатку со столом у окна и с веером и двумя или тремя парами перчаток...</p>
+<p>...и только собралась выходить из домика, как взгляд её упал на маленькую бутылочку, стоявшую около зеркала. На ней не было уже никакой надписи, и Алиса поднесла её к губам и приготовилась пить.</p>
+<p>– Наверное, от этого случится что-нибудь интересное! – сказала она себе. – Всякий раз, как я здесь чего-нибудь попью или поем, непременно происходит что-нибудь забавное. Как бы мне хотелось сделаться опять большой, а то надоело уже быть всё маленькой да маленькой!</p>
+<p>Так и случилось – и ещё раньше, чем она предполагала. Не успела она выпить и половины бутылочки, как её голова уже упёрлась в самый потолок домика. Боясь, как бы не треснул у неё череп или не сломалась шея, Алиса тотчас же перестала пить. Но это не помогло. Она росла всё больше и больше и уже вынуждена была скорчиться в домике и стать на колени. Но места всё-таки не хватало. Тогда она упёрлась локтем одной руки в дверь, а другую закинула себе за голову. Но не помогло и это. Она всё ещё продолжала расти, и теперь оставалось только просунуть ногу в камин и высунуть всю руку из окна.</p>
+<p>– Всё пропало! – решила Алиса. – Теперь я уж ничего больше не могу поделать. Интересно знать, что будет со мной дальше?</p>
+<p>К счастью, действие жидкости в эту минуту прекратилось и Алиса перестала расти далее; однако было очень неудобно сидеть в домике, скорчившись в три погибели, и так как никто не приходил на помощь, то Алиса почувствовала себя глубоко несчастной.</p>
+<p>– Дома гораздо интереснее! – сказала она. – Там никто не делается сразу ни маленьким, ни большим и никто не служит на посылках у разных кроликов и мышей!</p>
+<p>Как вдруг со двора послышался чей-то голос.</p>
+<p>– Мэри-Анна! Мэри-Анна! – кричал кто-то. – Когда же ты подашь мне перчатки?</p>
+<p>Затем послышались шаги мягких лапок.</p>
+<p>Алиса поняла, что это пришёл за ней Кролик, и задрожала так, что вместе с нею затрясся и весь домик. Она позабыла, что была теперь в тысячу раз больше Кролика могла уже не бояться его.</p>
+<p>Кролик подошёл к двери и попробовал было её отворить; но так как дверь отворялась внутрь, а Алиса подпёрла её локтем, то, конечно, его попытки оказались тщетными. Алиса слышала, как он сказал:</p>
+<p>– Что же делать? Придётся влезать в окно!</p>
+<p>«Ну это едва ли возможно!» – подумала Алиса и, выждав, когда Кролик подошёл к самому окну, быстро высунула из него руку и сделала пальцами хватательное движение.</p>
+<p>Она ничего не схватила, но услышала звук чьего-то падения, жалобный писк и звон разбитых стёкол, из которого она могла судить, что Кролик от страха упал прямо на парниковые рамы или влетел в чьё-нибудь чужое окно.</p>
+<p>– Пат! Пат! – вдруг послышался сердитый голос Кролика. – Где ты?</p>
+<p>И кто-то ответил:</p>
+<p>– Я здесь, я здесь, сударь! Я рою ямку для яблок!</p>
+<p>Алиса ещё ни разу не слышала этого голоса.</p>
+<p>– Рою ямку для яблок! – сердито передразнил его Кролик. – Бросай всё и идти скорее сюда! Помоги мне вылезти отсюда!</p>
+<p>Послышался новый звук битого стекла.</p>
+<p>Кто-то побежал к Кролику на помощь.</p>
+<p>– Но что это торчит из окна, Пат? – снова спросил Кролик.</p>
+<p>– Это чья-то рука, сударь! – послышался ответ.</p>
+<p>– Рука! Ах ты, гусь лапчатый! Да разве такие большие руки бывают?! Посмотри, она заняла собой всё окно!</p>
+<p>– Что делать, сударь, но это – действительно рука!</p>
+<p>– Но ей здесь совсем не место, этой руке! Пойди и убери её!</p>
+<p>Затем последовало долгое молчание и до Алисы долетел только шёпот: «Боюсь, сударь!.. Что-то не очень нравится мне, сударь, эта рука!». На что Кролик строго крикнул:</p>
+<p>– Иди и делай, что тебе приказывают, трус ты эдакий!</p>
+<p>Тогда Алиса высунула руку ещё больше и опять сделала хватательное движение пальцами. Послышались уже два испуганных визга, и уже кто-то вдвоём снова упал на стёкла.</p>
+<p>«Да сколько у них парниковых рам! – подумала Алиса. – Интересно знать, что они будут делать дальше? Хорошо было бы, если бы они вытащили меня из этого домика, а то уже надоело в нём сидеть!»</p>
+<p>Некоторое время продолжалось глубокое молчание. Наконец послышался стук маленьких колёс о мостовую и звук многих голосов, говоривших в одно время сразу:</p>
+<p>– Где другая лестница? Почему подали только одну? Кто взял другую? Это Биль взял другую! Биль, тащи её назад! Ставь её назад! Ставь её сюда, к углу! Нет, свяжи их прежде, обе вместе, чтобы вышло подлиннее, а то не достанешь и до окна! Так, так! Ну теперь действуйте все, ребятушки, подружнее! Не расходитесь врозь! Биль, тяни за эту верёвку! Только выдержит ли крыша? Смотрите, как бы не съехала черепица! Да она уже съезжает! Сторонитесь, берегите головы! Спасайся, кто может!</p>
+<p>Послышался громкий треск разбившейся черепицы.</p>
+<p>– Ну какой дурак это сделал? – снова услышала Алиса голоса. – Наверное, это опять глупый Биль! Братцы, кто влезет в печную трубу?.. Только не я! Только не я!.. А кто же? Вас честью просят!.. А если просишь, то зачем дерёшься?.. Биль, лезь в трубу ты!.. Да, да, пусть лезет в трубу Биль!</p>
+<p>«Эге! – подумала Алиса. – Значит, сейчас через печную дверцу ко мне явится сам Биль! Интересно с ним познакомиться. Но почему это все поручения сваливаются только на одного Биля? Не желала бы я очутиться на месте этого несчастного Биля и пролезать в эту узенькую печную вьюшку. В случае чего, – я могу угостить его хорошенько ногой!»</p>
+<p>И Алиса вытянула ногу и стала ожидать появления в печке своего врага. Но послышались какие-то робкие и неловкие царапанья какого-то зверька в трубе и затем всё стихло. Она сильно ударила ногой в печную дверцу.</p>
+<p>«Это, наверное, там скребётся Биль!» – подумала она.</p>
+<p>Как вдруг несколько голосов закричало:</p>
+<p>– Глядите, братцы, вон вылезает из трубы Биль обратно!</p>
+<p>– Держите его! Держите его! – послышался голос Белого кролика. – Он сейчас свалится и упадёт прямо на забор с гвоздями!</p>
+<p>После этого наступило некоторое молчание, и затем все опять сразу заговорили:</p>
+<p>– Тяни его за голову! Вот так! Дайте ему теперь глоток водки, чтобы он пришёл в себя! Не сломайте ему нечаянно шею! Ну что, друг? Как ты себя теперь чувствуешь? Что там в доме случилось? Расскажи нам всё по порядку!</p>
+<p>Послышался чей-то слабый, дрожащий голос, и Алиса сразу узнала в нём голос Биля.</p>
+<p>– Я и сам, братцы, не знаю, кто там сидит... – начал он. – Нет, довольно!.. Я ещё слишком взволнован, чтобы припомнить всё... Знаю только, что что-то громадное сунулось ко мне вдруг навстречу и со всей силы, прямо у меня перед носом, ударило в печную дверцу, так что я вылетел из трубы, как ракета!..</p>
+<p>– Это верно! – закричали все. – Точь-в-точь, как ракета. Так и полетел из трубы.</p>
+<p>– В таком случае давайте дом подожжём! – приказал Белый кролик. – Несите хворост и керосин.</p>
+<p>Алиса испугалась не на шутку.</p>
+<p>– А про кошку Дину и про собаку фокстерьера ты позабыл? – громко крикнула она ему в свою защиту. – Не желаешь ли, я их кликну сейчас сюда?</p>
+<p>По-видимому, Белый кролик испугался этой угрозы, потому что все вдруг затихли и надолго замолчали.</p>
+<p>«Что они придумают теперь? – подумала Алиса. – А было бы гораздо лучше, если бы они попросту разобрали крышу и потолок и дали бы мне возможность выйти отсюда самой. Какие они дураки!»</p>
+<p>Не прошло минуты три и вновь послышался голос Белого кролика:</p>
+<p>– Одной полной тачки будет достаточно! – скомандовал он.</p>
+<p>«Чего это ещё они привезли сюда целую тачку?» – подумала Алиса.</p>
+<p>Скоро она узнала, потому что почти тотчас же к ней в окно полетел целый дождь маленьких, как горох, камешков. Некоторые из них попали ей в лицо.</p>
+<p>– Надо это прекратить! – решила она и потянулась к окошку. – Не смейте это делать! – крикнула она.</p>
+<p>Снова наступило молчание. Вдруг кто-то из осаждавших кинул ей в окошко пирожок.</p>
+<p>«А что если я съем его? – подумала Алиса. – Не произойдёт ли от этого какая-нибудь перемена в моём росте? Не сделаюсь ли я от этого меньше?»</p>
+<p>Она скушала пирожок и вдруг сразу почувствовала, что стала заметно короче. Вскоре она стала опять такой маленькой, что могла уже выйти из домика через дверь, выбежала во двор и увидела перед собой множество разных зверюшек и птиц, которые выгоняли её из домика. «Билем» оказалась маленькая ящерица, которая беспомощно лежала теперь среди них на земле, и её поддерживали две морские свинки. Едва только Алиса показалась в дверях, как все звери и птицы в ужасе бросились от неё бежать в разные стороны. Но ей уже надоело возиться с ними, она тоже побежала так быстро, насколько хватало у неё сил, и скоро увидела себя в дремучем лесу.</p>
+<p>Здесь у Алисы появилось сильное желание стать снова такой же, какой она была и раньше, и проникнуть в заинтересовавший её очаровательный сад. Но как это сделать? И она уже стала придумывать, чего бы ей съесть, как вдруг наткнулась на большой гриб, на шляпке которого сидела гусеница, не обращавшая ни на кого внимания и спокойно покуривавшая трубочку. Гусеница была совсем сонная и едва ворочала языком, чтобы ответить на вопрос Алисы: что нужно сделать, чтобы стать опять такого же роста, какого девочка была и раньше?</p>
+<p>– Мне хотелось бы быть немножко длиннее, – сказала Алиса. – Ну что за интерес быть ростом всего только в полтора вершка?</p>
+<p>– Что ж, – ответила гусеница, – это как раз подходящая величина.</p>
+<p>– Но я не привыкла к ней! – воскликнула Алиса, глотая слёзы.</p>
+<p>– Привыкнешь! – равнодушно протянула гусеница и стала докуривать свою трубочку.</p>
+<p>Алиса стала терпеливо дожидаться, когда она кончит своё курение и снова вступит с ней в разговор. Но гусеница кончила курение, потянулась, зевнула два или три раза подряд и, вытянувшись во всю свою длину, сползла с гриба и поползла к зелёной траве.</p>
+<p>– Но что же я должна делать, чтобы стать большой? – спросила её Алиса.</p>
+<p>– Одна половина сделает тебя побольше, – ответила на ходу гусеница, – а другая – поменьше.</p>
+<p>– Но половина чего?</p>
+<p>– Как чего? – обиделась гусеница. – Конечно, гриба!</p>
+<p>И она исчезла в густой траве.</p>
+<p>Некоторое время Алиса задумчиво смотрела на гриб, стараясь решить, где в нём одна половина и где другая. Гриб был совершенно круглый, и для Алисы было трудно понять, о каких половинах говорила ей гусеница. Тогда она решила обломать его кругом весь и начать есть все кусочки постепенно.</p>
+<p>– С какого же начать? – задала Алиса себе вопрос и положила в рот один из кусочков, находившихся у неё в правой руке.</p>
+<p>В ту же минуту она почувствовала вдруг сильный удар обо что-то подбородком. Оказалось, что это она стукнулась им о носки своих же собственных ботинок: так моментально она сократилась в своём росте!</p>
+<p>Алиса испугалась такой быстрой перемены и тотчас же съела кусочек гриба из левой руки, хотя её подбородок и оказался настолько прижатым к носку ботинка, что она едва могла раскрыть рот.</p>
+<p>Как вдруг шея у неё вытянулась вверх и настолько, что весь лес и все вершины деревьев оказались для Алисы где-то далеко внизу. В одну минуту она сделалась великаншей с длинной, как змея, шеей. Все птицы, думая, что приползла громадная змея, чтобы разорить их гнёзда и съесть их яйца, переполошились и с криком повылезали из своих гнёзд и закружились вокруг головы Алисы. Тогда Алиса спохватилась и стала проглатывать кусочек гриба за кусочком и глотала до тех пор, пока не достигла наконец своей настоящей величины. Оставался в правой руке всего только один кусочек. Чтобы он не пропал даром, она съела и его и, к своему горю и разочарованию, превратилась опять в маленькую девочку, ростом всего только в четверть аршина.</p>
+<p>...Невдалеке находился небольшой домик, в котором жила Трефовая дама. Когда Алиса обратила на него внимание, то к нему прыгали лягушки, одетые лакеями. Они несли Трефовой даме приглашение от Червонной дамы поиграть в крокет. В домике в это время раздавался страшный шум. Когда Алиса подошла к нему, то из его двери вылетела тарелка и разбилась на части. Алиса улучила минуту и вошла в домик.</p>
+<p>Оказалось, что это Трефовая дама ссорилась со своей кухаркой за то, что та переперчила её суп.</p>
+<p>Кухарка бросала всё, что подвёртывалось ей под руку, и едва не разбила соусником нос маленькому ребёнку, которого Трефовая дама держала на руках. Ребёнок кричал во всё горло, и кончилось дело тем, что Трефовая дама разозлилась и швырнула его прямо Алисе в руки.</p>
+<p>– Качай его! – приказала она ей.</p>
+<p>Алиса взяла его и вышла с ним из дома.</p>
+<p>Как вдруг ребёнок обратился в поросёнка, выскочил у неё и рук и убежал в лес.</p>
+<p>«Вот так диковина! – подумала Алиса. – Воображаю, какая из этого поросёнка вырастет со временем большая свинья!»</p>
+<p>Но она ещё больше была удивлена, увидев невдалеке от себя, на дереве, большого пушистого кота.</p>
+<p>Увидев Алису, кот улыбнулся широко, во всю свою морду. Он показался Алисе очень добродушным, хотя у него и был очень длинные когти и очень острые зубы. Она решила отнестись к нему с возможной почтительностью.</p>
+<p>– Милый Котик, – обратилась она к нему.</p>
+<p>Морда Кота расплылась в ещё более широкую улыбку.</p>
+<p>– Милый Котик, – продолжала Алиса, – не можешь ли ты мне указать, как мне отсюда выбраться?</p>
+<p>– Это зависит от того, – ответил он, – куда ты хочешь выбраться.</p>
+<p>– Мне всё равно куда идти.</p>
+<p>– Тогда иди, куда глядят твои глаза!</p>
+<p>– Куда же именно?</p>
+<p>– Пройди немного и узнаешь!</p>
+<p>Алиса задумалась.</p>
+<p>– А кто там живёт? – спросила она.</p>
+<p>– В этом направлении живёт некий Шляпочник, – указал Кот, – а в этом – Мартовский заяц. Побывай у них обоих, если хочешь. Только предупреждаю тебя, что они оба – дураки.</p>
+<p>– Но я дураков не люблю, – возразила Алиса.</p>
+<p>– А не всё ли тебе равно? – ответил Кот. – Ведь все мы, каждый по своему, – дураки. И ты – дура, и я – дурак!</p>
+<p>– Почему же ты думаешь, что я – дура?</p>
+<p>– Да потому, что ты сюда забрела. Никто умный сюда не ходит!</p>
+<p>– А почему ты себя-то самого считаешь дураком?</p>
+<p>Кот улыбнулся.</p>
+<p>– Сравни меня с собакой, – ответил он. – Все вы, люди, считаете собаку самым умным животным. Но ведь собака, когда злится, то ворчит, а когда довольна, то виляет хвостом. Я же – наоборот: я ворчу, когда доволен, а когда злюсь, то виляю хвостом. Ну разве же я не дурак? Но шутки в сторону. Будешь ты сегодня играть в крокет у Червонной дамы?</p>
+<p>Алиса ответила не сразу.</p>
+<p>– Не знаю... – ответила она. – Я очень люблю играть в крокет, но приглашения не получила.</p>
+<p>– Я сейчас вернусь! – сказал Кот и мгновенно исчез.</p>
+<p>Алиса подождала немного, но он так и не появился. Тогда она отправилась по тому направлению, где жил Мартовский заяц.</p>
+<p>– Шляпочников и шапочников я видела уже и раньше, – решила она, – а вот Мартовский заяц – это, наверное, что-нибудь интересное.</p>
+<p>Она всё шла и шла, пока наконец не увидела вдалеке домик Мартовского зайца. Трубы на нём торчали, как уши, и вся крыша была покрыта мехом.</p>
+<p>Около домика, под деревом, стоял стол и за ним сидели Мартовский заяц и Шляпочник и пили чай. Между ними сидела Соня и почти спала, а её соседи оперлись о её спину локтями, точно о подушку, и вели между собой разговор.</p>
+<p>«Бедная Соня! – подумала Алиса. – Впрочем, она спит и ничего не замечает... Значит, ей хорошо!»</p>
+<p>Стол был велик, и все трое были там одни.</p>
+<p>– Нет мест! Нет мест! – закричали они, увидев приближавшуюся к ним Алису.</p>
+<p>– Как нет? – удивилась она и, им на зло, уселась в большое кресло у другого конца стола.</p>
+<p>– Не желаешь ли вина? – учтиво спросил Мартовский заяц.</p>
+<p>– Где же у вас тут вино? – заметила Алиса. – Я не вижу его у вас!</p>
+<p>– Да его у нас и нет!</p>
+<p>– Тогда зачем же ты предлагаешь его? Это невежливо!</p>
+<p>– А разве вежливо влезать за чужой стол без приглашения?</p>
+<p>– Я не знала, что это – твой стол! К тому же он так велик, что за ним хватит места и не на вас троих!</p>
+<p>– Тебе бы следовало подстричь волосы! – обратился к Алисе Шляпочник. – А то ты лохматая!</p>
+<p>И он с усмешкой оглядел Алису.</p>
+<p>– Неприлично говорить неприятности прямо в глаза! – возразила она. – Это грубо!</p>
+<p>Шляпочник широко открыл от удивления глаза и, чтобы переменить разговор, задал загадку:</p>
+<p>– Какое сходство между вороном и письменным столом?</p>
+<p>Алиса любила разгадывать загадки и подумала: «Ну теперь будет весело!».</p>
+<p>И стала придумывать ответ. Что бы это могло означать? Какое сходство между вороном и письменным столом? Но она не могла найти ответа и задумалась.</p>
+<p>Наступило продолжительное молчание. Первый нарушил его Шляпочник.</p>
+<p>– А какое сегодня число? – спросил он у Алисы.</p>
+<p>Он вытащил из кармана часы и стал с беспокойством оглядывать их, то вертя их в руках, то прикладывая к уху.</p>
+<p>Алиса подумала и сказала:</p>
+<p>– Четвёртое!</p>
+<p>– Значит, опять отстали на два дня! – вздохнул Шляпочник. И, обратившись уже к Мартовскому зайцу, продолжал: – Это оттого, что мы подмазали их вашим маслом! У вас плохое масло!</p>
+<p>– Нет, масло хорошее! – возразил Заяц.</p>
+<p>– Ну, значит, вместе с маслом попали в часы и крошки хлеба! Не нужно было бы вам лазать в масло хлебным ножом!</p>
+<p>Мартовский заяц взял у него часы и тоже внимательно оглядел их со всех сторон. Затем он окунул их в чашку с чаем, снова вытащил их оттуда и оглядел опять.</p>
+<p>– Нет, масло хорошее! – подтвердил он. – Растаяло от горячего чая и потекло! Значит, туда попали крошки!</p>
+<p>Алиса с любопытством поглядывала из-за его плеча.</p>
+<p>– Какие странные часы! – сказала она. – Показывают, какое число, а который час – показать не могут!</p>
+<p>– Так что ж такого? – возразил ей Шляпочник. – У меня есть ещё и другие часы, так те показывают только год!</p>
+<p>Алиса не поняла.</p>
+<p>– Я не понимаю вас, – ответила она.</p>
+<p>– Очень просто, – объяснил ей Шляпочник. – Они всегда стоят и потому целый год указывают всё одно и то же время.</p>
+<p>Алиса засмеялась.</p>
+<p>– Но какая же разгадка вашей загадки? – спросила она. – Какое сходство между вороном и письменным столом?</p>
+<p>– А разве ты не догадалась? – удивился Шляпочник.</p>
+<p>– Нет. Не томите меня, скажите скорее!</p>
+<p>Шляпочник подумал и ответил:</p>
+<p>– Я и сам не знаю!</p>
+<p>– И я тоже не знаю! – ответил Мартовский заяц.</p>
+<p>Соня проворчала что-то во сне и чуть слышно, бессвязно сказала:</p>
+<p>– И я тоже...</p>
+<p>Алиса надула губки.</p>
+<p>– Не стоило и времени терять на такие глупости! – сказала она.</p>
+<p>Тотчас же Шляпочник и Мартовский заяц выскочили из-за стола и стали что-то искать на земле.</p>
+<p>– Что вы ищете? – спросила их Алиса.</p>
+<p>– Время! – ответили они. – Ведь вы сказали сейчас, что потеряли время! Ну вот мы его и ищем!</p>
+<p>Алиса засмеялась.</p>
+<p>– Какие вы глупые! – весело сказала она. – Ну разве можно найти время на земле?</p>
+<p>Мартовскому зайцу сделалось неловко. Он потянулся, зевнул и сделал вид, что устал.</p>
+<p>– Знаете что? – предложил он, чтобы как-нибудь замять неловкость. – Мне ужасно хочется послушать что-нибудь интересное! Не расскажет ли нам барышня какую-нибудь историю?</p>
+<p>Алисе не понравилось это предложение.</p>
+<p>– Я, кажется, все свои истории позабыла, – ответила она.</p>
+<p>– Тогда пусть расскажет Соня! – воскликнули они вместе. – Эй, ты, Соня, проснись! – И они стали её расталкивать.</p>
+<p>Шляпочник схватил со стола чайник и полил ей на нос кипяток.</p>
+<p>– Да проснись ты, пожалуйста! – крикнул он. – Ведь нельзя же всю свою жизнь проспать!</p>
+<p>Соня слегка открыла глаза.</p>
+<p>– Я вовсе не сплю, – сказала она, едва ворочая языком. – Чего вы кричите? Я слышу каждое слово!..</p>
+<p>– Рассказывай нам историю! – крикнул Заяц.</p>
+<p>– Да, пожалуйста... – попросила Алиса.</p>
+<p>– Живо! Поворачивайся! – скомандовал и Шляпочник. – А то ты опять заснёшь на полуслове!</p>
+<p>Соня широко раскрыла глаза и, боясь, как бы снова не заснуть, быстро заговорила скороговоркой:</p>
+<p>– В некотором царстве, в некотором государстве жили-были три сестры!</p>
+<p>– Ну и что же было далее? – спросил Мартовский заяц.</p>
+<p>– ...их звали Эльси, Кэси и Тилли...</p>
+<p>– Дальше! Дальше! Не смей засыпать!</p>
+<p>– ...они жили на дне колодца...</p>
+<p>– Что же они там делали?</p>
+<p>– ...ели патоку...</p>
+<p>Соня каждую минуту готова была заснуть. Алисе очень хотелось узнать, что было потом с этими тремя сёстрами, и она нагнулась к Соне и громко её спросила:</p>
+<p>– Почему же именно они жили на дне колодца?</p>
+<p>– ...потому что в нём была вместо воды патока. Не перебивайте меня!</p>
+<p>– Да я тебя и не перебиваю!</p>
+<p>Соня замотала головой и, будучи не в силах сладить со своей дремотой, упала носом на стол и заснула.</p>
+<p>– Ну что вы будете делать с этим весёлым собеседником? – трагически воскликнул Шляпочник, приложив одну руку к груди, а другую вытянув в пространство. – С ним так весело, что можно сойти с ума!</p>
+<p>Мартовский заяц выскочил из-за стола и побежал куда-то в сторону.</p>
+<p>– Куда ты? Куда? – спросил его Шляпочник.</p>
+<p>– За лестницей, – ответил Заяц.</p>
+<p>– Для чего она тебе понадобилась?</p>
+<p>– Не мне, а тебе! Я хочу помочь тебе сходить с ума. Всё-таки по ступенькам это будет легче, чем прыгать так!..</p>
+<p>Шляпочник обиделся.</p>
+<p>– Это верх глупости! – воскликнул он.</p>
+<p>– Ну вот и отлично! – ответил Заяц. – В таком случае и на этот верх можно будет взобраться по лестнице!</p>
+<p>Алисе стала надоедать эта компания. Она посидела ещё немного, поднялась и ушла. Никто не заметил её ухода. Соня уже спала крепким сном, а Шляпочник и Мартовский заяц всё ещё продолжали пререкаться. Раз или два она обернулась назад, но не для того, чтобы они её вернули, а просто для того, чтобы лишний раз на них взглянуть. Она увидела, что Шляпочник и Мартовский заяц, схватив Соню за шиворот, старались всунуть её морду в чайник. Она мотала во сне головой, но вовсе им не сопротивлялась.</p>
+<p>– Нет, довольно с меня! – сказала себе Алиса. – Больше уж я, голубчики, к вам не приду никогда. Вы такие дураки, каких я не встречала за всю свою жизнь!</p>
+<p>И она стала продолжать свой путь через лес. Шла она, шла и наконец набрела на старое дерево, в стволе которого была устроена дверь.</p>
+<p>«Как это странно! – подумала Алиса. – Дверь в стволе дерева! А что если я в неё загляну?»</p>
+<p>Она отворила дверь и вошла в неё. Пройдя несколько шагов по тёмному узенькому коридору, она нежданно-негаданно очутилась вдруг в том самом длинном и узком зале, в который попала, когда шла за Белым кроликом. По-прежнему там стоял трёхногий столик и на нём лежал золотой ключик. Алиса пошарила у себя в кармане; там ещё оставалось несколько крошек от гриба, обладавшего способностью изменять человеческий рост.</p>
+<p>– Ну теперь уж я постараюсь не забыть ничего! – сказала она, поела грибных крошек, взяла со стола ключик, отперла им дверцу за занавеской, снова поела крошек, сделалась ростом в четверть аршина и пролезла через норку в сад. Он поразил её своими фонтанами и клумбами ярких, прекрасных цветов. Кругом бежали ручейки, летали бабочки и в воздухе стоял густой аромат. Она шла и наслаждалась.</p>
+<p>Как вдруг она увидела вдали какие-то странные существа, что-то делавшие около большого розового куста с белыми цветами. Она пригляделась к ним и, к удивлению своему, поняла, что это были червонные карты: двойка, тройка и пятёрка. Они имели головы, руки и ноги и если бы не были такими тонкими и плоскими, то совершенно походили бы на людей.</p>
+<p>– Будь осторожнее, Пятёрка! – крикнула одна из карт. – Ты на меня брызгаешь краской!</p>
+<p>– Я не виноват, Двойка, – ответила другая карта. – Это меня толкнул под локоть Тройка!</p>
+<p>– Он врёт! – отозвался Тройка. – Я не толкал никого!</p>
+<p>Алиса подошла к ним поближе.</p>
+<p>– Что вы тут делаете? – обратилась она к ним.</p>
+<p>– Да вот перекрашиваем белые розы в пунцовые, – ответил Двойка. – Наша королева приказала нам посадить пунцовые розы, а выросли вместо них белые. Чтобы она не узнала и не наказала нас, мы и решили выкрасить их все в пунцовую краску.</p>
+<p>– А кто ваша королева?</p>
+<p>– Червонная дама. Она у нас очень строга и за всякую, даже малейшую провинность всем приказывает отрубить головы. Если бы она узнала, что мы посадили белые розы вместо красных, то тотчас же скомандовала бы: «Отрубить им головы»! Вот мы и спешим перекрасить розы раньше, чем она придёт.</p>
+<p>Всё это время Пятёрка тревожно осматривался по сторонам.</p>
+<p>– Королева! Королева! – вдруг закричал он в испуге. – Прячь скорее краску и кисти! С нею идёт и сам Червонный король!</p>
+<p>Все три карты упали ниц.</p>
+<p>Послышались голоса и звуки труб, и Алиса увидела целую процессию: впереди важно шествовали под руку Червонные король и дама, а за ними, по четыре карты в ряд, шла целая колода карт. Валеты на бархатных подушках несли скипетр, державу, цепь и пояс короля. Тут же с серьёзным видом шагал и Белый кролик с красными глазами.</p>
+<p>– А почему я не вижу около себя Трефовой дамы? – строго спросила Королева.</p>
+<p>– Виноват, Ваше Величество, – робко ответил ей Кролик. – Трефовая дама просила меня извиниться перед вами: она поручила мне купить для неё перчатки и веер, но я их нечаянно потерял и ей пришлось поэтому остаться дома. Кроме того, у неё случилось семейное несчастье: её кухарка переперчила суп и перебила всю посуду, а ребёнок превратился в поросёнка и убежал.</p>
+<p>– Как это ужасно! – произнесла королева. – Но почему же ты не купил ей новый веер и перчатки?</p>
+<p>– Они у меня были уже куплены и лежали дома на столе, но когда я пришёл за ними, то оказалось, что весь мой дом заняла какая-то великанша, которая не хотела из него выходить. Так бедной Трефовой даме и пришлось остаться у себя дома и есть переперченный суп.</p>
+<p>– Отрубить этой великанше голову! – скомандовала Червонная дама.</p>
+<p>В это время Алиса близко подошла к процессии. Белый кролик взглянул на неё и узнал.</p>
+<p>– Вот она! – закричал он. – Вот она! Держите её!</p>
+<p>– Кто «она»? – спросили его все.</p>
+<p>– Великанша!</p>
+<p>Червонная дама оглядела Алису в лорнет и сделала недовольное выражение лица.</p>
+<p>– Ты ошибаешься, мой друг! – ответила она. – Эта девочка вовсе не великанша! В ней нет и четырёх вершков! Я не потерплю, чтобы в моём царстве наговаривали на других.</p>
+<p>Кролик испугался и тотчас же юркнул в толпу.</p>
+<p>– Как тебя зовут? – обратилась Червонная дама к Алисе.</p>
+<p>– Алисой, – ответила девочка и сделала реверанс.</p>
+<p>– Ты умеешь играть в крокет?</p>
+<p>– Умею.</p>
+<p>– В таком случае пойдём с нами, и ты будешь играть!</p>
+<p>Алиса присоединилась к процессии, и скоро все они вышли на крокетную площадку, по которой важно бродили длинноногие птицы фламинго и бегали ежи.</p>
+<p>– Выбирай себе молоток и шар! – сказала Алисе Червонная дама.</p>
+<p>Алиса с удивлением огляделась по сторонам.</p>
+<p>– Где же молотки и шары? – спросила она.</p>
+<p>– Как где? – воскликнула Червонная дама, не привыкшая к вопросам и возражениям. – А эти фламинго и ежи? Возьми фламинго за ногу и бей им по ежу, свернувшемуся в клубок! Вот тебе и шар, и молоток!</p>
+<p>Алиса взяла фламинго за ногу и приготовилась играть. Ежи свернулись клубочками и уже катались по площадке.</p>
+<p>Началась игра. Как ни любила Алиса крокет, но скоро должна была отказаться от такой оригинальной игры во фламинго и ежей. Червонная дама каждую минуту раздражалась и грозилась всем снести с плеч головы; ежи от страха развёртывались и изо всех сил убегали в стороны и скрывались в траве, а сами фламинго размахивали крыльями и взлетали на воздух. Получилось вместо игры в крокет что-то странное и непонятное, так что, поиграв немного, Алиса сделала перед Королевой реверанс и попросила у неё позволения лучше погулять по саду.</p>
+<p>– А ты знакома с нашими Черепахой и Грифоном? – спросила её Червонная дама.</p>
+<p>– Нет, – ответила Алиса. – А что это такое «Грифон»?</p>
+<p>– А это зверь, которого рисуют на гербах и изображением которого прежде украшали дома и садовые решётки! Пойдём, я тебя к ним проведу!</p>
+<p>Червонная дама оставила короля и всю свою процессию и, взяв Алису за руку, повела её куда-то далеко, в самую глубь сада. Там, на широкой полянке, Алиса увидела Грифона, мирно лежавшего на травке и гревшегося на солнышке. Червонная дама толкнула его ногой.</p>
+<p>– Ну ты, ленивое создание! – сказала она. – Вставай! Возьми эту девочку и проведи её к Черепахе! Живо! А мне ещё нужно возвратиться к своим подданным и исполнить много важных дел! Прикажи от моего имени Черепахе, чтобы она рассказала этой барышне свою трогательную историю!</p>
+<p>Она повернулась и важно отправилась обратно, оставив Алису одну с Грифоном.</p>
+<p>Алиса с любопытством оглядела со всех сторон Грифона. Он не очень ей понравился. У него было тело львицы, а голова, крылья и передние лапы – птичьи. Тем не менее она стала ожидать, что будет дальше.</p>
+<p>Грифон окончательно продрал глаза, потянулся, расправил крылья и, выждав, когда Червонная дама скрылась из виду, с усмешкой произнёс:</p>
+<p>– Потеха!</p>
+<p>– В чём потеха? – спросила Алиса.</p>
+<p>– Да во всём потеха! – ответил Грифон. – Много здесь любят разговаривать. Грозятся всем снести головы, а никому ещё не снесли. Строгости много, а порядка нет. Посадить бы их на какой-нибудь дом для украшения и заставить простоять там без движения целые двести или триста лет, тогда бы они узнали!.. Пойдём!</p>
+<p>Они прошли небольшое расстояние, и ещё издалека Алиса увидела Черепаху, которая грустно и одиноко сидела на небольшом выступе скалы и что-то жалобно пела себе под нос.</p>
+<p>Алиса стало жаль её.</p>
+<p>– О чём это она так горюет? – спросила она у Грифона.</p>
+<p>– Да всё ерунда! – неохотно ответил Грифон. – Сидит и ревёт, как белуга. Ну о чём ей горевать? Какое у этой слякоти может быть горе?</p>
+<p>Они близко подошли к Черепахе. Она посмотрела на них полными слёз глазами, но не сказала ничего.</p>
+<p>– Вот молодая барышня! – обратился к ней Грифон. – Королева приказала тебе рассказать ей свою трогательную историю!</p>
+<p>– Хорошо, – ответила печально Черепаха. – В таком случае садитесь здесь оба, слушайте и не говорите ни единого слова, пока я не кончу свой рассказ!</p>
+<p>Алиса и Грифон сели и приготовились слушать.</p>
+<p>«Как же она может кончить, когда ещё не начинала?» – подумала про Черепаху Алиса.</p>
+<p>Несколько минут прошли в глубоком молчании, во время которых Черепаха стала горько плакать.</p>
+<p>– Рассказывай же! – крикнул на неё Грифон.</p>
+<p>– Моя история так трогательна, – ответила Черепаха, – что я от слёз не могу говорить.</p>
+<p>– Так ты не плачь и расскажи!</p>
+<p>– Вот в том-то и дело, что это невозможно, – объяснила Черепаха. – Всякий раз как я начинаю рассказывать мою историю, я не могу сказать ни единого слова от слёз, а слёзы льются от того, что она очень трогательна. Как выйти из этого положения, я не знаю. В этом-то и вся трогательность моей истории!</p>
+<p>Алисе стало скучно с такой весёлой рассказчицей. Она встала и сделала перед Черепахой реверанс.</p>
+<p>– Благодарю вас за вашу интересную историю! – сказала она и собралась уходить.</p>
+<p>– Куда же вы? – воскликнул Грифон. – Мы ещё спляшем кэк-уок! Ну ты, старая плакса, вставай!</p>
+<p>Черепаха поднялась и встала на задние лапки. Грифон расправил крылья и стал напевать. Черепаха развеселилась.</p>
+<p>– Ну начинай! – скомандовал Грифон.</p>
+<p>Они встали в пару и запрыгали вокруг Алисы. Раза два или три Грифон наступил Алисе на ногу, так что она даже вскрикнула, и зацепил её крылом за волосы. Он танцевал с увлечением. Черепаха неуклюже топталась на месте.</p>
+<p>– Ну как вам нравится ваш танец? – обратился он к Алисе, когда танец был окончен.</p>
+<p>Алиса опустила глаза и потёрла себе ногу.</p>
+<p>– Благодарю вас, – ответила она, довольная тем, что эта дикая пляска наконец окончилась. – Это был очень интересный танец!</p>
+<p>– Теперь вы, барышня, расскажите нам что-нибудь! – предложил Грифон. – Мы вас послушаем! Расскажите нам ваши приключения!</p>
+<p>Алиса немного застеснялась.</p>
+<p>– Я могла бы рассказать вам только то, – ответила Алиса, – что случилось со мной сегодня и происходит сейчас! Вчера я была совсем другая!</p>
+<p>– То есть как это «другая»? – спросила Черепаха. – Объясни!</p>
+<p>– Нет, нет! – возразил Грифон. – На объяснения всегда уходит очень много времени. Рассказывайте сначала свои приключения!</p>
+<p>Алиса стала рассказывать всё то, что описано в этой сказке, начиная с того момента, как она впервые увидела Белого кролика, как вдруг невдалеке послышался чей-то громкий голос: «Господа, прошу встать, суд идёт!».</p>
+<p>Алиса и Грифон вздрогнули. Одна только Черепаха осталась спокойной.</p>
+<p>– Идём! – воскликнул Грифон и, схватив Алису за руку, потащил её куда-то в сторону от раздававшихся голосов.</p>
+<p>– Какой суд? Над кем суд? – спрашивала по дороге, едва переводя дух, Алиса.</p>
+<p>– Да идём же скорее! – крикнул на неё Грифон и потащил её почти насильно.</p>
+<p>Они скоро прибежали к месту суда. Король и дама Червей уже сидели на своих тронах и приготовились судить. Вокруг них столпилось множество всевозможных птиц и зверюшек и собралась целая колода карт. Перед Королём и Дамой стоял закованный в цепи Валет, и два солдата-рыцаря расположились у него с боков и наблюдали за тем, как бы он не убежал. Около Короля Червей стоял Белый кролик со свёртком бумаги в лапках, приготовляясь прочесть вслух обвинительный акт. В самой середине стоял стол, на котором в качестве вещественных доказательств было поставлено блюдо с пирожками. Они имели такой вкусный вид, что Алисе захотелось их поесть.</p>
+<p>«Должно быть, во время суда над этим Валетом, – подумала она, – все они будут подкрепляться этими пирожками».</p>
+<p>Но оказалось, что она ошиблась. До пирожков не дотронулся никто.</p>
+<p>Двенадцать присяжных деловито уселись на свои места и что-то стали записывать на грифельных дощечках.</p>
+<p>– Что они пишут? – спросила у Грифона Алиса.</p>
+<p>– Свои имена, – ответил Грифон, – а то они боятся, как бы их не забыть.</p>
+<p>В это время раздался голос Белого кролика:</p>
+<p>– Призываю всех к молчанию! Суд начинается!</p>
+<p>Все сразу умолкли.</p>
+<p>– Секретарь, прочтите обвинительный акт! – скомандовал Червонный король.</p>
+<p>Белый кролик развернул бумагу и стал читать:</p>
+<p>«Червонная дама напекла целое блюдо очень вкусных пирожков. Пирожки эти отличаются чудодейственной силой изменять по желанию человеческий рост. Когда эти пирожки были поставлены для остывания на окне, то мимо проходил этот презренный Валет. Незаметно он стащил один пирожок и положил его к себе в карман. Это видели три свидетеля – Мартовский заяц, Шляпочник и Соня. Высунувшись из окна, дама Червей увидела Валета и сказала: «Валет, беги немедленно к нашему секретарю Белому кролику и пригласи его сюда есть пирожки!».</p>
+<p>Когда Валет прибежал к Белому кролику, то застал его в отчаянном и печальном положении: в дом Белого кролика влезла какая-то великанша, которая не хотела из него выходить, несмотря на все меры, принятые Белым кроликом и его слугой Билем. Тогда, не долго думая, прибежавший от Червонной дамы Валет бросил в окошко к засевшей в домике великанше украденный им пирожок. Великанша съела его, быстро превратилась в маленького человечка и незаметно скрылась, причинив Белому кролику неисчислимые убытки по переустройству и ремонту принадлежащего ему, Кролику, дома».</p>
+<p>– Обвиняемый, – обратился к Валету Король, – признаёте ли вы себя виновным?</p>
+<p>– Никак нет! – ответил Валет.</p>
+<p>– В таком случае привести сюда свидетелей! – распорядился Червонный король.</p>
+<p>Ввели Шляпочника, Мартовского зайца и Соню. Шляпочник вошёл в цилиндре и держал в одной руке чашку чая, а в другой – кусок хлеба, намазанный маслом.</p>
+<p>– Прошу прощения, Ваше Величество, – обратился к Червонному королю Шляпочник. – Я ещё не кончил пить чай, когда меня позвали вдруг сюда!</p>
+<p>– Снимите вашу шляпу! – приказал Король.</p>
+<p>– Это шляпа не моя! – ответил Шляпочник.</p>
+<p>– А если не ваша, – воскликнул Король, – то, значит, она вами у кого-нибудь украдена? Секретарь, внесите это в протокол!</p>
+<p>Белый кролик тотчас же записал это в свёрток бумаги.</p>
+<p>– Никак нет, – ответил Шляпочник. – Все шляпы, которые я ношу, – не мои. Все эти шляпы моих будущих покупателей. У меня нет ни одной своей. Я ведь шляпочных дел мастер!</p>
+<p>В эту минуту Червонная дама надела пенсне и со строгим видом уставилась на Шляпочника. Он побледнел и задрожал. От страха у него даже свалилась с ноги туфля.</p>
+<p>– Потрудитесь, свидетель, давать немедленно ваши показания! – распорядился Червонный король. – Не нервничайте! А то я немедленно прикажу вас казнить на месте!</p>
+<p>От таких успокоительных слов Шляпочник задрожал с ног до головы и с беспокойством оглядел Червонную даму. Она всё ещё продолжала смотреть на него в упор. Он так испугался этого, что по нечаянности откусил вместо хлеба с маслом кусок фарфоровой чашки.</p>
+<p>В этот самый момент Алиса вдруг почувствовала в себе какую-то странную перемену: ни с того ни с сего она без всякой видимой причины стала вдруг расти. Она сидела рядом с Соней, которая в свою очередь сидела рядом с Мартовским зайцем. Диванчик был узкий, и, благодаря всё возраставшей величине Алисы, Соня оказалась зажатой между нею и Зайцем, как в тисках, и закряхтела.</p>
+<p>– А вы не раздавите меня? – спросила она с беспокойством, пробуждаясь от сна. – Я едва могу дышать!</p>
+<p>– Что же я могу поделать? – со своей стороны тоже с беспокойством ответила Алиса. – Я всё расту и расту!..</p>
+<p>– Вы не имеете никакого полного права расти здесь! – обиделась Соня и, вскочив с места и боясь, как бы не заснуть по дороге, перешла на другой диванчик.</p>
+<p>Всё это время дама Червей не переставала в упор глядеть на Шляпочника, и он так дрожал, что с него свалилась и вторая туфля.</p>
+<p>– Давайте же ваши показания! – гневно закричал на него Король. – Что вы знаете по этому делу?</p>
+<p>Шляпочник собрался с силами и приготовился отвечать.</p>
+<p>– Что вы знаете по этому делу? – повторил Король.</p>
+<p>– Ровно ничего!.. – ответил Шляпочник.</p>
+<p>– А вы, Мартовский заяц?</p>
+<p>Мартовский заяц вышел на середину.</p>
+<p>– Я знаю то же, что и Шляпочник! – подтвердил он.</p>
+<p>– А вы, Соня?</p>
+<p>– А я – то же, что и они оба вместе!.. – пробурчала сквозь сон Соня.</p>
+<p>– Господин Секретарь, запишите! – приказал Червонный король.</p>
+<p>И, обратившись к свидетелям, он продолжал:</p>
+<p>– Господа свидетели, вы теперь свободны и можете идти! Ваши показания очень ценны для правильного и всестороннего освещения этого дела.</p>
+<p>Шляпочник и Мартовский заяц обрадовалась и, схватив Соню за шиворот, бросились бежать с нею без оглядки домой.</p>
+<p>– Туфли! Мои туфли! – спохватился по дороге Шляпочник. – От расстройства чувств я забыл на суде свои туфли!</p>
+<p>Но Заяц толкнул его в спину и потащил за собой.</p>
+<p>– Пригласить сюда следующего свидетеля! – распорядился Червонный король, когда они скрылись из виду.</p>
+<p>Белый кролик заглянул к себе в бумагу. Алиса подняла на него глаза.</p>
+<p>«Кого-то он пригласить теперь?» – подумала она.</p>
+<p>И вдруг, к её великому изумлению, Белый кролик громко прочитал:</p>
+<p>– Алиса!</p>
+<p>– Здесь! – крикнула в ответ Алиса и быстро вскочила с места, чтобы выйти на средину суда.</p>
+<p>Но она позабыла, что выросла уже большая, и, зацепившись платьем за скамью присяжных заседателей, опрокинула её. Все присяжные упали на головы сидящей внизу публике. Алиса вспомнила, как неделю тому назад она нечаянно опрокинула дома аквариум с золотыми рыбками и как они забарахтались на полу. Присяжные живо напомнили ей этих рыбок.</p>
+<p>– Ах, виновата! – с огорчением воскликнула она и, нагнувшись, стала сгребать присяжных горстями и рассаживать их на прежние места.</p>
+<p>Они рассаживались, кто как мог.</p>
+<p>– Господа присяжные, – раздался вдруг голос Червонного короля. – Потрудитесь поскорее занять ваши места!</p>
+<p>– Я не могу!.. – послышался вдруг чей-то жалобный голос. – Мне больно!</p>
+<p>Алиса посмотрела на скамью присяжных и заметила, что второпях она поставила одного из них, именно маленького Биля, вверх ногами. Он беспомощно изгибался вправо и влево, не мог перевернуться и смешно помахивал хвостом. Она схватила Биля за хвост и перевернула его головой вверх.</p>
+<p>– Свидетельница, что вы знаете по этому делу? – обратился Король к Алисе.</p>
+<p>– Ровно ничего, – ответила она.</p>
+<p>– Ровно ничего, – переспросил её Король, – или волнисто ничего?</p>
+<p>– Ровно ничего, – повторила Алиса.</p>
+<p>– Это очень важное показание, – обратился Король к присяжным. – Обратите на него особое внимание, господа присяжные заседатели!</p>
+<p>А Алиса в это время всё росла и росла.</p>
+<p>Присяжные всё записывали на своих грифельных досках. Что-то записывал в свою памятную книжку и Червонный король. Затем он поднялся и громко скомандовал:</p>
+<p>– Тише!</p>
+<p>Все смолкли.</p>
+<p>– Я прочту вам сейчас главное правило нашего судопроизводства, – продолжал он и прочёл из большой переплетённой книги: – Статья 42-я. Все те, кто более версты ростом, должны немедленно оставить заседание суда.</p>
+<p>Все посмотрели на Алису.</p>
+<p>– Во мне ещё нет версты! – возразила она.</p>
+<p>– Но в вас сейчас будет и все две! – крикнула Королева. – Можете уходить!</p>
+<p>– Не уйду!</p>
+<p>– Нет, уйдёте! – крикнул Червонный король, и вся красная краска, которой он был выкрашен, сразу от гнева побледнела.</p>
+<p>– Нет, не уйду!</p>
+<p>Король захлопнул книгу и низким, дрожавшим голосом обратился к присяжным:</p>
+<p>– Господа присяжные заседатели! – сказал он. – Удалитесь в свою комнату, чтобы постановить решение, виновен ли подсудимый или нет.</p>
+<p>Присяжные поднялись со своих мест.</p>
+<p>– Нет, нет! – закричала Червонная дама. – Сперва надо Валета казнить, а потом уже постановить решение!</p>
+<p>– Что за чепуха! – в свою очередь крикнула и Алиса. – Как же приводить приговор в исполнение раньше, чем поставлено решение?</p>
+<p>– Удержи свой язык! – закричала Дама, и вся бумага, на которой она была напечатана, побагровела от гнева.</p>
+<p>– Не желаю! – ответила Алиса.</p>
+<p>– Отрубить ей голову! – взвизгнула Дама червей.</p>
+<p>Никто не пошевельнулся. Алиса уже достигла своей естественной величины.</p>
+<p>– Так я вас и испугалась! – ответила она с усмешкой. – Вы не люди, а простая колода карт!</p>
+<p>И вся колода карт подпрыгнула высоко в воздух и стала падать прямо на лицо Алисе. Она вскрикнула частично от испуга, частично от гнева, хотела отмахнуться от них – и пробудилась.</p>
+<p>Она увидела себя на берегу реки. Её сестра держала на коленях её голову и осторожно смахивала с её лица сухие прошлогодние листья, которые набежавший ветер сорвал с дерева и дунул ей прямо в лицо.</p>
+<p>– Проснись, милая Алиса! Уже пора! – сказала ей сестра. – Как долго ты спала!</p>
+<p>– Ах, какой я видела странный сон! – ответила Алиса и стала рассказывать ей всё, о чём мы прочитали сейчас этой сказке, – стараясь не забыть из неё ни малейшего события.</p>
+<p>А когда она кончила, то сестра поцеловала её и сказала:</p>
+<p>– Это в самом деле довольно странный сон. Но беги скорее пить чай; уже поздно!</p>
+<p>Алиса встала и побежала домой и всё время на бегу думала о той стране чудес, в которой ей так неожиданно довелось побывать.</p>
+<hr>
+<p><strong>Примечание публикатора</strong>:  </p>
+<p>1&nbsp;В русском переводе – перепев начала басни И.Крылова «Мартышка и очки» (1815):</p>
+<p><em>Мартышка к старости слаба глазами стала...</em></p>
+    </body>
+</html>

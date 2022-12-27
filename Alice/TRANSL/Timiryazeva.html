@@ -1,0 +1,1782 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Timiryazeva</title>
+        <meta charset='utf-8'/>
+        <style>
+ .ͼ1.cm-editor.cm-focused {outline: 1px dotted #212121;}
+.ͼ1.cm-editor {position: relative !important; box-sizing: border-box; display: flex !important; flex-direction: column;}
+.ͼ1 .cm-scroller {display: flex !important; align-items: flex-start !important; font-family: monospace; line-height: 1.4; height: 100%; overflow-x: auto; position: relative; z-index: 0;}
+.ͼ1 .cm-content[contenteditable=true] {-webkit-user-modify: read-write-plaintext-only;}
+.ͼ1 .cm-content {margin: 0; flex-grow: 2; flex-shrink: 0; display: block; white-space: pre; word-wrap: normal; box-sizing: border-box; padding: 4px 0; outline: none;}
+.ͼ1 .cm-lineWrapping {white-space: pre-wrap; white-space: break-spaces; word-break: break-word; overflow-wrap: anywhere; flex-shrink: 1;}
+.ͼ2 .cm-content {caret-color: black;}
+.ͼ3 .cm-content {caret-color: white;}
+.ͼ1 .cm-line {display: block; padding: 0 2px 0 6px;}
+.ͼ1 .cm-layer > * {position: absolute;}
+.ͼ1 .cm-layer {contain: size style;}
+.ͼ2 .cm-selectionBackground {background: #d9d9d9;}
+.ͼ3 .cm-selectionBackground {background: #222;}
+.ͼ2.cm-focused .cm-selectionBackground {background: #d7d4f0;}
+.ͼ3.cm-focused .cm-selectionBackground {background: #233;}
+.ͼ1 .cm-cursorLayer {pointer-events: none;}
+.ͼ1.cm-focused .cm-cursorLayer {animation: steps(1) cm-blink 1.2s infinite;}
+@keyframes cm-blink {50% {opacity: 0;}}
+@keyframes cm-blink2 {50% {opacity: 0;}}
+.ͼ1 .cm-cursor, .ͼ1 .cm-dropCursor {border-left: 1.2px solid black; margin-left: -0.6px; pointer-events: none;}
+.ͼ1 .cm-cursor {display: none;}
+.ͼ3 .cm-cursor {border-left-color: #444;}
+.ͼ1.cm-focused .cm-cursor {display: block;}
+.ͼ2 .cm-activeLine {background-color: #cceeff44;}
+.ͼ3 .cm-activeLine {background-color: #99eeff33;}
+.ͼ2 .cm-specialChar {color: red;}
+.ͼ3 .cm-specialChar {color: #f78;}
+.ͼ1 .cm-gutters {flex-shrink: 0; display: flex; height: 100%; box-sizing: border-box; left: 0; z-index: 200;}
+.ͼ2 .cm-gutters {background-color: #f5f5f5; color: #6c6c6c; border-right: 1px solid #ddd;}
+.ͼ3 .cm-gutters {background-color: #333338; color: #ccc;}
+.ͼ1 .cm-gutter {display: flex !important; flex-direction: column; flex-shrink: 0; box-sizing: border-box; min-height: 100%; overflow: hidden;}
+.ͼ1 .cm-gutterElement {box-sizing: border-box;}
+.ͼ1 .cm-lineNumbers .cm-gutterElement {padding: 0 3px 0 5px; min-width: 20px; text-align: right; white-space: nowrap;}
+.ͼ2 .cm-activeLineGutter {background-color: #e2f2ff;}
+.ͼ3 .cm-activeLineGutter {background-color: #222227;}
+.ͼ1 .cm-panels {box-sizing: border-box; position: sticky; left: 0; right: 0;}
+.ͼ2 .cm-panels {background-color: #f5f5f5; color: black;}
+.ͼ2 .cm-panels-top {border-bottom: 1px solid #ddd;}
+.ͼ2 .cm-panels-bottom {border-top: 1px solid #ddd;}
+.ͼ3 .cm-panels {background-color: #333338; color: white;}
+.ͼ1 .cm-tab {display: inline-block; overflow: hidden; vertical-align: bottom;}
+.ͼ1 .cm-widgetBuffer {vertical-align: text-top; height: 1em; width: 0; display: inline;}
+.ͼ1 .cm-placeholder {color: #888; display: inline-block; vertical-align: top;}
+.ͼ1 .cm-highlightSpace:before {content: attr(data-display); position: absolute; pointer-events: none; color: #888;}
+.ͼ1 .cm-highlightTab {background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="20"><path stroke="%23888" stroke-width="1" fill="none" d="M1 10H196L190 5M190 15L196 10M197 4L197 16"/></svg>'); background-size: auto 100%; background-position: right 90%; background-repeat: no-repeat;}
+.ͼ1 .cm-trailingSpace {background-color: #ff332255;}
+.ͼ1 .cm-button {vertical-align: middle; color: inherit; font-size: 70%; padding: .2em 1em; border-radius: 1px;}
+.ͼ2 .cm-button:active {background-image: linear-gradient(#b4b4b4, #d0d3d6);}
+.ͼ2 .cm-button {background-image: linear-gradient(#eff1f5, #d9d9df); border: 1px solid #888;}
+.ͼ3 .cm-button:active {background-image: linear-gradient(#111, #333);}
+.ͼ3 .cm-button {background-image: linear-gradient(#393939, #111); border: 1px solid #888;}
+.ͼ1 .cm-textfield {vertical-align: middle; color: inherit; font-size: 70%; border: 1px solid silver; padding: .2em .5em;}
+.ͼ2 .cm-textfield {background-color: white;}
+.ͼ3 .cm-textfield {border: 1px solid #555; background-color: inherit;}
+.ͼ1 .cm-foldPlaceholder {background-color: #eee; border: 1px solid #ddd; color: #888; border-radius: .2em; margin: 0 1px; padding: 0 1px; cursor: pointer;}
+.ͼ1 .cm-foldGutter span {padding: 0 1px; cursor: pointer;}
+.ͼq .cm-content {white-space: pre-wrap; word-break: break-word; overflow-wrap: anywhere; padding: 0;}
+ .custom-frames-view {
+	padding: 0 !important;
+	overflow: hidden !important;
+}
+
+.custom-frames-view-file {
+	padding: 0;
+	overflow: auto;
+}
+
+.custom-frames-frame {
+	width: 100%;
+	height: 100%;
+	border: none;
+	background-color: white;
+	background-clip: content-box;
+}
+
+.custom-frames-add {
+	margin-left: 10px;
+}
+
+.custom-frames-show {
+	margin-bottom: 18px;
+}
+
+.custom-frames-support {
+	max-width: 50%;
+	width: 400px;
+	height: auto;
+}
+ .setting-item.ex-setting-item {
+    border-top: unset;
+    padding-top: 0;
+}
+
+*[hidden] {
+    display: none;
+} 
+.pandoc-plugin-error {
+    color: red;
+}
+ /* 
+ *  Originally copied from dist/tippy.css in the tippy.js package.
+ *
+ *  Modifications were made to implement compatibility with
+ *  Obsidian themes.   
+ */
+
+.theme-light {
+  --link-tooltip-background: #333;
+  --link-tooltip-text: #fff;
+}
+
+.theme-dark {
+  --link-tooltip-background: #ccc;
+  --link-tooltip-text: #000;
+}
+
+.tippy-box[data-animation="fade"][data-state="hidden"] {
+  opacity: 0;
+}
+
+[data-tippy-root] {
+  max-width: calc(100vw - 10px);
+}
+
+.tippy-box {
+  position: relative;
+  background-color: var(--link-tooltip-background);
+  color: var(--link-tooltip-text);
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.4;
+  outline: 0;
+  transition-property: transform, visibility, opacity;
+}
+
+.tippy-box[data-placement^="top"] > .tippy-arrow {
+  bottom: 0;
+}
+
+.tippy-box[data-placement^="top"] > .tippy-arrow:before {
+  bottom: -7px;
+  left: 0;
+  border-width: 8px 8px 0;
+  border-top-color: initial;
+  transform-origin: center top;
+}
+
+.tippy-box[data-placement^="bottom"] > .tippy-arrow {
+  top: 0;
+}
+
+.tippy-box[data-placement^="bottom"] > .tippy-arrow:before {
+  top: -7px;
+  left: 0;
+  border-width: 0 8px 8px;
+  border-bottom-color: initial;
+  transform-origin: center bottom;
+}
+
+.tippy-box[data-placement^="left"] > .tippy-arrow {
+  right: 0;
+}
+
+.tippy-box[data-placement^="left"] > .tippy-arrow:before {
+  border-width: 8px 0 8px 8px;
+  border-left-color: initial;
+  right: -7px;
+  transform-origin: center left;
+}
+
+.tippy-box[data-placement^="right"] > .tippy-arrow {
+  left: 0;
+}
+
+.tippy-box[data-placement^="right"] > .tippy-arrow:before {
+  left: -7px;
+  border-width: 8px 8px 8px 0;
+  border-right-color: initial;
+  transform-origin: center right;
+}
+
+.tippy-box[data-inertia][data-state="visible"] {
+  transition-timing-function: cubic-bezier(0.54, 1.5, 0.38, 1.11);
+}
+
+.tippy-arrow {
+  width: 16px;
+  height: 16px;
+  color: var(--link-tooltip-background);
+}
+
+.tippy-arrow:before {
+  content: "";
+  position: absolute;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.tippy-content {
+  position: relative;
+  padding: 10px 15px;
+  z-index: 1;
+  overflow-wrap: anywhere;
+}
+ 
+
+#cMenuToolbarModalBar {
+  width: auto;
+  height: auto;
+  padding: 3px;
+  display: grid;
+  user-select: none;
+  border-radius: 6px;
+  position: absolute;
+  transition: 100ms cubic-bezier(0.92, -0.53, 0.65, 1.21);
+  -webkit-transition: 100ms cubic-bezier(0.92, -0.53, 0.65, 1.21);
+  min-width: fit-content;
+  justify-content: space-around;
+  z-index: var(--layer-status-bar);
+  box-shadow: 0px 3px 32px rgb(31 38 135 / 15%);
+  border: 1px solid var(--background-modifier-border);
+}
+#cMenuToolbarModalBar.cMenuToolbarFlex {
+  display: flex;
+}
+#cMenuToolbarModalBar.cMenuToolbarFlex :is(.cMenuToolbarCommandItem,button[class^=cMenuToolbarCommandsubItem]) {
+  min-width: 20px;
+}
+#cMenuToolbarModalBar .cMenuToolbarCommandItem {
+  margin: 2px;
+  border: none;
+  display: flex;
+  cursor: pointer;
+  padding: 5px 6px;
+  box-shadow: none;
+  margin-left: 3px;
+  margin-right: 3px;
+  position: relative;
+  border-radius: 3px;
+  font-size: initial !important;
+  background-color: var(--background-primary-alt);
+  height: auto;
+}
+
+#cMenuToolbarModalBar button.cMenuToolbarCommandItem:hover {
+  background-color: var(--background-secondary);
+}
+
+/* #cMenuToolbarModalBar button.cMenuToolbarCommandItem svg {
+  width: 1.3em;
+  height: 1.3em;
+} */
+
+/*----------------------------------------------------------------
+cMenuToolbar SETTINGS BUTTONS
+----------------------------------------------------------------*/
+
+.modal.mod-settings
+  button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsButton.cMenuToolbarSettingsButtonAdd,
+button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsButton.cMenuToolbarSettingsButtonAdd {
+  background-color: var(--interactive-accent);
+}
+
+.modal.mod-settings
+  button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsButton.cMenuToolbarSettingsButtonDelete,
+button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsButton.cMenuToolbarSettingsButtonDelete {
+  background-color: #989cab;
+}
+
+.modal.mod-settings
+  button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsButton.cMenuToolbarSettingsButtonRefresh,
+button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsButton.cMenuToolbarSettingsButtonRefresh {
+  background-color: var(--text-accent);
+}
+
+button.cMenuToolbarSettingsButton {
+  padding: 4px 14px;
+  border-radius: 6px;
+}
+
+
+
+/*----------------------------------------------------------------
+cMenuToolbar SETTING ITEMS
+----------------------------------------------------------------*/
+.setting-item.cMenuToolbarCommandItem:first-child {
+  padding-top: 18px;
+}
+
+.cMenuToolbarCommandItem {
+  cursor: grab;
+  padding: 18px 0 18px 0;
+}
+
+.sortable-fallback {
+  cursor: grabbing;
+  box-shadow: 0px 3px 32px rgb(31 38 135 / 15%);
+}
+
+.sortable-grab {
+  cursor: grabbing !important;
+}
+
+.sortable-ghost {
+  opacity: 0.4;
+  cursor: grabbing;
+}
+
+.sortable-chosen {
+  cursor: grabbing;
+  padding: 18px 0 18px 18px;
+  background-color: var(--background-primary);
+}
+
+.sortable-drag {
+  cursor: grabbing;
+  box-shadow: 0px 3px 32px rgb(31 38 135 / 15%);
+}
+
+.cMenuToolbarSettingsTabsContainer {
+  border-top: 1px solid var(--background-modifier-border);
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+/*----------------------------------------------------------------
+cMenuToolbar CLASS CHANGES
+----------------------------------------------------------------*/
+
+#cMenuToolbarModalBar.cMenuToolbarDefaultAesthetic
+{
+border: 1px solid var(--background-modifier-border);
+}
+#cMenuToolbarModalBar.cMenuToolbarDefaultAesthetic:not(.top) :is(.cMenuToolbarCommandItem,button[class^=cMenuToolbarCommandsubItem])
+{
+min-height:28px ;
+}
+#cMenuToolbarModalBar.cMenuToolbarDefaultAesthetic:not(.top) button[class^=cMenuToolbarCommandsubItem]  {
+  margin: auto;
+  padding: 6px;
+box-shadow: none;
+ border: none;
+  background-color: transparent;
+
+  place-items: center;
+
+}
+.cMenuToolbarDefaultAesthetic {
+background-color: var(--background-primary);
+}
+
+
+#cMenuToolbarModalBar.cMenuToolbarGlassAesthetic ,#cMenuToolbarModalBar.cMenuToolbarGlassAesthetic ~#cMenuToolbarPopoverBar {
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow:none;
+  background-color: transparent;
+}
+
+  #cMenuToolbarModalBar.cMenuToolbarGlassAesthetic:not(.top) button[class^=cMenuToolbarCommandsubItem]  {
+    margin: auto;
+    padding: 0px;
+    box-shadow: none;
+    border: none;
+    display: flex;
+    border-radius: 3px;
+  font-size: 10px;
+    margin-right: 0px;
+    position: relative;
+    background-color: transparent;
+    place-items: center;
+    clear: both;
+    max-width: 28px;
+    max-height: 23px;
+  }
+
+/*----------------------------------------------------------------
+cMenuToolbar ICONS
+----------------------------------------------------------------*/
+
+.cMenuToolbarIconPick {
+  line-height: normal;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.cMenuToolbarIconPick svg {
+  width: 17px;
+  height: 17px;
+}
+
+/*----------------------------------------------------------------
+cMenuToolbar STATUS BAR MENU
+----------------------------------------------------------------*/
+
+.cMenuToolbar-statusbar-menu {
+  text-align: center;
+  width: 200px;
+}
+
+
+.cMenuToolbar-statusbar-menu .menu-item {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.cMenuToolbar-statusbar-menu .menu-item.settings-item {
+  font-size: 12px;
+  text-align: center;
+  line-height: 1;
+  border-radius: 5px;
+  height: auto;
+  padding: 8px 5px 0px 5px;
+  margin: 0 auto;
+  width: fit-content;
+  color: var(--text-faint);
+}
+
+.cMenuToolbar-statusbar-menu .menu-item.settings-item .menu-item-title {
+  text-align: center;
+}
+
+.cMenuToolbar-statusbar-menu .menu-item:hover,
+.cMenuToolbar-statusbar-menu .menu-item .selected:hover,
+.cMenuToolbar-statusbar-menu .menu-item.selected:not(.is-disabled):not(.is-label) {
+  background-color: transparent;
+}
+
+.cMenuToolbar-statusbar-menu .menu-item-title {
+  margin-right: 10px;
+}
+
+.cMenuToolbar-statusbar-menu .slider {
+  width: 100%;
+}
+
+.cMenuToolbar-statusbar-menu .menu-item.buttonitem {
+  padding-top: 10px;
+  padding-bottom: 4px;
+  height: fit-content;
+}
+
+.cMenuToolbar-statusbar-menu .menu-item.buttonitem button.cMenuToolbarSettingsButton {
+  margin: 0;
+}
+
+.cMenuToolbar-statusbar-menu  .menu-item-icon svg  path   {
+    fill: var(--text-muted);
+}
+.cMenuToolbar-statusbar-menu  .menu-item-icon svg    {
+  stroke: var(--text-muted);
+}
+.cMenuToolbar-statusbar-menu  > .menu-item:is([data-section="ButtonAdd"]) {
+    display: inline-flex;
+    padding: 0px 0px 5px 5px;
+    align-items: center;
+}
+
+.cMenuToolbar-statusbar-menu  > .menu-item {
+  display: inline-flex;
+  padding: 0px 0px 5px 5px;
+  align-items: center;
+}
+.cMenuToolbar-statusbar-menu  > .menu-item:is([data-section="ButtonAdd"]) .menu-item-icon{
+  text-align: center;
+}
+ 
+
+/*----------------------------------------------------------------
+cMenuToolbar STATUS BAR BUTTONS
+----------------------------------------------------------------*/
+
+.cMenuToolbar-statusbar-button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.cMenuToolbar-statusbar-button svg {
+  display: flex;
+  width: 1.3em;
+  height: 1.3em;
+}
+
+/*----------------------------------------------------------------
+cMenuToolbar SUPPORT
+---------------------------------------------`-------------------*/
+
+.cDonationSection {
+  width: 60%;
+  height: 50vh;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--text-normal);
+}
+ 
+
+#cMenuToolbarModalBar{
+  align-items: center;
+  justify-items: center;  
+  border: none;
+  backdrop-filter: none;
+}
+
+#cMenuToolbarModalBar.cMenuToolbarGlassAesthetic .cMenuToolbarCommandItem{
+	
+background-color:#ffffff00;
+}	
+
+#cMenuToolbarModalBar.cMenuToolbarGlassAesthetic [class^=cMenuToolbarCommandsubItem]{
+	
+  background-color:#ffffff00;
+  }	
+#cMenuToolbarModalBar .cMenuToolbarCommandItem{
+  justify-content: center;
+  align-content: center;
+  place-items: center;
+
+  }	
+  
+
+/*  #cMenuToolbarModalBar.cMenuToolbarTinyAesthetic .cMenuToolbarCommandItem svg{
+     width: 1em;
+     height: 1em;
+ } */
+
+
+ 
+div.modal-container.cMenuToolbar-Modal:not(.changename)  .modal-bg
+{
+  background-color:transparent!important;
+  backdrop-filter: none!important;
+position: relative;
+}
+.modal-container.cMenuToolbar-Modal:not(.changename)  .modal {
+  padding: 10px 30px;
+  min-width: 130px;
+  position: absolute;
+  bottom: 2em;
+  right: 0.5em;
+  background-color: rgb(var(--mono-rgb-0),0.8);
+  backdrop-filter: blur(4px);
+}
+.modal-container.cMenuToolbar-Modal  .modal-title
+{
+  display: none;
+}
+
+.modal-container.cMenuToolbar-Modal  .modal  input[type='range'] {
+  width: 90%;
+ 
+}
+body.theme-dark .modal-container.cMenuToolbar-Modal  .modal  input[type='range'] {
+ background-color: var(--background-secondary);
+}
+/*tiny 样式*/
+#cMenuToolbarModalBar.cMenuToolbarTinyAesthetic {
+  align-items: center;
+  justify-items: center;  
+  border: none;
+  backdrop-filter: none;
+  background-color: var(--background-primary);
+  box-shadow: 0 3px 6px -4px rgb(0 0 0 / 12%), 0 6px 16px 0 rgb(0 0 0 / 8%), 0 9px 28px 8px rgb(0 0 0 / 5%);
+ }
+
+
+ #cMenuToolbarModalBar.cMenuToolbarTinyAesthetic .cMenuToolbarCommandItem {
+  margin: auto;
+  padding: 0px;
+  box-shadow: none;
+  margin-left: 0px;
+  margin-right: 0px;
+  position: relative; 
+  background-color:transparent;
+    backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+}
+ #cMenuToolbarModalBar .cMenuToolbarCommandItem {
+   margin: auto;
+
+   padding: 0px;
+   box-shadow: none;
+
+   margin-left: 4px;
+   margin-right: 0px;
+   position: relative; 
+   background-color:transparent;
+     backdrop-filter: blur(8px);
+   -webkit-backdrop-filter: blur(8px);
+ 
+ }
+
+
+:is(#cMenuToolbarModalBar).cMenuToolbarTinyAesthetic:not(.top) button[class^=cMenuToolbarCommandsubItem]  {
+  margin: auto;
+  padding: 0px;
+  box-shadow: none;
+  border: none;
+  display: flex;
+  border-radius: 3px;
+font-size: 10px;
+  margin-right: 0px;
+  position: relative;
+  background-color: transparent;
+ 
+  place-items: center;
+  clear: both;
+  max-width: 28px;
+  max-height: 23px;
+   
+}
+ button[class^=cMenuToolbarCommandsubItem]::after {
+
+  content:  url("data:image/svg+xml,%3Csvg width='4' height='4' version='1.1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024' enable-background='new 0 0 1024 1024' xml:space='preserve'%3E%3Cpath fill='%23666' d='M13.24 80.11 l461.75 560.8 q14.56 16.02 36.41 16.02 q21.85 0 36.42 -16.02 l463.2 -560.8 q10.2 -10.19 12.38 -24.75 q2.18 -14.57 -3.64 -27.68 q-5.82 -13.11 -18.21 -20.39 q-12.39 -7.29 -26.95 -7.29 l-924.95 0 q-20.4 0 -34.23 13.11 q-13.84 13.11 -15.29 32.77 q-1.46 19.66 13.11 34.23 Z'/%3E%3C/svg%3E");
+  
+ margin-left: 1px;
+ margin-top:6px;
+
+}
+
+
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar)  button[class^=cMenuToolbarCommandsubItem]  >.subitem
+{
+    background-color: var(--background-primary);
+    border-radius: 4px;
+    border: 1px solid var(--background-modifier-border);
+    box-shadow: 0 2px 8px var(--background-modifier-box-shadow);
+    position: absolute;
+    z-index: var(--layer-menu);
+    user-select: none;
+    transform: translateY(90%) translateX(0%);
+    -webkit-transform: translateY(90%) translateX(0%);
+    display: flex;
+    
+}
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button[class^=cMenuToolbarCommandsubItem]  >.subitem svg
+{
+  max-width: 1.3em;
+  max-height: 1.3em;
+}
+
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button[class^=cMenuToolbarCommandsubItem]  >.subitem button.menu-item
+{
+    background-color: var(--background-secondary);
+    line-height:2em;
+    display: inline-flex;
+    box-shadow: none;
+    align-items: center;
+}
+
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button[class^=cMenuToolbarCommandsubItem]  >.subitem button:hover
+{
+    background-color: var(--interactive-hover);
+    box-shadow: var(--input-shadow-hover);
+}
+
+
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button[class^=cMenuToolbarCommandsubItem]  >.subitem .menu-item {
+  margin-left: 2px;
+  margin-right: 2px;
+  padding: 0px 4px 0px 4px;
+}
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button[class^=cMenuToolbarCommandsubItem] >.subitem  {
+ 
+ visibility:hidden;
+ transition: all 0.3s linear;
+ -webkit-transition:  all 0.3s linear;
+}
+
+
+
+
+
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar)  button.cMenuToolbarCommandsubItem-font-color .triangle-icon
+{
+  position: absolute;
+  margin-left: 18px;
+  bottom: 8%;
+background-size: 4px 4px;
+background-image: url("data:image/svg+xml,%3Csvg width='4' height='4' version='1.1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024' enable-background='new 0 0 1024 1024' xml:space='preserve'%3E%3Cpath fill='%23666' d='M13.24 80.11 l461.75 560.8 q14.56 16.02 36.41 16.02 q21.85 0 36.42 -16.02 l463.2 -560.8 q10.2 -10.19 12.38 -24.75 q2.18 -14.57 -3.64 -27.68 q-5.82 -13.11 -18.21 -20.39 q-12.39 -7.29 -26.95 -7.29 l-924.95 0 q-20.4 0 -34.23 13.11 q-13.84 13.11 -15.29 32.77 q-1.46 19.66 13.11 34.23 Z'/%3E%3C/svg%3E");
+
+    width: 16px;
+    height: 20px;
+    background-position: center;
+ 
+    background-repeat: no-repeat;
+    min-width: unset;
+    border-left: 2px solid  transparent;
+ }
+
+ :is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar):not(.top) button.cMenuToolbarCommandsubItem-font-color .triangle-icon 
+ {
+  margin-left: 16px;
+  
+ }
+ 
+ :is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar):not(.top) button.cMenuToolbarCommandsubItem-font-color .x-color-picker-wrapper
+{
+  top:auto;
+bottom:calc(100% + 1.8em);
+}
+
+ 
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button.cMenuToolbarCommandsubItem-font-color .subitem
+{
+  visibility:hidden;
+  transition: all 0.3s linear;
+  -webkit-transition:  all 0.3s linear;
+ }
+
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button.cMenuToolbarCommandsubItem-font-color .subitem:hover  {
+  visibility:visible;
+  transition: all 0.3s linear;
+  -webkit-transition:  all 0.3s linear;
+ }
+
+
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button[class^=cMenuToolbarCommandsubItem]:hover >.subitem  {
+ 
+  visibility:visible;
+ transition: all 0.3s linear;
+ -webkit-transition:  all 0.3s linear;
+}
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button[class^=cMenuToolbarCommandsubItem] >.subitem:hover  {
+  visibility:visible;
+  transition: all 0.3s linear;
+  -webkit-transition:  all 0.3s linear;
+ }
+
+ .cMenuToolbarCommandsubItem-font-color button
+{
+ background-color: transparent;
+}
+.cMenuToolbarCommandsubItem-font-color button:hover
+{
+  background-color: var(--interactive-normal);
+}
+
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbarCommandItem .setting-item-info {
+  
+  flex:30%;
+margin: 0;
+}
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbarSettingsTabsContainer_sub
+ {
+  border-left: 1px solid var(--background-modifier-border);
+  flex-flow: column;
+  min-height: 45px;
+  display: flex;
+  padding: 0;
+ margin-left: 10px;
+  flex: 70%;
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbarSettingsTabsContainer_sub:empty
+ {
+ border: 2px dashed rgba(var(--interactive-accent-rgb),0.5);
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbarSettingsTabsContainer_sub:empty::before {
+  content: "✖️Drag it here";
+  margin: auto;
+  font-size: 12px;
+}
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbarSettingsTabsContainer_sub .cMenuToolbarCommandItem
+ {
+  flex: auto;
+  margin-left: 2em;;
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbarSettingsTabsContainer_sub .setting-item-control
+ {
+flex: 0;
+ }
+
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbarCommandSubItem>.setting-item-info
+ {
+ flex: 70px;
+ }
+ .cMenuToolbarCommandSubItem>.setting-item-control
+{
+
+  justify-content: flex-start;
+}
+ .modal.mod-settings button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsButton.cMenuToolbarSettingsButtonaddsub {
+   background-color: var(--background-secondary-alt);
+}
+
+
+.setting-item button.cMenuToolbarSettingsIcon{
+  display: block;
+  transform: translateX(-30%); 
+  -webkit-transform: translateX(-30%); 
+}
+.setting-item button.cMenuToolbarSettingsIcon:empty::before{
+ content: "❗";
+}
+.setting-item button.cMenuToolbarSettingsIcon svg{
+  max-width: 1.5em;
+  max-height: 1.5em;
+}
+.modal.mod-settings button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsIcon:hover{
+  background-color: var(--interactive-accent-hover);
+}
+.modal.mod-settings button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsIcon
+{
+  background-color: transparent;
+  box-shadow: 0 1px 1px 0px var(--background-modifier-border);
+}
+@media screen and (min-width: 781px){
+  .cMenuToolbar-Modal .wideInputPromptInputEl {
+  width: 40rem;
+  max-width: 100%;
+  height: 20rem;
+  background-color: rgb(var(--mono-rgb-0),0.8);
+}
+}
+
+.cMenuToolbarcustomIcon svg {
+  max-width: 1.3em;
+  max-height: 1.3em;
+  display: flex;
+}
+
+
+.cMenuToolbarSettingsButton  svg {
+  max-width: 1.3em;
+  max-height: 1.3em;
+  display: flex;
+}
+
+.cmdr-page-header
+{
+  min-width: 1em;;
+}
+
+
+.x-color-picker-wrapper {
+  right: 0px;
+  top:1.8em;
+  min-width: 1px;
+  padding: 10px;
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14);
+  position: absolute;
+  width: fit-content;
+  font-weight: 400;
+  font-family: Source Sans Pro,sans-serif;
+  border-radius: 4px;
+  background-color: var(--background-primary);
+}
+.markdown-source-view.mod-cm6 .x-color-picker-wrapper table.x-color-picker-table#x-color-picker-table {
+  width: unset;
+  border-collapse: separate;
+  border-spacing: 6px;
+  margin: auto !important;
+}
+.x-color-picker-wrapper table.x-color-picker-table#x-backgroundcolor-picker-table {
+  width: unset;
+  border-collapse: separate;
+  border-spacing: 6px;
+  margin: auto !important;
+}
+.x-color-picker-wrapper .x-color-picker-table th {
+  border: 0;
+  text-align: left;
+  font-weight: normal;
+  background: transparent !important;
+  color: #718096;
+}
+.x-color-picker-wrapper #x-color-picker-table td {
+  font-size: 1px;
+  padding: 9px;
+  cursor: pointer;
+  border: solid 1px var(--background-modifier-border);
+}
+.x-color-picker-wrapper #x-backgroundcolor-picker-table td {
+  font-size: 1px;
+  border-radius: 50%;
+  padding: 9px;
+  cursor: pointer;
+  border: solid 1px var(--background-modifier-border);
+}
+.x-color-picker-wrapper .x-color-picker-table tr td:hover {
+  box-shadow: 0 3px 6px -4px rgba(0,0,0,.12),0 6px 16px 0 rgba(0,0,0,.08),0 9px 28px 8px rgba(0,0,0,.05);
+}
+.x-color-picker-wrapper tbody>tr:hover
+{
+background-color:transparent !important;
+}
+/**top**/
+#cMenuToolbarModalBar.top {
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    height: 38px;
+    align-items: center;
+    transition: all 0.2s linear;
+    -webkit-transition:  all 0.2s linear;
+    
+}
+
+#cMenuToolbarModalBar.top :is(.cMenuToolbarCommandItem,button[class^=cMenuToolbarCommandsubItem]):not(.cMenuToolbar-Divider-Line)
+{
+font-size: 10px;
+  margin-right: 0px;
+  clear: both;  
+  opacity: 1;
+  flex-shrink:0;
+    height: 26px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+    border-radius: 2px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s linear;
+    -webkit-transition:  all 0.2s linear;
+
+ 
+
+    
+}
+#cMenuToolbarModalBar.top button.cMenuToolbarCommandItem:hover {
+  background-color: var(--interactive-hover);
+}
+
+ 
+
+#cMenuToolbarPopoverBar{
+  
+    padding: 0 10px;
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    z-index: var(--layer-status-bar); 
+    background-color: var(--background-primary);
+      background-clip: padding-box;
+      border-radius: 6px;
+      box-shadow: 0 3px 6px -4px rgba(0,0,0,.12),0 6px 16px 0 rgba(0,0,0,.08),0 9px 28px 8px rgba(0,0,0,.05);
+      box-shadow: 0 0 8px rgba(0,0,0,.15)\9;
+      margin-left: auto;
+      margin-right: 25px;
+      transition: all 0.1s linear;
+      -webkit-transition:  all 0.1s linear;
+      margin-top: 32px;
+    position: absolute;
+    right: 0;
+}
+
+#cMenuToolbarPopoverBar :is(.cMenuToolbarCommandItem,button[class^=cMenuToolbarCommandsubItem]){
+
+    height: 26px;
+margin-left: 4px;
+    font-size: 10px;
+  margin-right: 4px;
+  clear: both;  
+  opacity: 1;
+  flex-shrink:0;
+    height: 26px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+    border-radius: 2px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s linear;
+    -webkit-transition:  all 0.2s linear;
+   
+}
+#cMenuToolbarPopoverBar :is(.cMenuToolbarCommandItem,button[class^=cMenuToolbarCommandsubItem]):hover{
+  background-color: var(--interactive-hover);
+}
+
+#cMenuToolbarModalBar .more-menu {
+  display: flex;
+  align-items: center;
+  box-shadow:none;
+  margin-left: 4px;
+  border-left: 1px inset var( --background-modifier-form-field);
+  height: 24px;
+  opacity: 0.8;
+}
+ /*Divider-Line**/
+
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbar-Divider-Line
+ {
+  padding: 0;
+   
+  line-height: 0px;
+  border-left: 200px solid rgba(var(--interactive-accent-rgb),0.05);
+  border-right: 200px solid rgba(var(--interactive-accent-rgb),0.05);
+  text-align: center;
+  background: rgba(var(--interactive-accent-rgb),0.2);
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbar-Divider-Line .setting-item-control button:not(:last-child)
+ {
+   display: none;
+ }
+
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbar-Divider-Line .setting-item-info 
+ {
+  flex: 1 1 auto;
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbar-Divider-Line .setting-item-control 
+ {
+  justify-content: flex-start;
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbar-Divider-Line .setting-item-info .setting-item-name
+ {
+  font-size: 12px;
+ text-align: right;
+
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbar-Divider-Line .setting-item-control button:last-child
+ {
+  padding: 0;
+   background-color: transparent!important;
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbar-Divider-Line .setting-item-control button:last-child svg
+ {
+   display: none;
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbar-Divider-Line .setting-item-control button:last-child::before
+ {
+  content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M511.674077 66.707284c-246.52265 0-446.347744 199.835328-446.347744 446.347744s199.825095 446.356954 446.347744 446.356954c246.50423 0 446.348768-199.844537 446.348768-446.356954S758.177284 66.707284 511.674077 66.707284zM744.967424 667.159826c21.8701 21.8701 21.8701 57.310264 0 79.199807-21.8701 21.851681-57.30924 21.851681-79.198783-0.019443L511.674077 592.264045 357.56007 746.359632c-21.8701 21.8701-57.30924 21.851681-79.17934-0.019443s-21.8701-57.290821 0-79.160921L432.493713 513.065262 278.379707 358.950232c-21.8701-21.86089-21.8701-57.328683 0-79.18855 21.8701-21.87931 57.30924-21.87931 79.17934 0l154.114007 154.104797 154.095587-154.104797c21.889543-21.87931 57.32766-21.87931 79.198783-0.010233 21.8701 21.8701 21.8701 57.348126 0 79.207993L590.89128 513.065262 744.967424 667.159826z' fill='%23666666'/%3E%3C/svg%3E");
+ }
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button.cMenuToolbarCommandItem.cMenuToolbar-Divider-Line
+{
+  min-width:unset;
+    flex-shrink: 0;
+    display: inline-flex;
+    width: 0.6px;
+    background-color: var(--background-modifier-border);
+    height: 22px;
+    opacity: 0.8;
+    margin: 0;
+}
+.theme-dark :is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar)  button.cMenuToolbarCommandItem.cMenuToolbar-Divider-Line
+{
+
+    background-color: #4f4f5188;
+ 
+}
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar)  button.cMenuToolbarCommandItem.cMenuToolbar-Divider-Line svg
+{
+ display: none;
+}
+
+.workspace-tabs.mod-stacked  .workspace-tab-header:not(.is-active) + .workspace-leaf #cMenuToolbarModalBar
+{
+  opacity: 0;
+}
+ undefined
+</style>
+    </head>
+    <body>
+<h2 data-heading="Соня в царстве дива">Соня в царстве дива</h2>
+<p>Перевод: О.И. Тимирязева (<em>предп.</em>), 1879</p>
+<ul>
+<li><a aria-label-position="top" aria-label="Слёзная лужа" data-href="#Слёзная лужа" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%A1%D0%BB%D1%91%D0%B7%D0%BD%D0%B0%D1%8F%20%D0%BB%D1%83%D0%B6%D0%B0" class="internal-link" target="_blank" rel="noopener">Слёзная лужа</a></li>
+<li><a aria-label-position="top" aria-label="Игра в горелки" data-href="#Игра в горелки" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%98%D0%B3%D1%80%D0%B0%20%D0%B2%20%D0%B3%D0%BE%D1%80%D0%B5%D0%BB%D0%BA%D0%B8" class="internal-link" target="_blank" rel="noopener">Игра в горелки</a></li>
+<li><a aria-label-position="top" aria-label="Кролик посылает Ваську на врага" data-href="#Кролик посылает Ваську на врага" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%9A%D1%80%D0%BE%D0%BB%D0%B8%D0%BA%20%D0%BF%D0%BE%D1%81%D1%8B%D0%BB%D0%B0%D0%B5%D1%82%20%D0%92%D0%B0%D1%81%D1%8C%D0%BA%D1%83%20%D0%BD%D0%B0%20%D0%B2%D1%80%D0%B0%D0%B3%D0%B0" class="internal-link" target="_blank" rel="noopener">Кролик посылает Ваську на врага</a></li>
+<li><a aria-label-position="top" aria-label="Советник-червяк" data-href="#Советник-червяк" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%A1%D0%BE%D0%B2%D0%B5%D1%82%D0%BD%D0%B8%D0%BA-%D1%87%D0%B5%D1%80%D0%B2%D1%8F%D0%BA" class="internal-link" target="_blank" rel="noopener">Советник-червяк</a></li>
+<li><a aria-label-position="top" aria-label="Поросёночек" data-href="#Поросёночек" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%9F%D0%BE%D1%80%D0%BE%D1%81%D1%91%D0%BD%D0%BE%D1%87%D0%B5%D0%BA" class="internal-link" target="_blank" rel="noopener">Поросёночек</a></li>
+<li><a aria-label-position="top" aria-label="Шальная беседа" data-href="#Шальная беседа" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%A8%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20%D0%B1%D0%B5%D1%81%D0%B5%D0%B4%D0%B0" class="internal-link" target="_blank" rel="noopener">Шальная беседа</a></li>
+<li><a aria-label-position="top" aria-label="Игра в крокет" data-href="#Игра в крокет" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%98%D0%B3%D1%80%D0%B0%20%D0%B2%20%D0%BA%D1%80%D0%BE%D0%BA%D0%B5%D1%82" class="internal-link" target="_blank" rel="noopener">Игра в крокет</a></li>
+<li><a aria-label-position="top" aria-label="Соня в зверинце" data-href="#Соня в зверинце" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%A1%D0%BE%D0%BD%D1%8F%20%D0%B2%20%D0%B7%D0%B2%D0%B5%D1%80%D0%B8%D0%BD%D1%86%D0%B5" class="internal-link" target="_blank" rel="noopener">Соня в зверинце</a></li>
+<li><a aria-label-position="top" aria-label="Заседание суда" data-href="#Заседание суда" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%97%D0%B0%D1%81%D0%B5%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20%D1%81%D1%83%D0%B4%D0%B0" class="internal-link" target="_blank" rel="noopener">Заседание суда</a></li>
+</ul>
+<h3 data-heading="У кролика в норке">У кролика в норке</h3>
+<p>Скучно стало Соне сидеть без дела в саду около старшей сестры. Раза два она заглянула ей в книгу - в книге ни картинок, ни разговоров. Какая радость в книге без картинок и разговоров!</p>
+<p>День жаркий, душно. Соня совсем раскисла, ее клонит ко сну; вздумала было плести венок, да надо встать, нарвать цветов. «Встать или не встать!» колеблется Соня, как вдруг, откуда ни возьмись, бежит мимо, близехонько от нее, кролик - шкурка беленькая, глаза розовые. Что кролик пробежал - не диво, но Соня удивилась, что кролик на бегу пробормотал про себя: «Батюшки, опоздаю!»</p>
+<p>Когда же кролик достал из кармана в жилете часы, взглянул на них, и во все лопатки припустился бежать, Соня вскочила на ноги. Чтобы кролики ходили в жилетах, при часах!... Нет, такой штуки она отроду не видывала и не слыхивала! Так разгорелось у Сони любопытство, что она бросилась за беленьким в погоню полем, и нагнала его как раз в пору: кролик только что шмыгнул в широкое отверстие норки около изгороди. Соня туда же за ним.</p>
+<p>Сначала дорога в норку шла прямая; потом вдруг обрывалась вниз, да так неожиданно и круто, что Соня не успела опомниться, как уже летела стремглав куда-то, словно в глубокий колодезь. Взглянула вниз - зги не видать.</p>
+<p>Тогда Соня стада глядеть по сторонам. Видит - по стенам колодца как будто шкафы, книжные полки; на гвоздях кое-где висят атласы, картины.</p>
+<p>Все ниже, ниже и ниже спускается Соня. «Когда же этому будет конец? Любопытно узнать на сколько верст я уже провалилась! Эдак, пожалуй, я скоро окажусь где-нибудь около самого центра земли. Дай, припомню: около 4000 верст, кажется, будет.»</p>
+<p>Соня, видите ли, уже знала кое-что из географии. «Ну, положим», думает она, «я и спустилась на 4000 верст, но под каким я градусом широты и долготы, - вот что всего важнее узнать». Соня, надо заметить, не понимала хорошенько смысла широты и долготы, но слова эти сами по себе казались ей такими важными, славными, так тешили ее. «А что, если я провалюсь совсем, насквозь всей земли? Вот будет смех - очутиться с людьми, которые ходят вверх ногами, на голове! Антипатия, кажется, это место называется...»</p>
+<p>Тут Соня стала в тупик: с этим словом она не могла справиться, и обрадовалась, что некому было ее подслушать.</p>
+<p>«Впрочем, о названии этой страны можно будет у них там справиться», решила она, и стала представлять себе, как подойдет к кому-нибудь, присядет и спросит: «скажите, пожалуйста, что это - Новая Зеландия или Австралия?» Соня даже чуть не присела, но как тут присядешь на воздухе, летя вниз!</p>
+<p>«Впрочем, лучше не расспрашивать, а то, пожалуй, примут меня за невежду! Так и быть, не стану расспрашивать. Где-нибудь там у них да будет написано.»</p>
+<p>Все ниже, ниже и ниже летит Соня. Что делать! Она опять принялась болтать. «Вот хватится меня Катюша! (Катюша у нее кошка). Надеюсь, ее кто-нибудь попоит молоком за чаем. Катюша, милая! Хоть бы ты была здесь со мною! Мышей, правда, в воздухе не водится, ну, поймала бы себе летучую мышь; ведь простая мышь и летучая, я думаю, почти одно и то же? Не знаю только, едят ли кошки летучих мышей? - вот что!»... Тут Соню стала разбирать дремота, и она то и дело повторяет: «едят ли кошки летучих мышей? едят ли мышей летучие кошки? едят ли кошек летучие мыши?..» Соня дремлет, и кажется ей, будто она ходит рука об руку с Катюшей и строго допрашивает ее: «Скажи, Катюшка, признайся, едала ты когда-нибудь летучую мышь? смотри, Катюшка, говори правду!»... Вдруг - стук, стук, хлоп! - Соня свалилась на кучу сухих листьев и сучьев, и - стой, ни с места!...</p>
+<p>Однако, она нисколько не ушиблась и тотчас вскочила на ноги. Взглянула вверх - темно; посмотрела вперед - опять длинный ход, а по нем бежит- спешит беленький кролик. Не теряя минуты, Соня, как вихрь, понеслась за ним вслед, нагнала его на повороте, и слышит, говорит беленький: «ай, ай, ай, как поздно!» Только Соня повернула за угол - глядит, а беленького и след простыл, словно провалился!</p>
+<p>Соня очутилась одна в длинной, низкой зале, сверху освещенной рядом ламп, которые висели с потолка. По обеим стенам залы множество дверей; все заперты. Соня прошлась по всей зале, толкнулась в каждую дверь, ни одна не отпирается. Она отошла, и стала посреди залы. «Что мне теперь делать? Как выйти отсюда?» грустно думает она.</p>
+<p>Соня обернулась и натолкнулась на столик. Столик этот о трех ножках, весь из литого стекла, а на нем лежит крохотный золотой ключик и больше ничего. «Этим ключиком, должно быть, отпирается хоть одна из всех этих дверей», соображает Соня. Взяла ключик, пошла примерять его ко всем дверям - ни к одной не приходится, - как быть!</p>
+<p>Соня обошла залу еще раз, и набрела на низенькую занавеску, которую сперва не заметила. Откинула занавеску - за нею дверка вершка в 4 вышины. Она вложила ключ в замок - о радость! - ключ впору; отворила дверку, глядит: дверка выводит в корридорчик с мышиную норку; на самом конце коридорчика чудеснейший сад. Соня стала на коленки, нагнулась, смотрит, и не налюбуется. Как бы она погуляла в этом саду, посидела около фонтана.</p>
+<p>«Но как быть! И головы не просунешь в узенькую дверку, а голову просунешь, плечи застрянут!»</p>
+<p>«Когда бы я могла вдвигаться и раздвигаться как подзорная труба - вот было бы хорошо! Тогда я бы, кажется, справилась.»</p>
+<p>Видя, однако, что нет пользы стоять у дверки, Соня воротилась к столику, не найдется ли на нем другого ключика. На этот раз оказалось на столике скляночка с ярлыком, на ярлыке крупными, четкими, печатными буквами была надпись: «Выпей меня!» - «Выпей меня» - прочесть не мудрено, но взять, да так и выпить, не посмотрев, что пьешь - нет, не так глупа Соня!</p>
+<p>«Посмотрю сперва, не написано ли "наружное"» - рассудила она.</p>
+<p>Соня вспомнила, что когда на склянке написано наружное, то значит яд; и если выпить его слишком много, то может кончиться плохо. На этой склянке, однако, не стояло «наружное», и Соня решилась отведать. Отпила - ничего, вкусно; отзывается чем-то в роде всякой всячины: будто вишневым вареньем и яичницей, и ананасом, и жареной индейкой, и леденцом, и сдобными сухарями. Она допила все до капельки.</p>
+<p>«Что-то теперь будет? Престранное чувство!» говорит Соня. «Да никак я стала уменьшаться!»</p>
+<p>Так и есть: Соня действительно становится меньше, да меньше. От нее осталось уже всего вершка четыре и как обрадовалась она, вздумав, что теперь она ростом как раз подходит к дверке, что выводит в чудесный сад!</p>
+<p>Постояла Соня, подождала, не будет ли еще чего, не вдвинется ли еще? «Как бы совсем не вдвинуться!» - струсила она. «Эдак, пожалуй, совсем исчезнешь, и погаснешь как свечка», говорит она самой себе.</p>
+<p>Постояла Соня, видит - перемены нет, и решила, что тотчас отправится в сад. Пошла к дверке, а ключик от нее забыла на столике; воротилась к столику - что за горе! никак не достанет с него ключа, такая стала маленькая! Видит ключик сквозь стеклянный столик, а добраться до него не может. Что ни делала, как ни пробовала, ни хлопотала по ножкам взобраться на стол - ничего не поделаешь: скользко. Выбилась из сил бедная девочка, села и горько заплакала.</p>
+<p>«Ну, разревелась!» - вдруг спохватилась Соня. «Советую тебе сейчас перестать!» - резко и строго унимает она себя. Соня, надо заметить, была вообще мастерица угощать себя не только советами, но иной раз даже и щелчками. Шли ли они ей в прок - другое дело. И теперь она было пустилась в разговор с собою, но тотчас бросила, утерла слезы и стала озираться на все стороны. Вдруг, видит под стеклянным столиком лежит хрустальный ящичек. Она открывает его - в нем пирожок. На пирожке красиво выложены из коринки слова: «съешь меня!». «Пожалуй, съем», решила Соня. «Если выросту, достану ключ; а стану еще меньше, пролезу под дверь. Чтобы ни было, - лишь бы выбраться в сад».</p>
+<p>Соня откусила пирожка, села кусочек и страх ее разбирает. «Что-то будет! Куда иду? Вверх или вниз?» Она подняла руки под головой, щупает вверх или вниз она уходит? Что за чудеса! Голова на месте, никуда не уходит! Странное, однако, дело! - думает Соня. От пирогов, правда, никогда ничего не бывает особенного; но за это время с нею было столько диковинного, что ее словно озадачило, и даже несколько обидело, что с нею не делается ничего особенного. Она опять принялась за пирог и дочиста съела его.</p>
+<h3 data-heading="Слёзная лужа">Слёзная лужа</h3>
+<p>«Чуднее и распречуднее», закричала Соня! От удивление она даже путалась в словах, и выражалась как-то не по-русски. «Вот тебе раз! Выдвигаюсь теперь, как самая большущая подзорная труба! Стой, ноги, куда вы? Никак надо проститься с вами!» И действительно, Соня, нагнувшись, едва уже видит ноги, так они вытянулись и далеко от нее ушли. «Ну уж теперь никак не достану обувать их», рассудила она и вдруг стукнулась головой о потолок - она вытянулась чуть не на сажень. Она проворно схватила со стола ключик и поскорей к садовой дверке. Бедная Соня, опять неудача! - В дверь не пройдет. Только растянувшись во всю длину, она могла приложиться к ней одним глазом и заглянуть в сад; но пройти - куда при таком росте! не выдержала тут Соня, опять расплакалась.</p>
+<p>«Постыдилась бы себя, коли других не стыдно! Такая большая, да плачет» (и подлинно большая!). «Ну, будет, сейчас перестань, слышишь!» Ни увещание, ни угрозы, ничего не помогает; Соня плачет, рыдает, разливается; в три ручья текут у нее слезы, собираются в порядочно-глубокую лужу, и захватила эта лужа уже с пол залы. «Уж не заколдовал ли меня ночью колдун, или волшебница!» подумала Соня. «Дай вспомню, было ли со мною что-нибудь особенное нынче утром? Да, будто что-то было не как всегда. Ну, положим, я стала не Соней, а кем-то другим, так куда же девалась настоящая Соня, и в кого я обернулась?»</p>
+<p>Соня стала перебирать всех ей знакомых девочек, не узнает ли, в которую именно она обернулась. «Уж не стала ли я Аней? - Нет, не может быть: у Ани волосы длиннее моих и вьются, а мои совсем не вьются. И Машей я не стала - я учусь хорошо, и уже много знаю, а Маша учится дурно и ничего не знает. Однако с моей головой как будто что-то неладное делается!... Попробовать разве припомнить, знаю ли я впрямь все, что знала. Ну-ка: 4 x 5 = 12; 4 x 6 = 13; 4 x 7 = ... Сколько бишь?... эдак, пожалуй, и до 20-ти не досчитаешь... Ну, да что таблица умножение - это не важно! Посмотрим, как из географии: Лондон - столица... Парижа, а Париж?.. - столица Рима, а Рим?... Ну, поздравляю, все вздор!.. И вправду не обернулась ли я в Машу? Попробую, как со стихами. Ну-ка: "Птичка Божия не знает!"» Соня сложила перед собою руки, как привыкла за уроком, и начала. Голос ее в этой пустой зале казался глухим, хриплым, будто не своим, а слова все выходили навыворот, и никак она не сладит с языком:</p>
+<p>Киска хитрая не знает<br>
+Ни заботы, ни труда:<br>
+Без хлопот она съедает<br>
+Длиннохвостого зверька.  </p>
+<p>&nbsp;<br>
+Долгу ночь по саду бродит,<br>
+Как бы птичку подцепить,<br>
+И мурлыча песнь заводит,<br>
+Чтоб доверье ей внушить.  </p>
+<p>&nbsp;<br>
+А как утром солнце встанет,<br>
+Люди выйдут погулять,<br>
+Киска сытенькая сядет<br>
+Морду лапкой умывать.  </p>
+<p>&nbsp;</p>
+<p>«И все не так, все по-дурацки!» говорит бедная Соня, и так ей досадно, чуть не до слез. «И выходит, что я обернулась в Машу - это так верно, как нельзя вернее!.. Не хочу я быть Машей! Ни за что, ни за что!.. Господи, да что же это такое!» вдруг разрыдалась Соня, «хоть бы кто-нибудь просунул сюда голову! Уж мне так скучно сидеть здесь одной!...»</p>
+<p>Соня опустила голову и, нечаянно взглянув себе на руки, видит, что в жару разговора с собою, она и не заметила, что она словно тает. Соня вскочила, пошла к столику помериться. И то, - уж немного от нее осталось. «Хорошо сделала, что выбралась из воды», - думает Соня, «а то бы, пожалуй и совсем растаяла!» - «Теперь в сад!» закричала она и со всех ног бросилась к двери. Час от часу не легче! - Дверь опять заперта, а золотой ключик опять лежит на стеклянном столике. «Это уж просто из рук вон? Где же мне такой крошечной достать его! уж это так худо, что хуже и нельзя - терпение моего не стало - вот что!» и с этими словами Соня поскользнулась - и бултых, по горло окунулась в соленую воду.</p>
+<p>«Потону еще, чего доброго, в собственных своих слезах, и будет это мне наказанием, что бы я вперед не плакала, как дура.» Вдруг, на том конце лужи заплескалось что-то. Соня подплыла разузнать, что такое. Она, было, струсила, но потом успокоилась и подумала на мышь.</p>
+<p>«Точно - мышь. Не заговорить ли мне с нею», думает Соня. «Здесь все так удивительно, что и мыши, пожалуй, говорят; я этому нисколько бы не удивилась. Попробовать разве? - Спрос не беда. Мышь, мышка! Скажите, пожалуйста, как мне выбраться из этой лужи? Я совсем измучилась, плавая в ней, да и растаять боюсь!»</p>
+<p>Мышь с любопытством обратилась острыми глазками на Соню, прищурилась, но ничего не отвечала.</p>
+<p>«Она, может быть, не понимает по-русски», думает Соня. «Может быть это мышь французская, пришла в Россию с Наполеоном. Посмотрим, скажу что-нибудь по-французски.»</p>
+<p>Первое, что ей вспомнилось из французских уроков, она и сказала: «Ou est machatte?»</p>
+<p>Как прыгнет мышь одним скачком вон из лужи, стоит вся трясется. Соня догадалась, хоть и поздно, что сильно напугала ее. «Ах, простите меня, пожалуйста!» поспешила она извиниться, «я совсем забыла, что вы не любите кошек».</p>
+<p>«Не люблю!» сердито и резко завизжала мышь. «Посмотрела бы я как ты на моем месте стала бы целоваться с кошкой.»</p>
+<p>«Уж, конечно, не стала бы» - вкрадчиво говорит Соня, желая помириться с мышью. «Только, пожалуйста, не сердитесь. Но знаете ли, если бы вы хоть раз взглянули на нашу кошечку, Катюшу, наверное полюбили бы ее.уж такая наша Катюша ласковая, такая милашка!» - болтаясь в луже, припоминает Соня, совсем забыв про мышь. «Уж такая эта Катюша у нас драгоценный зверок: сидит около печки, курлычет, лапки себе лижет, мордочку умывает! И такая она чистенькая, мягонькая, тепленькая! С рук бы не спустил. А какая мастерица ловить мышей... Ах, что же это я опять!... пожалуйста, простите!», спохватилась вдруг Соня, взглянув на мышь. А эта стоит натопорщенная.</p>
+<p>«Ну, теперь уж непременно обиделась», думает Соня. «Лучше нам вовсе об этом не говорить», успокаивает она мышь.</p>
+<p>«Нам!!!» - закричала мышь, а сама трясется с головы до самого кончика хвоста. «Стану я говорить о такой гадости! В нашем семействе всегда ненавидели кошек. Гадкий, низкий, подлый зверь - вот что! И что бы уши мои не слышали, глаза мои не видали!.. Прошу покорно меня этим не угощать.» - «Не буду, не буду. Давайте разговаривать о другом», предлагает Соня, стараясь придумать, чем бы развлечь мышь. «Скажите, какое ваше мнение о собаках? Любите ли вы собак?» На это мышь ни гу-гу. Соня обрадовалась.</p>
+<p>«Есть у нас, знаете, около дома, премиленькая собачка», начинает Соня. «Вот уж понравилась бы вам! Глазки у нее быстрые, острые; шубка темная, кудрявая и уж каких, каких штук она не знает! Хозяин ея, наш староста, не нахвалится Жучкой. Такая, говорит, смышленая, полезная, за сто рублей не отдам. В амбарах у него всех крыс, да мы...»</p>
+<p>«Ах, батюшки, что же это я опять!» остановилась Соня. И жалко, и совестно ей. «Ах, какая досада, опять я вас нечаянно обидела!» Соня оглянулась на мышь, видит - удирает от нее мышь, что есть мочи и такую подняла плескотню в луже, что страсть! Тогда Соня тихим, мягким голосом стала ее к себе звать. «Мышка, душенька, пожалуйста, вернитесь! Право не стану больше говорить о кошках и собаках - вижу теперь как они вам противны.»</p>
+<p>Мышь на эти слова, тихо стала подплывать к Соне. Лицо у нее было бледно, как смерть (верно со злости, подумала Соня); и говорит мышь дрожащим голосом: «Выйдем на берег, там я расскажу тебе повесть моей жизни, и ты поймешь тогда, почему я ненавижу кошек и собак.»</p>
+<p>И пора было выбираться из лужи: в ней становилось тесно. В нее навалилось бездна всякого народа: были тут и утка, и журавль, и попугай, и орленок, и кого только не было! Соня поплыла вперед, все за нею, и целой партией выбрались на берег.</p>
+<h3 data-heading="Игра в горелки">Игра в горелки</h3>
+<p>Престранное собралось общество на берегу. Птицы все растрепанные, хохлы взъерошенные, перья болтаются по бокам; звери прилизанные, шубки мокрые насквозь, с них льет, течет, и все они, нахохленные, надутые, глядят сентябрем.</p>
+<p>Первым делом надо было обсушиться. Стали об этом держать совет, Соня тут же с ними толкует, рассуждает, ни мало не конфузясь, точно век знакома с ними. Она даже пустилась с попугаем в спор, но он скоро надулся и зарядил одно: «я старше тебя, стало быть, и умнее тебя.» А насколько старше, не хочет сказать. Так Соня видит, что ничего от него не добьешься и замолчала.</p>
+<p>Тогда мышь вступилась. Она, как видно, была между ними важное лицо. «Садитесь и слушайте», сказала она, «вы у меня скоро обсохнете.» Все расселись в кружок, мышь посередке. Соня жадно уставилась на нее. «Что-то она скажет», думает она, «поскорее бы обсохнуть, а то так холодно, - еще простудишься, пожалуй!»</p>
+<p>«Ну-с», с достоинством начала мышь, - «все ли на месте? Сухо же здесь, нечего сказать! Прошу покорнейше всех молчать. Было это в 12-м году. Мы с Наполеоном шли на Россию, хотели брать Москву. Я ехала в фургоне с провиантом, где ни в чем не нуждалась и имела очень удобное помещение в ранце одного французского солдата.» Тут мышь важно приподняла голову и значительно оглянула все общество. «Полководцы у нас были отличные, привыкли воевать: куда ни пошлют их, везде побеждают. Пошли на Москву, сразились под Бородиным...»</p>
+<p>«Б-р-р-р», затрясся попугай - очень его уж пробирало.</p>
+<p>«Вам что угодно? Вы, кажется, что-то сказали?» - учтиво обратилась к нему мышь, а сама нахмурилась и сердито водит усами.</p>
+<p>«Ничего-с, я так только», поспешил отвечать попугай.</p>
+<p>«Мне, стало быть, почудилось», отрезала мышь. «Так, дальше, продолжаю. Сразились под Бородиным, одержали победу, вступили в Москву зимовать. Все бы хорошо, не случись беды. Москва стала гореть, а кто поджег неизвестно. Русские говорят на французов, Французы сваливают на русских - кто их разберет. Я в то время жила во дворце и была свидетельницей всего, что происходило». И мышь опять значительно оглянула общество. «Ну, видит Наполеон, что плохо дело, собрал совет, много толковали и нашли... Ну что, душенька, обсохла?» вдруг обратилась мышь к Соне.</p>
+<p>«Нисколько, мокрехонька, как была», пригорюнившись, отвечает Соня.</p>
+<p>«Господа», торжественно выступил тут журавль, «имею предложить заседанию распуститься для принятие более энергических мер...»</p>
+<p>«Говори по-русски», закричал на него орленок, «из твоих мудреных слов я ничего не пойму, да и сам ты, чай, их, брат, в толк не возьмешь». И орленок засмеялся исподтишка; но это заметили другие птицы и поднялось хихиканье.</p>
+<p>«Я хотел только, в виду общего блага, предложить игру в горелки - а впрочем, как будет угодно», несколько обиженно сказал журавль.</p>
+<p>«Что же это за игра?» спросила Соня, и только потому, что ей стало жалко журавля, который после выходки орленка стоял сконфуженный.</p>
+<p>«Чем пускаться в объяснение, лучше показать на деле», отвечал журавль и вышел на середину.</p>
+<p>Он расставил всех по парам и не успел стать в свою пару, как пошла беготня без толку. Все побежали разом. Толкотня, путаница, и никто не разберет, кому гореть, кого ловить.</p>
+<p>Потолкавшись так с полчаса, они-таки порядочно пообсохли; вдруг журавль скомандовал: «стой, господа, игра кончена!»</p>
+<p>Запыхавшись, все обступили его.</p>
+<p>Соне стало жарко, она хочет достать платок, опускает руку в карман, и в нем оказывается коробочка с леденцами, к счастью, не промокшая в воде. Соня вынула коробочку и принялась угощать всю компанию. Принялись за леденцы, но и тут неудача. Поднялся шум, гвалт. Длинноносые, крупные птицы не справятся с леденцом, не знают, как пропустить его в клюв. Мелкие давятся им, - пришлось колотить их по спине, чтобы проскочил. Наконец, кое-как справились, успокоились и, рассевшись опять в кружок, попросили мышь рассказать что-нибудь.</p>
+<p>«Вы обещались рассказать про себя, помните», обратилась к ней Соня. «Хотели рассказать почему вы ненавидите к... и с...» шепотом добавила она, боясь опять раздразнить ее.</p>
+<p>«Ах, грустная и длинная повесть моей жизни», вздохнула мышь, глядя на Соню.</p>
+<p>«Длинная-то, длинная!» подумала Соня, оглядываясь на мышиный хвост, «но почему грустная, любопытно знать», продолжала она про себя. Очень смущал ее этот длинный хвост, не оторвет от него глаз и мысли. Мышь рассказывает, а Соне чудится, что рассказ ее извивается вниз по хвосту, как по дорожке, в следующем виде:</p>
+<p>Однажды Громи-<br>
+ло, дво-<br>
+ровый<br>
+злой<br>
+пёс,<br>
+заско-<br>
+чил на<br>
+мышь;<br>
+без суда,<br>
+без<br>
+расправы<br>
+к суду<br>
+пота-<br>
+щил:<br>
+«Бла-<br>
+го дела<br>
+мне нет»,<br>
+гово-<br>
+рит<br>
+он<br>
+зло-<br>
+дей:<br>
+«без<br>
+суда и<br>
+судей<br>
+при-<br>
+сужу<br>
+тебя<br>
+к<br>
+смер-<br>
+ти.</p>
+<p>&nbsp;</p>
+<p>«Ты, кажется, не слушаешь?» - строго вдруг покосилась мышь на Соню. «О чем ты думаешь и куда глядишь?»</p>
+<p>«Извините, пожалуйста», поспешила оправдаться сконфуженная Соня. «Я все слышала; вы кажется остановились на пятом повороте.»</p>
+<p>«Ворона!» яростно взвизгнула мышь.</p>
+<p>«Где, где! Дайте я поймаю!» бросилась Соня, не понимая в чем дело.</p>
+<p>«Какие тут вороны!» - еще более взбесилась мышь, собираясь уходить. «Вы оскорбляете меня вашими глупыми речами!»</p>
+<p>«Право, я не нарочно... Я думала... Мне показалось... Да что же это вы беспрестанно обижаетесь!» взмолилась Соня.</p>
+<p>Мышь только фыркнула в ответ. «Пожалуйста, воротитесь, расскажите дальше», упрашивала Соня.</p>
+<p>«Пожалуйста, воротитесь, расскажите дальше», повторили все за нею хором.</p>
+<p>Но мышь не внимала, мотнула только головой, и еще чаще засеменила ножками.</p>
+<p>«Жаль, что ушла», заметил попугай, глядя уходящей мыши вслед.</p>
+<p>«Ну, характер!» обратилась жирная старая жаба к молодой. «Видишь, как нехорошо злиться! Пусть тебе это будет наукой...»</p>
+<p>«Уж, пожалуйста, отстаньте!» - с сердцем прервала молодая лягушка; «вас слушать терпение не хватит. Устрица на что дура, и та не выдержит - лопнет».</p>
+<p>«Была бы Катюшка здесь со мною, сейчас воротила бы мышь», сказала Соня вслух, но не обращаясь ни к кому особенно.</p>
+<p>«А кто такая Катюшка, позвольте узнать?» спросил попугай.</p>
+<p>«Это у нас такая кошечка Катюша», живо начинает Соня. Она радехонька случаю поговорить о своей любимице. «Да какая ловкая мышей ловить! А посмотрели бы вы как она за птицами! только увидит и цап-царап - съела. уж такая мастерица!»</p>
+<p>Едва Соня это сказала, переполошились птицы. Некоторые поспешно разлетелись.</p>
+<p>«И мне, кажется, пора», затрещала старая сорока, кутаясь в шаль; «уже смеркается, а у меня горло ужасно боится сырости. Совсем голос пропадет!»</p>
+<p>«Домой, домой, спать пора!» зазвенела дрожащим голосом канарейка, сзывая своих птенцов.</p>
+<p>Так, понемногу разошлись все и Соня опять осталась одна.</p>
+<p>«Лучше бы мне вовсе не поминать о Катюше», пригорюнившись, сказала она. «Никому-то она здесь не мила, а ведь лучше моей Катюши на свете нет! Милая, дорогая, золотая моя Катюшечка! Когда-то мы с тобою свидимся! Ну как никогда!...»</p>
+<p>Не выдержала Соня, разрыдалась: так скучно и горько стало ей здесь одной.</p>
+<p>Вдруг, слышит опять топочут чьи-то маленькие ножки. Оглянулась, не мышь ли одумалась, идет назад досказывать длинную повесть свой жизни?</p>
+<h3 data-heading="Кролик посылает Ваську на врага">Кролик посылает Ваську на врага</h3>
+<p>Не мышь, а беленький кролик топочет, идет не спеша, озирается по сторонам, будто что ищет, и походя ворчит: «пропали мы с вами, ножки мои золотые; пропали матушка шубка, сударики усики! Загубит, казнить велит червонная краля!.. Да куда это они злодейки запропастились!..»</p>
+<p>Вскоре заметил кролик Соню и сердито закричал: «Матрена Ивановна, а Матрена Ивановна! Сбегайте-ка скорей домой, принесите перчатки, да веер; да проворнее, проворнее же, говорят вам!»</p>
+<p>Соня с испуга ударилась бежать куда указывал кролик. «Пусть думает кролик, что я Матрена Ивановна; это у него должно быть кухарка», рассуждает она сама с собою. «Вот удивится, как узнает, что я не Матрена Ивановна!»</p>
+<p>Прибежала Соня, видит: стоит маленький хорошенький домик; на двери прибита медная дощечка; на дощечке написано: «дом церемониймейстера Кроликовского». Соня, не постучавшись, отворяет дверь, вбегает на лестницу, спешит отыскать перчатки, веер, сама боится, не встретить бы ей эту Матрену Ивановну, - не выгнала бы она ее из дому.</p>
+<p>«Странно, однако, быть на побегушках у кролика!» думает Соня. «Эдак, пожалуй, и Катюшка вздумает меня гонять!!!»</p>
+<p>Между тем она пробралась в чистенькую, маленькую комнатку: у окна стоит туалетный столик; на нем несколько пар новых перчаток и несколько вееров. Она проворно берет с него пару перчаток, веер и собирается выходить, как вдруг, взглянув еще раз на туалетный столик, видит, у зеркала стоит склянка, на ней нет ярлыка с надписью: «выпей меня» но Соня думает, не мешало бы отпить от нее. Откупорила, отпила, «чего я здесь ни поем и ни напьюсь, всегда выходит что-нибудь да необыкновенное», рассуждает Соня; «посмотрим, что из этого выйдет - хоть бы мне вырости! А то право, очень уж надоело быть такой крохотной!..» Не успела Соня пожелать, глядь, она уже подымается, растет выше, выше, да так быстро, что в один миг ударилась головой о потолок и только успела нагнуться, чтобы не свернуть шеи. «Будет, больше не стану пить», сказала Соня и бросила склянку. «Ну, опять беда, - не вылезу теперь из двери; напрасно я столько отпила!»</p>
+<p>Поздно было об этом жалеть: Соня все растет да растет; спустилась на колени - мало, тесно становится; свернулась, съежилась: одним локтем уперлась в дверь, другую руку занесла на голову, - все мало: растет, да растет. Что делать? оставалось одно, последнее средство: одну руку высунуть в окошко, одну ногу просунуть в трубу.</p>
+<p>Просунула и думает Соня: «кончено, теперь уж ничего не поделаешь. Что-то со мною будет!»</p>
+<p>Тут Соня, к радости своей, заметила, что больше не растет. И то хорошо, но как бы то ни было, положение ее было крайне неприятное и неловкое. Каким образом избавиться от него, ума не приложишь! Соня приуныла. Долго ли, нет ли лежала Соня, только вдруг слышит она издали чей-то голос, прислушивается: «Матрена Иванова, а Матрена Ивановна, куда вы пропали? что не несете перчатки?» - затем, топы, топы, взбирается кто-то по ступенькам на лестницу.</p>
+<p>Как заслышала Соня голос да шаги кролика, вся затряслась, даже весь дом покачнулся. Н чего она, глупенькая, испугалась! чуть не забыла, что при ее росте не страшен ей ни кролик, ни всякий другой зверь.</p>
+<p>Подошел кролик к двери, хочет отпереть - не подается: дверь отпирается внутрь, а Соня локтем приперла ее. Не сладил кролик, отошел и слышит Соня: «ну, говорит, влезу в окно.»</p>
+<p>«Как же, непременно, попробуй-ка», подсмеялась Соня. Заслышав кролика под окном, она вдруг как растопырит пальцы... (Руку-то одну она ведь высунула в окно.) Слышит, писк, хлоп! задребезжали стекла где-то внизу, будто провалился кто в рамы парника. Затем яростный крик кролика: «Петька, Петька, где ты бездельник?» Отвечает ему чей-то незнакомый голос, словно петуший: «здесь я, в навозной куче, спаржу рою вашей милости.»</p>
+<p>«Роет спаржу!» - с сердцем кричит кролик. «Иди сейчас, вытащи меня отсюда!» И опять хруст, лязг побитых стекол.</p>
+<p>«Гляди-ка Петька, что это там торчит в окне?»</p>
+<p>«Никак рука, ваша милость.»</p>
+<p>«Рука, хохлатый тетерев! когда ж бывают такие руки! эта ручища, не видишь, что ли, загородила все окно!»</p>
+<p>«Загородила-то, загородила, а все ж это рука, ваша милость!»</p>
+<p>«Ну, пусть, ручища, только ей там не зачем быть, и ты у меня сейчас пойди, чтоб не было ее!»</p>
+<p>Молчание. Изредка только, слышит Соня, перешептываются под окном.</p>
+<p>«Воля ваша, сударь, не пойду: больно страшно.» - «Трусишка, смеешь ты ослушиваться! делай, что тебе приказывают, не то!...» Тут Соня опять растопырила пальцы.</p>
+<p>На этот раз запищали в оба голоса, потом хлоп, хлоп! и опять задребезжали стекла.</p>
+<p>«Сколько же у них там должно быть парников!» подумала Соня. «Что-то они теперь станут делать! Хоть бы догадались вытащить меня в окно; сил моих нет скорчившись лежать.»</p>
+<p>Ждет Соня, прислушивается - ничего не слыхать. Спустя немного, слышит, катится что-то, будто везут телегу; говор на разные голоса. «Лестницу, ребята! тащите лестницу», говорит один. «Эй, Петька, тащи ее сюда! на угол станови!»</p>
+<p>«Эх, коротка, братцы», кричит другой; «одной мало, другую подавай! Веревкой ее связать! Эй, Васька, веревку хватай, связывай!»</p>
+<p>Приставили лестницу, взбирается кто-то, вдруг стал: «и крепка ли крыша, ребята», говорит; «вот что, не провалиться бы!»</p>
+<p>«И то! Гляди-ка, гляди, никак доска ползет! Берегись, ребята, головы прочь!»кто то хлопнулся о землю и пошел треск и гром внизу.</p>
+<p>«Эй, братцы, никак Петька слетел? и то слетел.»</p>
+<p>«Кому ж теперь, братцы, в трубу-то лезть?»</p>
+<p>«Как знаете, я не полезу.»</p>
+<p>«Ты, Васька, полезай!»</p>
+<p>«Ишь ловкий! не пойду, сам полезай!»</p>
+<p>«Кому, сударь, прикажете лезть?»</p>
+<p>«Ваське», приказал кролик.</p>
+<p>«Васька, барин тебе велит!»</p>
+<p>Соня просунула ногу в трубу сколько можно было выше и ждет; слышит в трубе поднялась возня, - скребет, шаркает что-то близехонько над ней.</p>
+<p>«Ну, Васька идет», думает она и что есть мочи брыкнула в него ногой. Ждет. Вот, слышит, загомонили внизу на все голоса: «вона! Васька, Васька-то вылетел!» Потом кролик вопит: «вон, вон он около изгороди лежит!» Все затихло на время, потом опять заголосили, - слышно, будто хлопочут около Васьки.</p>
+<p>Один кричит: «Голову держи! Водкой отпоить!»</p>
+<p>«Да тише вы, братцы», - кричит другой; «помаленьку, не то захлебнется! Ну, что, брат Васька, отлегло ли?»</p>
+<p>«Говори, что, как было?» говорит кролик. «Как это тебя из трубы вы кинуло?»</p>
+<p>Тут запищал кто-то слабеньким голосом.</p>
+<p>«Это Васька очнулся», решила Соня.</p>
+<p>«И не припомню, братцы, что тут было: как поддало из трубы, инда в глазах помутилось!... Я в трубу, а из трубы как пырнет в меня чем-то, - я, братцы, и не взвидел света. Вылетел словно пуля!..»</p>
+<p>«Что и говорить, важно вылетел!» поддакнули все. Опять замолчали.</p>
+<p>«Поджечь разве дом?» спустя немного, вдруг говорит кролик.</p>
+<p>«Попробуйте-ка, дураки» закричала тут Соня во весь голос. «Вот погодите, натравлю я на вас Катюшку!»</p>
+<p>Все смолкло.</p>
+<p>«Ну», думает Соня, «что-то они теперь затеют! Хоть бы догадались крышу разобрать».</p>
+<p>Немного погодя, опять голос кролика: «и одного будет воза для начала».</p>
+<p>«Чего это, одного воза?» думает Соня. Скоро узнала чего, как посыпалась на нее куча камушков, и ударились ей прямо в лицо.</p>
+<p>«Забьют теперь, пожалуй, коли их не унять! Ну, вы там, полноте, дурачье!»</p>
+<p>Опять все замолкло, не слыхать ничего.</p>
+<p>Вдруг Соня видит: брошенные камушки превращаются в пирожки. «Что за диво! Попробовать разве сесть хоть один», пришло ей на ум. «Какая-нибудь да выйдет перемена! Вырасти еще больше не выросту - это верно; а стану меньше, - тем лучше» Соня взяла пирожок, - села; замечает, точно, росту несколько убавилось. То-то обрадовалась! Выждала покуда не поравнялась с дверью, отперла ее и выбежала из дому.</p>
+<p>Около двери толпилась куча всяких зверят и птиц: тут был и Петька петух и черномазый Васька таракан. Его держали двое поросят и чем-то отпаивали. Увидев Соню, они было кинулись на нее, но она бросилась от них бежать и вскоре очутилась в дремучем лесу.</p>
+<p>Ходит Соня по лесу, как вдруг, над самой головой ее раздается резкий, визгливый лай. Озадаченная Соня проворно подымает голову, видит - огромный щенок таращится на нее круглыми, глупыми глазами и тянется ударить ее лапой. «Щеночек, голубчик», подзывает его Соня, даже свистнула, а сама до смерти трусит, не проголодался ли щенок: она такая маленькая, не вздумал бы ее съесть. Растерялась Соня. не знает как быть; подняла прутик, бросила его щенку. Как подпрыгнул щенок четырьмя лапками вверх, да кинется вперед за прутиком, а Соня проворно шмыг от него за куст, и выглядывает оттуда, - уж очень она испугалась. А щенок теребит прутик, скачет, мечется, ворчит, лает, визжит. Соня ни жива, ни мертва. Наконец щенок, видно, измучился, запыхался совсем, уселся, передними лапами врозь, высунул красный, широкий язык и щурит глупые глазенки. Соня решилась воспользоваться этим временем, и со всех ног пустилась бежать. Далеко убежала, еле опомнилась! . «А какой миленький был щеночек! - размышляет Соня, едва переводя дух, опершись на цветок и обмахиваясь листком. - Была бы я настоящего роста, каким бы славным штукам я его выучила!.. Ах, да что же это я, чуть не забыла. Ведь мне нужно вырасти; подумаю, как это сделать: уж не съесть ли или выпить чего-нибудь?» Соня пошла, глядит по сторонам; то подойдет к цветку, осмотрит листья, то заглянет в траву, - нет ничего и похожего, что бы можно было сесть. Идет дальше, видит перед нею сидит гриб, как раз с нее ростом; она обошла кругом гриба, внимательно осмотрела его, заглянула ему под шапочку, поднялась на цыпочки, вытянула шею, подняла голову и встретилась глазами с большим, толстым, синеватым червяком. Он сидел на самой макушке гриба и, сложив руки, спокойно курил предлинную трубку.</p>
+<h3 data-heading="Советник-червяк">Советник-червяк</h3>
+<p>Глядит червяк на Соню, Соня на червяка. Поглядели они так молча друг на друга. Вынул, наконец, червяк трубку изо рта, и говорит Соне, да таким сонным голосом, едва тянет:</p>
+<p>«Кто ты такая?»</p>
+<p>Этот вопрос очень озадачил Соню; она никак не ожидала, что этим начнется у них разговор, и, несколько сконфуженная, говорит червяку:</p>
+<p>«Право, сударь, я и сама не знаю. Нынче утром, вставши, я знала наверное, что была Соней, но с тех пор со мною было столько чудес и перемен, что я совсем сбилась с толку.»</p>
+<p>«Что ты вздор городишь?» строго остановил ее червяк. «Говори дело!»</p>
+<p>«Никак не могу - отвечает Соня - потому что я, видите, стала сама не своя».</p>
+<p>«Не вижу», говорит червяк.</p>
+<p>«Очень жалею», учтиво продолжает Соня, а самоё уже разбирает досада. «Не могу я говорить дело, когда сама не знаю с чего начать и как объяснить, почему я нынче беспрестанно меняюсь: то стану выше, то ниже. Все это ужасно бестолково!»</p>
+<p>«Нисколько», говорит червяк.</p>
+<p>«Для вас, может быть, нисколько, а вот посмотрим, каково вам будет, когда вы станете куколкой, а из куколки вылетите бабочкой? Тогда вот увидим, покажется ли вам это странным!»</p>
+<p>«Ни чуть не странным», отвечал червяк.</p>
+<p>«Ну, у вас видно характер совсем особенный. мне так оно кажется очень странным.»</p>
+<p>«Тебе!» презрительно заметил червяк, «да кто ты такая?»</p>
+<p>«Вот разговор», думает Соня. «Заладил: кто, да кто!» Досадно ей стало на червяка, вздумала и его озадачить: выпрямилась во весь свой рост, и с важностью говорит ему: «и вам бы, кажется следовало сказать кто вы такой?»</p>
+<p>«Почему это?» - кротко спросил червяк.</p>
+<p>Опять Соня стала в тупик: не придумает почему и, решив про себя, что червяк очень не в духе, отвернулась от него и пошла.</p>
+<p>«Воротись», закричал ей червяк, «я скажу тебе кое-что важное».</p>
+<p>Соня приободрилась, воротилась; подходит.</p>
+<p>«Не сердись», протянул червяк.</p>
+<p>«Только-то!» говорит Соня и так разозлилась, что едва совладала с собою.</p>
+<p>«Нет, не только».</p>
+<p>«Впрочем, пусть его», рассудила Соня:, «дела у меня другого нет, послушаю, так и быть, - может и скажет что-нибудь дельное.»</p>
+<p>Червяк раза два потянул из трубки, расправил руки, изогнулся и говорит: «так ты находишь в себе перемену?»</p>
+<p>«Нахожу, сударь», отвечает Соня. «Первое, я ничего порядком не могу припомнить; что ни скажу - все путаю. Второе, ростом я беспрестанно меняюсь».</p>
+<p>«Что ты именно путаешь?»</p>
+<p>«Да вот, хотела сказать наизусть Птичку Божию, так все слова у меня выходят навыворот», пригорюнившись, отвечает Соня.</p>
+<p>«Посмотрим, ну-ка скажи: "Близко города Славянска..."»</p>
+<p>Соня сложила руки на животике, и начала:</p>
+<p>Близко города Буянска,<br>
+На верху крутой норы,<br>
+Пресердитый жил-был парень,<br>
+По названию Колотун.  </p>
+<p>В его погребе глубоком,<br>
+Словно мышка в западне,<br>
+Изнывала в злом рассоле<br>
+Белорыбица душа.  </p>
+<p>Рано вечером однажды,<br>
+У кошачьего окна,<br>
+Раскрасавица Катюша,<br>
+Притаившися, сидит.  </p>
+<p>Она плачет, сердце бьется,<br>
+Хочет выскочить оно.<br>
+Сердцу чудится отрава<br>
+И постыло все ему.  </p>
+<p>Вдруг, откуда ни возьмися,<br>
+Два мышонка молодых<br>
+Наскочили на Катюшку -<br>
+Испугались молодцы!..  </p>
+<p>Где же парень? Попивает,<br>
+Его слуги также пьют,<br>
+Один стриж сидит на крышке<br>
+И щебечет про себя.  </p>
+<p>&nbsp;</p>
+<p>«Не так», сказал червяк.</p>
+<p>«И мне кажется не совсем так; будто выходят не те слова», робко сказала Соня.</p>
+<p>«Напутала с начала до конца», решительно сказал червяк Оба замолчали.</p>
+<p>«На сколько хочешь вырасти?» заговорил червяк.</p>
+<p>«Мне бы все равно, лишь бы не меняться беспрестанно, - это, знаете, очень скучно».</p>
+<p>«Не знаю», сказал червяк.</p>
+<p>«Все дразнится», думает Соня, и так ей досадно стало, чуть не рассердилась; однако, смолчала.</p>
+<p>«Чего тебе еще надо?»</p>
+<p>«Хоть бы мне чуточку прибавить росту, сударь, если можно», просит Соня, «а то два вершка, что это за рост!»</p>
+<p>«Рост прекрасный», сердито молвил червяк и вытянулся во всю свою длину; (в нем было ровно два вершка).</p>
+<p>«Но я ведь к этому не привыкла!» жалобно взмолилась Соня, а сама думает: «какие же они. право, все обидчивые!»</p>
+<p>«Привыкнешь», протянул червяк, сунул трубку в рот и принялся курить.</p>
+<p>Соня стоит перед ним, терпеливо выжидает не заговорит ли опять червяк. Минут через пять он выпустил трубку, раза два зевнул, встряхнулся, потом медленно стал спускаться с гриба, и пополз в траву; ползет и бормочет: «с одного бока отгрызешь, станешь больше, с другого отгрызешь - станешь меньше».</p>
+<p>«Чего отгрызть? с чьего бока?» думает озадаченная Соня.</p>
+<p>«Гриба», шепнул червяк, будто в ответ на ее мысль, и вскоре скрылся в густой траве.</p>
+<p>«Вот задача, так задача!» раздумалась Соня; глядит на гриб, соображает, с какого бока подойти к нему. Ведь он весь круглый, как тут разберешь бока! Думала, думала, наконец придумала: обняла гриб обеими руками и каждой рукой отломила от обеих сторон по кусочку.</p>
+<p>«Дело теперь в том», рассуждает она, «от которого кусочка отгрызть, от левого или от правого?» Попробовала от правого - вдруг чувствует удар. Что такое? - Подбородок у нее встретился с ногами. Перепугалась Соня и, не теряя времени, поскорее взялась за кусочек в левой руке; едва справилась разинуть рот, так она вся сплюснулась; однако, приловчилась, кое-как просунула в рот, отгрызла, проглотила... «Ну, слава Богу, голову высвободила!» - радостно вскричала Соня. Но не долга была ее радость. Глядит, где плечи? - нет их... Ищет Соня плечи. водит повсюду глазами, заглянет вниз - нет, только видно, что длинная, предлинная шея подымается из-под травы высоким стеблем, и ныряет в целом море зеленой листвы.</p>
+<p>«И что это за бездна густой зелени? куда я попала?» удивляется Соня. «И куда девались мои плечи? А руки-то, руки - их бедненьких совсем не видать!» - Соня потрясла руками, чтобы узнать на месте ли они, не увидит ли их? нет, не видать... зашуршали листья где-то внизу, далеко под нею - и только.</p>
+<p>Видит Соня, что не поднять ей рук к голове, и догадалась спустить голову к рукам; нагнула шею: шея сгибается и разгибается точно змеиная. Этому открытию она очень обрадовалась, и плавными, извилистыми движениями стала нырять сквозь веток - тут она поняла, что попала в самые макушки деревьев, подле которых она сперва стояла, когда была маленькая.</p>
+<p>Вдруг зашипело что-то около нее, и сильно ударило крыльями прямо ей в лицо.</p>
+<p>«У-у, змея!» - закричал голубь изо всей мочи.</p>
+<p>«Нет, не змея!»</p>
+<p>«Змея, змея, змея!» завопила голубка, но уже тише, и тут же жалобно застонала: «и где я ни пробовала, все от них не уйдешь!»</p>
+<p>«И о чем ты стонешь, нс пойму?» - сказала Соня.</p>
+<p>«И где я ни пробовала», не внимая ей, продолжала голубка стонать, «и в дуплах-то, и на берегу речки, и в плетнях, нет - нигде не упасешься от этих проклятых змей!»</p>
+<p>Слушает Соня, но в толк не возьмет, на что голубка жалуется; решилась молчать.</p>
+<p>«И так мне хлопот довольно высиживать яйца - продолжает голубка, - а тут еще сторожи денно и нощно, не заползла бы змея! ведь три недели, шутка сказать, я глаз не смыкала!»</p>
+<p>«Очень жалею, что вас обеспокоила», говорит Соня, догадавшись, наконец, в чем дело.</p>
+<p>«И только я устроилась на самой макушке самого высокого дерева», вопит голубка, «и только я думала, что упаслась от этих злодеек, так нет же, откуда ни возьмись, с неба норовила вильнуть на меня! У - у, змея подколодная!»</p>
+<p>«Говорят тебе, я не змея! Какая я змея, я...»</p>
+<p>«Кто ж ты такая? говори», стонет голубка. «Да ты смотри, не вздумай меня дурачить - нарасскажешь, пожалуй».</p>
+<p>«Я... я... маленькая девочка», объявила Соня не совсем твердым голосом.</p>
+<p>«Ну, этому трудно поверить», с величайшим презрением заметила голубка. «Много я видала девочек на своем веку, а с такой длинной шеей от роду не доводилось видеть. Нет, ты не девочка, не может этого быть. Какая ты девочка? ты змея! Ты, поди, еще скажешь, что яиц никогда не едала?»</p>
+<p>«Яйца я, конечно, едала», призналась Соня. (Она была девочка очень правдивая). «Так что ж из этого! Будто девочкам нельзя есть яиц, потому что змеи едят!»</p>
+<p>«Что-то не верится. А если так, значит девочка и змея одного поля ягодки - вот что!»</p>
+<p>Соня растерялась, не знает, что отвечать на эти слова. Пока она, молча, собиралась с мыслями, голубка опять за свое:</p>
+<p>«Я ведь знаю, зачем ты тут слоняешься, - к моим яйцам пробираешься! И выходит по моему: что девочка, что змея - одно и то же.»</p>
+<p>«А по моему, вовсе не выходит на одно», с сердцем выговорила Соня. «Первое, вы ошибаетесь, если воображаете, что я пробираюсь к вашим яйцам; второе, если бы и пробиралась, то, конечно, не стала бы их есть: я не ем, от роду не едала и не стану есть голубиных яиц, особенно сырых!»</p>
+<p>«Пусть так, только убирайся!» сердито закричала голубка, надулась и уселась на гнездо.</p>
+<p>Соня прижалась к дереву; с непривычки ей было неловко справляться с длинной шеей: она беспрестанно путалась и цеплялась в ветках, и беспрестанно надо было распутывать и отцеплять ее. Вдруг она вспомнила, что в руке у нее остался еще кусочек гриба, нагнула шею к рукам и принялась за гриб: от одного куска погрызет, от другого откусит: то выше станет, то ниже, - и так она понемногу довела себя до настоящего своего роста. Сначала даже будто дико показалось ей, что стала настоящей Соней; потом привыкла и заговорила сама с собой, по-старому.</p>
+<p>«Ну, половина дела у меня теперь сделано. Престранные, однако, были со мной перемены! И теперь не совсем еще верится, что все кончено; так и кажется: вот, вот сейчас пойдут какие-нибудь новые штуки. Уж и то хорошо, что я вернула свой прежний рост. Теперь надо непременно добраться до чудесного сада, - как бы это устроить?»</p>
+<p>Только сказала это Соня, и видит перед собою большую, открытую поляну; на поляне стоит домик всего в аршин вышины.</p>
+<p>«Кто бы там ни жил», - рассуждает. Соня, «не годится мне входить туда: перепугаются моего роста, подумают, великан!»</p>
+<p>Опять Соня принялась за гриб - убавлять себе росту, и довела себя до полуаршина вышины.</p>
+<h3 data-heading="Поросёночек">Поросёночек</h3>
+<p>Соня постояла, поглядела, - не знает на что решиться. Вдруг, откуда ни возьмись, из лесу выбегает лакей. Соня приняла его за лакея, потому что на нем была ливрея, но голова и лицо у него были рыбьи. Лакей стал громко стучаться кулаком в дверь. Ему отворил другой лакей, круглолицый, глаза на выкате, точь-в-точь лягушка. Очень любопытно стало Соне узнать какое у них дело, и, выбравшись осторожно из лесу, поближе к ним, она стала прислушиваться.</p>
+<p>Лакей-рыба вытащил из-под мышки огромный, чуть ли не с него, ростом конверт и передал его другому лакею. «Пиковой княгине приглашение от червонной крали на игру в крокет», важно произнес лакей-рыба. Лакей-лягушка с такою же важностью принял конверт. Тут оба лакея поклонились друг другу так низко, что стукнулись головами и сцепились курчавыми волосами. Соня, глядя на них, чуть не расхохоталась вслух, и поскорее убежала в лес, чтобы не заметили ее лакеи.</p>
+<p>Немного погодя, она опять выглянула, видит лакей-рыба ушел, и сидит один лакей-лягушка у двери, на пороге. бессмысленно уставив глаза вверх.</p>
+<p>Соня робко подошла к двери, постучалась.</p>
+<p>«Напрасно стучитесь», сказал лакей-лягушка. «Первое, я сижу здесь и стало некому отпереть вам из дому. Второе, у них там идет такой гам, что никто не услышит, хоть сутки простой.»</p>
+<p>И вправду из дому слышался шум необыкновенный: рев, чихание не умолкали, затем треск, гром, будто кидаются блюдами, или кастрюлями.</p>
+<p>«Скажите, пожалуйста, как мне войти в дом?» спросила Соня.</p>
+<p>«И что стучаться без толку», продолжает лакей свое, будто не слыхал вопроса Сони. «Оно бы еще можно, кабы вы, примерно, стояли за дверью, - ну, постучались, я бы отпер вам отсюда, а так, знаете...» говорит лакей и глядит не на Соню, а вверх.</p>
+<p>«Какой неуч!» думает Соня. «Впрочем, может быть он это не нарочно, а так, глаза у него сидят, что не сладит с ними», одумалась она. «Но хоть бы отвечал на то, что у него спрашивают! Скажите, как мне войти в дом?» - уже бойчее спрашивает Соня.</p>
+<p>«И здесь, полагать надо, просижу до завтрашнего дня...» опять начинает лакей.</p>
+<p>Вдруг отворяется дверь и вылетает из нее большое блюдо прямо в голову лакея, задевает его за нос и, ударившись в дерево, разбивается в дребезги.</p>
+<p>«...А может и больше», договаривает лакей тем же голосом, будто ни в чем не бывало.</p>
+<p>«Как мне войти» - еще громче спрашивает Соня.</p>
+<p>«Как войти? А за каким вам туда делом, извольте-ка сперва сказать?»</p>
+<p>Соне очень не понравилось это замечание.</p>
+<p>«Ни на что не похоже» - ворчит она, «как эти люди нынче стали рассуждать! не сладишь с ними: совсем из повиновенья вышли!»</p>
+<p>А лакей, с радости должно быть, что огорошил Соню, опять за свое:</p>
+<p>«А я просижу здесь и ныне и завтра и во веки веков».</p>
+<p>«Но что же мне-то делать?»</p>
+<p>«А что угодно», говорит лакей, и засвистал.</p>
+<p>«Нечего с ним толковать», говорит Соня, доведенная до отчаяние. «Он набитый дурак!» Пошла, сама отперла дверь и вошла.</p>
+<p>Дверь отворялась прямо в большую кухню; в ней стоял дым коромыслом. Посреди кухни, на скамье о трех ножках, сидела сама пиковая княгиня и нянчилась с ребенком; кухарка, около печки, нагнувшись над огромной кастрюлей, мешала в ней ложкой что-то, похожее на щи.</p>
+<p>«Наложила же она в них луку и чесноку», говорит Соня про себя и расчихалась. И вправду наложила! По всей кухне стоял запах лука и чеснока; сама княгиня нет-нет, да и чихнет; а про ребенка что и говорить - ревет да чихает, чихает да ревет без умолку. Не чихали лишь двое: кухарка да огромная кошка, сидевшая у печки. И что за морда у этой кошки! широкая, преширокая, - будто скалится она до самых ушей.</p>
+<p>«Скажите пожалуйста», начала Соня довольно робко: она не знала, учтиво ли первой вступать в разговор, «отчего это у вас кошка так скалится?»</p>
+<p>«Она сибирская кошка»; отвечает княгиня, «вот отчего. Свинья!...» - вдруг крикнула она так яростно, что Соня даже подпрыгнула и оторопела. Увидав, однако, что не ее, а ребенка она обозвала свиньей, Соня успокоилась и опять пустилась в разговор.</p>
+<p>«Я не знала», говорит она, «что сибирские кошки скалятся. Если правду сказать, я даже совсем не знала, что кошки скалят зубы.»</p>
+<p>«Как же, все умеют; все они скалят зубы», говорит княгиня.</p>
+<p>«Скажите! А я, по правде, никогда этого не видывала и даже совсем не знала», говорит Соня и рада, что завела разговор.</p>
+<p>«Много ты знаешь! вот это так правда», сказала княгиня.</p>
+<p>Это замечание не очень-то понравилось Соне, и она стала придумывать другой разговор. Пока она придумывала, кухарка, сняв с огня корчагу со щами, приняласькидать чем ни попало, в княгиню и ребенка: первою полетела кочерга, за нею блюда, тарелки, сковороды, горшки. А княгиня сидит себе, - ни слова, даже когда попадало в нее чем-нибудь. Ребенок же и без того так громко ревел, что никак нельзя было разобрать от боли он ревет, или так.</p>
+<p>«Ах, что это вы! Пожалуйста перестаньте, осторожнее!» кричит Соня, отскакивая и бегая по кухне в ужасном страхе. «Вот, чуть меня не задели! Ведь эдак можно убить!» уговаривает она кухарку, увертываясь от горшка, который чуть не попал ей в нос. «Велите ей перестать!» обратилась она, наконец, к княгине.</p>
+<p>«Не совался бы каждый в чужие дела и земля пошла бы шибче кружиться», заговорила хриплым голосом княгиня.</p>
+<p>«Не знаю, что бы из этого вышло!» говорит Соня, радуюсь случаю выказать свою ученость. «Вы только представьте себе, что бы это было, если бы вдруг день перепутался с ночью!.. Ведь земля, знаете, в 24 часа обращается около своей оси...»</p>
+<p>«Отстань с твоими часами, счетами да расчетами! Я чисел и цифр терпеть не могу»!</p>
+<p>Тут княгиня занялась ребенком: качает его и напевает колыбельную песенку.</p>
+<p>Споет стишок, и тряхнет ребенка, да так поддаст, что страшно глядеть. На втором стихе княгиня еще шибче стала тормошить и подкидывать вверх бедного малютку; а он заливается, визжит, так что за его криком и воем Соня едва могла расслушать:</p>
+<p>И ревет-то злой ребенок<br>
+Только б досадить!<br>
+Дам тебе я, поросенок,<br>
+...........................  </p>
+<p>&nbsp;</p>
+<p>«На, можешь понянчиться с ним, коли есть охота», пропев второй стих, сказала княгиня и швырнула ребенком, прямо в Соню. «А мне пора собираться к червонной крале». Сказала и проворно пошла к двери. Кухарка пустила в нее сковородою, но промахнулась.</p>
+<p>Соня, поймав ребенка кое-как на лету, сначала едва могла с ним справиться, такой он был неуклюжий, точно чурбан - со всех сторон торчат руки да ноги. Бедняжка пыхтел и фыркал ужасно; ёрзал у нее в руках: то свернется клубком, то вытянется доской, того и гляди выскользнет. Много было Соне хлопот удержать его на руках!</p>
+<p>Наконец, она приловчилась-таки к нему, и, крепко забрав его в охапку, вышла с ним погулять.</p>
+<p>«Если не отнять у них этого ребенка, они уморят его непременно, мне надо спасти его от верной смерти!» сказала Соня вслух.</p>
+<p>Ребенок словно хрюкнул. «Что это с ним?» - думает удивленная Соня, и с беспокойством вглядывается ему в лицо. Глядит, а сама думает: «странный у него, признаться, нос: будто не нос, а скорее рыльце; и глаза что-то уж очень узки!..» Одним словом, не понравилась Соне наружность ребенка, и даже взяло ее сомнение.</p>
+<p>«Впрочем, это он, может быть, не хрюкал, а рыдал», утешает она себя, и опять нагнулась, глядит ему в лицо, не видать ли слез? нет, не видать. «Ну», думает Соня, «если ж ты обернешься в поросенка, брошу тебя, непременно брошу! Смотри же!» Малютка опять зарыдал или захрюкал, трудно было разобрать, а Соне все еще не совсем верится: ходит она, нянчится с ним, и обдумывает, куда бы ей девать ребенка, вернувшись в дом.</p>
+<p>Как хрюкнет малютка изо всей мочи! даже Соня вздрогнула, взглянула на него, - видит, нет сомнение - не ребенок, а поросенок у нее на руках!</p>
+<p>Глупо было бы возиться с поросенком, рассудила Соня и спустила его с рук, а он, к ее радости, тотчас отправился мелкой рысцой прямо в лес.</p>
+<p>Задумалась Соня о том, какие грязные бывают дети, словно поросята; взглянула на дерево, а там сидит сибирская кошка: сидит она на сучке, глядит на Соню, ухмыляется. «Лицом она кажется ничего, добрая», рассуждает Соня, «но когти у нее уж что-то очень длинные, да острые, и зубастая какая, - пожалуй, шутить не любит. Надо с нею осторожно», решила она.</p>
+<p>«Сибирская киска» начинает Соня, а сама боится, по нраву ли ей будет это имя. На это кошка только шире ухмыльнулась.</p>
+<p>«Кажется, понравилось» - думает Соня. «Не можете ли вы мне сказать», продолжает она, «куда мне отсюда пройти?»</p>
+<p>«А это смотря по тому, куда ты желаешь выйти», отвечает кошка.</p>
+<p>«Мне бы все равно, куда» - отвечает Соня.</p>
+<p>«А коли все равно, значит, куда ты ни пойдешь - везде тебе дорога» - говорит кошка.</p>
+<p>«Лишь бы мне попасть куда-нибудь», объясняет Соня.</p>
+<p>«Ну да; всегда куда-нибудь да попадешь, покуда носят ноги», говорит кошка.</p>
+<p>Как с этим не согласиться! Придумала Соня другое.</p>
+<p>«Скажите», говорит, «сибирская киска, живут ли люди в здешней стороне?»</p>
+<p>«Как же, живут. Здесь вот», говорит, «живет Враль-Илюшка, а там - заяц косой», и повела в обе стороны лапкой. «Ты у них побывай, они оба шальные.»</p>
+<p>«Что мне за охота знакомиться с шальными», заметила Соня.</p>
+<p>«Это не беда» говорит кошка, «все мы здесь шальные, и ты, и я, и все мы шальные.»,</p>
+<p>«Почему вы полагаете, что я шальная?» несколько обидевшись, спрашивает Соня.</p>
+<p>«А потому, что ты сюда попала», решила кошка.</p>
+<p>Соня совсем не была согласна с этим доводом, однако, не желая затевать спора, говорит:</p>
+<p>«Положим. Но вы-то почему шальная?»</p>
+<p>«Сама увидишь. Как по твоему: собака шальная или нет?» спрашивает кошка.</p>
+<p>«Не всегда, а только когда взбесится», отвечает Соня.</p>
+<p>«Ну так сама посуди: собака, когда сердится - ворчит, а радуется - виляет хвостом. Я же, напротив, виляю хвостом, когда рассержусь, а радуюсь - ворчу. Как же я не шальная!»</p>
+<p>«Кошки по моему курлычут, а не ворчат», вступилась Соня.</p>
+<p>«Это по твоему; по моему, курлыкать или ворчать одно и то же», решила кошка. «А что, пойдешь ты к червонной крале на крокет?» вдруг спросила она. «Не знаю; я не звана, а очень бы хотелось», говорит Соня.</p>
+<p>«Так до свидание, там увидимся», говорит кошка: сказала и вдруг исчезла, будто ее и не бывало.</p>
+<p>Соня за это время мало чему удивлялась, - так она свыклась со всякими странностями. И этому она нисколько не удивилась, а стала озираться, не увидит ли куда скрылась кошка. Глядит, она опять на дереве, на том же сучке.</p>
+<p>«Кстати», говорит кошка, «чуть не забыла спросить: куда девался ребенок?»</p>
+<p>«Он обернулся в поросенка», отвечает Соня.</p>
+<p>«Так я и полагала», говорит кошка, и опять исчезла.</p>
+<p>Соня постояла, подождала не явится ли она опять, однако, не дождалась, и пошла отыскивать зайца, куда указала кошка.</p>
+<p>«На что мне этот Враль-Илюшка!» рассуждает она, походя. «Зайцы по моему гораздо интереснее. Посмотрю я на этого; он вовсе может быть не такой шальной, как рассказывает кошка!» Вскоре завидела она домик; взглянув на него, Соня решила, что это и есть самый дом зайца: крыша вся крыта заячьими шкурками, вместо труб торчат ушки. Но дом по ее росту оказался слишком велик, потому она тотчас распорядилась прибавить себе росту. Принялась за гриб и грызла его покуда не поднялась на аршин. Соня тогда подошла к домику, а сама трусит: «ну, как заяц в самом деле шальной!» думает она. «И напрасно я, кажется, не пошла к Илюшке!» Подумала, постояла, и решилась войти.</p>
+<h3 data-heading="Шальная беседа">Шальная беседа</h3>
+<p>Соня вошла в комнату: видит - по средине стоит накрытый, длинный стол; за столом Илюшка с зайцем сидят за чаем; между ними Мишенька-Сурок спит крепким сном, а те двое, опершись на него локтями, как на подушку, ведут между собою разговор.</p>
+<p>«Вот нашли себе подушку!» думает Соня, глядя на Мишеньку. «Впрочем, он спит и должно быть ничего не чувствует.»</p>
+<p>Все трое сидели кучкой на самой середине длинного стола; но лишь только Соня подошла, и собралась сесть за стол, все на нее накинулись, кричат: «прочь, прочь, места нет!»</p>
+<p>«Извините, места довольно, даже много лишнего!» отвечает Соня в большом негодовании, и уселась в широкое кресло, на конце стола.</p>
+<p>«Не прикажете ли винца?» весьма учтиво предложил ей заяц. Соня оглянула весь стол: подан один чай, а вина не видать.</p>
+<p>«Где же у вас вино?» - спрашивает она.</p>
+<p>«Вина нет», говорит заяц.</p>
+<p>«Очень неучтиво с вашей стороны предлагать чего нет» с сердцем говорит Соня.</p>
+<p>«А с вашей стороны очень неучтиво садиться за стол без приглашение», - отвечает заяц.</p>
+<p>«Вам не мешало бы меня пригласить, - стол накрыт на многих.» «А вам, Гнеденькая, не мешало бы подстричь гривку» - заметил Илюшка!</p>
+<p>Он давно уже с любопытством поглядывал на Соню и на длинные ее волосы.</p>
+<p>«Во-первых, я не Гнеденькая, и таких имен не бывает, во вторых, вам нет дела до моих волос; а в третьих, очень неучтиво делать замечание прямо в лицо!» строго обратилась к нему Соня.</p>
+<p>Илюшка на это только вытаращил глаза, и вдруг спрашивает: «а скажите-ка, какая разница между чаем и чайкой?»</p>
+<p>«Ну, думает Соня, теперь посмеемся. Хорошо, что он затеял игру в загадки.»</p>
+<p>«Эту загадку я, кажется, отгадаю», - говорит она вслух.</p>
+<p>«То есть, ты думаешь, что придумаешь на нее ответ», поправил ее заяц.</p>
+<p>«Думаю», отвечает Соня.</p>
+<p>«Так говорила бы, что думаешь», пристает заяц.</p>
+<p>«Я и говорю, что думаю», живо перебивает его Соня. «То есть я думаю, что скажу - впрочем, это все равно.»</p>
+<p>«Нисколько не все равно», вмешался Илюшка. «Эдак, пожалуй, все равно сказать: ем, что вижу, или вижу, что ем!»</p>
+<p>«А я», говорит заяц, «скажу: ловлю, что люблю, или люблю, что ловлю, - так же все равно!»</p>
+<p>«Дышу, когда сплю, или сплю, когда дышу также выйдет, небось, все равно?» неожиданно промычал сонный Мишка.</p>
+<p>«И прибрал же себе как раз кстати», заметил Илюшка. Все замолчали.</p>
+<p>Соня сидела, задумавшись над загадкой, но сколько ни старалась, никак не разгадает.</p>
+<p>«Какое нынче число?» вдруг спрашивает Илюшка, и вынул из кармана часы, поглядел на них с беспокойством, стал трясти их, потом приложил к уху.</p>
+<p>«Четвертое», сказала Соня.</p>
+<p>«Так и есть, отстали на два дня!» - вздохнул Илюшка. «Говорил я тебе ие смазывать их маслом!» сердито обернулся он к зайцу.</p>
+<p>«А масло было свежее, первый сорт!» кротко заметил заяц.</p>
+<p>«Ну, видно крошки попали», ворчит Илюшка. «Говорил я тебе не смазывать хлебным ножом!»</p>
+<p>Заяц взял часы, задумчиво стал их осматривать, потом окунул в чашку с чаем и опять внимательно осмотрел.</p>
+<p>«А масло было первый сорт!» повторил заяц, не придумав иного извинение.</p>
+<p>Все это время Соня следила за происходившим, глядя зайцу через плечо.</p>
+<p>«Престранные у вас часы», говорит она, «показывают не час, а число!»</p>
+<p>«Твои разве показывают год?»</p>
+<p>«Конечно нет», отвечает Соня. «Год идет так долго, что часы не нуж...»</p>
+<p>«Ну, вот видишь, кто прав?» резко прервал ее Илюшка.</p>
+<p>Соня совсем растерялась мыслями: она ли не понимает, что говорит Илюшка, а говорит он по-русски; или он говорит бестолково? - ничего не разберет.</p>
+<p>«Я что-то вас не понимаю?» как можно учтивее спрашивает Соня.</p>
+<p>«Опять Мишенька храпит», говорит Илюшка, и капнул ему горячим чаем на нос.</p>
+<p>Мишенька только тряхнул головой и, не открывая глаз, промычал: «так, так, разумеется, и я тоже хотел сказать...»</p>
+<p>«А загадку разгадала?»</p>
+<p>«Нет, никак не могу, скажите разгадку», отвечает Соня.</p>
+<p>«А я почем знаю?»</p>
+<p>«И я не знаю», сказал заяц.</p>
+<p>«Лучше было бы нам и не тратить времени над такими глупостями», говорит раздосадованная Соня.</p>
+<p>«Не тратить времени!» насмешливо повторил Илюшка. «Ты не говорила бы так легкомысленно, если бы была знакома с временем. Ведь времени, небось, не знаешь!» Тут Илюшка значительно поднял палец кверху.</p>
+<p>«Я ничего не понимаю», говорит Соня.</p>
+<p>«Где ж тебе, Гнеденькая! Ты, видно, не пряха, не ткаха!» с презрением мотнул на нее головой Илюшка. «Ты должно быть никогда и не имела дела с временем?»</p>
+<p>«Очень может быть», уклончиво говорит Соня, боясь, что ее опять поднимут на смех.</p>
+<p>«Вот, за уроками разве: мне, признаться, иной раз с временем просто беда - тянется, тянется и конца ему нет - уж я сижу, сижу... А то в праздник нечего делать бывает, - опять время тянется. Вот тут уж я с ним ужасно бьюсь!»</p>
+<p>«Ха-ха-ха! Бьешься! Ну, оно и понятно, что ты с временем не в ладу, коли с ним дерешься. Это дело дрянь! А была бы ты с ним в ладах, какое бы тебе было от него угождение! Сама посуди: примерно, девять часов утра, пора тебе за уроки, а ты только шепнула ему на ухо: не успела оглянуться, уже и стрелки переведены, - глядь, не 9 часов, а половина второго: обедать пора!»</p>
+<p>«И как бы пора-то!» - заворчал заяц.</p>
+<p>«Это, конечно, было бы славно!» призадумавшись, сказала Соня. «Одно только не совсем ладно: ну, а как я бы еще не проголодалась к этому времени?»</p>
+<p>«Э, пустяки! Время сколько угодно продержит стрелки на половине второго».</p>
+<p>«А вы разве так делаете?» спросила Соня.</p>
+<p>«Ни-ни-ни!» замотал Илюшка головой. «С прошлого марта...»</p>
+<p>«Не поговорить ли о чем другом», зевая, вмешался тут заяц. «Мне-таки этот разговор, признаться, куда как надоел. Не мешало бы этой ученой барышне рассказать нам сказку».</p>
+<p>«Ах, право я ни одной не знаю!» поторопилась Соня отказаться: очень не понравилось ей такое предложение.</p>
+<p>«Так пусть Мишенька расскажет», закричали оба. «Эй, Соня, будет тебе спать!» И пошли его с обеих сторон трепать, щипать, покуда не добудились.</p>
+<p>«Я вовсе не спал», прохрипел Мишенька, едва продирая глаза. «Все слышал, о чем вы, ребята, толковали...»</p>
+<p>«Расскажи сказку», перебил его заяц.</p>
+<p>«Ах, да, пожалуйста, расскажите сказку», просит Соня.</p>
+<p>«Да проворней начинай, а то, гляди, опять заснешь», кричит Илюшка.</p>
+<p>«Жили-были три сестрицы», - заторопился Мишенька, «и звали их Сашей, Пашей и Дашей; и жили они в дремучем лесу, под ключом...»</p>
+<p>«Как это под ключом? Кто их запер?» - в недоумении спрашивает Соня.</p>
+<p>«Никто. И сидели они в дремучем лесу под ключом...»</p>
+<p>«А что они там кушали» - Соня, надо заметить, вообще очень интересовалась едой и питьем.</p>
+<p>«Дрему», без запинки отвечает Мишенька.</p>
+<p>«Ах, что вы»! живо вступилась Соня. «Дрема цветок- дрему не едят! они бы заболели от него».</p>
+<p>«Ну, да, они и заболели, сильно даже хворали, чуть не умерли, а там ничего, поправились, - хворость, знаете, хворостом выбили.»</p>
+<p>«Я право не понимаю, что вы такое говорите? Это выходит сказка совсем ни на что не похожая!»</p>
+<p>«Так вы бы не слушали», - напустился на нее Илюшка. «Хотите еще чаю?» - «Еще!» обиженно огрызнулась Соня. «Довольно странно предлагать еще, когда я еще не пила!»</p>
+<p>«Я и спрашиваю вас - все ли еще хотите чаю?»</p>
+<p>Соня разобиделась, вышла изо стола и пошла к двери. Мишенька тотчас заснул, а те двое не обратили на нее никакого внимание. Еще досаднее стало Соне: она, признаться, ожидала, что попросят ее воротиться. Но им было не до того; оглянувшись на них в последний раз, Соня видит: Илюшка с зайцем, оба изо всех сил хлопочут окунуть Мишеньку мордой в чайник!</p>
+<p>«Ноги моей здесь никогда не будет - это верно» говорит Соня, пробираясь лесом. «Так глупо я в жизни еще никогда не проводила времени!»</p>
+<p>Идет Соня лесом, видит перед собою дерево; в дереве дверка, и ведет дверка прямо в дерево. Штука странная, но Соне не привыкать стать к странностям! Не задумавшись, она отпирает дверку, входит в дерево. Что это? Куда она попала? Глядит, опять прежняя, длинная зала; на прежнем месте стоит хрустальный столик; на столике золотой ключик.</p>
+<p>«Погоди», думает Соня, «теперь я распоряжусь умнее». Сперва взяла со стола ключик, потом отперла им дверку, выходящую в сад, и тогда только, вынув из кармана кусочек гриба, лежавший у нее в запасе, стала грызть его помаленьку, осторожно, покуда не довела себя до уровня дверки.</p>
+<p>Какова была радость Сони, когда, пробравшись коридорчиком, она вышла, наконец, в чудесный сад, где пышно цвела и благоухала бездна ярких цветов, где искрились и били светлые, прохладные фонтаны!</p>
+<h3 data-heading="Игра в крокет">Игра в крокет</h3>
+<p>В саду, у самого входа, высоко подымался огромный куст, весь усыпанный белыми розами в полном цвету. Около него трое садовников с кистями в руках усердно хлопотали, закрашивая белые розы в красный цвет. Эта затея удивила Соню. «Престранную они придумали штуку», думает Соня, и подошла поближе, на них посмотреть. Слышит, один говорит: «эй, Пятерка, берегись, всего меня обрызгал краской!»</p>
+<p>«Не я виноват - вон Семерка толкнула меня под локоть.»</p>
+<p>«Так, так, Пятерка, всегда сваливай с больной головы да на здоровую», говорит Семерка и сердито взглянула на Пятерку.</p>
+<p>«Уж ты бы молчал», говорит Пятерка; «слышал, намедни приказывала ее милость снести тебе голову?»</p>
+<p>«За что это?» - спросил первый садовник.</p>
+<p>«Не твое дело» - говорит Семерка.</p>
+<p>«Нет, его дело», говорит Пятерка.</p>
+<p>«Я вот скажу за что. За то, что на царскую кухню отпустил цветочных луковиц вместо луку - вот за что!»</p>
+<p>Семерка с досады бросила кисть, да как закричит: «вот уж напраслина, так...», да вдруг, увидав Соню, замолчала и уставилась на нее, разиня рот. И те двое ее тогда заметили, и все трое низко ей поклонились.</p>
+<p>«Скажите, пожалуйста», робко начала Соня, «для чего вы закрашиваете белые розы в красный цвет?»</p>
+<p>Пятерка с Семеркой молча оглянулись на Двойку, а эта говорит, да так почтительно, в полголоса: «изволите видеть, барышня, приказано было на этом месте посадить куст с красными розами, а по нечаянности посадили белых. Как увидит их милость, Червонная Краля, всем нам велит головы снести. Вот мы и стараемся поправить беду до них».</p>
+<p>Пока говорила Двойка, Пятерка, в большой тревоге, глядела все в одном направлении, и вдруг закричала: «идут, идут! Червонная Краля идет!» Тут все трое садовников ударились лицом в землю.</p>
+<p>Послышался топот как от множества людских ног. Соня встрепенулась в радостном ожидании.</p>
+<p>Вот идут: сперва выступили парами десять пиковых солдат, и все они, как вылитые, похожи на трех садовников: такие же плоские, продолговатые, все стоят вверх и вниз головами, руки справа и слева по углам. За ними также парами шли десять придворных валетов, разукрашенные бубнами. За валетами шли царские дети, их также было десятеро, и все они, милашки, разодетые с червонными сердцами, шли парами, держа друг друга за ручки, и весело подпрыгивали. За ними следовали приглашенные гости, короли и придворные дамы.</p>
+<p>Между гостями, кого же узнает Соня? - старого знакомого, беленького кролика! Он шел торопливо, будто сам не свой; то заговорит, то поклонится. И такой перепуганный, растерянный, что, проходя мимо Сони, не заметил ее. За гостями шел червонный валет и на бархатной подушке нес царскую корону. В самом конце шествие выступали король и краля червонные.</p>
+<p>Соня, было, подумала - не следует ли и ей пасть перед ними ниц, но, вспомнив, что нигде не читала о таком обыкновении при церемониальных выходах, решила глядеть на него стоя. «Да и некому было бы любоваться на эти интересные церемонии, если бы все лежали, уткнувшись лицом в землю», рассудила она.</p>
+<p>Когда шествие поравнялась с Соней, все остановились и стали глядеть на нее, а червонная краля обратилась к червонному валету и спрашивает: «это кто такая?»</p>
+<p>На это червонный валет только осклабился и зашаркал ногами.</p>
+<p>«Болван!» закричала на него раздосадованная червонная краля, замотала головой и сама к Соне: «как тебя», говорит, «милая, звать?»</p>
+<p>«Меня, ваше величество, зовут Соней», почтительно отвечает Соня, а сама думает: «Ах батюшки! Да это все карты, карточные короли да крали! чего мне их бояться!»</p>
+<p>«А эти, вон, кто такие?» спрашивает червонная краля, указывая на садовников: они лежали лицом к земле, а по рубашкам нельзя было узнать солдаты, валеты, или царские они дети.</p>
+<p>«Я не знаю, да и не мое это дело знать». отвечает Соня, и сама подивилась своей смелости.</p>
+<p>Червонная краля побагровела от гнева, услышав такой ответ.</p>
+<p>Соня не струсила и смело глядела ей в глаза.</p>
+<p>Червонная краля хотела что-то крикнуть, но замолчала.</p>
+<p>«Сама рассуди, душенька, она ведь ребенок», робко вступился король за Соню, кротко положив руку червонной крале на плечо.</p>
+<p>Она с гневом отвернулась от короля и, указывая на лежавших садовников, говорит валету: «обернуть их лицом!»</p>
+<p>Валет приподнял их ногой и обернул лицом.</p>
+<p>«На ноги, фофоны!» резко прикрикнула краля на них, и садовники горошком вскочили на ноги и принялись кланяться на все стороны: королю, крале, царским детям и всем придворным.</p>
+<p>«Будет, будет, болваны! Совсем завертелись!» Червонная краля отвернулась, увидала красные розаны, взглянула на них и говорит: «это что наделано?»</p>
+<p>Двойка опустилась на коленки и говорит дрожащим голосом: «Это, изволите видеть... вашей милости угодно было приказать... мы изволили стараться...»</p>
+<p>«Вижу, вижу, вы изволили постараться», передразнила ее червонная краля, осматривая куст и погрозила кулаком.</p>
+<p>Шествие двинулось вперед. Отстало от него лишь трое солдат, чтобы исполнить приговор над бедными садовниками, которые бросились к Соне, умоляя защитить их.</p>
+<p>«Не бойтесь, останетесь целы», сказала им Соня; взяла и сунула всех троих в цветочный горшок.</p>
+<p>Солдаты поискали, поискали и, недоискавшись их, преспокойно отправились себе назад. «Умеешь ты играть в крокет?» вдруг крикнула краля.</p>
+<p>Солдаты молча взглянули на Соню, догадавшись, что к ней обратилась червонная краля с вопросом.</p>
+<p>«Умею», отвечала Соня.</p>
+<p>«Так иди сюда», заревела краля и Соня пошла за шествием.</p>
+<p>«Прекрасная нынче погода», запищал кто-то тоненьким голоском около Сони; она оглянулась, - видит беленький кролик идет и заглядывает ей в лицо.</p>
+<p>«Да, погода прекрасная», говорит Соня. «А где пиковая княгиня?»</p>
+<p>«Ш-ш, молчи, ради Бога!» шепчет кролик, а сам боязливо озирается на все стороны. Потом, поднявшись на цыпочки, он шепчет ей на ухо: «не знаешь разве, она была под судом, приговорена к смерти!»</p>
+<p>«За что это?» спрашивает Соня.</p>
+<p>«Ты говоришь, как жаль это?» переспросил кролик.</p>
+<p>«Совсем я этого не говорила! Чего мне ее жалеть! Я сказала: за что это».</p>
+<p>«Тише, тише, ради Бога! Ну как услышит она! Это, видишь, как случилось: позвала она пиковую княгиню к себе на вечер играть, а та чуть-чуть опоздала; и говорит ей она...»</p>
+<p>«По местам!» заревела тут Червонная Краля на всю площадь. Все испугались, переполошились, - словно громом оглушило всех. Поднялась беготня, толкотня: одни наскакивали на других, сшибали друг друга с ног, кидались опрометью вперед, летели кувырком чрез головы, и чего, чего тут не было! Однако, стали униматься понемногу, пришли в себя, устроился порядок, началась игра.</p>
+<p>Но что за игра! Такой игры Соня никогда не видывала! Площадка вся неровная: где доска гнилая, где торчит ребром, а где вовсе провалилась. Вместо шаров живые ежи; вместо арок - картонные солдаты стоят друг у друга на голове, перегнувшись в три погибели, вместо молотков - живые журавли.</p>
+<p>Главным затруднением для Сони было справляться со своим журавлем: никак ни приноровится схватить его половчее; только она его возьмет на руки, он норовит вывернуться, просунет длинную шею ей под руку и глядит в глаза, да так смешно, что Соня расхохочется. Пока она опять укладывает его и, дождавшись очереди, идет играть, смотрит: либо ежи сбежали в сторону, либо пустились в драку.</p>
+<p>Поглядела, поглядела Соня, да и решила, что труднее этой игры ничего не придумаешь. Игроки беспрестанно путались; играли все разом, не дожидаясь очереди, и спорили из-за ежей.</p>
+<p>Соня стала озираться, нет ли где лазейки, куда бы незаметно скрыться. Подняла глаза, - что за диво! В воздухе стала показываться морда с оскаленными зубами! «Это должно быть сибирская кошка», - догадалась Соня и очень обрадовалась, что будет с кем поболтать.</p>
+<p>«Как поживаешь?» говорит кошка, лишь только вышло довольно морды, чтобы можно было говорить. Соня дождалась, покуда у кошки вышли глаза и думает: «пусть еще выйдут уши, а то, что пользы говорить: пожалуй, не услышит!» Наконец явилась вся голова и на этом стала. Соня рада, что есть кому ее слушать, и пустилась рассказывать об игре в крокет.</p>
+<p>«И как они бестолково играют», жалобно начала Соня, «вы себе представить не можете! Никакого порядка; никто никого не слушает; говоришь, - самого себя не расслышит; ссорятся, дерутся, спорят, никаких правил не соблюдают. С молотками и шарами - беда! Все живые, перебегают с места на место; хватишься шара, а он куда-то уполз, поди, ищи его. Не поверите, как трудно! С одними журавлями голова кругом идет. Вот я бы непременно выиграла партию у червонной крали; гляжу, где мой шар - а он вцепился в драку с чужим ежом, - ну, разнимать надо!»</p>
+<p>«А как тебе нравится червонная краля?» в полголоса спрашивает кошка.</p>
+<p>«Совсем не нравится», - говорит Соня. «у нее, знаете, такой ужасный...» - Тут Соня замечает, за плечом у нее стоит червонная краля, прислушивается.</p>
+<p>Струсила Соня, - однако, тотчас нашлась, поправила себя, говорит: «такое ужасное счастье, что играть с нею невозможно!»</p>
+<p>На это краля самодовольно улыбнулась и пошла дальше.</p>
+<p>«С кем это ты разговариваешь?» спрашивает Король, подойдя к Соне.</p>
+<p>«Это знакомая мне сибирская киска», - говорит Соня. «Позвольте мне ее вам представить».</p>
+<p>«Морда ее мне вовсе не нравится», говорит Король, «однако, если желает. пусть приложится к моей руке»</p>
+<p>«Избавьте от чести», сухо сказала кошка.</p>
+<p>«Не груби, смотри! Чего ты пялишь на меня глазища?» сказал Король и стал Соне за спину.</p>
+<p>«И чего она здесь торчит! вовсе не у места», решил он. «Прикажи ее, душенька, отсюда убрать», обратился он к червонной крале.</p>
+<p>Соня видит, здесь ей делать нечего, пошла взглянуть на игроков: трое из них уже были приговорены к смерти. Слышит издали: крик, гам - это бушует червонная краля. Соня подходит, видит: игроки все перебунтовались. Что ей делать! Пошла отыскивать своего ежа да журавля; застает их в драке с другим ежом да журавлями. «Самое время», думает Соня, «схватить их!» Поймала обоих, ежа завернула в платок, журавля сунула под мышку, стала дожидаться своей очереди.</p>
+<p>Дождалась, опять беда! Валеты соскочили друг у друга с головы, борются, повалились, а остальные сбежались их разнимать. У Сони с досады опустились руки. Пока приводили все в порядок, Соня опять хватилась ежа - нет его; выскользнул из платка! куда девался? Соня глядит, ищет, а он вон где - в сад уполз, забрался в самую глушь, шуршит там, роется в куче сухих листьев. Она за ним; поймала, уложила, притащила к крокету, а на крокете уже никого нет: игра кончилась.</p>
+<p>«Пожалуй», рассуждает Соня, «не стоило и доигрывать такой бестолковой партии!» Она завязала ежа в платок и хотела уходить, но вдруг перед ней пиковая княгиня, да такая добрая.</p>
+<h3 data-heading="Соня в зверинце">Соня в зверинце</h3>
+<p>«Уж как же я рада тебя видеть, душенька!» говорит Пиковая княгиня и, взяв Соню под руку, пошла с нею прохаживаться.</p>
+<p>И Соня рада, что Пиковая княгиня теперь в хорошем расположении духа. «От лука и чеснока должно быть она была такая сердитая давеча, в кухне! Когда я буду княгиней, никогда не позволю держать чеснок на кухне», решила Соня. «И на что он! в суп никуда не годится, только портит. Вот сахар и леденец другое дело! От него дети бывают такие добренькие, кроткие, если б знали это большие, не стали бы так скупиться на него». И Соня очень была довольна, что додумалась до такой премудрости; и так она раздумалась о леденце и сахаре, что совсем забыла о подруге своей, Пиковой княгине, даже вздрогнула, как та закричала ей на ухо: «о чем ты, душенька, так задумалась, что забыла про меня? Из этого выходит нравоучение, что бишь... погоди, дай вспомнить!»</p>
+<p>«Может быть и ничего из этого не выходит?» заметила Соня.</p>
+<p>«Что ты, что ты, дитятко! Изо всего всегда можно вывести нравоучение, - надо только придумать его.» И Пиковая княгиня еще крепче обняла Соню. А Соне вовсе это не нравилось по двум причинам: первое - Пиковая княгиня была ужасно дурна собой; второе - она упиралась ей подбородком прямо в плечо, а подбородок у ней был преострый. Однако, не желая быть неучтивой, Соня решилась терпеть.</p>
+<p>«Игра, кажется пошла на лад», говорит Соня, чтобы завязать разговор.</p>
+<p>«Как же, как же», поддакнула Пиковая княгиня. «Отсюда нравоученье: любовью свет держится!»</p>
+<p>«А я так слыхала, что дело мастера боится», пролепетала Соня.</p>
+<p>«Пожалуй, и так: это почти одно и тоже», согласилась Пиковая княгиня. «Отсюда нравоученье: лишь бы был смысл, а слова сами придут.»Тут она опять ткнулась острым подбородком в плечо Соне.</p>
+<p>«И что она за охотница ко всякому слову причитывать!» думает Соня.</p>
+<p>«Я рада бы еще крепче тебя обнять, чтоб доказать тебе свою дружбу», вдруг говорит Пиковая княгиня, «да вот зверок, что у тебя в платке, что-то очень топорщиться, как бы его не раздразнить!»</p>
+<p>«Пожалуй, раздразнишь, может уколоть», поспешила сказать Соня, вовсе не желая обниматься с княгиней.</p>
+<p>«Правда, правда, и я слыхала, что еж, что горчица, больно кусаются... Отсюда нравоученье, что свой своему поневоле брат!»</p>
+<p>«Но ведь горчица не животное», заметила Соня.</p>
+<p>«Опять таки твоя правда» - говорит княгиня. «И что ты за умница? Слово скажешь - рублем подаришь!»</p>
+<p>«Горчица, кажется, из царства ископаемых», говорит Соня.</p>
+<p>«Разумеется», говорит княгиня, которая, казалась, готова была согласиться со всем, что ни скажет Соня. «Вот даже неподалеку отсюда есть горчичные копи, как же не ископаемое! Отсюда выходит, что сколько ни копи, довольно не накопишь!»</p>
+<p>«Ах, знаю теперь, вспомнила!» закричала Соня, не расслышав последних слов княгини. «Горчица из царства растительного: это овощ, хоть видом и непохожа на растение».</p>
+<p>«И на этот раз совершенно согласна с тобою», говорит княгиня. «Отсюда нравоученье: будь тем, чем хочешь, - проще говоря: всегда будь такою, какою желаешь казаться другим, - но так, чтобы не заметили другие, что ты желаешь казаться такою, какою ты желаешь показаться другим, а чтобы думали другие, что ты действительно такая, какою желаешь казаться!»</p>
+<p>«Если бы вы потрудились мне это записать, оно было бы мне понятнее, а то я никак не могу поспеть за вами, все слова перепутались», говорит Соня как можно учтивее.</p>
+<p>«О, это что! пустяки в сравнении с тем, что я могу сказать, если захочу!» - говорит княгиня и самодовольно улыбнулась.</p>
+<p>«Нет, уж пожалуйста не трудитесь: хорошенького понемножку, - и то уж у меня голова совсем закружилась», поспешила Соня отказаться.</p>
+<p>«Какой это труд, душенька! Я даже от всей души готова подарить тебе каждое свое слово!»</p>
+<p>«Дешевый подарок!» думает Соня. «Беда, если бы так дарили к рождению и именинам!»</p>
+<p>«Опять задумалась!» говорит княгиня и ткнула ей подбородком в плечо.</p>
+<p>«Никто, кажется, не запрещает мне думать», резко говорить Соня: ей сильно стало надоедать приставание Пиковой княгини.</p>
+<p>«Что ты, что ты, миленькая! ни тебе мечтать, ни свинье летать - никто не вправе запретить! И выходят из э...» На этом, к удивлению Сони, голос Пиковой княгини разом оборвался, и она вся затряслась; Соня взглянула - перед ними, скрестивши руки, стоит Червонная Краля, насупившись, словно грозная туча.</p>
+<p>«Погода нынче прекрасная, ваше величество!» запищала Пиковая княгиня чуть слышным трепетным голоском.</p>
+<p>«Погоди!... я тебе покажу погоду!» заорала Червонная Краля, и топнула ногой.</p>
+<p>Пиковая княгиня, долго не думая, давай Бог ноги!</p>
+<p>«Пойдем теперь доигрывать партию», обратилась к Соне Червонная Краля.</p>
+<p>А Соня, глядя на них, так перетрусила, что стоит сама не своя, и молчком побрела за Кралей.</p>
+<p>Тем временем игроки, пользуясь отсутствием Крали, расположились под деревьями отдыхать. Лишь завидели они ее, повскакали с мест, и назад к крокету! а Червонная Краля ну их подгонять!</p>
+<p>Вдруг Червонная Краля раскрасневшись, запыхавшись, говорит Соне: «а видела ты мой зверинец?»</p>
+<p>«Нет», отвечала Соня, «что это за зверинец?»</p>
+<p>«А вот увидишь - все они идут ко мне на кухню.»</p>
+<p>«Такого зверинца я никогда не видывала» говорит Соня.</p>
+<p>«Ну, так увидишь, - пойдем, они сами тебе расскажут про себя»</p>
+<p>Первый попавшийся им зверь был грифон. Пригревшись на солнце, он спал, свернувшись клубком.</p>
+<p>«На ноги, лентяй!» - закричала на него Червонная Краля. «Сведи эту барышню к телячьей головке». И она бросила Соню одну, глаз на глаз с грифоном.</p>
+<p>Соне крепко не понравилась наружность этого зверя, однако, подумавши, она решила, что вернее, пожалуй, остаться с ним, чем идти за этой свирепой Червонной Кралей. Стала Соня и ждет.</p>
+<p>Грифон протер себе глаза, поглядел Крале вслед и, когда она скрылась из виду, загоготал: «Шутиха!» не то про себя, не то вслух.</p>
+<p>«Кто это шутиха?» спросила Соня.</p>
+<p>«Конечно, она!» сказал грифон. «Все у нее одно воображение!.. все грозит снести голову! никому никогда не сносили голов - все целехоньки! ну, как же не шутиха! иди сюда!»</p>
+<p>«Отроду так мною не командовали!» думает Соня и потихоньку пошла за грифоном.</p>
+<p>Немного они прошли, как завидели «телячью головку». Из брони черепахи торчала телячья голова хвост и задние ноги - теленка, передние лапы - черепахи. Грустно и одиноко сидела она на обломке скалы. Подойдя к ней поближе, Соня слышит: вздыхает телячья головка, будто сердце у нее надрывается.</p>
+<p>Разжалобилась Соня над ней. «О чем она грустит?» спрашивает она грифона, а грифон говорит: «все это у нее одно воображение, никакого горя у нее нет. Подойдем к ней.»</p>
+<p>Подошли, а телячья головка только глядит на них большими, заплаканными глазами, ничего не говорит.</p>
+<p>«Вот барышня пришла послушать твои россказни», говорит ей грифон.</p>
+<p>«Пожалуй, расскажу», глухим голосом, мрачно выговорила телячья головка. «Садитесь оба и не говорите ни слова, покуда я не кончу.»</p>
+<p>Уселись и молчат.</p>
+<p>Долго ли, нет ли, они молчали, только Соне начало надоедать так сидеть.</p>
+<p>«Однажды», замычала, наконец, телячья головка, и тяжело вздохнула, «я была настоящим теленком.» За этим настало долгое молчание: телячья головка опять зарыдала, а грифон передразнивает ее, - также всхлипывает. Соня потеряла терпение и собралась было уходить, поблагодарив за приятную беседу, но ей вдруг стало жалко телячью головку и она решилась подождать; уселась опять и молчит.</p>
+<p>«И жилось нам хорошо, телятам, как вздумали вдруг сделать из нас черепах и отдали нас в ученье к старой черепахе, жившей в море», несколько успокоившись и лишь изредка всхлипывая, продолжает телячья головка. «Море это было не настоящее, а соленый бассейн, но мы его называли морем!»</p>
+<p>«Почему же вы его называли морем, когда оно было не настоящее?» спросила Соня.</p>
+<p>«Мы его называли морем, потому что нас там морили», сердито отвечала телячья головка. «И воспитывали нас прекрасно...»</p>
+<p>«Я тоже хожу в школу, нечего вам, стало быть, так хвастаться!» прерывает Соня.</p>
+<p>«А есть у вас дополнительные предметы за особую плату?» - хвастливо спросила телячья головка.</p>
+<p>«Как же, французский и музыка.»</p>
+<p>«А стирке вас учат?»</p>
+<p>«Какой вздор! конечно, не учат», с негодованием говорит Соня.</p>
+<p>«Ну, хороша же эта ваша школа! самая пустая!» решительно выговорила телячья головка и самодовольно вздохнула. «Нет у нас учили.»</p>
+<p>«Что же вы стирали? ведь вы жили в воде?» насмешливо заметила Соня.</p>
+<p>«По бедности я не могла этому обучаться», вздохнула телячья головка. «Ну чему же вас учат?»</p>
+<p>«Нас сначала учат читать, потом идут склонение, спряжение...»</p>
+<p>«Да, да, да», подхватила телячья головка, «слоняние,наряжание...»</p>
+<p>«А по сколько часов в день вас учили?» поторопилась Соня повернуть разговор, видя, что головка понесла чепуху.</p>
+<p>«По десяти часов в первый день, по девяти - на второй, и так далее, все на ущерб».</p>
+<p>«Скажите, какой странный порядок» - удивилась Соня.</p>
+<p>«Ничего не странно! Сама увидишь. Ведь иначе никогда не отучишься! Вот понемногу ученье-то и убавлялось.»</p>
+<p>Такая новая мысль очень заняла Соню; она задумалась над ней и собралась было с новым вопросом.</p>
+<hr>
+<p>Телячья головка глубоко вздохнула, провела лапой по глазам, поглядела на Соню, будто желая что-то сказать, но рыдание заглушили ей голос.</p>
+<p>«Ни дать, ни взять подавилась костью!» говорит грифон, и ну ее тормошить и колотить в спину. После этой трепки телячья головка пришла в себя; слезы все еще текли по ее щекам, однако она успокоилась настолько, что могла проговорить:</p>
+<p>«Ты, может быть, не живала на дне морском, и потому не имела случая познакомиться с морским раком.»</p>
+<p>«Случалось его пробовать, когда подавали к сто...» начала было Соня, но поскорее замолчала, боясь кого-нибудь обидеть. «Никогда не случалось», говорит она.</p>
+<p>«Следственно, ты никак не можешь себе представить всю прелесть раковой пляски!»</p>
+<p>«Никак не могу», согласилась Соня. «Что это за пляска?»</p>
+<p>«Не желаешь ли посмотреть, - мы, пожалуй, пропляшем?» предложил грифон.</p>
+<p>«С удовольствием».</p>
+<p>«Давай, пропляшем первую фигуру!» говорит грифон телячьей головке.</p>
+<p>Телячья головка утерла слезы и охотно согласилась.</p>
+<p>Начали: пошли кружиться около Сони, то заденут ее хвостом, то отдавят ей ногу.</p>
+<p>«Благодарю вас, очень занимательная эта пляска!» говорит Соня, а сама ждет не дождется конца.</p>
+<p>Наконец кончили.</p>
+<p>«Ты бы рассказала нам теперь про свои приключение», обратился вдруг грифон к Соне.</p>
+<p>«С удовольствием расскажу вам, что было со мною, но только с сегодняшнего дня», робко начала Соня, «Про вчерашний не стоит говорить, потому что вчера я была совсем не той, чем стала нынче с утра.»</p>
+<p>«Что-то непонятно объяснила», говорит телячья головка.</p>
+<p>«Прошу без объяснений - от них одна скука. Начинай прямо с приключений», говорит грифон.</p>
+<p>И пошла Соня им рассказывать, что было с нею с тех пор, как, увидавши белого кролика, она погналась за ним. Сначала она робела и несколько сбивалась и было с чего: оба зверя подсели близко к ней и, широко разинув пасть, выпучили на нее глаза. Вскоре, однако, она оправилась и стала говорить смелей. Слушатели ёя сидели смирно, чинно и не прерывали ее, покуда не дошла она до того места, где червяк вслед ей прочитать наизусть «Близко города Славянска» и слова у нее выходили все на выворот.</p>
+<p>«Оказия!» проговорила тут телячья головка и глубоко вздохнула.</p>
+<p>«Да, признаться, - оказия!» - поддакнул грифон.</p>
+<p>«И все выходило на выворот?» задумчиво переспросила телячья головка.</p>
+<p>«Любопытно было бы ее прослушать; вели-ка ей сказать что-нибудь», обратилась она к грифону, словно он более ее имел права командовать Соней.</p>
+<p>«Встань и прочитай наизусть "Раз в крещенский вечерок"», - приказал грифон.</p>
+<p>«И они туда же распоряжаться! Задавать уроки! это выходит, ни дать ни взять, та же школа!» думает Соня, однако встала, начала. И понесла она такую чепуху, что и сама себя не разберет: пляшут у нее в голове поросята, разные звери, а язык болтает, - не сладит она с ним никак:</p>
+<p>Раз, собравшися в кружок,<br>
+Петухи гадали,<br>
+На ворота колпачок,<br>
+Сняв с ноги, сажали...  </p>
+<p>&nbsp;</p>
+<p>Соня остановилась - стыдно ей и досадно стало; она закрыла, лицо руками и думает «будет ли всей этой чепухе конец?»</p>
+<p>«Не мешало бы тебе объяснить», начала было телячья головка, но грифон перебил ее.</p>
+<p>«Где ей», говорит, «объяснять! И сама-то себя не разберет.»</p>
+<p>«Не желаешь ли, мы пропляшем тебе вторую фигуру раковой кадрили? А то, не попросишь ли телячью головку спеть нам песенку?» предложил грифон.</p>
+<p>«Ах, да, пожалуйста песенку! Будьте так добры, спойте что-нибудь», говорит Соня телячьей головке.</p>
+<p>Телячья головка тяжело вздохнула и дрожащим голосом, прерываемым рыданьем, затянула:</p>
+<p>Ах, прекраснейший суп<br>
+Из головки телячьей!...  </p>
+<p>&nbsp;</p>
+<p>Только что заголосила телячья головка, как вдруг издали послышался крик: «К суду, к суду, допрос начался!»</p>
+<p>«Идем!» заторопился грифон и, не дождавшись конца песни, схватил Соню за руку и пустился бежать.</p>
+<p>«Какой допрос? кого судят?» допрашивает Соня, едва переводя дух; а грифон только пуще торопит ее и сам шибче бежит.</p>
+<p>Издалека, все слабее и слабее доносились до них замирающие звуки жалобной песни телячьей головки:</p>
+<p>Ах, прекраснейший суп<br>
+Из головки телячьей!..</p>
+<h3 data-heading="Заседание суда">Заседание суда</h3>
+<p>На троне сидели Король и Краля Червонные; около них собралась большая толпа из мелких пташек и всяких зверят; тут же выстроилась вся колода карт.</p>
+<p>Подсудимый, Червонный Валет, в цепях стоял перед троном, охраняемый двумя стражами. Возле Короля белый кролик держал в одной руке звонок, в другой - большой сверток бумаги. На средине залы, на столе было поставлено большое блюдос сладкими пирожками. И что за вкусные пирожки! Глядя на них, у Сони глаза и зубы разгорелись.</p>
+<p>Соня никогда еще не бывала в заседаниях суда, но слыхала толки о них.</p>
+<p>«Этот вот - судья, потому, что у него цепь на груди», думает Соня. А на этот раз судьей был сам Король.</p>
+<p>«А там вон - скамья, а на ней сидят все разные животные. Это, должно быть, пристяжные», подумала Соня. Она, видите, говорила пристяжные, потому, что не совсем затвердила слово присяжные.</p>
+<p>«Да, это пристяжные, пристяжные», повторяла она, с самодовольствием несколько раз кряду, а сама думает: «это, пожалуй, знает не каждая девочка одних со мною лет!»</p>
+<p>Эти двенадцать пристяжных усердно строчили что-то на грифельных досках.</p>
+<p>«Что они пишут? И о чем им писать, когда суд еще не начался?» шепнула Соня на ухо грифону.</p>
+<p>«Имена свои учатся подписывать, неравно забудут до окончание суда», шепнул ей грифон в ответ.</p>
+<p>«Глупые тва...!» крикнула Соня, но испугалась и остановилась на полуслове.</p>
+<p>«Тише господа!» громко крикнул белый кролик.</p>
+<p>Король надел очки и с досадой оглянул собрание.</p>
+<p>Соня с своего места заметила, как все присяжные записали на своих досках: «глупые тва..!»</p>
+<p>Еще ей показалось, что один из присяжных не знал: писать ли глупые или глупые, и шептался об этом с соседом.</p>
+<p>«Ну, славная у них выйдет каша на досках?» думает Соня. У одного из присяжных грифель нестерпимо визжал; этого не выдержала Соня, - встала, прокралась задними рядами к скамье присяжных, стала за виновным, и, дождавшись удобного случая, выхватила у него грифель. Она сделала это так ловко и проворно, что бедненький, маленький присяжный не догадался, куда девался его грифель. Поискал, поискал, искоса посмотрел на кралю, и пошел водить пальцем по доске. Хоть мало из этого толку, а все же на вид как будто дело делает.</p>
+<p>Вдруг дверь с шумом отворилась и в залу ввалился Враль-Илюшка, в одной руке у него чашка чая, в другой - кусок хлеба.</p>
+<p>«Прощение просим, ваше величество», обратился он к Королю, «я сидел за чаем, да вижу, что пора идти, ну и захватил чашечку. И тут можно допить».</p>
+<p>«Шляпу долой!» закричал на него Король.</p>
+<p>«Никак невозможно, ваше величество», говорит Илюшка, «я шляпами торгую, изволите видеть, - шляпа у меня служит вывеской».</p>
+<p>Тут Червонная Краля надела очки и выпялила глаза на Илюшку, да так страшно, что Илюшка побледнел и весь затрясся.</p>
+<p>«Шляпу долой, болван?» повторил Король, «не то, берегись, велю тебя казнить!»</p>
+<p>Илюшка беспокойно поглядывал на Червонную Кралю и переминался с ноги на ногу. Кончилось тем, что вместо хлеба он с испугу выкусил большой кусок из чашки.</p>
+<p>А Червонная Краля не спускала глаз с Илюшки и вдруг как закричит «что ему надо? зачем пришел?»</p>
+<p>Илюшка еще пуще перепугался, - едва на ногах держится, даже башмаки растерял.</p>
+<p>«Чего тебе надо, зачем пришел?» - повторил Король. «Сейчас отвечай, не то казнить велю тебя, трусишка негодный!»</p>
+<p>«Я, ваше величество, бедный человек», дрожащим голосом начал Илюшка. «И только я садился за чай, и всего-то я с неделю сидел, а может и меньше - за хлопотами запамятовал!» - «Что ты городишь!» крикнул на него Король.</p>
+<p>Бедный Илюшка с испуга выронил из рук чашку, хлеб и пал на колени:</p>
+<p>«Я, ваше величество, бедный человек» начал, было, он.</p>
+<p>«И негодный болтун, пустомеля!» огорошил его Король.</p>
+<p>Тут захихикали и одобрительно захрюкали заморские свинки; но их тотчас укротили: сунули в мешок, связали его и положили под скамью.</p>
+<p>«От тебя, я вижу, толку не добьешься, убирайся! Ну, живо, проваливай!» сказал Король.</p>
+<p>А Илюшка все лежит, припав лицом к полу.</p>
+<p>«Куда же мне еще провалиться!» жалобно вопит бедняга, «уж и так лежу!... ваше величество!» вдруг, с отчаяние, вскрикнул он, несколько приподняв голову, «окажите божескую милость, отпустите к чаю!» А сам боязливо, исподлобья глядит на червонную кралю. «Отпустить его!» решил Король.</p>
+<p>Илюшка мигом вскочил и без башмаков - давай бог ноги.</p>
+<p>Вдруг Соня слышит - резкий голос зовет: «Соня!»</p>
+<hr>
+<p>«Я здесь» громко отвечает удивленная Соня, вскакивает на ноги и стремительно бросается вперед.</p>
+<p>Забыв про свой огромный рост, она впопыхах задела ногой скамью присяжных. Скамья повалилась, и присяжные кувырком полетели во все стороны, карабкаясь и барахтаясь в ужасном смятении.</p>
+<p>«Ах, простите, извините... Это я нечаянно!» жалобно завопила Соня и бросилась подбирать присяжных и усаживать их, как попало, по скамьям.</p>
+<p>«Нельзя начинать допроса, покуда не будет все в порядке!» строго выговорил Король и значительно взглянул на Соню.</p>
+<p>Соня оглянулась на скамью присяжных и видит, что второпях она сунула бедного Ваську-таракана вверх ногами. Черномазенький лежит на спине и беспомощно болтает ножками в воздухе.</p>
+<p>Соня нагнулась, обернула его, осторожно взяла двумя пальцами за спинку, посадила на скамью, а сама думает:</p>
+<p>А вы, друзья, как ни садитесь,<br>
+Всё в музыканты не годитесь!  </p>
+<p>&nbsp;</p>
+<p>И так ей стало смешно, что она едва удержалась, чтобы не расхохотаться вслух.</p>
+<p>Лишь только присяжные несколько пришли в себя, они отыскали доски и грифеля и снова принялись усердно писать свои имена. Один Васька не писал, а сидел, как одурелый. Соня стояла так близко к ним, что могла заглядывать им в доски и видела, что они все исписаны одними именами.</p>
+<p>Соня не выдержала и захихикала.</p>
+<p>В эту минуту Король, который усердно записывал что-то в памятную книжку, вдруг поднял голову, окинул взором собрание и крикнул: «молчание!» Все притихли.</p>
+<p>Он опять заглянул к себе в книжку и говорит: «по статье 42-й лица, превышающие установленную законом меру, не могут присутствовать в заседании присяжных. Соня, удались! в тебе сажень росту. Ты превышаешь меру». Все взглянули на Соню. И в самом деле она похожа была на колокольню посреди этого собрание, и надо было высоко поднимать голову, чтобы взглянуть ей в лицо.</p>
+<p>«Во мне нет сажени», - защищается Соня.</p>
+<p>«Есть», говорит Король.</p>
+<p>«Больше сажени!» - кричит Червонная Краля, «вон, вон, вон сейчас!»</p>
+<p>«Сажень ли, две ли сажени, это как вам угодно, а я из собрание не выйду!» горячится Соня. «И статьи такой вовсе нет, а сами вы ее сейчас сочинили!»</p>
+<p>«Статья эта существует спокон века, из первых первейшая», гневно возражает Король.</p>
+<p>«Ну, и выходит, что ваша статья не 42-я, а 1-я!», отвечает Соня, все более горячась.</p>
+<p>Король побледнел и с досадой захлопнул памятную книжку. «Молчать!»</p>
+<p>«Вздор! Не замолчу!» закричала Соня вне себя.</p>
+<p>«Снести ей голову!» - во все горло заорала Червонная Краля.</p>
+<p>Никто не двинулся.</p>
+<p>«Очень я вас боюсь!» гордо и смело сказала Соня. «Все-то вы колода карт и болыпе ничего - годны разве только поиграть в дурачки!»</p>
+<p>Тут поднялась в воздух, закружилась и вихрем налетела на Соню вся колода карт.</p>
+<p>С испуга и с досады Соня вскрикнула, замахнулась на нее...</p>
+<p>Ах!... что такое? Где она?... Лежит на траве, головой на коленях у сестры. Сестра осторожно смахивает ей с лица упавшие с дерева сухие листья.</p>
+<p>«Проснись, Сонечка!» тихо говорит сестра, «успокойся! ты, верно, сон видела. Уж очень ты заспалась, душенька».</p>
+<p>«Ах, Катя! что за удивительный приснился мне сон!» И Соня, как умела, пересказала сестре только что прочитанные вами странные приключение свои в царстве дива.</p>
+    </body>
+</html>

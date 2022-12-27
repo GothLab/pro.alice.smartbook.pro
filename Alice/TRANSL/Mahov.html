@@ -1,0 +1,2168 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Mahov</title>
+        <meta charset='utf-8'/>
+        <style>
+ .ͼ1.cm-editor.cm-focused {outline: 1px dotted #212121;}
+.ͼ1.cm-editor {position: relative !important; box-sizing: border-box; display: flex !important; flex-direction: column;}
+.ͼ1 .cm-scroller {display: flex !important; align-items: flex-start !important; font-family: monospace; line-height: 1.4; height: 100%; overflow-x: auto; position: relative; z-index: 0;}
+.ͼ1 .cm-content[contenteditable=true] {-webkit-user-modify: read-write-plaintext-only;}
+.ͼ1 .cm-content {margin: 0; flex-grow: 2; flex-shrink: 0; display: block; white-space: pre; word-wrap: normal; box-sizing: border-box; padding: 4px 0; outline: none;}
+.ͼ1 .cm-lineWrapping {white-space: pre-wrap; white-space: break-spaces; word-break: break-word; overflow-wrap: anywhere; flex-shrink: 1;}
+.ͼ2 .cm-content {caret-color: black;}
+.ͼ3 .cm-content {caret-color: white;}
+.ͼ1 .cm-line {display: block; padding: 0 2px 0 6px;}
+.ͼ1 .cm-layer > * {position: absolute;}
+.ͼ1 .cm-layer {contain: size style;}
+.ͼ2 .cm-selectionBackground {background: #d9d9d9;}
+.ͼ3 .cm-selectionBackground {background: #222;}
+.ͼ2.cm-focused .cm-selectionBackground {background: #d7d4f0;}
+.ͼ3.cm-focused .cm-selectionBackground {background: #233;}
+.ͼ1 .cm-cursorLayer {pointer-events: none;}
+.ͼ1.cm-focused .cm-cursorLayer {animation: steps(1) cm-blink 1.2s infinite;}
+@keyframes cm-blink {50% {opacity: 0;}}
+@keyframes cm-blink2 {50% {opacity: 0;}}
+.ͼ1 .cm-cursor, .ͼ1 .cm-dropCursor {border-left: 1.2px solid black; margin-left: -0.6px; pointer-events: none;}
+.ͼ1 .cm-cursor {display: none;}
+.ͼ3 .cm-cursor {border-left-color: #444;}
+.ͼ1.cm-focused .cm-cursor {display: block;}
+.ͼ2 .cm-activeLine {background-color: #cceeff44;}
+.ͼ3 .cm-activeLine {background-color: #99eeff33;}
+.ͼ2 .cm-specialChar {color: red;}
+.ͼ3 .cm-specialChar {color: #f78;}
+.ͼ1 .cm-gutters {flex-shrink: 0; display: flex; height: 100%; box-sizing: border-box; left: 0; z-index: 200;}
+.ͼ2 .cm-gutters {background-color: #f5f5f5; color: #6c6c6c; border-right: 1px solid #ddd;}
+.ͼ3 .cm-gutters {background-color: #333338; color: #ccc;}
+.ͼ1 .cm-gutter {display: flex !important; flex-direction: column; flex-shrink: 0; box-sizing: border-box; min-height: 100%; overflow: hidden;}
+.ͼ1 .cm-gutterElement {box-sizing: border-box;}
+.ͼ1 .cm-lineNumbers .cm-gutterElement {padding: 0 3px 0 5px; min-width: 20px; text-align: right; white-space: nowrap;}
+.ͼ2 .cm-activeLineGutter {background-color: #e2f2ff;}
+.ͼ3 .cm-activeLineGutter {background-color: #222227;}
+.ͼ1 .cm-panels {box-sizing: border-box; position: sticky; left: 0; right: 0;}
+.ͼ2 .cm-panels {background-color: #f5f5f5; color: black;}
+.ͼ2 .cm-panels-top {border-bottom: 1px solid #ddd;}
+.ͼ2 .cm-panels-bottom {border-top: 1px solid #ddd;}
+.ͼ3 .cm-panels {background-color: #333338; color: white;}
+.ͼ1 .cm-tab {display: inline-block; overflow: hidden; vertical-align: bottom;}
+.ͼ1 .cm-widgetBuffer {vertical-align: text-top; height: 1em; width: 0; display: inline;}
+.ͼ1 .cm-placeholder {color: #888; display: inline-block; vertical-align: top;}
+.ͼ1 .cm-highlightSpace:before {content: attr(data-display); position: absolute; pointer-events: none; color: #888;}
+.ͼ1 .cm-highlightTab {background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="20"><path stroke="%23888" stroke-width="1" fill="none" d="M1 10H196L190 5M190 15L196 10M197 4L197 16"/></svg>'); background-size: auto 100%; background-position: right 90%; background-repeat: no-repeat;}
+.ͼ1 .cm-trailingSpace {background-color: #ff332255;}
+.ͼ1 .cm-button {vertical-align: middle; color: inherit; font-size: 70%; padding: .2em 1em; border-radius: 1px;}
+.ͼ2 .cm-button:active {background-image: linear-gradient(#b4b4b4, #d0d3d6);}
+.ͼ2 .cm-button {background-image: linear-gradient(#eff1f5, #d9d9df); border: 1px solid #888;}
+.ͼ3 .cm-button:active {background-image: linear-gradient(#111, #333);}
+.ͼ3 .cm-button {background-image: linear-gradient(#393939, #111); border: 1px solid #888;}
+.ͼ1 .cm-textfield {vertical-align: middle; color: inherit; font-size: 70%; border: 1px solid silver; padding: .2em .5em;}
+.ͼ2 .cm-textfield {background-color: white;}
+.ͼ3 .cm-textfield {border: 1px solid #555; background-color: inherit;}
+.ͼ1 .cm-foldPlaceholder {background-color: #eee; border: 1px solid #ddd; color: #888; border-radius: .2em; margin: 0 1px; padding: 0 1px; cursor: pointer;}
+.ͼ1 .cm-foldGutter span {padding: 0 1px; cursor: pointer;}
+.ͼq .cm-content {white-space: pre-wrap; word-break: break-word; overflow-wrap: anywhere; padding: 0;}
+ .custom-frames-view {
+	padding: 0 !important;
+	overflow: hidden !important;
+}
+
+.custom-frames-view-file {
+	padding: 0;
+	overflow: auto;
+}
+
+.custom-frames-frame {
+	width: 100%;
+	height: 100%;
+	border: none;
+	background-color: white;
+	background-clip: content-box;
+}
+
+.custom-frames-add {
+	margin-left: 10px;
+}
+
+.custom-frames-show {
+	margin-bottom: 18px;
+}
+
+.custom-frames-support {
+	max-width: 50%;
+	width: 400px;
+	height: auto;
+}
+ .setting-item.ex-setting-item {
+    border-top: unset;
+    padding-top: 0;
+}
+
+*[hidden] {
+    display: none;
+} 
+.pandoc-plugin-error {
+    color: red;
+}
+ /* 
+ *  Originally copied from dist/tippy.css in the tippy.js package.
+ *
+ *  Modifications were made to implement compatibility with
+ *  Obsidian themes.   
+ */
+
+.theme-light {
+  --link-tooltip-background: #333;
+  --link-tooltip-text: #fff;
+}
+
+.theme-dark {
+  --link-tooltip-background: #ccc;
+  --link-tooltip-text: #000;
+}
+
+.tippy-box[data-animation="fade"][data-state="hidden"] {
+  opacity: 0;
+}
+
+[data-tippy-root] {
+  max-width: calc(100vw - 10px);
+}
+
+.tippy-box {
+  position: relative;
+  background-color: var(--link-tooltip-background);
+  color: var(--link-tooltip-text);
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.4;
+  outline: 0;
+  transition-property: transform, visibility, opacity;
+}
+
+.tippy-box[data-placement^="top"] > .tippy-arrow {
+  bottom: 0;
+}
+
+.tippy-box[data-placement^="top"] > .tippy-arrow:before {
+  bottom: -7px;
+  left: 0;
+  border-width: 8px 8px 0;
+  border-top-color: initial;
+  transform-origin: center top;
+}
+
+.tippy-box[data-placement^="bottom"] > .tippy-arrow {
+  top: 0;
+}
+
+.tippy-box[data-placement^="bottom"] > .tippy-arrow:before {
+  top: -7px;
+  left: 0;
+  border-width: 0 8px 8px;
+  border-bottom-color: initial;
+  transform-origin: center bottom;
+}
+
+.tippy-box[data-placement^="left"] > .tippy-arrow {
+  right: 0;
+}
+
+.tippy-box[data-placement^="left"] > .tippy-arrow:before {
+  border-width: 8px 0 8px 8px;
+  border-left-color: initial;
+  right: -7px;
+  transform-origin: center left;
+}
+
+.tippy-box[data-placement^="right"] > .tippy-arrow {
+  left: 0;
+}
+
+.tippy-box[data-placement^="right"] > .tippy-arrow:before {
+  left: -7px;
+  border-width: 8px 8px 8px 0;
+  border-right-color: initial;
+  transform-origin: center right;
+}
+
+.tippy-box[data-inertia][data-state="visible"] {
+  transition-timing-function: cubic-bezier(0.54, 1.5, 0.38, 1.11);
+}
+
+.tippy-arrow {
+  width: 16px;
+  height: 16px;
+  color: var(--link-tooltip-background);
+}
+
+.tippy-arrow:before {
+  content: "";
+  position: absolute;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.tippy-content {
+  position: relative;
+  padding: 10px 15px;
+  z-index: 1;
+  overflow-wrap: anywhere;
+}
+ 
+
+#cMenuToolbarModalBar {
+  width: auto;
+  height: auto;
+  padding: 3px;
+  display: grid;
+  user-select: none;
+  border-radius: 6px;
+  position: absolute;
+  transition: 100ms cubic-bezier(0.92, -0.53, 0.65, 1.21);
+  -webkit-transition: 100ms cubic-bezier(0.92, -0.53, 0.65, 1.21);
+  min-width: fit-content;
+  justify-content: space-around;
+  z-index: var(--layer-status-bar);
+  box-shadow: 0px 3px 32px rgb(31 38 135 / 15%);
+  border: 1px solid var(--background-modifier-border);
+}
+#cMenuToolbarModalBar.cMenuToolbarFlex {
+  display: flex;
+}
+#cMenuToolbarModalBar.cMenuToolbarFlex :is(.cMenuToolbarCommandItem,button[class^=cMenuToolbarCommandsubItem]) {
+  min-width: 20px;
+}
+#cMenuToolbarModalBar .cMenuToolbarCommandItem {
+  margin: 2px;
+  border: none;
+  display: flex;
+  cursor: pointer;
+  padding: 5px 6px;
+  box-shadow: none;
+  margin-left: 3px;
+  margin-right: 3px;
+  position: relative;
+  border-radius: 3px;
+  font-size: initial !important;
+  background-color: var(--background-primary-alt);
+  height: auto;
+}
+
+#cMenuToolbarModalBar button.cMenuToolbarCommandItem:hover {
+  background-color: var(--background-secondary);
+}
+
+/* #cMenuToolbarModalBar button.cMenuToolbarCommandItem svg {
+  width: 1.3em;
+  height: 1.3em;
+} */
+
+/*----------------------------------------------------------------
+cMenuToolbar SETTINGS BUTTONS
+----------------------------------------------------------------*/
+
+.modal.mod-settings
+  button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsButton.cMenuToolbarSettingsButtonAdd,
+button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsButton.cMenuToolbarSettingsButtonAdd {
+  background-color: var(--interactive-accent);
+}
+
+.modal.mod-settings
+  button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsButton.cMenuToolbarSettingsButtonDelete,
+button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsButton.cMenuToolbarSettingsButtonDelete {
+  background-color: #989cab;
+}
+
+.modal.mod-settings
+  button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsButton.cMenuToolbarSettingsButtonRefresh,
+button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsButton.cMenuToolbarSettingsButtonRefresh {
+  background-color: var(--text-accent);
+}
+
+button.cMenuToolbarSettingsButton {
+  padding: 4px 14px;
+  border-radius: 6px;
+}
+
+
+
+/*----------------------------------------------------------------
+cMenuToolbar SETTING ITEMS
+----------------------------------------------------------------*/
+.setting-item.cMenuToolbarCommandItem:first-child {
+  padding-top: 18px;
+}
+
+.cMenuToolbarCommandItem {
+  cursor: grab;
+  padding: 18px 0 18px 0;
+}
+
+.sortable-fallback {
+  cursor: grabbing;
+  box-shadow: 0px 3px 32px rgb(31 38 135 / 15%);
+}
+
+.sortable-grab {
+  cursor: grabbing !important;
+}
+
+.sortable-ghost {
+  opacity: 0.4;
+  cursor: grabbing;
+}
+
+.sortable-chosen {
+  cursor: grabbing;
+  padding: 18px 0 18px 18px;
+  background-color: var(--background-primary);
+}
+
+.sortable-drag {
+  cursor: grabbing;
+  box-shadow: 0px 3px 32px rgb(31 38 135 / 15%);
+}
+
+.cMenuToolbarSettingsTabsContainer {
+  border-top: 1px solid var(--background-modifier-border);
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+/*----------------------------------------------------------------
+cMenuToolbar CLASS CHANGES
+----------------------------------------------------------------*/
+
+#cMenuToolbarModalBar.cMenuToolbarDefaultAesthetic
+{
+border: 1px solid var(--background-modifier-border);
+}
+#cMenuToolbarModalBar.cMenuToolbarDefaultAesthetic:not(.top) :is(.cMenuToolbarCommandItem,button[class^=cMenuToolbarCommandsubItem])
+{
+min-height:28px ;
+}
+#cMenuToolbarModalBar.cMenuToolbarDefaultAesthetic:not(.top) button[class^=cMenuToolbarCommandsubItem]  {
+  margin: auto;
+  padding: 6px;
+box-shadow: none;
+ border: none;
+  background-color: transparent;
+
+  place-items: center;
+
+}
+.cMenuToolbarDefaultAesthetic {
+background-color: var(--background-primary);
+}
+
+
+#cMenuToolbarModalBar.cMenuToolbarGlassAesthetic ,#cMenuToolbarModalBar.cMenuToolbarGlassAesthetic ~#cMenuToolbarPopoverBar {
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow:none;
+  background-color: transparent;
+}
+
+  #cMenuToolbarModalBar.cMenuToolbarGlassAesthetic:not(.top) button[class^=cMenuToolbarCommandsubItem]  {
+    margin: auto;
+    padding: 0px;
+    box-shadow: none;
+    border: none;
+    display: flex;
+    border-radius: 3px;
+  font-size: 10px;
+    margin-right: 0px;
+    position: relative;
+    background-color: transparent;
+    place-items: center;
+    clear: both;
+    max-width: 28px;
+    max-height: 23px;
+  }
+
+/*----------------------------------------------------------------
+cMenuToolbar ICONS
+----------------------------------------------------------------*/
+
+.cMenuToolbarIconPick {
+  line-height: normal;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.cMenuToolbarIconPick svg {
+  width: 17px;
+  height: 17px;
+}
+
+/*----------------------------------------------------------------
+cMenuToolbar STATUS BAR MENU
+----------------------------------------------------------------*/
+
+.cMenuToolbar-statusbar-menu {
+  text-align: center;
+  width: 200px;
+}
+
+
+.cMenuToolbar-statusbar-menu .menu-item {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.cMenuToolbar-statusbar-menu .menu-item.settings-item {
+  font-size: 12px;
+  text-align: center;
+  line-height: 1;
+  border-radius: 5px;
+  height: auto;
+  padding: 8px 5px 0px 5px;
+  margin: 0 auto;
+  width: fit-content;
+  color: var(--text-faint);
+}
+
+.cMenuToolbar-statusbar-menu .menu-item.settings-item .menu-item-title {
+  text-align: center;
+}
+
+.cMenuToolbar-statusbar-menu .menu-item:hover,
+.cMenuToolbar-statusbar-menu .menu-item .selected:hover,
+.cMenuToolbar-statusbar-menu .menu-item.selected:not(.is-disabled):not(.is-label) {
+  background-color: transparent;
+}
+
+.cMenuToolbar-statusbar-menu .menu-item-title {
+  margin-right: 10px;
+}
+
+.cMenuToolbar-statusbar-menu .slider {
+  width: 100%;
+}
+
+.cMenuToolbar-statusbar-menu .menu-item.buttonitem {
+  padding-top: 10px;
+  padding-bottom: 4px;
+  height: fit-content;
+}
+
+.cMenuToolbar-statusbar-menu .menu-item.buttonitem button.cMenuToolbarSettingsButton {
+  margin: 0;
+}
+
+.cMenuToolbar-statusbar-menu  .menu-item-icon svg  path   {
+    fill: var(--text-muted);
+}
+.cMenuToolbar-statusbar-menu  .menu-item-icon svg    {
+  stroke: var(--text-muted);
+}
+.cMenuToolbar-statusbar-menu  > .menu-item:is([data-section="ButtonAdd"]) {
+    display: inline-flex;
+    padding: 0px 0px 5px 5px;
+    align-items: center;
+}
+
+.cMenuToolbar-statusbar-menu  > .menu-item {
+  display: inline-flex;
+  padding: 0px 0px 5px 5px;
+  align-items: center;
+}
+.cMenuToolbar-statusbar-menu  > .menu-item:is([data-section="ButtonAdd"]) .menu-item-icon{
+  text-align: center;
+}
+ 
+
+/*----------------------------------------------------------------
+cMenuToolbar STATUS BAR BUTTONS
+----------------------------------------------------------------*/
+
+.cMenuToolbar-statusbar-button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.cMenuToolbar-statusbar-button svg {
+  display: flex;
+  width: 1.3em;
+  height: 1.3em;
+}
+
+/*----------------------------------------------------------------
+cMenuToolbar SUPPORT
+---------------------------------------------`-------------------*/
+
+.cDonationSection {
+  width: 60%;
+  height: 50vh;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--text-normal);
+}
+ 
+
+#cMenuToolbarModalBar{
+  align-items: center;
+  justify-items: center;  
+  border: none;
+  backdrop-filter: none;
+}
+
+#cMenuToolbarModalBar.cMenuToolbarGlassAesthetic .cMenuToolbarCommandItem{
+	
+background-color:#ffffff00;
+}	
+
+#cMenuToolbarModalBar.cMenuToolbarGlassAesthetic [class^=cMenuToolbarCommandsubItem]{
+	
+  background-color:#ffffff00;
+  }	
+#cMenuToolbarModalBar .cMenuToolbarCommandItem{
+  justify-content: center;
+  align-content: center;
+  place-items: center;
+
+  }	
+  
+
+/*  #cMenuToolbarModalBar.cMenuToolbarTinyAesthetic .cMenuToolbarCommandItem svg{
+     width: 1em;
+     height: 1em;
+ } */
+
+
+ 
+div.modal-container.cMenuToolbar-Modal:not(.changename)  .modal-bg
+{
+  background-color:transparent!important;
+  backdrop-filter: none!important;
+position: relative;
+}
+.modal-container.cMenuToolbar-Modal:not(.changename)  .modal {
+  padding: 10px 30px;
+  min-width: 130px;
+  position: absolute;
+  bottom: 2em;
+  right: 0.5em;
+  background-color: rgb(var(--mono-rgb-0),0.8);
+  backdrop-filter: blur(4px);
+}
+.modal-container.cMenuToolbar-Modal  .modal-title
+{
+  display: none;
+}
+
+.modal-container.cMenuToolbar-Modal  .modal  input[type='range'] {
+  width: 90%;
+ 
+}
+body.theme-dark .modal-container.cMenuToolbar-Modal  .modal  input[type='range'] {
+ background-color: var(--background-secondary);
+}
+/*tiny 样式*/
+#cMenuToolbarModalBar.cMenuToolbarTinyAesthetic {
+  align-items: center;
+  justify-items: center;  
+  border: none;
+  backdrop-filter: none;
+  background-color: var(--background-primary);
+  box-shadow: 0 3px 6px -4px rgb(0 0 0 / 12%), 0 6px 16px 0 rgb(0 0 0 / 8%), 0 9px 28px 8px rgb(0 0 0 / 5%);
+ }
+
+
+ #cMenuToolbarModalBar.cMenuToolbarTinyAesthetic .cMenuToolbarCommandItem {
+  margin: auto;
+  padding: 0px;
+  box-shadow: none;
+  margin-left: 0px;
+  margin-right: 0px;
+  position: relative; 
+  background-color:transparent;
+    backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+}
+ #cMenuToolbarModalBar .cMenuToolbarCommandItem {
+   margin: auto;
+
+   padding: 0px;
+   box-shadow: none;
+
+   margin-left: 4px;
+   margin-right: 0px;
+   position: relative; 
+   background-color:transparent;
+     backdrop-filter: blur(8px);
+   -webkit-backdrop-filter: blur(8px);
+ 
+ }
+
+
+:is(#cMenuToolbarModalBar).cMenuToolbarTinyAesthetic:not(.top) button[class^=cMenuToolbarCommandsubItem]  {
+  margin: auto;
+  padding: 0px;
+  box-shadow: none;
+  border: none;
+  display: flex;
+  border-radius: 3px;
+font-size: 10px;
+  margin-right: 0px;
+  position: relative;
+  background-color: transparent;
+ 
+  place-items: center;
+  clear: both;
+  max-width: 28px;
+  max-height: 23px;
+   
+}
+ button[class^=cMenuToolbarCommandsubItem]::after {
+
+  content:  url("data:image/svg+xml,%3Csvg width='4' height='4' version='1.1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024' enable-background='new 0 0 1024 1024' xml:space='preserve'%3E%3Cpath fill='%23666' d='M13.24 80.11 l461.75 560.8 q14.56 16.02 36.41 16.02 q21.85 0 36.42 -16.02 l463.2 -560.8 q10.2 -10.19 12.38 -24.75 q2.18 -14.57 -3.64 -27.68 q-5.82 -13.11 -18.21 -20.39 q-12.39 -7.29 -26.95 -7.29 l-924.95 0 q-20.4 0 -34.23 13.11 q-13.84 13.11 -15.29 32.77 q-1.46 19.66 13.11 34.23 Z'/%3E%3C/svg%3E");
+  
+ margin-left: 1px;
+ margin-top:6px;
+
+}
+
+
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar)  button[class^=cMenuToolbarCommandsubItem]  >.subitem
+{
+    background-color: var(--background-primary);
+    border-radius: 4px;
+    border: 1px solid var(--background-modifier-border);
+    box-shadow: 0 2px 8px var(--background-modifier-box-shadow);
+    position: absolute;
+    z-index: var(--layer-menu);
+    user-select: none;
+    transform: translateY(90%) translateX(0%);
+    -webkit-transform: translateY(90%) translateX(0%);
+    display: flex;
+    
+}
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button[class^=cMenuToolbarCommandsubItem]  >.subitem svg
+{
+  max-width: 1.3em;
+  max-height: 1.3em;
+}
+
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button[class^=cMenuToolbarCommandsubItem]  >.subitem button.menu-item
+{
+    background-color: var(--background-secondary);
+    line-height:2em;
+    display: inline-flex;
+    box-shadow: none;
+    align-items: center;
+}
+
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button[class^=cMenuToolbarCommandsubItem]  >.subitem button:hover
+{
+    background-color: var(--interactive-hover);
+    box-shadow: var(--input-shadow-hover);
+}
+
+
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button[class^=cMenuToolbarCommandsubItem]  >.subitem .menu-item {
+  margin-left: 2px;
+  margin-right: 2px;
+  padding: 0px 4px 0px 4px;
+}
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button[class^=cMenuToolbarCommandsubItem] >.subitem  {
+ 
+ visibility:hidden;
+ transition: all 0.3s linear;
+ -webkit-transition:  all 0.3s linear;
+}
+
+
+
+
+
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar)  button.cMenuToolbarCommandsubItem-font-color .triangle-icon
+{
+  position: absolute;
+  margin-left: 18px;
+  bottom: 8%;
+background-size: 4px 4px;
+background-image: url("data:image/svg+xml,%3Csvg width='4' height='4' version='1.1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024' enable-background='new 0 0 1024 1024' xml:space='preserve'%3E%3Cpath fill='%23666' d='M13.24 80.11 l461.75 560.8 q14.56 16.02 36.41 16.02 q21.85 0 36.42 -16.02 l463.2 -560.8 q10.2 -10.19 12.38 -24.75 q2.18 -14.57 -3.64 -27.68 q-5.82 -13.11 -18.21 -20.39 q-12.39 -7.29 -26.95 -7.29 l-924.95 0 q-20.4 0 -34.23 13.11 q-13.84 13.11 -15.29 32.77 q-1.46 19.66 13.11 34.23 Z'/%3E%3C/svg%3E");
+
+    width: 16px;
+    height: 20px;
+    background-position: center;
+ 
+    background-repeat: no-repeat;
+    min-width: unset;
+    border-left: 2px solid  transparent;
+ }
+
+ :is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar):not(.top) button.cMenuToolbarCommandsubItem-font-color .triangle-icon 
+ {
+  margin-left: 16px;
+  
+ }
+ 
+ :is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar):not(.top) button.cMenuToolbarCommandsubItem-font-color .x-color-picker-wrapper
+{
+  top:auto;
+bottom:calc(100% + 1.8em);
+}
+
+ 
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button.cMenuToolbarCommandsubItem-font-color .subitem
+{
+  visibility:hidden;
+  transition: all 0.3s linear;
+  -webkit-transition:  all 0.3s linear;
+ }
+
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button.cMenuToolbarCommandsubItem-font-color .subitem:hover  {
+  visibility:visible;
+  transition: all 0.3s linear;
+  -webkit-transition:  all 0.3s linear;
+ }
+
+
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button[class^=cMenuToolbarCommandsubItem]:hover >.subitem  {
+ 
+  visibility:visible;
+ transition: all 0.3s linear;
+ -webkit-transition:  all 0.3s linear;
+}
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button[class^=cMenuToolbarCommandsubItem] >.subitem:hover  {
+  visibility:visible;
+  transition: all 0.3s linear;
+  -webkit-transition:  all 0.3s linear;
+ }
+
+ .cMenuToolbarCommandsubItem-font-color button
+{
+ background-color: transparent;
+}
+.cMenuToolbarCommandsubItem-font-color button:hover
+{
+  background-color: var(--interactive-normal);
+}
+
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbarCommandItem .setting-item-info {
+  
+  flex:30%;
+margin: 0;
+}
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbarSettingsTabsContainer_sub
+ {
+  border-left: 1px solid var(--background-modifier-border);
+  flex-flow: column;
+  min-height: 45px;
+  display: flex;
+  padding: 0;
+ margin-left: 10px;
+  flex: 70%;
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbarSettingsTabsContainer_sub:empty
+ {
+ border: 2px dashed rgba(var(--interactive-accent-rgb),0.5);
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbarSettingsTabsContainer_sub:empty::before {
+  content: "✖️Drag it here";
+  margin: auto;
+  font-size: 12px;
+}
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbarSettingsTabsContainer_sub .cMenuToolbarCommandItem
+ {
+  flex: auto;
+  margin-left: 2em;;
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbarSettingsTabsContainer_sub .setting-item-control
+ {
+flex: 0;
+ }
+
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbarCommandSubItem>.setting-item-info
+ {
+ flex: 70px;
+ }
+ .cMenuToolbarCommandSubItem>.setting-item-control
+{
+
+  justify-content: flex-start;
+}
+ .modal.mod-settings button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsButton.cMenuToolbarSettingsButtonaddsub {
+   background-color: var(--background-secondary-alt);
+}
+
+
+.setting-item button.cMenuToolbarSettingsIcon{
+  display: block;
+  transform: translateX(-30%); 
+  -webkit-transform: translateX(-30%); 
+}
+.setting-item button.cMenuToolbarSettingsIcon:empty::before{
+ content: "❗";
+}
+.setting-item button.cMenuToolbarSettingsIcon svg{
+  max-width: 1.5em;
+  max-height: 1.5em;
+}
+.modal.mod-settings button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsIcon:hover{
+  background-color: var(--interactive-accent-hover);
+}
+.modal.mod-settings button:not(.mod-cta):not(.mod-warning).cMenuToolbarSettingsIcon
+{
+  background-color: transparent;
+  box-shadow: 0 1px 1px 0px var(--background-modifier-border);
+}
+@media screen and (min-width: 781px){
+  .cMenuToolbar-Modal .wideInputPromptInputEl {
+  width: 40rem;
+  max-width: 100%;
+  height: 20rem;
+  background-color: rgb(var(--mono-rgb-0),0.8);
+}
+}
+
+.cMenuToolbarcustomIcon svg {
+  max-width: 1.3em;
+  max-height: 1.3em;
+  display: flex;
+}
+
+
+.cMenuToolbarSettingsButton  svg {
+  max-width: 1.3em;
+  max-height: 1.3em;
+  display: flex;
+}
+
+.cmdr-page-header
+{
+  min-width: 1em;;
+}
+
+
+.x-color-picker-wrapper {
+  right: 0px;
+  top:1.8em;
+  min-width: 1px;
+  padding: 10px;
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14);
+  position: absolute;
+  width: fit-content;
+  font-weight: 400;
+  font-family: Source Sans Pro,sans-serif;
+  border-radius: 4px;
+  background-color: var(--background-primary);
+}
+.markdown-source-view.mod-cm6 .x-color-picker-wrapper table.x-color-picker-table#x-color-picker-table {
+  width: unset;
+  border-collapse: separate;
+  border-spacing: 6px;
+  margin: auto !important;
+}
+.x-color-picker-wrapper table.x-color-picker-table#x-backgroundcolor-picker-table {
+  width: unset;
+  border-collapse: separate;
+  border-spacing: 6px;
+  margin: auto !important;
+}
+.x-color-picker-wrapper .x-color-picker-table th {
+  border: 0;
+  text-align: left;
+  font-weight: normal;
+  background: transparent !important;
+  color: #718096;
+}
+.x-color-picker-wrapper #x-color-picker-table td {
+  font-size: 1px;
+  padding: 9px;
+  cursor: pointer;
+  border: solid 1px var(--background-modifier-border);
+}
+.x-color-picker-wrapper #x-backgroundcolor-picker-table td {
+  font-size: 1px;
+  border-radius: 50%;
+  padding: 9px;
+  cursor: pointer;
+  border: solid 1px var(--background-modifier-border);
+}
+.x-color-picker-wrapper .x-color-picker-table tr td:hover {
+  box-shadow: 0 3px 6px -4px rgba(0,0,0,.12),0 6px 16px 0 rgba(0,0,0,.08),0 9px 28px 8px rgba(0,0,0,.05);
+}
+.x-color-picker-wrapper tbody>tr:hover
+{
+background-color:transparent !important;
+}
+/**top**/
+#cMenuToolbarModalBar.top {
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    height: 38px;
+    align-items: center;
+    transition: all 0.2s linear;
+    -webkit-transition:  all 0.2s linear;
+    
+}
+
+#cMenuToolbarModalBar.top :is(.cMenuToolbarCommandItem,button[class^=cMenuToolbarCommandsubItem]):not(.cMenuToolbar-Divider-Line)
+{
+font-size: 10px;
+  margin-right: 0px;
+  clear: both;  
+  opacity: 1;
+  flex-shrink:0;
+    height: 26px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+    border-radius: 2px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s linear;
+    -webkit-transition:  all 0.2s linear;
+
+ 
+
+    
+}
+#cMenuToolbarModalBar.top button.cMenuToolbarCommandItem:hover {
+  background-color: var(--interactive-hover);
+}
+
+ 
+
+#cMenuToolbarPopoverBar{
+  
+    padding: 0 10px;
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    z-index: var(--layer-status-bar); 
+    background-color: var(--background-primary);
+      background-clip: padding-box;
+      border-radius: 6px;
+      box-shadow: 0 3px 6px -4px rgba(0,0,0,.12),0 6px 16px 0 rgba(0,0,0,.08),0 9px 28px 8px rgba(0,0,0,.05);
+      box-shadow: 0 0 8px rgba(0,0,0,.15)\9;
+      margin-left: auto;
+      margin-right: 25px;
+      transition: all 0.1s linear;
+      -webkit-transition:  all 0.1s linear;
+      margin-top: 32px;
+    position: absolute;
+    right: 0;
+}
+
+#cMenuToolbarPopoverBar :is(.cMenuToolbarCommandItem,button[class^=cMenuToolbarCommandsubItem]){
+
+    height: 26px;
+margin-left: 4px;
+    font-size: 10px;
+  margin-right: 4px;
+  clear: both;  
+  opacity: 1;
+  flex-shrink:0;
+    height: 26px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+    border-radius: 2px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s linear;
+    -webkit-transition:  all 0.2s linear;
+   
+}
+#cMenuToolbarPopoverBar :is(.cMenuToolbarCommandItem,button[class^=cMenuToolbarCommandsubItem]):hover{
+  background-color: var(--interactive-hover);
+}
+
+#cMenuToolbarModalBar .more-menu {
+  display: flex;
+  align-items: center;
+  box-shadow:none;
+  margin-left: 4px;
+  border-left: 1px inset var( --background-modifier-form-field);
+  height: 24px;
+  opacity: 0.8;
+}
+ /*Divider-Line**/
+
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbar-Divider-Line
+ {
+  padding: 0;
+   
+  line-height: 0px;
+  border-left: 200px solid rgba(var(--interactive-accent-rgb),0.05);
+  border-right: 200px solid rgba(var(--interactive-accent-rgb),0.05);
+  text-align: center;
+  background: rgba(var(--interactive-accent-rgb),0.2);
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbar-Divider-Line .setting-item-control button:not(:last-child)
+ {
+   display: none;
+ }
+
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbar-Divider-Line .setting-item-info 
+ {
+  flex: 1 1 auto;
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbar-Divider-Line .setting-item-control 
+ {
+  justify-content: flex-start;
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbar-Divider-Line .setting-item-info .setting-item-name
+ {
+  font-size: 12px;
+ text-align: right;
+
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbar-Divider-Line .setting-item-control button:last-child
+ {
+  padding: 0;
+   background-color: transparent!important;
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbar-Divider-Line .setting-item-control button:last-child svg
+ {
+   display: none;
+ }
+ .cMenuToolbarSettingsTabsContainer .cMenuToolbar-Divider-Line .setting-item-control button:last-child::before
+ {
+  content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M511.674077 66.707284c-246.52265 0-446.347744 199.835328-446.347744 446.347744s199.825095 446.356954 446.347744 446.356954c246.50423 0 446.348768-199.844537 446.348768-446.356954S758.177284 66.707284 511.674077 66.707284zM744.967424 667.159826c21.8701 21.8701 21.8701 57.310264 0 79.199807-21.8701 21.851681-57.30924 21.851681-79.198783-0.019443L511.674077 592.264045 357.56007 746.359632c-21.8701 21.8701-57.30924 21.851681-79.17934-0.019443s-21.8701-57.290821 0-79.160921L432.493713 513.065262 278.379707 358.950232c-21.8701-21.86089-21.8701-57.328683 0-79.18855 21.8701-21.87931 57.30924-21.87931 79.17934 0l154.114007 154.104797 154.095587-154.104797c21.889543-21.87931 57.32766-21.87931 79.198783-0.010233 21.8701 21.8701 21.8701 57.348126 0 79.207993L590.89128 513.065262 744.967424 667.159826z' fill='%23666666'/%3E%3C/svg%3E");
+ }
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button.cMenuToolbarCommandItem.cMenuToolbar-Divider-Line
+{
+  min-width:unset;
+    flex-shrink: 0;
+    display: inline-flex;
+    width: 0.6px;
+    background-color: var(--background-modifier-border);
+    height: 22px;
+    opacity: 0.8;
+    margin: 0;
+}
+.theme-dark :is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar)  button.cMenuToolbarCommandItem.cMenuToolbar-Divider-Line
+{
+
+    background-color: #4f4f5188;
+ 
+}
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar)  button.cMenuToolbarCommandItem.cMenuToolbar-Divider-Line svg
+{
+ display: none;
+}
+
+.workspace-tabs.mod-stacked  .workspace-tab-header:not(.is-active) + .workspace-leaf #cMenuToolbarModalBar
+{
+  opacity: 0;
+}
+ undefined
+</style>
+    </head>
+    <body>
+<h2 data-heading="Алиса в Стране Чудес">Алиса в Стране Чудес</h2>
+<p>Перевод: Сергей Александрович Махов, 2008</p>
+<ul>
+<li><a aria-label-position="top" aria-label="ГЛАВА 1. Вниз по кроличьему лазу" data-href="#ГЛАВА 1. Вниз по кроличьему лазу" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%9B%D0%90%D0%92%D0%90%201.%20%D0%92%D0%BD%D0%B8%D0%B7%20%D0%BF%D0%BE%20%D0%BA%D1%80%D0%BE%D0%BB%D0%B8%D1%87%D1%8C%D0%B5%D0%BC%D1%83%20%D0%BB%D0%B0%D0%B7%D1%83" class="internal-link" target="_blank" rel="noopener">ГЛАВА 1. Вниз по кроличьему лазу</a></li>
+<li><a aria-label-position="top" aria-label="ГЛАВА 2. Пруд пруди слёз" data-href="#ГЛАВА 2. Пруд пруди слёз" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%9B%D0%90%D0%92%D0%90%202.%20%D0%9F%D1%80%D1%83%D0%B4%20%D0%BF%D1%80%D1%83%D0%B4%D0%B8%20%D1%81%D0%BB%D1%91%D0%B7" class="internal-link" target="_blank" rel="noopener">ГЛАВА 2. Пруд пруди слёз</a></li>
+<li><a aria-label-position="top" aria-label="ГЛАВА 3. Выборно-гоночная горячка с долгосказом-хвостиком" data-href="#ГЛАВА 3. Выборно-гоночная горячка с долгосказом-хвостиком" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%9B%D0%90%D0%92%D0%90%203.%20%D0%92%D1%8B%D0%B1%D0%BE%D1%80%D0%BD%D0%BE-%D0%B3%D0%BE%D0%BD%D0%BE%D1%87%D0%BD%D0%B0%D1%8F%20%D0%B3%D0%BE%D1%80%D1%8F%D1%87%D0%BA%D0%B0%20%D1%81%20%D0%B4%D0%BE%D0%BB%D0%B3%D0%BE%D1%81%D0%BA%D0%B0%D0%B7%D0%BE%D0%BC-%D1%85%D0%B2%D0%BE%D1%81%D1%82%D0%B8%D0%BA%D0%BE%D0%BC" class="internal-link" target="_blank" rel="noopener">ГЛАВА 3. Выборно-гоночная горячка с долгосказом-хвостиком</a></li>
+<li><a aria-label-position="top" aria-label="ГЛАВА 4. Кролик засылает малыша Билла" data-href="#ГЛАВА 4. Кролик засылает малыша Билла" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%9B%D0%90%D0%92%D0%90%204.%20%D0%9A%D1%80%D0%BE%D0%BB%D0%B8%D0%BA%20%D0%B7%D0%B0%D1%81%D1%8B%D0%BB%D0%B0%D0%B5%D1%82%20%D0%BC%D0%B0%D0%BB%D1%8B%D1%88%D0%B0%20%D0%91%D0%B8%D0%BB%D0%BB%D0%B0" class="internal-link" target="_blank" rel="noopener">ГЛАВА 4. Кролик засылает малыша Билла</a></li>
+<li><a aria-label-position="top" aria-label="ГЛАВА 5. Совет Гусеница" data-href="#ГЛАВА 5. Совет Гусеница" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%9B%D0%90%D0%92%D0%90%205.%20%D0%A1%D0%BE%D0%B2%D0%B5%D1%82%20%D0%93%D1%83%D1%81%D0%B5%D0%BD%D0%B8%D1%86%D0%B0" class="internal-link" target="_blank" rel="noopener">ГЛАВА 5. Совет Гусеница</a></li>
+<li><a aria-label-position="top" aria-label="ГЛАВА 6. Свин с перцем" data-href="#ГЛАВА 6. Свин с перцем" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%9B%D0%90%D0%92%D0%90%206.%20%D0%A1%D0%B2%D0%B8%D0%BD%20%D1%81%20%D0%BF%D0%B5%D1%80%D1%86%D0%B5%D0%BC" class="internal-link" target="_blank" rel="noopener">ГЛАВА 6. Свин с перцем</a></li>
+<li><a aria-label-position="top" aria-label="ГЛАВА 7. Маетное чаепитъе" data-href="#ГЛАВА 7. Маетное чаепитъе" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%9B%D0%90%D0%92%D0%90%207.%20%D0%9C%D0%B0%D0%B5%D1%82%D0%BD%D0%BE%D0%B5%20%D1%87%D0%B0%D0%B5%D0%BF%D0%B8%D1%82%D1%8A%D0%B5" class="internal-link" target="_blank" rel="noopener">ГЛАВА 7. Маетное чаепитъе</a></li>
+<li><a aria-label-position="top" aria-label="ГЛАВА 8. Игра в шары у Дамы" data-href="#ГЛАВА 8. Игра в шары у Дамы" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%9B%D0%90%D0%92%D0%90%208.%20%D0%98%D0%B3%D1%80%D0%B0%20%D0%B2%20%D1%88%D0%B0%D1%80%D1%8B%20%D1%83%20%D0%94%D0%B0%D0%BC%D1%8B" class="internal-link" target="_blank" rel="noopener">ГЛАВА 8. Игра в шары у Дамы</a></li>
+<li><a aria-label-position="top" aria-label="ГЛАВА 9. Судьба Черепаха Якобы" data-href="#ГЛАВА 9. Судьба Черепаха Якобы" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%9B%D0%90%D0%92%D0%90%209.%20%D0%A1%D1%83%D0%B4%D1%8C%D0%B1%D0%B0%20%D0%A7%D0%B5%D1%80%D0%B5%D0%BF%D0%B0%D1%85%D0%B0%20%D0%AF%D0%BA%D0%BE%D0%B1%D1%8B" class="internal-link" target="_blank" rel="noopener">ГЛАВА 9. Судьба Черепаха Якобы</a></li>
+<li><a aria-label-position="top" aria-label="ГЛАВА 10. Крупный Морской Перепляс" data-href="#ГЛАВА 10. Крупный Морской Перепляс" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%9B%D0%90%D0%92%D0%90%2010.%20%D0%9A%D1%80%D1%83%D0%BF%D0%BD%D1%8B%D0%B9%20%D0%9C%D0%BE%D1%80%D1%81%D0%BA%D0%BE%D0%B9%20%D0%9F%D0%B5%D1%80%D0%B5%D0%BF%D0%BB%D1%8F%D1%81" class="internal-link" target="_blank" rel="noopener">ГЛАВА 10. Крупный Морской Перепляс</a></li>
+<li><a aria-label-position="top" aria-label="ГЛАВА 11. Кто украл пирожки?" data-href="#ГЛАВА 11. Кто украл пирожки?" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%9B%D0%90%D0%92%D0%90%2011.%20%D0%9A%D1%82%D0%BE%20%D1%83%D0%BA%D1%80%D0%B0%D0%BB%20%D0%BF%D0%B8%D1%80%D0%BE%D0%B6%D0%BA%D0%B8?" class="internal-link" target="_blank" rel="noopener">ГЛАВА 11. Кто украл пирожки?</a></li>
+<li><a aria-label-position="top" aria-label="ГЛАВА 12. Показанья Алис" data-href="#ГЛАВА 12. Показанья Алис" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%9B%D0%90%D0%92%D0%90%2012.%20%D0%9F%D0%BE%D0%BA%D0%B0%D0%B7%D0%B0%D0%BD%D1%8C%D1%8F%20%D0%90%D0%BB%D0%B8%D1%81" class="internal-link" target="_blank" rel="noopener">ГЛАВА 12. Показанья Алис</a></li>
+</ul>
+<h3 data-heading="Вступление">Вступление</h3>
+<p>Сквозь злато предвечернее<br>
+Мы медленно скользим;<br>
+Ведь вёсел два – куда там! –<br>
+Управиться б с одним;<br>
+Лишь маленьким ладошкам<br>
+Змеистый путь вестим.  </p>
+<p>О Тройка бессердечная!<br>
+В дремотно-сонный час<br>
+Из уст чрезмерно слабых<br>
+Просить волшебный сказ!<br>
+Но разве трёх осилит<br>
+Бедняга сирый глас?  </p>
+<p>Повелевает Первая:<br>
+«Не мешкая, вперёд!»...<br>
+Надеется Вторая, мол<br>
+«Там чепуха живёт!»...<br>
+Вопросами у Третьей<br>
+Частенько полон рот...  </p>
+<p>Но вскоре молча следуют<br>
+В мечтах невинных детств<br>
+За девочкой, гуляющей<br>
+Средь сказочных чудес;<br>
+Причём почти уж веря,<br>
+Что всё случилось здесь.  </p>
+<p>Чуть только ж иссякают<br>
+Ключи воображенья,<br>
+И норовит сказитель<br>
+Отсрочить продолженье:<br>
+«Потом...», – «Потом настало!<br>
+Желаем завершенья!»  </p>
+<p>Так подрастала сказка<br>
+Про Чудесатый Край,<br>
+Но вот она готова,<br>
+И в ней сплошной раздрай;<br>
+Заходит солнце злато:<br>
+Труба, отбой играй!  </p>
+<p>Сей сказ шутливый, Алис,<br>
+Ты доброю рукой<br>
+С мечтами заплети-ка<br>
+В жгут-Память колдовской,<br>
+Как странника веночек...<br>
+На кой?.. Да ни на кой.._</p>
+<h3 data-heading="ГЛАВА 1. Вниз по кроличьему лазу">ГЛАВА 1. Вниз по кроличьему лазу</h3>
+<p>Алис, сидевшей без дела на скамье рядом с сестрою, стало совсем уж скушно; разок-другой она косилась на книгу, которую читает сестра, но там нету ни рисунков, ни разговоров.</p>
+<p>«А какой толк от книжки», думает Алис, «без рисунков да разговоров».</p>
+<p>В общем, она размышляла (насколько уж получалось, ибо знойный день нагоняет сильнейшие дрёму и осоловелость), покроет ли удовольствие от выплетенья веночка из ромашек затраченные усилья на вставание да собирание тех самых ромашек, как вдруг рядом пробежал Белый Кролик с красноватыми глазёнками.</p>
+<p>Ничего столь уж из ряда вон выходящего в том нет; Алис даже не сочла чем-то жутко поразительным бормотанье Кролика себе под нос: «О господи! Батюшки светы! Чересчур опоздаю!» (обдумав после, она решила, дескать удивиться-то следовало бы, но в те мгновенья всё казалось вполне естественным); однако едва Кролик взял да вынул из кармашка безрукавки часы, посмотрел на них, а затем заторопился ещё пуще.</p>
+<p>Алис вскочила – ведь в голове у ней мелькнуло, мол раньше не доводилось видеть кроликов ни с безрукавками, ни с кармашками, ни с вынутыми оттуда часами; сгорая от любопытства, она помчала за ним по полю да к счастью успела углядеть: возле живой изгороди тот юркнул в уходящий под землю широкий кроличий лаз.</p>
+<p>Не раздумывая, как вообще-то потом выберется. Алис в мгновенье ока ринулась следом.</p>
+<p>Кроличий лаз сначала шёл ровно (подземный ход ведь), а потом резко нырнул, да столь резко, что у Алис не нашлось даже мига сообразить остановиться – опа-па-па, уже па-па-падает в глубочайший колодец.</p>
+<p>То ли колодец весьма глубок, то ли па-адает очень уж медленно, но теперь-то времени достаточно, дабы оглядеться да задать себе вопрос: ну и чё дальше?</p>
+<p>Сперва она норовила заглянуть вниз и выяснить, куда летит; затем, посмотрев на стенки колодца, обнаружила, что те уставлены посудными да книжными шкафами; а ещё на крючках висят чертежи, рисунки.</p>
+<p>На пролёте она ухватила из шкафа баночку с наклейкой «АПЕЛЬСИННОЕ ВАРЕНЬЕ», но к огромному разочарованию та оказался пустой’, бросать банку неохота из страха кого-нибудь пришибить, посему она изловчилась и, пролетая мимо посудного шкафчика, поставила её на полку.</p>
+<p>А сама думает:</p>
+<p>– Ух ты! Да после эдаких полётов паденье с лестницы покажется лёгонькой прогулочкою! Дома меня посчитают жутко храброй! Ведь я даже не пикну, упав с верхушки здания! (Чего весьма похоже на правду.)</p>
+<p>Вниз, вниз, вниз. Хорошо б вот эдак вот падать вечно!</p>
+<p>«Любопытно, какое расстоянье уже пролетела? – спросила она вслух. – Небось к серёдке земли приближаюсь. Погодите-ка, она вроде б на глубине шесть с лишним вёрст...» (ведь Алис, видите ли, зазубрила на уроках в учебном заведении целую кучу подобных сведений, и хоть случай для хвастовства знаньями не вполне благоприятный, ибо слушать всё равно некому, однако лишний раз поупражняться в их произнесении всегда полезно) «...ага, расстоянье-то примерно правильное – но тогда любопытно, на какие попаду широту-долготу?» (Алис понятия не имеет, чего такое Широта и Долгота, но полагает эти слова для выговариванья приятными, широтно-долготно-добротными.)</p>
+<p>И немного погодя опять затараторила:</p>
+<p>– Занятно, не проскочу ли сквозь всю землю! Здоровско буду выглядеть, появившись среди людей, ходящих кверх тормашками!</p>
+<p>Противно положниками их вроде бы называют... (а сама рада на сей раз, мол никто не слушает, поскольку слово звучит вообще-то как-то неправильно) ...но придётся, понимаете ли, спросить, как именуют их страну’. Простите, судар’ня, здесь Новая Зеландия или Австралия?.. (и сопровождая оное выраженье, попыталась присесть с поклоном – представьте себе почтительное приседанье в свободном падении! Ну, у вас-то, вероятно, получилось бы?) ... Сколь невежественной девчонкой она меня за такой вопросик посчитает! Нет, спрашивать не годится; пожалуй, у видела б где-нибудь надпись.</p>
+<p>Вниз, вниз, вниз. А делать-то больше нечего, вот Алис вскоре речь и продолжила:</p>
+<p>– По-моему, Дайна сегодня вечером станет страшно по мне скучать! (Дайной кличут кошку.) Надеюсь, не забудут налить ей блюдце молочка в полдник. Дайна, кисонька! Вот бы нам падать тут вместе! Вообще-то в воздухе нету мышей, но ты б поймала летучую, а она, как тебе известно, весьма похожа на мышку-норушку. Но вот вопрос – едят ли кошки летучих мышек?</p>
+<p>Тут Алис ощу тила лёгкую дремоту, и продолжает бормотать в полусне:</p>
+<p>– Едят ли кошки летучих мышек? Едят ли кошки летучих мышек?</p>
+<p>А иногда:</p>
+<p>– Едят ли мышки летучих кошек?</p>
+<p>Но поскольку, видите ли, она не знает ответа ни на тот, ни на другой вопрос, расстановка слов особого значенья не имеет.</p>
+<p>А сама чувствует, что прям спит на ходу (то ль на лету), да видит сон, якобы гуляет за ручку с Дайной и весьма по-деловому ту расспрашивает:</p>
+<p>– Скажи-ка мне. Дайна, правду – ты летучих мышей вообще-то отведывала?</p>
+<p>Но здесь внезапно трах! бабах! упала на ворох хвороста и сухих листьев, то бишь полёт закончен.</p>
+<p>Алис ни капельки не ушиблась; вмиг вскочив на ноги, глянула вверх, но над головою сплошной мрак; зато впереди – длинный ход, по которому, ага, убегает Белый Кролик. Нельзя терять ни мгновенья; Алис во все лопатки рванула вдогонку и успела услышать, как тот, поворачивая за угол, бормотнул: «Клянусь ушами да усами – опаздываю ваще!» Обогнув же угол сразу за ним, никакого Кролика не увидела; зато попала в длиннющее помещенье, с невысокого потолка свисает ряд тусклых светильников.</p>
+<p>По обе стороны – двери, но все запертые; Алис прошла вдоль одной стены и обратно вдоль другой, дёргая-толкая каждую створку, затем печально ступила на середину: как же теперь выбраться-то?</p>
+<p>И вдруг наткнулась на трёхногий столик из цельного куска стекла; на нём лежит-скучает золотой ключик; Алис сперва подумала, дескать он от какой-либо из дверей помещенья; но, увы, либо скважины слишком большие, либо ключик чересчур мал – во всяком случае, ни одну не отпер. Однако, пойдя по второму кругу, она обнаружила возле пола занавесочку, ранее не замеченную, а за ней – дверцу высотой пониже пояса; вставила золотой ключик в замочную скважинку – о счастье, подходит!</p>
+<p>Алис дверцу отомкнула, та ведёт в узенький проходик чуть шире крысиного лаза; встав на колени, она узрела на том конце восхитительнейший садик, какого вы сроду не видывали. Вот бы вылезть из мрачного помещенья да побродить меж ярких цветочных клумб и прохладных водомётов, однако за дверцу не просунешь даже голову. «А коль и протиснешь», подумала бедная Алис, «то без плеч от неё весьма мало пользы. Эх, кабы стать самой в себя втягивающейся, вроде подзорной трубы! Пожалуй, сумела б – знать бы лишь, с чего начать». Ибо, видите ли, за последнее время произошло столько диковинного, что она начала уже думать, мол ничего впрямь невыполнимого почти не существует.</p>
+<p>Вроде бы возле дверцы ждать бессмысленно, ну Алис и шагнула обратно к столику, втайне надеясь найти ещё один ключик или уж на худой конец руководство по самойвсебявтягиванью, вроде подзорной трубы; но на сей раз обнаружила там пузырёк («коего раньше определённо не наблюдалось», проронила она) со словами «ВЫПЕЙ МЕНЯ», отпечатанными красивыми крупными буквами на свисающей с горлышка бумажной бирке.</p>
+<p>Проще простого сказать «Выпей меня», однако премудрая девочка Алис следовать просьбе отнюдь не торопится. «Нетушки, сперва гляну», говорит, «вдруг где-нибудь пометка ‘Яд’»; ибо читала не один миленький рассказик про деток погоревших, или сожранных дикими зверями, или попавших в другие переплёты – а всё поскольку не желали помнить простые правила, подсказываемые им друзьями: например, ежели слишком долго подержишь в руке раскалённую докрасна кочергу, случается ожог; коль очень глубоко резанёшь палец ножом, обычно капает кровь; и уж ни на миг она не забывает: если вдосталь глотнуть из пузырька с пометкой ‘Яд’, рано или поздно почти наверняка почувствуешь недомоганье.</p>
+<p>Однако пометки ‘Яд’ на пузырьке нету, вот Алис и дерзнула пригубить, а поскольку содержимое оказалось прям лакомством (вообще-то вроде как со смешанным вкусом вишнёвого пирожного, заварного крема, ананаса, тушёной индейки, ириски да тёплого поджаренного хлеба с маслом), она его прикончила весьма быстро.</p>
+<p>– Причудливое ощущенье! – воскликнула Алис. – похоже, сама в себя втягиваюсь, вроде подзорной трубы. И впрямь: росту в ней осталось чуть больше пяди, а лицо прям светится от мысли, дескать теперь размеры тела подходящие, дабы пройти через дверцу в восхитительный садик. Перво-наперво, однако, она некоторое время подождала, не ужмётся ль ещё больше, даже чуток тревожась; «ибо запросто, понимаете ли, закончится тем», сказала себе, «что истаю вообще как свечка. На чего ж тогда, любопытно, стану похожа?» А сама норовит вообразить, на чего похоже пламя свечки после того, как её задуть, поскольку воочью таковского, помнится, сроду не видала. Чуть погодя да убедившись, мол дальше ничего не происходит, она решила сразу идти в сад; но, увы и ах! подойдя к дверце, обнаружила, дескать забыла золотой ключик, а вернувшись к столику, обнаружила, дескать фигушки до него дотянешься; сквозь стекло-то прекрасно виден, и Алис изо всех сил пыталась влезть по одной из ножек, но та слишком скользкая; устав от бесплодных попыток, бедняжка села да расплакалась.</p>
+<p>– Ну-ну, слезами горю не поможешь! – довольно строго прикрикнула на себя Алис, – советую сейчас же прекратить! Вообще-то она всегда одаривает себя замечательными советами (хотя страшно редко им следует), а порой столь сурово бранит – аж слёзы на глаза наворачиваются; однажды, помнит, норовила дать себе затрещин за жульничанье при игре сама с собой в шары, ибо сия причудница очень любит грезить, якобы её две. «Но щас-то», подумала Алис, «бесполезно грезить, якобы меня две! И на одну-то более-менее сносную едва наберётся!»</p>
+<p>Тут её взор упал на лежащий под столом стеклянный ларчик; открыв крышку, она увидала малюсенький пирожок, на котором смородинами красиво выложены слова «СКУШАЙ МЕНЯ».</p>
+<p>– А чё, и съем, – заявила Алис. – Ежели подрасту’, то доберусь до ключика, а коль уменьшу сь, то пролезу в щёлочку под дверцей.</p>
+<p>Короче, в любом случае в садик попаду – ну и без разницы, каким образом!</p>
+<p>Съев крошечный кусочек, взволнованно спрашивает себя:</p>
+<p>– Вверх или вниз? Вверх или вниз?</p>
+<p>А сама положила ладонь на макушку, дабы ощутить, в каком направленьи меняется, но с удивленьем чувствует, мол ни туда, ни сюда; безусловно, именно так вообще-то при поглощены! пирожков и происходит, но Алис ушла столь далеко по пути ожидания только диковинного, что жизнь, протекающая обычным образом, кажется уже довольно скушной да нагоняющей осоловелость.</p>
+<p>Короче, за работу: и вскоре от пирожка ничего не осталось.</p>
+<h3 data-heading="ГЛАВА 2. Пруд пруди слёз">ГЛАВА 2. Пруд пруди слёз</h3>
+<p>– Любопытей да любопытей! – воскликнула Алис (от чрезвычайного удивленья даже на миг разучившаяся правильно склонять спряженья). – теперь прям из себя выползучиваюсь, вроде наидлиннейшей подзорной трубы в мире! Ноги, до свиданья! (ведь глянув вниз на ступни, она почти их не увидала, столь далеко те отъехали). Эх, бедненькие мои ножки, кто-то станет надевать на вас чулочки да туфельки, дорогуши? Сама-то ведь наверняка не справлюсь! Буду чересчур-чрезмерно далеко, дабы заморачиваться вашими заботами; обходитесь по мере сил... но вообще-то надо с ними полюбезней, – подумала Алис. – а то вдруг не пожелают ходить, куда охота мне! Погодите-ка: стану’ дарить им на каждое Рождество новые сапожки. И начала обмозговывать, как это получше устроить. «Надо отправлять с нарочным», думает, «а вообще-то смехота: посылать подарки собственным ступням! И сколь несуразным будет выглядеть место назначенья!</p>
+<p><em><br>
+Правой ступне Алис, сударыне;<br>
+Коврик перед очагом,<br>
+возле Решётки,<br>
+(с любовью от Алис).</em></p>
+<p>Батюшки светы, ну и вздор же я несу!»</p>
+<p>Тут как раз голова врезалась в потолок; вообще-то Алис вымахала уже под три метра, посему, быстренько схватив золотой ключик, заспешила к дверце в сад.</p>
+<p>Бедняжка! Ей удалось всего лишь, лёжа на боку, одним глазком заглянуть в сад; а уж дабы пролезть туда целиком, не осталось вообще никакой надежды; сев на пол, она снова зарыдала.</p>
+<p>– Как не стыдно. – укорила себя Алис. – столь большая девочка (ведь сказать это она имела полное право), а прям рёвушка-коровушка! Прекрати сейчас же, кому велят! – Но сама продолжает, изливая ручьи слёз; вокруг аж образовался огромный пруд глубиной по щиколотку и доходящий до середины помещенья.</p>
+<p>Вдруг вдалеке послышался топоток, и она по-быстрому утёрла глаза – ну, посмотреть, чего подступает. То возвращался Белый Кролик, разряженный в пух и прах, в одной руке белые лайковые перчатки, в другой – громадный веер; в страшной спешке он рысцой просеменил мимо, бормоча под нос: «О-ё-ёй! княгиня, княгиня! о-ё-ёй! вот уж рассвирепеет, коль заставлю её ждать!» Алис дошла уже до такой степени отчаянья, что готова была просить помощи у кого угодно: посему, чуть только Кролик подбежал, обратилась к нему тихо-застенчиво: «Сударь, будьте добры...» Тот дико вздрогнул, уронил белые лайковые перчатки с веером и, наддав скорости до слонопотопота, скрылся во мраке.</p>
+<p>Алис подняла перчатки, затем веер, а поскольку в помещены! стало весьма жарко, продолжала им обмахиваться во всё время очередного рассуждения: «Батюшки-батюшки! Сколь всё нынче чудесато! А вчерашний день пролетел прям обыкновенно. Чё я, за ночь эдак изменилась? Погодите-ка – утром встала я теперешняя? Вроде бы кажется, мол припоминаю, дескать ощущала себя чуток иной. А раз не та же самая, следует вопрос: ‘Кто ваще такая?’ Да уж, вот уж заковыристая головоломочка». И принялась перебирать всех знакомых сверстниц – не превратилась ли в кого из них.</p>
+<p>– Ну конечно не Эйда. – решила она. – ведь у неё волосы эдакими длинными завитушками, а мои вообще не вьются; и уж наверняка не Мейбел, поскольку имею представленье о всякой всячине, а она, о-хо-хо! знает столь капелью мало! Кроме того, она – она, а я – я, и... ох, батюшки, как же головоломно! Проверю, пожалуй, всё ли помню, чего помнила. Погодите-ка: четырежды пять двенадцать, четырежды шесть тринадцать, четырежды семь... ох, батюшки! с такой скоростью и до двадцати в жизнь не доберёшься! Вообще-то правила умноженья ни о чём не говорят; надо чего-нибудь из землеописательного. Лондон – столица Парижа, а Париж – столица Рима, а Рим... нет, всё не так, ну конечно же! Наверняка превратилась в Мейбел! Попытаюсь-ка наизусть «Юного беззаботного...», – и сложив руки на коленях, точно при ответе домашнего заданья, начала выразительно читать, но голос звучит хрипло да некультяписто, причём слова вырываются вовсе не те, что прежде:</p>
+<p>_<br>
+Юный беззаботный крокодилъчик,<br>
+Хвостиком сверкающим вильнув,<br>
+Орошает влагой речки Нильчик<br>
+Всю свою златую чешую!  </p>
+<p>Ах, какой весёленький оскал;<br>
+Ах, как ловко растопырил пясть.<br>
+Рыбки, наконец он вас зазвал<br>
+В ласково-улыбчивую пасть!_</p>
+<p>– Ну конечно же слова неправильные, – глаза бедной Алис снова наполнились слезами. – Несомненно я теперь Мейбел, надлежит переселиться в тот убогий домишко, где почти совсем нет игрушек, зато ах! нужно учить столько уроков! Нетушки, решено: раз я Мейбел, лучше уж останусь здесь! Пусть не суют сюда головы да не просят: «Выходи наверх, дорогая!» Я только подниму глаза да отвечу: «Вы с кем вообще-то разговариваете? Сперва скажите, а потом, ежели мне охота стать той особою, выйду’; неохота – поживу в тутошней земле, пока не превращусь в кого-то другого».</p>
+<p>– Но ох, батюшки! – воскликнула, внезапно зарёвывая. – Пусть всё же головы-то сюда засунут! Полное одиночество весьма утомительно!</p>
+<p>Произнеся последние слова, она глянула на руки и с удивленьем обнаружила: разговаривая, натянула белые лайковые перчаточки Кролика. «Как же сумела?» – думает Алис. – «Наверно, опять уменьшилась». Встав, подошла к столику – ну, как к мерке – и догадка почти в точности прям подтвердилась: росту, причём быстро убывающего, чуть более полуметра: тут она поняла, что виной тому веер, который продолжает держать, и поспешно бросила его на пол – в последний миг едва избежав втягиванья в саму себя до полного исчезновения.</p>
+<p>– Ух ты, на волосок от улепетучиванья! – пролепетала Алис, жутко перепутанная внезапным изменением размеров, но страшно довольная, мол ещё существует.</p>
+<p>– А теперь в садик! – и стрелой помчалась обратно к дверце; но увы! та снова закрыта, а золотой ключик, как прежде, лежит на стеклянном столе, – «только всё гораздо хуже», думает бедняжка. «ибо столь маленькой сроду не была, ну просто отродясь! И честное слово – плоше просто некуда!»</p>
+<p>При этих словах она поскользнулась, а в следующий миг, бултых! плюхнулась по шейку в солёную воду. Сперва-то решила, дескать упала в море. «Но в таком случае запросто доберусь обратно на поезде», сказала себе Алис. (Однажды она к взморью уже ездила и пришла к общему выводу, мол куда по английскому побережью ни пойди, увидишь посередь воды передвижные купальни, затем детишек, копающих песок деревянными лопаточками, после ряд домиков-гостиниц, а за ними – железнодорожный вокзал.) Однако вскоре выяснила, что попала в пруд из слёз, выплаканных ею-великаншей.</p>
+<p>– Нефига по стольку реветь! – корит себя Алис, барахтаясь да прикидывая, как бы оттуда выбарахтаться. – Вот теперь, небось, и наказанье – потону в собственных слезах! Поступочек крайне нелепый, уж точно! Но вообще-то сегодня всё нелепо.</p>
+<p>Вдруг она услыхала неподалёку всплеск и подплыла ближе, дабы выяснить, чего тут; сперва-то решила, дескать морж или гиппопотам, но после вспомнила, какая сейчас маленькая, и вскоре выяснила, что всего лишь Мышь-К, тоже соскользнувшая с берега.</p>
+<p>– Не без толку ли, – подумала Алис. – прям вот так вот к ней обратиться? Здесь внизу всё столь диковинно: почитай, весьма вероятно, она умеет разговаривать; во всяком случае, попытка не пытка. Ну и начала: «Ка-мыш, не знаете, как выбраться из пруда? Я уж измучилась по нему плавать. Ка-мыш! (Вроде бы к мышам надо обращаться именно так; прежде-то не доводилось, но она припоминает: видела у брата в Учебнике по латыни, мол в определённых случаях последний слог, то ли предлог, надо перетаскивать на место первого: или наоборот; или не в Учебнике по латыни, а где-то ещё.) Короче. Мышь-К поглядела на неё с любопытством, вроде бы подмигнула одним глазком, но молчит.</p>
+<p>– Вероятно, не понимает по-нашенски. – подумала Алис. – Небось. Мышь-К-то французская, приехала вместе с Уилльямом Завоевателем. (Ибо, невзирая на прекрасные познанья в летописях, Алис не вполне ясно представляет, давно иль недавно всяческие события происходили.) Посему начинает по новой: «Ou est ma chatte»<em> {</em> – Где моя кошка? (фр.)}, то бишь с первого предложенья теперь уж из своего Учебника французского. Мышка вдруг в воде аж подпрыгнула и вся от страху затрепетала.</p>
+<p>«Ой, простите!» поспешно воскликнула Алис, испугавшись, мол оскорбила чувства бедного животного, «совсем забыла – вы ж не любите кошек».</p>
+<p>– Не любите кошек! – с писклявой запальчивостью передразнила Мышь-К. – А ты б на моём месте любила?</p>
+<p>– Ну, пожалуй, не очень. – утихомиривает Алис, – не сердитесь. А всё ж неплохо б вам познакомиться с Дайной; поглядев на неё, вы, полагаю, к кошкам бы прониклись. Милая-спокойная зверушка. – задумчиво продолжает Алис, медленно плывя по пруду, – сидит, славно мурлыча у камелька, лижет лапки да умывает мордочку... столь приятно поласкать мятенький-тёпленький комочек... а уж мастерица ловить мыш... ой, простите! – снова воскликнула Алис, ибо на сей раз Мышь-К вся столь ощетинилась, что никаких сомнений: по-настоящему обижена. – Коли не возражаете, больше мы про неё вспоминать не станем.</p>
+<p>– Ну да: мы! – заверещала Мышь-К, дрожа от усиков до кончика хвоста. – Стала б я беседовать о таком предмете! Наше семейство испокон веку ненавидит кошек – злобных-подлых-непотребных тварей! Даже слова такого больше не произносите!</p>
+<p>– Че’слово не стану! – жутко спешит Алис переменить содержанье разговора. – А вы... любите ли вы... ну, предположим... собак? – Мышь-К не ответила, посему Алис увлечённо продолжает. – Вот бы показать вам славненького пёсика, живущего неподалёку от нашего дома! Терьерчик со смышлёными глазёнками, понимаете ли, да с эдакой, ой, с эдакой-длинной-кучерявой-коричневой шёрсткой! Кинешь чевон’ть, а он притаскивает, или садится на задние лапки, прося кушать, да всё такое прочее – я и половины не упомню, – хозяин его, ну крестьянин, понимаете ли, говорит, мол столь полезный, цены ему нет! Перебил, говорит, всех крыс да... ох, батюшки! – печально воскликнула Алис, – вроде б опять обидела!</p>
+<p>Ибо Мышь-К уплывает от неё почём зря, в пруду аж поднялось волненье.</p>
+<p>Ну она и кличет ласково вслед: «Мышь-К, дорогая! Пожал’ста, вернитесь, раз не любите Ко да Со, че’сло: больше про них ни полсловечка!»</p>
+<p>Услыхав обещанье, Мышь-К повернула и медленно к ней подплывает; мордочка прям бледная (от душевного потрясенья, решила Алис), при том говорит дребезжащим голоском: «Давай выплывем на берег, там кой-чего тебе расскажу’ – вот тогда-то поймёшь, почему кошек да собак терпеть ненавижу.</p>
+<p>Вообще-то самое время вылезать, поскольку в пруду становится довольно тесно от свалившихся в него птиц да зверей: тут и Утка, и птица Дронт, и попугай Лори, и Орлёнок, и всяческие другие прелюбопытные созданья. Алис поплыла к берегу первой, а за ней уж вся остальная вереница.</p>
+<h3 data-heading="ГЛАВА 3. Выборно-гоночная горячка с долгосказом-хвостиком">ГЛАВА 3. Выборно-гоночная горячка с долгосказом-хвостиком</h3>
+<p>На берегу впрямь собралась причудливая ватага: грязнопёрые птицы, облиплошёрстые животные, со всех стекает вода, многие обозлены-взбудоражены. Безусловно, первый вопрос: как обсохнуть; затеяли совещанье, и через несколько минут Алис уже кажется вполне естественным, что запросто с ними разговаривает, словно знакомы всю жизнь. Разумеется, она долго спорила с Лори, который в конце концов надулся и долдонит: «Я старше, потому и поопытней»; с чем Алис не желает соглашаться, и не зная, сколько ему лет, но поскольку попугай возраст назвать наотрез отказался, то препирательства и закончены.</p>
+<p>Наконец Мышь-К, вроде бы пользующаяся тут уваженьем, заявляет: «А ну-ка сели да послушали меня! Я вас вмиг высушу!» Все сразу расселись большим кольцом, посередине Мышь-К. Алис не сводит с неё тревожных глаз, ибо уверена: коль немедленно не обсохнет, то подхватит жуткую простуду.</p>
+<p>– Кхе! – важно начала Мышь-К. – готовы? Вот самое сухое, чего мне известно. Потише вокруг, пожалуйста! ‘Уилльяму Завоевателю, чьим деяньям благоволил римский папа, вскоре подчинились англичане, жаждавшие вождей и к тому времени уже сильно привыкшие к покорителям да незаконным захватчикам. Эдуин и Моркар, правители Мерсии и Северной Амбрии... ’</p>
+<p>– Тьфу! – с омерзеньем сплюнул Лори.</p>
+<p>– Простите? – ощерившись, но весьма вежливо вопросила Мышь-К. – Вы что-то сказали?</p>
+<p>– Отнюдь! – поспешно заявил попугай.</p>
+<p>– Значит, показалось... Итак, продолжаю. ‘Эдуин и Моркар, правители Мерсии и Северной Амбрии, высказались за него: даже Стиганд, преданный своему народу главный духовный чин Кантербёри, нашёл это благоразумным</p>
+<p>– Чего-чего нашёл? – переспрашивает Утка.</p>
+<p>– Нашёл это, – свирепея, повторяет Мышь-К. – Вы, конечно, понимаете, что такое «это».</p>
+<p>– Когда я чего-то нахожу, то прекрасно понимаю, что такое «это», – говорит Утка. – Обычно подразумевается лягушка или червяк. Вопрос в ином: главный духовный чин-то чего нашёл?</p>
+<p>Презрительно оставив сей вопрос без вниманья. Мышь-К поспешно продолжила: нашёл это благоразумным, присоединился к князю Эдгару, приветствовал Уилльяма да предложил тому венец. Спервоначалу Уилльям вёл себя умеренно. Однако дерзость его норманцев... ’</p>
+<p>«Как тебе сохнется, дорогуша?» – обратилась она к Алис.</p>
+<p>– Я всё столь же мокница. – уныло отвечает та. – Вроде бы речуга совсем не иссушает.</p>
+<p>– В данной ситуации. – торжественно произносит Дронт, приподнимаясь. – вношу резолюцию: митинг запаузивается для экстренного формирования более энергичной методологии...</p>
+<p>– Говорите по-нашенски! – перебивает Орлёнок. – Я не понимаю значенья и половины употреблённых щас длинных слов; более того – вы, как я догадываюсь, тоже! – И клонит голову, скрывая улыбку; некоторые птицы громко подхихикнули.</p>
+<p>– Я просто норовлю сказать следующее. – обиженно продолжает Дронт. – Наилучшим иссушающим мероприятием является выборно-гоночная горячка.</p>
+<p>– Чёй’та за фиговина такая? – спросила Алис; знать-то ей особо не хотелось, но Дронт приумолк, как бы предполагая, мол кто-нибудь полюбопытствует, а все остальные вроде склонны помалкивать.</p>
+<p>– Вообще-то, – отвечает тот. – проще показать, нежели объяснять. (А поскольку вам, пожалуй, придёт в голову каким-нибудь морозным зимним деньком самим поупражняться, расскажу, чего учудил Дронт.)</p>
+<p>Во-первых, обозначил направление гонки, в итоге-то образовавшее замкнутую кривую, то бишь корявую-неровную окружность («точность очертаний значенья не имеет», пояснил он), затем всю ватагу расставил тут и там вдоль черты. Никаких тебе «раз-два-три-начали», просто все трусят по мере желанья, а надоело – прекращают, посему непросто понять, де забег окончен. Однако примерно через полчаса суеты, чуть только участники, разгорячась, подыссушились, Дронт внезапно крикнул: «Гонка завершена!» Все его обступили, тяжело дыша, пыхтя да спрашивая: «Ну? Кто выиграл-то?»</p>
+<p>На эдакие вопросы без тщательного обмозговыванья Дронт отвечать не умеет; сев, надолго задумался, прижав палец ко лбу (именно в таком положении обычно сочиняет на рисунке Шейкспир), а остальные молча ждут. Наконец Дронт молвил: «Все победили, посему наградить надобно всех».</p>
+<p>– А кто ж тогда награды раздаст? – вопрошает разношёрстная многоголосица.</p>
+<p>– Ну конечно ж, она, – Дронт указывает пальцем на Алис: вся ватага сразу вкруг неё столпилась да смущённо требует: «Награды! Награды!»</p>
+<p>Алис понятья не имеет, чего делать; от отчаянья сунула руку в карман, вытащила коробочку засахаренных плодов (к счастью, солёная вода внутрь не проникла) и раздала в качестве наград. Всем как раз хватило по кусочку.</p>
+<p>– Но ей самой-то выигрыш тоже, понимаешь ли, положен, – напоминает Мышь-К.</p>
+<p>– Естественно. – весьма внушительно соглашается Дронт. – Чего у тебя ещё в кармане? – спрашивает, повернувшись к Алис.</p>
+<p>– Только напёрсток, – грустно отвечает та.</p>
+<p>– Давай-ка сюда.</p>
+<p>И все снова сгрудились вокруг, пока Дронт торжественно его ей вручал со словами: «Просим принять в дар этот изящный напёрсток», а после окончанья сей краткой речи – захлопали. Алис сочла сам обряд страшно нелепым, но звери-птицы выглядели столь чинными, что хихикнуть смелости не достало: а поскольку слов подобрать она не сумела, то просто поклонилась и с жу тко напыщенным видом напёрсток приняла.</p>
+<p>Тут уж настало время скушать засахаренные плоды; причём началась довольно шумная суматоха, ибо крупные птицы сету ют, мол даже не ощутили вкуса, а мелкие – подавились, и им надобно постучать по хребтинке. Однако пир, наконец, закончен, все снова сели кольцом да просят: пусть Мышь-К ещё чего-нибудь расскажет.</p>
+<p>– Вы обещали, понимаете ли, кой-чего мне рассказать. – напоминает Алис. – а также почему терпеть ненавидите Ко да Со, – добавляет шёпотом, несколько опасаясь, мол та опять обидится.</p>
+<p>– Сказ у меня печальный и долгий, на целый час с хвостиком! – вздыхает Мышь-К, поворачивая мордочку к Алис.</p>
+<p>– Ага, хвостик у вас впрямь долгий-предолгий, но почему, – с изумленьем оглядывает та хвост. – вы называете его печальным? – и пока Мышь-К излагала, сказ-с-хвостиком-на-час представлялся Алис чем-то вроде вот эдакого:</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <em>Полкану в домишке<br>
+встретилась Мышь-К.<br>
+ну он ей<br>
+и говорит:<br>
+«Давай-ка<br>
+вдвоём в суд<br>
+пойдём:<br>
+я предъявлю иск<br>
+тебе. Пошли,<br>
+да никаких отказов<br>
+не принимаю. Сразу<br>
+назначим заседанье,<br>
+а вовсе не свиданье,<br>
+ибо сегодня<br>
+до вечера<br>
+всё равно<br>
+делать нечего».<br>
+А Мышь-К<br>
+и говорит<br>
+шавке: «Такое<br>
+разбирательство,<br>
+дорогой сударь,<br>
+без<br>
+присяжных<br>
+да судьи<br>
+стало б<br>
+пустой<br>
+тратой<br>
+словес».<br>
+«Я сам<br>
+судья да<br>
+присяжные». –<br>
+говорит<br>
+хитрован<br>
+Полканище, –<br>
+«Я сам<br>
+всё дело<br>
+рассмотрю<br>
+по полочкам<br>
+разложу<br>
+и<br>
+к смерти<br>
+тебя<br>
+прису-<br>
+жу».</em></p>
+<p>– Да ты совсем не слушаешь! – строго прикрикнула Мышь-К. – Где мысли витают?</p>
+<p>– Простите. – робко извиняется Алис. – Но уже до пятого завитка довитали.</p>
+<p>– При чём тут завитки? – весьма злобно верещит Мышь-К. – Ведь он же мне всё жизненное пространство сделал... сузил!</p>
+<p>– С какой такой узел? На хвосте узел? – Алис, всегда готовая помочь, в волненьи-нетерпеньи его осматривает. – Давайте распутаю!</p>
+<p>– Ничего я тебе не дам. – вскочила Мышь-К и пошла прочь. – Только и знаешь, что оскорблять всякими глупостями!</p>
+<p>– Я вовсе не хотела! – оправдывается Алис. – Но вы, понимаете ли, столь обидчивы!</p>
+<p>В ответ Мышь-К только взвизгнула.</p>
+<p>– Вернитесь, пожал’ста, да закончите рассказ! – кричит Алис вдогонку; все остальные дружно вторят «Да уж, пожал’ста!», но Мышь-К лишь тряхнула раздражённо головой и прибавила ходу.</p>
+<p>– Жаль, что не пожелала остаться! – вздохнул Лори, едва та скрылась из виду; а пожилая Рачиха воспользовалась случаем, дабы сказать дочери: «Вот, дорогая! Пусть станет тебе уроком: никогда не выходи из себя!»</p>
+<p>«Чья б корова мычала, мамаша. – не зло грубит отраковица. – Ты ведь даже устрицу из себя... в смысле, из ракушки... выведешь!»</p>
+<p>– Кабы щас сюда Дайну, вот бы здоровско! – подумала вслух Алис, не обращаясь ни к кому в особенности. – Она быстро б её назад притащила!</p>
+<p>– А кто такая Дайна, коль позволительно задать эдакий вопрос? – полюбопытствовал попугай.</p>
+<p>Алис охотно отвечает, ибо про свою любимицу поболтать готова всегда: «Дайна – наша киска. Мышей ловить мастерица, каких поискать! А поглядели б, как охотится на птиц! Чуть птенчика завидит – и уже скушала!»</p>
+<p>Сия речь произвела на окружающих неизгладимое впечатленье. Некоторые птахи тут же улетели; дряхлая сорока начала весьма тщательно закутываться, бормоча «Вообще-то самое время домой, вечерний воздух вреден для горла!», а Канарейка дрожащим голоском велела деткам: «Упархиваем, дорогие! Давно пора в постельку!» Под разными предлогами улизнули все, и вскоре Алис осталась одна.</p>
+<p>– Не следовало поминать Дайну! – кручинится она. – Никто-то её здесь вроде не любит, а по мне – дык лучшая кису ля в мире! Эх, дорогая Дайночка! Любопытно, увижу ль тебя ещё! – от одиночества да унынья бедняжка снова заплакала. Однако тут опять услыхала вдалеке топоток – и глянула бодрее, с тенью надежды, мол Мышь-К, передумав, возвращается докончить сказ.</p>
+<h3 data-heading="ГЛАВА 4. Кролик засылает малыша Билла">ГЛАВА 4. Кролик засылает малыша Билла</h3>
+<p>Но то рысит обратно Белый Кролик, озабоченно поглядывая по сторонам, словно чего-то потерял; да ещё, слышно, бормочет: «Княгиня! Княгиня! О-ё-ёй, бесценные мои лапки! О-ё-ёй, мех да усишки! Она меня казнит, всенепременно казнит! Где умудрился их обронить-то, хотел бы я знать?» Алис вмиг сообразила, дескать имеет в виду веер с белыми лайковыми перчатками, и весьма добросердечно начала тоже искать, но впустую – с тех пор, как плавала в пруду, всё вокруг вроде как переменилось, причём громадное помещенье да стеклянный столик да дверца исчезли напрочь.</p>
+<p>Очень скоро Кролик заметил Алис, рыщущую возле него, и сердито прикрикнул: «Послушай. Мэри-Энн, а ты-то чего тут делаешь? Немедленно дуй в дом и принеси мне перчатки да веер! Живо!» Алис столь испугалась, что сразу припустила в указанном им направленьи, даже не сделав попытку’ объяснить, мол тот обознался.</p>
+<p>– Принял меня за горничную, – говорит сама себе на бегу. – Вот обалдеет, узнав, кто я на самом деле! Но сперва притащу’ ему веер с перчатками... ну, коль найду. – Глядь, а вот и опрятный домик. На двери надраенная медная дощечка с именем «Б. Кролик». Она входит без стука да сразу наверх – ну, из опасенья наткну ться на настоящую Мэри-Энн, коя выгонит из домика прежде, чем успеешь найти веер и перчатки.</p>
+<p>– Вообще-то. – думает Алис. – выполнять заданья кролика как-то несуразно! Положим, теперь надумала б поручить мне чего-нибудь Дайна! – И принялась воображать, как бы эдакое происходило: «Барышня Алис! Тотчас сюда! Готовьтесь к прогулке!» «Уже иду, няня! Но надо до прихода Дайны следить за норкой, дабы мышь не убежала». – Только вряд ли, – продолжает рассуждать Алис. – Дайне разрешат оставаться в доме, коль станет вот так вот людьми верховодить!</p>
+<p>А сама уже отыскала вход в чистенькую комнатку; возле окна стол, на нём (как и предполагала) лежит веер с тремя парами крошечных белых лайковых перчаток; схватив веер да две перчатки, она собиралась уже выскочить из комнаты, однако взгляд упал на стоящий возле зеркала пузырёк. На сей раз висюльки со словами «ВЫПЕЙ МЕНЯ» нет; тем не менее. Алис, откупорив, поднесла его к губам. «Знаю: стоит чего-либо съесть или выпить», думает, «какое-то любопытное событие происходит непременно: вот просто и погляжу, зачем тутошний пузырёк. Чаятельно, опять сделает большой, поскольку страшно надоело обретаться эдакой крохотулькою!»</p>
+<p>Ну тот и постарался, причём куда быстрей, нежели она ожидала; не успела допить до половины, а голова уже упёрлась в потолок, пришлось нагнуться, дабы не сломать шею. Поспешно поставив пузырёк, Алис думает: «Вполне достаточно... надеюсь, дальше расти не стану... ого, уже в дверь не пролезаю... зря выпила столь много!»</p>
+<p>Увы! сожалеть чересчур поздно! Она продолжает расти, расти, и весьма скоро вынуждена стать на колени; ещё через минутку даже в таком положеньи места не хватает; а коли попытаться лечь на пол, один локоть уткнуть в дверь, другой рукой обхватить голову... А сама всё растёт, посему в качестве последнего средства руку высунула в окно, ногу запихнула в дымоход; думает: «Теперь уж, чего ни случись, даже пальцем шевельнуть не сумею. Во что превращусь-то?»</p>
+<p>К счастью, действие волшебного напитка достигло предела, расти Алис перестала; но ведь теснотища, а выбраться из комнаты вроде б вообще ни малейшей возможности; неудивительно, что чувствует она себя жутко несчастною.</p>
+<p>– Дома гораздо приятней, – думает бедняжка. – ведь не увеличиваешься да уменьшаешься всю дорогу, и мыши с кроликами тобой не помыкают. Уже почти жалею, мол сиганула в кроличий лаз... но всё же... но всё же... довольно занятная, понимаете ли, тут жизнь! Любопытно – чё со мной приключилось-то? Читая сказки, думала, дескать подобного взаправду-то сроду не происходит, а теперь нате вам – сама в одну из них угодила! Надо написать про меня книжку, уж непременно! Погодите, вырасту и напишу... но вот ведь выросла, – добавляет грустно. – по крайней мере здесь расти уж места нету.</p>
+<p>– Зато, – думает, – ввек не стану старше, чем сейчас, правильно? С одной стороны, не жизнь, а малина – никогда не превращусь в старушку; с другой – вечно учить уроки! Нетушки, эдакое мне не по вкусу!</p>
+<p>– Дурында ты, Алис! – сама себе возражает. – Как тут учить уроки? Для тебя-то места едва хватает, а учебники вообще не влезут!</p>
+<p>И прям разболталась: сперва говорит от одного лица, после – от другого; в общем, целую беседу наворачивает; однако через несколько минут снаружи долетел голос, заставивший умолкнуть и прислушаться.</p>
+<p>– Мэри-Энн! Мэри-Энн! – зовёт голос. – Сейчас же неси перчатки! – Топоток раздался на лестнице. Алис поняла, дескать Кролик идёт за ней, и вздрогнула – аж домик затрясся; совсем забыла: она ведь теперь в тыщу раз его больше, незачем бояться-то.</p>
+<p>Тут Кролик подошёл к двери да норовит открыть; поскольку та распахивается внутрь, а локоть Алис крепко прижат к створке, попытка не удалась. Но слышен голос: «Значит, обойду дом и влезу в окно».</p>
+<p>– Ну уж дудки! – думает Алис; подождав, пока шаги вроде бы послышались под окном, внезапно растопырила пальцы и сделала в воздухе хватательное движенье. Поймать-то никого не поймала, но услышала взвизг, удар от паденья и звон разбитого стекла, из чего заключила: вероятно, нечто шмякнулось в теплицу с огурцами, то ль ещё куда.</p>
+<p>Затем прозвучал сердитый голос – конечно же. Кролика: «Пат! Пат! Ты где?» А голос, который она прежде не слышала, откликнулся: «Знамо дело здеся! За яблочками охочусь, ваш-честь!»</p>
+<p>– За яблочками он охотится! – сердито передразнил Кролик. – Дуй ко мне! Иди помоги отсюда вылезть!</p>
+<p>(Опять звон стеклянных осколков.)</p>
+<p>– А теперь скажи. Пат, чевой’та в окне?</p>
+<p>– Знамо, ручонка, ваш-честь!</p>
+<p>(Произносит-то «ррычонка».)</p>
+<p>– Ру чонка – эх ты, простофиля! Ктон’ть ручищу эдаких размеров-то видывал?</p>
+<p>Глянь, всё окно впритык заполнила!</p>
+<p>– Знамо дело, ваш-честь; однако ж ручонка.</p>
+<p>– Ну дык, во всяком случае, нечего ей там торчать; ступай вытащи!</p>
+<p>Тут наступило длительное молчанье, только время от времени прерывавшееся перешёптываньями, вроде: «Знамо, не по мне, ваш-честь, ваще, ваще!» «Делайчё велят, трус!»; Наконец Алис снова растопырила пальцы и опять цапнула наудачу. На сей раз донеслись два взвизга, сопровождаемые звоном разбитого стекла. «Небось, тьма огурцовых теплиц!» подумала она. «Любопытно, чего ещё придумают! Насчёт вытащить меня через окно – я только за! Лично мне здесь уже порядком надоело!»</p>
+<p>Некоторое время подождала, но снаружи полная тишина; в конце концов загромыхали колесики тачек, послышалось множество голосов, говорящих одновременно; различимы слова:</p>
+<p>«– Где вторая лестница?</p>
+<p>– Да мне велели тащить лишь одну; вторая у Билла</p>
+<p>– Вилл! давай её сюда, чувак!</p>
+<p>– А ну-ка, приставляем к углу</p>
+<p>– Нет, сперва их свяжи... ведь даже до половины высоты не достают</p>
+<p>– Ага! ещё как достанут; ща увидишь</p>
+<p>– Вот так, Гилл! прицепись за верёвку</p>
+<p>– Крыша-то выдержит?</p>
+<p>– Осторожно, там доска шатается</p>
+<p>– Ой, отскочила! Поберегись!»</p>
+<p>(громкий хрустреск)</p>
+<p>«– Ну, и кто ж такой умный?</p>
+<p>– Дилл, небось</p>
+<p>– Кто полезет в трубу?</p>
+<p>– Не-а, я ни за какие коврижки! Сам лезь!</p>
+<p>– Нашёл дурака!</p>
+<p>– Жиллова обязанность</p>
+<p>– Сюда. Зилл! Начальник велит спу скаться в трубу тебе!»</p>
+<p>– Ага, значит, в трубу полезет Килл, да? – думает Алис. – Вообще-то вроде бы всё валят на Лилла! Озолоти меня – не желала б оказаться на Милловом месте; дымоход тут, конечно, узкий; но, по-моему, наподдать чуток сумею. Втянув ногу как можно ниже в трубу, она затаилась, пока не услыхала, как к ней по дымоходу со скрежетом подползает маленькое животное (породу определить не удалось); тут со словами «А вот и Нилл» Алис резко его лягнула и ждёт последствий.</p>
+<p>Сперва услыхала дружный крик «Пилл летит!», затем одинокий возглас Кролика: «Ловите его, эй там, у плетня!», затем, после молчанья, опять разноголосица</p>
+<p>«– Поддерживайте ему голову</p>
+<p>– Глотни-ка вот беленькой</p>
+<p>– Не захлебнулся б</p>
+<p>– Рассказать сумеешь, старина?</p>
+<p>– Как всё произошло-то? Давай по порядку!»</p>
+<p>Последним раздался слабый писклявый голосок («Риллов» подумала Алис): «Да сам не пойму... Хватит, спасибо; уже лучше... но слишком мотает для разговоров... понял только, чё-то пнуло, точно пружина чёртика из коробки, ну и полетел шутихой!»</p>
+<p>– Самой настоящей шутихой, старичок! – согласны остальные.</p>
+<p>«Надо сжечь дом!» донёсся голос Кролика; тут Алис во всю мощь завопила: «Только попытайтесь – натравлю на вас Дайну!» Мгновенно повисла мёртвая тишина. Алис подумала: «Любопытно, чего затеют дальше-то! Кабы мозгов хватило, разобрали б крышу».</p>
+<p>Через минуту-другую те снова задвигались; она слышит – Кролик распоряжается: «Для начала хватит тележки».</p>
+<p>– Тележки чего? – думает Алис; но долго гадать не пришлось, ибо в следующий миг через окно посыпался град камешков, несколько даже попало в лицо.</p>
+<p>«Не потерплю», сказала себе Алис и крикнула: «Не смейте продолжать!», снова учинив мёртвую тишину.</p>
+<p>А сама с удивленьем замечает: лежащие на полу камешки превращаются в пирожки, и в голову ей приходит великолепная мысль.</p>
+<p>«Коль съем пирожок», думает, «кой-чего в моих размерах изменится; но поскольку’ больше-то вырасту’ вряд ли, то вполне вероятно, что сделаюсь поменьше».</p>
+<p>Короче, один пирожок проглотила и с восторгом обнаруживает, дескать сразу начала ужиматься. А чуть только стала достаточно маленькой, дабы пролезть в дверь, выбежала из домика и увидала изрядную толпу поджидавших снаружи зверьков да птиц. В середине стоит хамелеончик Силл, поддерживаемый двумя морскими свинками, которые чем-то его поят из бутылки. Едва Алис выскочила, все на неё бросились; но она стрелой рванула прочь и вскоре прибежала в спасительный густой лес.</p>
+<p>– Первым делом, – говорит себе, бредя по чащобе, – надо снова вырасти до собственных размеров; вторым – найти дорогу в тот восхитительный садик. А лучше ничего и не придумаешь.</p>
+<p>Задумка-то, вне сомнений, великолепная, к тому ж ясно-просто осуществимая; одна только закавыка: у неё ни малейшего представленья, с чего начать; она пристально всматривается в просветы между деревьями, но тут резкий-отрывистый тявк прямо над головой заставил весьма поспешно вскинуть взгляд.</p>
+<p>Сверху на неё смотрит огромными круглыми глазищами исполинский щенок да неуверенно тянет лапу, норовя дотронуться. «Бедный малютка!» по-доброму воскликнула Алис и попыталась ему посвистеть; а сама всё время с ужасом думает, вдруг голодный, ибо в таком случае запросто сожрёт, невзирая на весь ейный подлизон.</p>
+<p>Плохо соображая, чего делает, она подняла хворостинку и предлагает щенку поиграть; тот, взвизгну в от восторга, подпрыгнул на всех четырёх лапах, ринулся на хворостинку и сделал вид, якобы треплет зубами; тут Алис спряталась за огромный куст чертополоха, дабы он на неё не наступил; причём едва выглянула с другой стороны, щен снова напал на хворостинку’ да, спеша её схватить, аж перекувырнулся; тогда Алис, сообразив, дескать такая забава весьма похожа на игры с ломовой лошадью, и опасаясь, мол её вот-вот затопчут, снова юркнула за куст чертополоха; а щенок выдал залп коротких бросков на хворостинку, всякий раз вперёд продвигаясь по чуть-чуть, зато долго пятясь, да всю дорогу хрипло лая, пока не сел поодаль, тяжело дыша, вывалив из пасти язык и призакрыв огромные глазищи.</p>
+<p>Алис решила, что выпадает великолепный случай смыться, посему сразу помчалась прочь и бежала до тех пор, пока не устала да запыхалась; щенячий лай уже слабо доносится из да-альнего далека.</p>
+<p>– А всё же милый щеночек! – Алис прислонилась к стеблю лютика отдохнуть и обмахивается одним из его листьев. – Очень хотела б его научить всяким ловким проделкам, кабы... кабы только вырасти сперва до собственных размеров! Ох, батюшки! Чуть не забыла – надо же снова подрасти! Погодите... как обычно происходит-то? Полагаю, нужно чего-нибудь съесть или выпить; но главный вопрос – чего именно?</p>
+<p>Вот уж, безусловно, главный вопрос – чего именно? Алис обозрела окружающие цветы да стебли трав, однако не увидела ни фига подходящего для поеданья или выпивания в сложившихся обстоятельствах. Рядом торчит, правда, гриб чуть выше её ростом; заглянув под него, да по обе стороны от него, да за него, Алис подумала, дескать, пожалуй, неплохо б посмотреть, чего у гриба на шляпке-то.</p>
+<p>Встав на цыпочки да глянув поверх кромки, тут же упёрла взор в глаза толстому синему гусеницу, сидевшему, сложив руки на груди, посередь шляпки, спокойно покуривавшему кальян через длиннющую трубку и не обращавшему вниманья ни на неё, ни на что-либо другое.</p>
+<h3 data-heading="ГЛАВА 5. Совет Гусеница">ГЛАВА 5. Совет Гусеница</h3>
+<p>Некоторое время Гусениц с Алис обозревали друг дружку молча; наконец тот вытащил изо рта чубук и вяло-сонно говорит:</p>
+<p>– А ты-то кто такая?</p>
+<p>Начало беседы далеко не обнадёживающее. Алис довольно робко ответила: «В настоящее время сама... сама едва улавливаю, сударь... зато знаю, кем была, вставая сегодня утром с постели, но полагаю, вроде бы, несколько раз уж с тех пор переменилась.</p>
+<p>– В каком смысле? – строго спрашивает Гусениц. – Объясни свои слова!</p>
+<p>– Свои слова, боюсь, объяснить не сумею, сударь, ибо, понимаете ли, сама не своя.</p>
+<p>– Не понимаю.</p>
+<p>– Боюсь, ясней изложить не в состоянии, – вежливо молвила Алис. – поскольку, во-первых, сама никак не уразумею: а во-вторых, очень сбивает с толку, коль так много раз в день оказываешься разных размеров.</p>
+<p>– Отнюдь.</p>
+<p>– Ну, вам, вероятно, ещё не приходилось; однако чуть только придёт пора становиться куколкой... ведь в один прекрасный день так, понимаете ли, и случится... а затем в бабочку, то, вероятно, ощутите себя, наверно, причудливо, не так ли?</p>
+<p>– Совсем не так.</p>
+<p>– Ну, значит, у вас чувствительность, очевидно, иная; а вот я знаю наверняка: мне ощущенья показались бы весьма причудливыми.</p>
+<p>– Тебе! – презрительно выдохнул Гусениц. – Ты кто такая-то?</p>
+<p>То бишь на колу мочало, начинай разговор сначала. Алис сердило, что Гусениц отпускает ну прям очень короткие замечанья, посему, приосанившись, она чрезвычайно вну шительно сказала: «По-моему, сперва вам следовало бы сообщить мне, кто вы такой».</p>
+<p>– Зачем?</p>
+<p>Ещё один озадачивающий вопросец; и поскольку Алис не приходило в голову ни одной веской причины, а Гусениц находился в жутко дурном расположеньи духа, она шагнула прочь.</p>
+<p>– Вернись! – позвал тот. – Хочу сказать кой-чего важное!</p>
+<p>Звучит, конечно, заманчиво: Алис опять подошла.</p>
+<p>– Держи себя в руках. – молвил Гусениц.</p>
+<p>– И всё? – а сама в меру сил пытается не дать волю злости.</p>
+<p>– Нет.</p>
+<p>Алис решила, дескать, пожалуй, стоит подождать, всё равно ведь делать нефига; да к тому ж, вероятно, он, в конце концов, поведает чего-нибудь полезное. Несколько минут тот попыхивал молча, но затем расплёл скрещенные руки, вынул изо рта чубук и говорит: «В общем, говоришь, переменилась, да?»</p>
+<p>– Увы, сударь; не в состоянья припомнить сведенья, кои раньше... И вообще десяти минут не способна удержаться в определённых размерах.</p>
+<p>– Не в состоянии припомнить какие сведенья?</p>
+<p>– Ну, пыталась выразительно прочесть «Юного беззаботного...», а он вышел прям совсем неправильным! – очень печально отвечает Алис.</p>
+<p>– Тогда прочти про отца, – предлагает Гусениц.</p>
+<p>Сцепив пальцы рук, она начала:</p>
+<p>_<br>
+«Батя, ты уж старикан», – вопрошает у отца<br>
+Парень, – «плешь совсем седая;<br>
+Чё ’йта, в возрасте твоём на голову без конца<br>
+становиться – блажь такая?»  </p>
+<p>«В юности боялся я повредить», – тот дал ответ, –<br>
+«мозги этим ли алъ тем ли;<br>
+Нынче ж напрочь убеждён: у меня их вовсе нет –<br>
+Вот и тычу бошку в землю».  </p>
+<p>«Ты старик», – талдычит сын, – «какуже я помянул,<br>
+И к тому ж ужасно толстый;<br>
+В дверь входя, однако, вдруг сальто взад шутя крутнул –<br>
+Ну зачем, не так же просто?»  </p>
+<p>«В юности», – ему мудрец отвечает, гнясъ в баранку, –<br>
+«Гибкости достиг я прыткой,<br>
+Натираясь мазью той – по семь золотых за банку;<br>
+Хошь, продам тебе со скидкой?»  </p>
+<p>«Старики», – твердит всё сын, – «обладают челюстями<br>
+Для еды, не твёрже каши;<br>
+Ну а ты прикончил гуся вместе с клювом да костями –<br>
+Объясни – как так, папаша?»  </p>
+<p>«В юности», – отец в ответ, – «нравилось мне про права<br>
+Спор вести с женою милой;<br>
+Челюсти же, в тех боях обратившись в жернова,<br>
+Мне прослужат до могилы».  </p>
+<p>«Старики», – сынок опять, – «очень часто чушь несут<br>
+О своей былой сноровке;<br>
+А ты угря, словно шест, лихо держишь на носу –<br>
+Кто ещё настолько ловкий?»  </p>
+<p>«Я на три вопроса уж дал ответ, причём не вру», –<br>
+Батя лишь развёл руками, –<br>
+«Коль продолжишь вопрошать про подобную муру,<br>
+С лестницы спущу пинками!»_</p>
+<p>– Всё не то. – итожит Гусениц.</p>
+<p>– Боюсь, почти, – робко соглашается Алис. – некоторые слова вроде как переделаны.</p>
+<p>– Неверно всё – от начала до конца. – решительно настаивает Гусениц; несколько минут побезмолвствовали.</p>
+<p>Гусениц заговорил первым:</p>
+<p>– Какого хочешь стать размера?</p>
+<p>– Ой, да дело не в размерах, – поспешно объясняет Алис. – не нравится лишь, понимаете ли, столь часто изменяться.</p>
+<p>– Не понимаю.</p>
+<p>Алис промолчала; ей за всю жизнь столько не перечили, вот она и чувствует: прям зла не хватает.</p>
+<p>– А теперешними довольна? – любопытствует Гусениц.</p>
+<p>– Вообще-то, сударь, хотела б, с вашего позволенья, капельку подрасти: трёхдюймовочка – даже звучит как-то ужасно.</p>
+<p>– Между прочим, рост просто замечательный! – сердито возразил Гусениц, выпрямляясь-приподнимаясь на хвостовой части (в нём ведь ровно три дюйма).</p>
+<p>– Но для меня непривычный! – жалобно протянула бедная Алис. А сама думает: «Кабы здешние обитатели урождались ещё не столь обидчивыми!»</p>
+<p>– Со временем привыкнешь. – Гусениц продолжил покуривать.</p>
+<p>На сей раз Алис терпеливо ждала, пока тот соизволит заговорить. Через несколько минут Гусениц, вынув трубку кальяна изо рта да зевнув разок-другой, встряхнулся. Затем слез с гриба и пополз в траву, просто бросив по пути: «С одного боку вырастешь, с другого – уменьшишься».</p>
+<p>– С одного боку чего? С другого – чего? – подумала Алис.</p>
+<p>– Гриба. – сказал Гусениц, словно она спросила вслух; а в следующий миг скрылся из виду.</p>
+<p>Алис с минуту сосредоточенно рассматривала гриб, норовя определить, где те самые один и другой бока; но поскольку тот совсем круглый, задачка весьма непростая. Тем не менее, наконец, обхватила его до предела вытянутыми руками да отщипнула по ломтику от кромки.</p>
+<p>– Ага, дык какой же – какой? – думает; куснула чуть-чуть от ломтика в правой руке – ну испытать действие; и тут же почувствовала резкий удар снизу в подбородок: это он стукнулся о туфлю! Сия внезапная перемена здорово напугала, но она чувствует, мол время терять нельзя, поскольку стремительно ужимается; оттого сразу решила откусить от второго ломтика. Однако челюсть так сильно придавлена к ступням – аж рот с трудом приоткрывается; в конце концов она его прираспахнула и умудрилась проглотить шматочек от ломтя из левой руки.</p>
+<p>– Опа, голова опять на воле! – воскликнула Алис с восторгом, в следующий миг сменившимся тревогой, чуть только она обнаружила, дескать куда-то пропали плечи; при взгляде долу видна лишь агромадной длины шея, вроде бы растущая, подобно стеблю, из раскинувшегося далеко внизу зелёного моря листвы.</p>
+<p>– Откуда вся тамошняя зелёная фигня? – говорит Алис. – А также куда подевались плечи? И – ой! – бедные ладошки, почему вас-то не видать?</p>
+<p>Говоря, она ими пошевеливает, но толку вроде б никакого, разве лишь лёгкая рябь на далёких зелёных листиках.</p>
+<p>Поскольку надежды на то, чтоб поднести ладони к лицу, нет, она попыталась опустить к ним голову, и с радостью открыла, дескать шея легко клонится в любом направленьи – ну сущая змея. Даже удалось выгнуть её изящными волнами и приготовиться сунуть в листву, коя оказалась ничем иным как верхушками деревьев, под коими Алис прежде бродила, но тут её вынудил поспешно отпрянуть шелестяще-свистящий звук: прямо к лицу подлетел крупный голубь, яростно трепыхая крыльями.</p>
+<p>– Змея! – крикнул Голубь.</p>
+<p>– А вот и нет! – возмутилась Алис. – Отстаньте!</p>
+<p>– А по-моему, змея! – по вторил Голубь, но уже не столь задиристо; и добавил вроде как навзрыд, – я и так, и эдак, но им, кажется, не угодишь!</p>
+<p>– Ни малейшего представленья не имею, о чём вы вообще говорите.</p>
+<p>– Норовил под корнями деревьев, и в обрывистых берегах, и внутри живых изгородей, – не обращает на неё вниманья Голубь, – однако змеи! Им не потрафишь!</p>
+<p>Всё больше недоумевая. Алис мыслит: «пока тот не выговорится, встревать бесполезно».</p>
+<p>– Точно насиживанье яиц само по себе недостаточно утомительно. – продолжает Г олубь, – дык нет же, изволь ещё день и ночь охранять их от змей! Три недели вообще глаз не сомкнул!</p>
+<p>– Очень жаль, что вас тревожили. – Алис начинает понимать, чем тот озабочен.</p>
+<p>– А чуть только занял самое высокое в лесу дерево. – голос Голубя постепенно переходит на визг, – да решил, дескать наконец-то от них избавился, им обязательно надо сползти, извиваясь, с неба! Ух, змеюки!</p>
+<p>– Но я не змея, объясняю ж! Я... я...</p>
+<p>– Ну! Кто ты? Вижу, норовишь чего-то придумать!</p>
+<p>– Я... я девочка, – нерешительно произнесла Алис, вспомнив количество изменений, в тот день с нею произошедших.</p>
+<p>– Очень правдоподобно! – с глубочайшим презреньем фыркает Голубь. – Я на своём веку повстречал немало девочек, но ни у одной не видал эдакой шеи! Нет-нет! Ты змея; отпираться бесполезно. Следующим делом, небось, скажешь, мол в жизни не отведывала яиц!</p>
+<p>– Почему ж – отведывала. – Алис ведь ребёнок очень правдивый. – однако, понимаете ли, девочки, как и змеи, едят яйца.</p>
+<p>– Не верю; но коль впрямь едят, тогда они самые настоящие змеи, а больше мне и добавить нечего.</p>
+<p>Сия мысль для Алис настолько нова, она аж на минуту-другую примолкла, а Голубь воспользовался случаем и таки добавил: «Ты ищешь яйца, в том сомнений нет; ну и какая мне разница – девочка ты или змея?..»</p>
+<p>– Зато для меня огромная, – запальчиво перебила Алис, – но яйца не ищу; а кабы искала, то ваших не пожелала б: я сырые не люблю.</p>
+<p>– Ну вот и проваливай восвояси, – мрачно сгрубил Голубь и опустился на гнездо.</p>
+<p>Алис присела, насколько сумела, меж деревьев, ибо шея всю дорогу застревает в ветвях, посему то и дело надо приостанавливаться да её высвобождать. А вскоре вспомнила – ведь всё ещё держит в руках те ломтики гриба; и весьма осторожно приступила к опытам, откусывая по чуточке от одного, от другого, становясь чересчур маленькой, слишком вырастая; наконец ей удалось достичь привычного размера.</p>
+<p>Она столь давно уже не была правильного роста, что ощущенья сперва показались довольно причудливыми; но через несколько минут всё вошло в колею, и Алис стала, как обычно, сама с собой беседовать. «Ага, задумка уже наполовину выполнена! Как же загадочны всяческие происходящие измененья! Вообще ни капельки уверенности, кем стану в следующий миг! Тем не менее, к собственному размеру вернулась; следующим делом надо проникнуть в тот восхитительный садик – любопытно, каким образом?» И с оными словами неожиданно подошла к полянке, где стоит домик с неё ростом. «Кто бы там ни жил, – думает Алис, – ни в коем случае нельзя к ним являться в таких размерах: ведь испугаю ж до опупенья!» В общем, снова начала откусывать понемногу от ломтика из правой руки да не решалась подходить к дому, пока не уменьшилась до размера с пясть.</p>
+<h3 data-heading="ГЛАВА 6. Свин с перцем">ГЛАВА 6. Свин с перцем</h3>
+<p>Минуты две уж она стояла, обозревая домик и соображая, чего делать дальше, как вдруг из леса выбежал ливрейный слуга (Алис посчитала его слугой, ибо он в ливрее: а вообще-то, судя по лицу, правильней бы назвать рыбой) и громко забарабанил в дверь костяшками пальцев. Ту распахнул другой ливрейный слуга – круглолицый, глаза навыкате, лягушачьи; у обоих, заметила Алис, по всей голове кучерявятся накладные, обсыпанные белым порошком волосы. Ей страшно любопытно узнать, в чём вообще дело-то, ну и прокралась на самую опушку – послушать.</p>
+<p>Слуга-Рыба сразу вытащил из-под мышки огромное письмо, величиной почти с него самого, и вручил второму, торжественно провозгласив: «Княгине. Приглашение от Дамы на игру в шары». Слуга-Лягушка повторил столь же торжественно, только слегка изменив порядок слов: «От Дамы. Приглашение Княгине на игру в шары».</p>
+<p>Оба отвесили поклон – аж кудряшками чуть не сцепились.</p>
+<p>Тут Алис в рот попала крупная смешинка, пришлось даже забежать обратно в лес из опасенья, мол те уловят, как хихикает; выглянув же опять, Слуги-Рыбы уже не увидела, зато второй сидит на земле возле входа, тупыми зенками таращась в небо.</p>
+<p>Робко ступив к двери, Алис постучала.</p>
+<p>– Ваще-то стучать без толку, – заявил Слуга, – причём причин две. Во-первых, я по ту же сторону двери, что и ты; во-вторых, внутри такой шум – тебя никто даже не услышит. Оттуда впрямь доносился чрезвычайно умопомрачительный тарарам: постоянные визжанья-чиханья, да то и дело сильнейший грохот, словно в лепёшку расколошмачивают миску или чайник.</p>
+<p>– Скажите, пожалуйста, как же мне тогда войти?</p>
+<p>– Какой-то толк ещё наблюдался б, – пропуская мимо ушей вопрос, продолжает Слуга, – кабы между нами наличествовала дверь. Например, находись ты внутри, запросто постучала б, а я тебя, понимаешь ли, выпустил. – А сам во всё время разговора зырит кверху, в небо, чего Алис посчитала крайне невежливым.</p>
+<p>«Хотя, вероятно, по-другому не способен», думает она, «ведь глаза расположены возле самой макушки. Но уж на вопросы-то, по крайней мере, отвечать сладил бы».</p>
+<p>– Как же мне войти? – повторила она вслух.</p>
+<p>– Просижу здесь, – бубнит Слуга. – до завтра...</p>
+<p>Тут как раз дверь прираспахнулась, из неё прямо в направленьи лягушачьей головы вылетело большое вращающееся блюдо и, чиркнув ему по носу, вдребезги разбилось об одно из деревьев.</p>
+<p>– .. а то, пожалуй, и до послезавтра. – как ни в чём ни бывало продолжил тот нисколько не изменившимся голосом.</p>
+<p>– Как мне войти? – снова, но куда громче, спрашивает Алис.</p>
+<p>– А надлежит тебе вообще входить-то? – рассуждает Слуга. – Вот в чём, понимаешь ли, вопрос первый.</p>
+<p>Да уж, не поспоришь; но только Алис не нравится, когда с нею так разговаривают. «Тутошние обитатели», бормотнула она под нос, «до ужаса любят поспорить. Прям с ума спрыгнешь!»</p>
+<p>Слуга, наверное, посчитал, дескать представился неплохой случай ещё раз высказать собственные мысли, только видоизменёнными. «Буду сидеть здесь», говорит, «с промежутками, цельными днями да ночами».</p>
+<p>– А мне-то чего делать? – любопытствует Алис.</p>
+<p>– Чё хошь. – Слуга принялся насвистывать.</p>
+<p>– Разговаривать с ним без толку, – отчаялась Алис. – полный придурок! – Открыла дверь да вошла.</p>
+<p>И попала прямо в просторную кухню, всю окутанную дымом: посередине на трёхногой табуретке сидит Княгиня, укачивающая младенца: у печи склонилась повариха, помешивая половником в большом котле, вроде б до краёв заполненном похлёбкой.</p>
+<p>– В похлёбку явно переложили перцу! – думает Алис, готовясь чихнуть.</p>
+<p>В воздухе его, безусловно, чересчур много. Даже Княгиня время от времени чихает; младенец же без передышки попеременно то чихает, то визжит. Единственные не чихающие существа на кухне – повариха да матёрый котище, сидящий на полке с улыбкой от уха до уха.</p>
+<p>– Будьте любезны, пожалуйста, сказать. – несколько робко начала Алис, ибо не вполне уверена, не против ли правил воспитанья заговаривать первой, – почему ваш кот эдак разулыбался?</p>
+<p>– Потому. Кот-то ведь чеширский, – бросила Княгиня. – Свинья!</p>
+<p>Причём последнее слово произнесла с такой внезапной яростью – Алис аж вздрогнула; но тут же поняла: оно предназначено не ей, а младенцу; посему набралась храбрости и продолжает:</p>
+<p>– Не знала, что чеширские коты всегда улыбаются; вообще-то даже не знала, мол коты умеют улыбаться.</p>
+<p>– Все поголовно умеют. – говорит Княгиня. – и большинство таки лыбится.</p>
+<p>– А я ни с одним улыбчивым не знакома, – очень вежливо молвит Алис, весьма довольная, дескать завязалась беседа.</p>
+<p>-Ты вообще с многим не знакома. – отрезала Княгиня. – и против правды не попрёшь.</p>
+<p>Алис совсем не понравилось, как та с ней заговорила; посему решает предмет обсужденья поменять. Пока придумывала чего-нибудь новое, повариха вытащила котёл с похлёбкой из печи и сразу принялась швырять в Княгиню да младенца всё попадающее под руку: сперва кочергу-ухват-совок, затем посыпался град кастрюль-тарелок-блюд. Но Княгиня и бровью не ведёт, даже коль они в неё попадают; а младенец и без того уже столь разверещался – вообще нельзя определить, больно ль ему от ударов.</p>
+<p>– Ой, пожал‘ста, поосторожней! – кричит Алис, подпрыгивая да терзаясь ужасом. – Ой, там ведь его миленький носик. – едва рядом с оным пролетела, чуть не унеся тот с собой, необычайно громадная кастрюлища.</p>
+<p>– Кабы все вели себя поосторожней, – хрипло ворчит Княгиня. – мир поворачивался бы куда быстрей, нежели щас.</p>
+<p>– Чего пользы б не принесло. – Алис радостно ухватилась за случай чуток повоображать образованностью. – Только подумайте, чего стало бы с днём и ночью! Земле, понимаете ли, надо двадцать четыре часа, дабы провернуться на оси, да ещё в такую-то пору, такую-то пор ищу...</p>
+<p>– Кстати, о топорище. – приказывает Княгиня. – отрубить ей голову!</p>
+<p>Алис тревожно глянула на повариху – намерена ли, дескать, следовать указанию; но та сосредоточенно помешивает похлёбку и вроде бы не слышит; посему продолжила: «Двадцать четыре часа, по-моему, или двенадцать? Я...»</p>
+<p>– Ой, меня даже и не спрашивай. – перебила Княгиня. – сроду не терплю чисел! – И снова стала укачивать младенца, напевая ему при том вроде как колыбельную, причём в конце каждой строчки зверски того встряхивая:</p>
+<p><em>Ты с сыном говори грубей<br>
+И бей, когда чихает;<br>
+Нарочно дразнится, злодей;<br>
+Ведь знает: досаждает.</em>  </p>
+<p>Все вместе (с участием поварихи и младенца):  </p>
+<p><em>Ой! ей! ёй!</em></p>
+<p>Распевая второе четырёхстрочье колыбельной, Княгиня всю дорогу резко подбрасывала да ловила младенца, а бедняжка дико визжал, и Алис с трудом разбирала слова:</p>
+<p><em>Я строго с сыном говорю<br>
+И бью, едва чихнёт;<br>
+Зато и перец подарю,<br>
+Коль долго не орёт!</em>  </p>
+<p>Все вместе:  </p>
+<p><em>Ой! ёй! ёй!</em></p>
+<p>– Держи! Покачай немного, ежели охота! – Княгиня швырнула младенца Алис. – А мне пора готовиться к игре в шары с Дамой. – И выскочила из кухни. Повариха метнула вдогонку сковороду, но чуток промахнулась.</p>
+<p>Алис поймала младенца с определёнными трудностями, поскольку тот представляет собой созданьице причудливых очертаний, растопырившее во все стороны ручки-ножки. «Прям словно морская звезда», подумала Алис. Бедный малыш фыркал на руках наподобие парового двигателя, а ещё его всю дорогу’ крючило-распрямляло, посему первые минуты две ей стоило огромных усилий не уронить младенца на пол.</p>
+<p>Приладившись правильно держать (а именно: скрутив вроде как в узел и крепко вцепившись а правое ушко и левую ножку, дабы сам не сумел развязаться), она вынесла его на свежий воздух.</p>
+<p>«Коль не утащить ребёночка с собой», подумала Алис, «его через день-другой угробят; ну разве не преступленье – оставлять малютку’ здесь?»</p>
+<p>Последние слова она произнесла вслух, а дитя в ответ всхрюкнуло (чихать-то к тому времени уже прекратило).</p>
+<p>«Не хрюкай», велела Алис. «так чувства не выражают».</p>
+<p>Младенец снова прихрюкнул; тогда Алис весьма пристально всмотрелась ему’ в личико – ну, понять, чего с ребятёнком происходит-то. Совершенно без сомнения: носик очень вздёрнутый, больше даже похож на рыльце; гляделки становятся чересчур маленькими, совсем не детскими; вообще весь внешний вид ей не понравился.</p>
+<p>«Просто наверно так всхлипывает», подумала она и вновь посмотрела на реснички – нет ли там слёз. Нету и в помине.</p>
+<p>«Если намерен превратиться в поросёнка, дорогуша», сурово предупреждает Алис, «я с тобой больше не вожусь. Заруби себе на носу!»</p>
+<p>Несчастный малыш опять всхлипнул (то ли всхрюкнул, сразу не скажешь), затем некоторое время они шли молча.</p>
+<p>Алис уже начала про себя соображать: «Ну, принесу малявку домой, и чё с ним делать-то?»</p>
+<p>Но тут снова раздался всхрюк, да столь дикий, – она аж обеспокоенно глянула ему в личико. На сей раз никакой ошибки: самый настоящий поросёнок; а потому ей мнится нелепым тащить его дальше на руках.</p>
+<p>Короче, опускает она малыша на траву и с облегченьем видит, как тот потрусил спокойненько в лес.</p>
+<p>«Кабы подрос», мыслит Алис, «стал бы жутко безобразным ребёнком; а вот поросёночек из него, по-моему, довольно привлекательный».</p>
+<p>И принялась перебирать знакомых детей, из коих запросто вышли бы свинки, а сама думает: «Вот бы знать верный способ их превращенья...», но тут слегка вздрогнула, увидав в нескольких шагах от себя Чеширского Кота, сидящего на ветке дерева.</p>
+<p>При виде Алис Кот лишь улыбнулся. Выглядит добродушно,однако она думает: «Всё ж когти-то жутко длиннющие, да зубов полон рот», в общем, решила вести себя с ним поуважительней.</p>
+<p>– Чеширский Котик. – начинает робко, ибо кто знает, понравится ль ему эдакое имечко: но тот лишь ещё шире расплылся в улыбке.</p>
+<p>«Ага, пока доволен», думает Алис, и продолжила: «Скажите, пожалуйста, каким путём отсюда выбираться?»</p>
+<p>– Во многом сие зависит от того, куда хочешь добрраться. – мурлычет тот.</p>
+<p>– Да мне, в общем-то, всё равно, куда...</p>
+<p>– Тогда без рразницы, каким путём добирраться.</p>
+<p>– Ведь куда-нг/будь-то приду, – добавляет Алис в качестве объясненья.</p>
+<p>– Вот уж непрременно – ежели только шагать достаточно долго.</p>
+<p>Она понимает: да, не поспоришь; посему переходит к следующему вопросу: «Что за люди тут живут в округе?»</p>
+<p>– Вон в том напрравленьи, – машет Кот правой лапой, – живёт Маячник; а в том, – взмах левой, – Майский Заяц. Заходи к любому: оба головой маются, то бишь без ума маячат.</p>
+<p>– Но мне совсем неохота путешествовать среди безумастых.</p>
+<p>– Эх, никуда не попррёшь. Мы тут все безумастые. Я безголовый. Ты безмозглая.</p>
+<p>– С чевой’та вы решили, якобы я безмозглая?</p>
+<p>– Наверрняка. Иначе б сюда не попала.</p>
+<p>Алис эдакое доказательством вовсе не считает; однако продолжает допытываться: «А откуда знаете, мол сами безголовы?»</p>
+<p>– Начнём хотя б от собачки – она ведь не безголовая. Прравильно?</p>
+<p>– Положим, правильно.</p>
+<p>– Хоррошо; далее: понимаешь ли, собака от злобы воррчит, а от ррадости метёт хвостом. Я же от ррадости воррчу, а от злобы мету хвостом. Значит, безголовый.</p>
+<p>– Я называю это не ворчаньем, а мурчаньем.</p>
+<p>– Называй как хошь. Ты в шарры сегодня с Корролевой игрраешь?</p>
+<p>– Очень бы хотела, но ещё не звана.</p>
+<p>– До встрречи там, – сказал Кот и исчез.</p>
+<p>Алис не особо удивилась, поскольку уже привыкает к происходящим чудесатостям. Пока продолжала смотреть на то место, где сидел Кот, тот вдруг появился снова:</p>
+<p>– Кстати, чего с рребятёнком-то? Чуть не забыл спрросить.</p>
+<p>– Превратился в евина. – спокойно отвечает Алис, словно эдакие возвращенья в порядке вещей.</p>
+<p>– Так и прредполатал. – Кот опять растаял.</p>
+<p>Алис немного подождала, почти уверенная в его очередном появленьи, но тщетно: затем пошла в направлении того взмаха, который указывал на жилище Зайца. «Маячников я раньше видывала», думает, «Майский Заяц куда гораздо любопытней, а поскольку май на исходе, он, пожалуй, уже не буйно помешанный... во всяком случае не столь мается, сколь в начале месяца».</p>
+<p>Произнеся последние слова, поднимает глаза – а на ветке дерева вновь сидит Кот:</p>
+<p>– Дык говорришь, в «евина», а не в «сына»?</p>
+<p>– Ну да; а вообще-то предпочитаю, чтоб впредь вы появлялись да исчезали не столь внезапно: прям голова кругом идёт.</p>
+<p>– Договоррились, – и на сей раз слинял очень медленно, начав с кончика хвоста, а закончив улыбкой, коя оставалась некоторое время после его исчезновенья.</p>
+<p>– Во даёт! Котов без улыбки я наблюдала часто. – думает Алис. – но улыбку без кота!.. Самое прикольное, чего в жизни встречала!</p>
+<p>Далеко идти не пришлось, вскоре показался дом Майского Зайца; ошибка исключена, ибо трубы сделаны в виде длинных ушек, а крыша – из меха. Строенье выглядело таким большим, что она не решилась подходить, пока не куснула чуть-чуть от ломтика гриба из левой руки да не увеличилась до размеров настоящего зайца; но даже при том шагнула к дому довольно робко, раздумывая: «А вдруг он всё же буйно помешан? Пожалуй, следовало лучше навестить Маячника!»</p>
+<h3 data-heading="ГЛАВА 7. Маетное чаепитъе">ГЛАВА 7. Маетное чаепитъе</h3>
+<p>Под деревом перед домом накрыт стол, а за ним пьют чай Майский Заяц с Маячником; между ними сидит крепко почивающая Соня, те двое на неё облокотились, словно на подушку, и разговаривают поверх головы.</p>
+<p>«Соне ведь очень неудобно», думает Алис, «но раз спит, значит ей всё равно».</p>
+<p>Стол большущий, однако все трое сгрудились в углу. «Места нет! Места нет!» – закричали чаёвники, увидав подходящую Алис.<br>
+«Полно места!» – возмущённо сказала она и заняла обширное кресло во главе стола.</p>
+<p>– Наливай винишко. – угощает Майский Заяц.</p>
+<p>Алис оглядела стол, но ничего кроме чая нету. «Не вижу никакого вина», говорит.</p>
+<p>– Не завезли, – поясняет Майский Заяц.</p>
+<p>– Значит, и предлагать его не больно-то вежливо. – рассержена Алис.</p>
+<p>– Не больно-то вежливо подсаживаться без приглашены!, – отражает удар Майский Заяц.</p>
+<p>– Я не знала, дескать стол ваш – ведь стоит гораздо больше трёх приборов.</p>
+<p>– Тебе пора постричься. – изрекает Маячник. Он уже давно смотрит на Алис с огромным любопытством, но в разговор вступил впервые.</p>
+<p>– Вам надо научиться не лезть с обидными замечаньями. – назидательно осаживает его Алис, – они звучат весьма грубо.</p>
+<p>Услышав последние слова. Маячник широко раскрыл глаза, но сказал только: «Чем ворон похож на письменный стол?»</p>
+<p>«Ага, щас станет поприкольней!» думает Алис. «Рада, что перешли к загадкам». – Пожалуй, найти ответ сумею, – произносит вслух.</p>
+<p>– В смысле, уверена, мол сумеешь отгадать? – вопрошает Майский Заяц.</p>
+<p>– Вот именно.</p>
+<p>– Но ведь тогда придётся сказать то, чего думаешь. – продолжает Майский Заяц.</p>
+<p>– А я так и делаю, – запальчиво заявляет Алис, – по крайней мере... во всяком случае думаю, чего говорю... ведь это, понимаете ли, одно и то же.</p>
+<p>– Совсем не одно и тоже! – не согласен Маячник. – Небось ещё скажешь «Я вижу, чего ем» равнозначно выраженью «Я ем, чего вижу»!</p>
+<p>– Небось ещё скажешь, – подхватывает Майский Заяц. – «Мне нравится, чего получаю» равнозначно выраженью «Получаю, чего мне нравится»!</p>
+<p>– Небось ещё скажешь, – бормочет Соня, которая вроде бы вещает во сне, – «Я дышу, пока сплю» равнозначно выраженью «Я сплю, пока дышу»!</p>
+<p>– Для тебя-то уж наверняка равнозначно, – сказал Маячник, и разговор затух; с минуту все сидели молча, зато Алис обмозговывала всё, чего припомнилось про воронов и письменные столы – не столь уж, честно говоря, много.</p>
+<p>Первым нарушил тишину’ Маячник.</p>
+<p>«Какое сегодня число?» спрашивает, повернувшись к Алис; а сам достаёт из кармана часы и беспокойно на них смотрит, всю дорогу потряхивая да поднося к уху.</p>
+<p>Алис чуток подумала: «Двадцать девятое».</p>
+<p>– На два дня врут! – вздохнул Маячник. – Говорил тебе, сливочное масло для пятерёнок не подходит! – добавил, сердито глядя на Майского Зайца.</p>
+<p>– Вкуснейшее масло-то! – покорно оправдывается тот.</p>
+<p>– Да, но небось ещё и крошки внутрь попали, – ворчит Маячник, – зря ты мазал ножом для хлеба.</p>
+<p>Майский Заяц взял часы, хмуро осмотрел: затем макнул в чашку с чаем, снова оглядел; но не придумал ничего лучше первого замечанья: «Вкуснейшее, понимаешь ли, масло-то».</p>
+<p>Алис давно уже с любопытством наблюдала поверх его плеча.</p>
+<p>«Какие часики мудрёные!» говорит. «Показывают число, а не сколько время!»</p>
+<p>– С какой стати время-то? – пробубнил Маячник. – А твои год показывают?</p>
+<p>– Конечно, нет. – с большой готовностью ответила Алис. – но лишь потому, что один и тот же год длится столько времени подряд.</p>
+<p>– Вот и с моими прям та же петрушка, – говорит Маячник.</p>
+<p>Алис жутко озадачена. В заявлении Маячника вроде б нет ни капли смысла, хотя буквально все слова знакомые.</p>
+<p>«Не совсем вас понимаю», наиучтивейше молвит.</p>
+<p>– Соня вновь задремала. – Маячник плеснул той на нос чуток горячего чая.</p>
+<p>Соня раздражённо тряхнула головой и говорит, не открывая глаз: «Конечно-конечно; именно это как раз сама собиралась сказать».</p>
+<p>– Ну, загадку решила? – опять поворачивается к Алис Маячник.</p>
+<p>– Не-а, сдаюсь; какой ответ-то?</p>
+<p>– Не имею ни малейшего представления.</p>
+<p>– Я тоже. – мотает башкой Майский Заяц.</p>
+<p>Теряя терпенье, Алис вздохнула: «Полагаю, время подобало бы использовать с большим проком, нежели растрачивать на загадки, не имеющие ответов».</p>
+<p>– Кабы ты знала Время столь же хорошо, сколь я. – говорит Маячник. – не поминала б про использование его. Наоборот – оно использует тебя.</p>
+<p>– Не понимаю, в каком смысле. – недоумевает Алис.</p>
+<p>– Ещё бы! – Маячник презрительно задрал нос. – Осмелюсь предположить, ты с Временем даже отродясь не разговаривала!</p>
+<p>– Пожалуй, и так. – осторожно подбирает слова Алис, – но наверняка знаю: вынуждена с ним бороться – ну, на уроках там.</p>
+<p>– Опа! Причина обнаружена. – говорит Маячник. – Борьбы оно ни в жисть не потерпит. Зато, ежели только ты с ним в хороших отношеньях, сделает всё, чего твоей душеньке угодно, с отсчётом часов. Предположим, к примеру, наступает полдевятого утра, начало занятий; тебе надо лишь шушукнуть Времени на ушко, и стрелки вмиг прокручиваются! Полвторого – пора обедать!</p>
+<p>(«Вот бы впрямь пора», шепнул под нос Майский Заяц.)</p>
+<p>– Здоровско, конечно. – задумчиво произносит Алис, – но тогда... я ведь ещё, понимаете ли, не проголодаюсь.</p>
+<p>– Сперва-то, вероятно, не особо. – согласен Маячник. – однако его не возбраняется подзадержать в половине второго на сколь угодно долго.</p>
+<p>– То бишь вы эдак умеете? – спрашивает Алис.</p>
+<p>Маячник скорбно помотал головой: «Увы, нет! В самом начале мая мы поссорились – прям перед тем как он, понимаешь ли, замаялся... (тычет чайной ложечкой в Майского Зайца) ... ну на большом творческом вечере у Дамы Червей, где мне предстояло исполнять</p>
+<p><em><br>
+Мельтеши, мельтеши,<br>
+Мышь летучая в тиши!</em></p>
+<p>Знаешь, вероятно, песенку-то?</p>
+<p>– Вроде бы чего-то похожее слышала.</p>
+<p>– А дальше, понимаешь ли, эдак:</p>
+<p><em><br>
+Высоко же ты паришь –<br>
+Словно чайник – выше крыш.<br>
+Мельтеши, мельтеши...</em></p>
+<p>Тут Соня встряхнулась и подхватила во сне:</p>
+<p><em>«Мельтеши, мельтеши, мельтеши, мельтеши... »</em>,</p>
+<p>да всё голосит-го лосит-голосит-голосит, пришлось даже ущипнуть, чтоб прекратила.</p>
+<p>– Короче, едва закончил первый запев, – продолжает Маячник. – Дама вскочила и развопилась: «Он убивает время! Оттяпать ему голову!»</p>
+<p>– Прям жуткая свирепость какая-то! – воскликнула Алис.</p>
+<p>– И с тех самых пор. – мрачно повествует Маячник, – оно не желает исполнять моих просьб! Теперь всю дорогу пять часов.</p>
+<p>Тут в голову Алис пришла блестящая догадка. «Дык вот почему на стол накрыто столько чайных принадлежностей?» спрашивает.</p>
+<p>– Ага, потому, – вздохнул Маячник, – ведь всю дорогу время полдника с чаем, даже не всегда успеваем помыть посуду.</p>
+<p>– Но тогда, наверно, пересаживаетесь к следующему прибору? – спрашивает Алис.</p>
+<p>– Вот именно, – сказал Маячник. – После того как замусолим.</p>
+<p>– А... чего происходит при возвращены! в исходную точку? – отваживается спросить Алис.</p>
+<p>– А... не сменить ли нам предмет обсужденья? – зевнув, передразнил её Майский Заяц. – Больно уж утомительный. Предлагаю юной особе рассказать нам какую-нибудь сказку.</p>
+<p>– Да я вроде б ни одной не знаю, – встревожилась Алис от эдакого предложенья.</p>
+<p>– Тогда пусть Соня! – закричали оба. – Соня, подъём! – и одновременно ущипнули с обеих сторон.</p>
+<p>Та медленно открыла глаза.</p>
+<p>«А я и не спю», говорит слабым-хриплым голоском, «Слышала дословно все, о чём вы, ребятки, говорили».</p>
+<p>– Сказку давай! – требует Майский Заяц.</p>
+<p>– Ага, пожалуйста! – просит Алис.</p>
+<p>– Да побыстрее. – добавляет Маячник. – не то снова заснёшь на половине.</p>
+<p>– Жили-были-три-маленькие-сестрички, – в страшной спешке начинает Соня. – звали-их-Элси-Ласи-и-Тилли, обитали-они-на-дне-колодца...</p>
+<p>– А чем питались? – спрашивает Алис, коя вечно проявляет любопытство к вопросам еды и питья.</p>
+<p>– Рис ели, – после довольно длительных раздумий сообщила Соня.</p>
+<p>– Просто, понимаете ли, немыслимо. – осторожно замечает Алис. – они ведь заболели б.</p>
+<p>– И заболели, си-ильно заболели.</p>
+<p>Алис норовит представить, каково бы жить в столь диковинных условьях, и, чересчур ошарашенная, продолжает выспрашивать: «Но почему на дне колодца-то жили?»</p>
+<p>– Добавляй ещё чаю. – весьма настойчиво угощает Алис Майский Заяц.</p>
+<p>– Я пока что не наливала ничего. – оскорблённо откликается Алис. – посему не способна добавить.</p>
+<p>– Ты имеешь в виду, мол не способна отбавить, – встревает Маячник. – ведь добавить к ничего весьма просто.</p>
+<p>– А вашего мненья вообще никто не просит. – огрызается Алис.</p>
+<p>– Дык кто же в итоге кого норовит обидеть? – ликующе спрашивает Маячник.</p>
+<p>Алис вообще-то не знала, чего ответить, потому налила себе чаю да намазала хлеб маслом; затем повернулась к Соне и повторила вопрос: «Почему на дне колодца-то жили?» Соня вновь долго обдумывала; после говорит, задрёмывая: «Коло’ц ведь рис’в’ый».</p>
+<p>– Таких не бывает! – весьма сердито начинает спор Алис, но Маячник с Майским Зайцем зашикали, а Соня надулась: «Раз не уме’шь по-вежлив’му, сама се’ сказк’ и договарь’вай».</p>
+<p>– Ой нет, пожалуйста, продолжайте! – с преувеличенным почтеньем просит Алис. – Больше перебивать не стану. По-моему, один такой вроде бы где-то существует.</p>
+<p>– Как же, один! – фыркает Соня.</p>
+<p>Однако уступила и продолжает: «В общем, три сестрички... учились, понимаешь ли, рисовать...»</p>
+<p>– Чего-чего совать? – торопит Алис, совсем позабыв про обещанье.</p>
+<p>– Рис. – на сей раз без раздумий ответила Соня.</p>
+<p>– Желаю чистую чашку, – вмешался Маячник. – Давайте каждый подвинется на следующее кресло.</p>
+<p>Говорит, а сам уж пересаживается, вслед за ним – Соня; Майский Заяц перелез на место Сони. Алис же довольно неохотно села в кресло Майского Зайца. От перемещений выиграл только Маячник; зато Алис стало гораздо хуже, чем прежде, ибо незадолго до того Майский Заяц опрокинул себе в тарелку кувшин молока. Алис не хотела вновь злить Соню, посему начинает весьма осторожно: «Но я не поняла. Куда они рис совали?»</p>
+<p>– Ну вот воду из водяного колодца достал – и суй, куда охота. – объясняет Маячник. – Короче, по-мойму, рис из рисового колодца тоже... а, дурында?</p>
+<p>– Но они ведь находились внутри колодца, – обращается Алис к Соне, предпочитая последнего замечанья не замечать.</p>
+<p>– Ес’ес’но, – та ей, – ‘щё в ‘кой нутри!..</p>
+<p>Сие объяснение настолько сбило Алис с толку – она аж позволила Соне излагать некоторое время, не перебивая.</p>
+<p>– Они учил’сь рис’вать. – зевая да потирая глаза вещает та, ибо прям совсем засыпает. – пр’чём рис’вали всяч’ские пр’дметы... ваще всё, нач’нающе’ся на «эм»...</p>
+<p>– Почему на «эм»? – спрашивает Алис.</p>
+<p>– А почему б и нет? – вопросом на вопрос Майский Заяц.</p>
+<p>Алис промолчала. К тому времени Соня уже закрыла глаза и задрёмывала; но пискнув от щипка Маячника, встрепенулась и продолжила: «...нач’нающе’ся на «эм», ну там мыш’ловки, м’слёнки, мгн’венья, множ’ства... зна’шь ведь в’раженье «не’счислимое множ’ство»... хоть раз в’дала эдак’ю ф’говину – рисун’к множ’ства?»</p>
+<p>– Вообще-то, коль уж спрашиваете. – окончательно сбита с толку Алис, – по-моему, не...</p>
+<p>– Тогда лучше помолчала б, – перебивает Маячник.</p>
+<p>Эдакая грубость переполнила чашу терпенья; Алис с отвращением встала и пошла прочь; Соня сразу опочила, остальные вообще её ухода не заметили, а ведь она два-три раза обернулась в надежде, мол позовут обратно; напоследок вообще заметила, как те норовят запихнуть Соню в чайник.</p>
+<p>– Хоть убейте, а туда больше ни ногой! – зарекается Алис, выбирая, по какой дороге идти через лес. – Самое дурацкое чаепитье, в каком за всю жизнь участвовала.</p>
+<p>Только проговорила – глядь, а на одном из деревьев дверь, ведущая прямо в ствол. «Очень любопытненько!» думает она. «Но сегодня всё любопытненько. По-моему, надо заходить не раздумывая». Ну и шагнула внутрь.</p>
+<p>И опять очутилась в том длиннющем помещенья, прям возле стеклянного столика. «Ну уж на сей-то раз справлюсь получше», думает, и первым делом взяла золотой ключик да отперла дверцу, ведущую в сад. Затем принялась понемножку откусывать от гриба (ведь ломтик-то сберегла в кармане), пока не стала самой-себе-полноразмерной по колено; после шагнула в проходик; хоп – и она, наконец, в восхитительном садике, меж ярких цветочных клумб да прохладных водомётов.</p>
+<h3 data-heading="ГЛАВА 8. Игра в шары у Дамы">ГЛАВА 8. Игра в шары у Дамы</h3>
+<p>Возле входа в сад стоит пышное розовое дерево, и цветут на нём белые розы, но три садовника деловито покрывают их красной краской. Алис подошла ближе, ну поглазеть – весьма любопытно ведь – и услышала, как один говорит: «Эй. Пятёрка, осторожней! Чё на меня краской брызгаешь?»</p>
+<p>– Нечаянно, – угрюмо бубнит Пятёрка. – Семёрка вон под локоть толкнул. Семёрка поднял глаза: «Давай-давай. Пятёрочка! Вечно вину на других перекладываешь!»</p>
+<p>– А ты ваще бы помолчал! – тот ему. – Я слыхал, как Дама буквально вчера сказала, дескать тебя давно пора обезглавить.</p>
+<p>– За что? – спрашивает заговоривший первым.</p>
+<p>– Не твоё собачье дело. Двойка! – Семёрка в ответ.</p>
+<p>– А вот и его! – Пятёрка долдонит. – Ужо ему расскажу’... как ты заместо лука притащил повару тюльпанные луковицы.</p>
+<p>Бросив кисть наземь. Семёрка успел только выпалить: «Из всех, блин, поклёпов...», как взгляд его упал на Алис, стоящую, наблюдая за ними; он вдруг осёкся, остальные тоже повернули головы, и все низко поклонились.</p>
+<p>– Не объясните ли, – слегка застенчиво молвит Алис, – зачем вы красите розы?</p>
+<p>Пятёрка с Семёркой молча глянули на Двойку. Тот начал шёпотом: «Ну, понимаете ли, барышня, дело вот в чём: на энтом тут деревце надлежало цвесть красным розам, а мы невзначай маху дали, посадили по ошибке с белыми; кабы Даме пронюхать, нам всем, понимаете ли, оттяпают головы. Короче, понимаете ли, барышня, прежде нежели ей пройтить, прикладаем все силы, дабы...»</p>
+<p>Тут Пятёрка, пристально смотревший в глубь сада, воскликнул: «Дама! Дама!» и трое садовников бухнулись ниц. Послышался перестук множества ног; Алис огляну лась, горя желаньем увидеть Даму.</p>
+<p>Первыми ступают военные, несущие кресты-трилистники, видом все похожи на троих садовников: плоские, прямоугольные, по углам руки-ноги; за ними десять придворных, с головы до пят разукрашенных бубновыми ромбами, причём идут, как и военные, по двое. Следом – высокородные дети: десять карапузов весело подпрыгивают, держась ручка за ручку, парами; все расшиты сердечками-червочками. Потом гости – в основном, Короли да Дамы, и среди них Алис углядела Белого Кролика: частит возбуждённой скороговоркою; всему, чего услышит, улыбается; проскочил мимо, её не заметив. Далее шагает Валет Червей, несущий королевский венец на малиновой бархатной подушечке; а замыкают великолепное шествие КОРОЛЬ И КОРОЛЕВА ЧЕРВЕЙ.</p>
+<p>Алис посомневалась, не надлежит ли, подобно трём садовникам, пасть ниц, но не сумела вспомнить, слыхала ль чего про такое правило при шествиях; «что за толк тогда от эдакой вереницы», думает. «коль людям надо ложиться лицом вниз и ни фига не видеть?» Короче, стоит себе на месте да ждёт.</p>
+<p>Поравнявшись с Алис, все участники шествия застыли и глядят на неё, а Дама сурово спрашивает: «Кто это?» Обратилась-то к Валету Червей, но тот в ответ лишь с улыбкой поклонился.</p>
+<p>– Болван! – нетерпеливо вскинула голову Дама: и, поворачиваясь к Алис, на том же дыхании: «Как тебя зовут, дитя?»</p>
+<p>– Алис, с позволенья вашего величества. – очень вежливо представилась Алис; а про себя добавила: «Делов-то: в конце концов всего-навсего колода карт. Фиг ли их бояться-то!»</p>
+<p>– А те кто такие? – любопытствует Дама, указывая на трёх лежащих около дерева садовников; ибо, видите ли, лежат-то они лицом вниз, а рубашки у них сзади точно такие же, как у всей остальной колоды, вот она и не в состояньи определить, кто там: садовники, или военные, или придворные, то ли трое её детишек.</p>
+<p>– Я-то откуда знаю? – удивляясь собственной смелости, вопросом на вопрос отвечает Алис. – Не моя это забота.</p>
+<p>Дама стала аж малиновой от ярости, диким’-свирепым зверем на неё зыркнула и заверещала: «Отрубить ей голову! Отр...»</p>
+<p>– Глупости! – весьма громко-решительно оборвала Алис, и Дама замолкла.</p>
+<p>Король положил ей ладонь на предплечье и говорит робко: «Учти, дорогая: она всего лишь ребёнок!»</p>
+<p>Супруга, злобно от него отвернувшись, приказывает Валету: «Переверни их!» Тот брезгливо эдак, мысочком сапога, выполнил приказанье.</p>
+<p>– Встать! – громко взвизгнула Дама; трое садовников мгновенно вскочили и ну кланяться Королю, Даме, высокородным детишкам, да вообще всем присутствующим.</p>
+<p>– Отставить! – вопит Дама. – У меня от вас голова кругом идёт. – Затем, поворачиваясь к розовому дереву, вопрошает: «Чего тут делали?»</p>
+<p>– С высочайшего позволенья вашего величества, – чрезвычайно почтительно говорит Двойка, опускаясь на колено, – пытались...</p>
+<p>– Сама вижу! – перебила Дама, осматривавшая тем временем розы. – Отрубить им головы! – и шествие поплыло дальше, а трое военных задержались, дабы привести приговор в исполненье: злосчастные садовники подбежали за помощью к Алис.</p>
+<p>– Никто и не подумает вас обезглавливать! – сунула их та в стоявший рядом большой цветочный горшок. Трое военных минуту-другую порыскали вокруг в поисках садовников, а после преспокойно пошагали вслед за шествием.</p>
+<p>– Отрубили? – орёт Дама.</p>
+<p>– С позволенья вашего величества, пропали их головы! – гаркнули военные.</p>
+<p>– Вот и замечательно! – вопит Дама. – В шары сгоняем?</p>
+<p>Военные молча глядят на Алис, ибо вопрос явно предназначен ей.</p>
+<p>– Да! – крикнула Алис.</p>
+<p>– Ну так вперрёд! – раскатисто грохочет Дама, и Алис примкнула к шествию, сгорая от любопытства, чего произойдёт дальше.</p>
+<p>– Чудный... причудный нынче денёк! – проговорил рядом робкий голос.</p>
+<p>Она шла обочь Белого Кролика, беспокойно заглядывающего ей в глаза.</p>
+<p>– Чрезвычайно, – согласна Алис. – А где Княгиня?</p>
+<p>-Тсс! Тсс! – поспешно шепнул Кролик, взволнованно гляну в через плечо; затем поднялся на цыпочки и поднёс губы к её уху: «Приговорена к смертной казни».</p>
+<p>– Как так?</p>
+<p>– Ты сказала «Какжаль!»? – переспрашивает Кролик.</p>
+<p>– Не-а. Ни о какой жалости даже речи нет. Я сказала «Как так?»</p>
+<p>– Побила Даму... – начал Кролик.</p>
+<p>Алис радостно взвизгнула.</p>
+<p>– Ой, тсс! – испуганно шепчет тот. – Дама услышит! Чересчур, понимаешь ли, поздно пришла, а Дама говорит...</p>
+<p>– По местам! – рявкнула Дама громовым голосом, гости забегали в разных направленьях, запинаясь друг за дружку; однако вскоре заняли положенные места – игра началась.</p>
+<p>Алис подумала, дескать сроду не видала столь несуразной площадки для игры в шары: вся в грядках-бороздах; шарами служат живые ежи, молоточками – живые же фламинго, а военные, сложившись пополам да стоя на кистях и ступнях, изображают воротца.</p>
+<p>В первое время трудней всего оказалось укрощать фламинго: Алис преуспела в довольно плотном зажиманьи его тела с болтающимися ногами под мышкой, но стоило ей, замечательно выпрямив ему шею, замахнуться для удара по ёжику фламинжьей головой, тот, как правило, перекручивался и глядел ей в глаза столь изумлённо, что не захочешь, а рассмеёшься; опустив же его голову и вновь норовя прицелиться, она с досадой обнаруживала, мол ёж выпростал ножки и отползает, к тому ж вообще в направленьи, куда собирается его послать, обязательно торчит грядка или зияет борозда, а поскольку сложившиеся пополам военные постоянно вскакивали и убегали в другие концы площадки.</p>
+<p>Алис вскоре пришла к выводу, дескать состязанье-то впрямь жутко непростое. Игроки лупили все сразу, не ждя очереди, постоянно споря, дерясь за ежей; причём весьма скоро Дама распалилась-разъярилась, топает направо-налево, чуть не каждую минуту крича: «Отрубить ему голову!» или «Отрубить ей голову!»</p>
+<p>Алис становилось всё больше не по себе; до стычки с Дамой, конечно, пока не дошло, но она понимает: запросто дойдёт, в любой миг, «и чего тогда со мной учудят?» думает, «тут жутко любят обезглавливать; поразительно, что хоть кто-то ещё цел!»</p>
+<p>А сама поглядывает, куда бы смыться, да соображает, сумеет ли улизнуть незаметно, и тут замечает в воздухе непонятное явленье; сперва оно здорово озадачило, но после некоторого рассмотрения оказалось улыбкой, ну она и думает: «Котяра Чеширский; теперь будет, с кем поболтать».</p>
+<p>Чуть только рта стало достаточно для разговоров, Кот спрашивает: «Как игрра прродвигается?»</p>
+<p>Алис подождала появленья глаз и приветственно кивнула. «Говорить-то с ним бесполезно», думает. «пока уши не проступят, ну хотя б одно». Вскоре обрисовалась вся голова. Алис поставила фламинго на землю и стала рассказывать об игре, радуясь, мол кто-то слушает. Кот же вроде бы решил, дескать достаточная его часть уже на виду и дальше проявляться не стал.</p>
+<p>– По-моему, играют вообще-то нечестно, – начала Алис с некоторым недовольством, – и так жутко спорят, сами себя не слыша... впечатление, будто правил точных нету; во всяком случае, коль даже есть, никто их не придерживается... вы не представляете, сколько сложностей из-за оду шевлённости снаряжения; например, следующие воротца, которые мне надо пройти, гуляют в другом конце площадки... только-только нацелилась вышибить ежа Дамы – он увидел, как мой катится, и убежал.</p>
+<p>– Нрравится тебе Дама? – тихонько спрашивает Кот.</p>
+<p>– Ни фига: вся из себя столь жутко... – тут Алис заметила: Дама стоит прямо позади неё, прислушиваясь, а потому сразу песенку сменила. – ...нацелена на победу – аж вряд ли кто сомневается в исходе игры.</p>
+<p>Дама с улыбочкой пошла дальше.</p>
+<p>– С кем и зачем ты тут разговариваешь? – шагнул к Алис Король; высоко вскидывая брови, глянул на голову Кота.</p>
+<p>– Позвольте познакомить вас с моим другом – Чеширским Котом.</p>
+<p>– Внешность совсем не приглядная, – морщится Король, – однако руку мне поцеловать разрешаю, коль ему охота.</p>
+<p>– Пожалуй, воздерржусь.</p>
+<p>– Не дерзи, – Король предупреждает, – и нечего на меня так смотреть! – А сам всё-таки встал позади Алис.</p>
+<p>– За погляд денег не берут, даже с котов и кошек. – та ему. – Прочла в книжке; только не помню в какой.</p>
+<p>– В общем, его надо убрать, – очень решительно заявил Король и подозвал проходившу ю мимо Даму. – Дорогая! Пожалуйста, будь добра, убери отсюда кота.</p>
+<p>А у той лишь один способ утрясать любые неурядицы, большие и малые. «Отрубить ему голову!» говорит, даже взгляда не бросив.</p>
+<p>– Пойду за палачом, – сразу заспешил Король.</p>
+<p>Алис решила вернуться понаблюдать за игрой, к тому ж издали доносился гневный ор Дамы. До того она уже слыхала приговоры к казни трём игрокам, прозевавшим очередь, но вообще-то ей совсем не нравится весь ход состязания, ибо игра столь путаная – ввек не поймёшь, твоя иль не твоя очередь. Короче, пошла искать ежа. А тот как раз дерётся с другим ёжиком – прекрасная возможность для Алис вышибить из игры соперника: да только вот незадача: фламинго убрёл в другой конец сада, где беспомощно-безуспешно – Алис ведь хорошо видно – норовит взлететь на дерево. Пока ловила да тащила обратно фламинго, драка закончилась, и оба ежа скрылись из виду. «Но не невелика беда», думает она. «поскольку все воротца гуляют в противоположном углу площадки». Короче, крепко стиснула его под мышкой, дабы снова не убежал, и возвращается ещё немного поболтать с другом.</p>
+<p>Подойдя ж к Чеширскому Коту, с удивленьем обнаружила вкруг того довольно приличную толпу; палач, Король и Дама пререкаются, причём говорят одновременно, а остальные помалкивают и выглядят весьма обеспокоенными. Чуть только Алис приблизилась, все трое попросили её разрешить спор да повторили доводы, но поскольку выпалили их в один голос, на самом деле трудновато понять, о чём в точности толкуют-то.</p>
+<p>Точка зренья палача: нельзя отрубить голову, раз нету тела, от коего её оттяпывать; прежде ему совершать эдакого не доводилось, и в его лета начинать он не собирается.</p>
+<p>Мнение Короля: всё, имеющее голову, обезглавить не заказано, а вот околёсицу нести не надо.</p>
+<p>Дама высказывает следующее сужденье: коль немедленно чего-то не предпримут, всех окружающих поголовно казнят. (Именно из-за последнего обоснования гости глядят хмуро да озабоченно.)</p>
+<p>Алис ничего не придумала, кроме как сказать: «Кот Княгинин, лучше всего её спросить».</p>
+<p>– Она в тюрьме, – Дама повернулась к палачу, – веди её сюда.</p>
+<p>Тот помчал стрелой.</p>
+<p>Едва палач скрылся из виду, голова Кота начала линять и ко времени его прихода с Княгиней исчезла полностью; ну Король с палачом принялись бегать туда-сюда как угорелые, её искать, а остальные возобновили игру.</p>
+<h3 data-heading="ГЛАВА 9. Судьба Черепаха Якобы">ГЛАВА 9. Судьба Черепаха Якобы</h3>
+<p>– Даже представить себе не в силах, как я рада нынешнему свиданью, дорогая моя старая знакомка! – Княгиня ласково берёт Алис под руку, и они идут вдвоём по площадке.</p>
+<p>Алис тоже очень рада – ну, что та в столь хорошем настроены!; небось, думает, при знакомстве на кухне распалилась-разгорячилась только из-за перца.</p>
+<p>– Вот стану Княгиней, – про себя говорит (без особой, правда, надежды). – вообще перца на кухне держать не буду. Похлёбка и без него весьма вкусная получается... Похоже, именно перец делает людей горячими. – а сама очень довольна, мол обнаружила вроде как новую закономерность. – уксус – кислыми... лук – едкими... от травки-пупавки они опупевают... благодаря сладкому с детишками легко сладить. Кабы взрослые хоть про последнее знали; тогда не жмотничали б, а то прям леденечика, понимаете ли, у них не допросишься...</p>
+<p>А сама уж позабыла вообще про Княгиню и аж чуток вздрогну ла, услыхав возле уха её голос: «Ты о чём-то замечталась, дорогуша, и забываешь про беседу. Сходу-то я не скажу, какой на сей счёт следует вынести урок, но через некоторое время припомню».</p>
+<p>– Пожалуй, тут и выносить нечего. – отважно заявляет Алис.</p>
+<p>– Но-но, дитя! Уроки выносят из всего, надо лишь уметь их обнаруживать. – И плотней прижалась к девочкиному боку.</p>
+<p>Алис эдакая близость вовсе не понравилась; во-первых, Княгиня жутко безобразная, во-вторых, ей хватило росту, чтобы положить подбородок на плечо Алис, а тот оказался на диво острым. Но грубить неохота. Посему она изо всех сил терпит.</p>
+<p>– Игра пошла повеселей, – говорит, – ну, чтоб поддерживать потихоньку беседу.</p>
+<p>– Да-да, и на сей счёт мы выносим урок: «Ах, мир поворачивается быстрей из-за любви, из-за любви!»</p>
+<p>– А кто-то говорил, – шепчет Алис. – дескать кабы все вели себя поосторожней!</p>
+<p>– Мм, ну да! Смысл почти тот же. – Княгиня воткнула острый подбородочек в плечо Алис. – и на сей счёт мы выносим такой урок: «Главное смысл, а не какими он выражен словами».</p>
+<p>«Прям помешана из всего выносить уроки!» подумала Алис.</p>
+<p>– Ты, естественно, задаёшь себе вопрос, почему я не обнимаю тебя вокруг пояса, – некоторое время спустя говорит Княгиня. – Причина проста: сомневаюсь в добронравии твоего фламинго. Хочешь – поставим опыт?</p>
+<p>– Запросто щипнёт, – предупреждает Алис, вовсе не рвущаяся ставить эдакие опыты.</p>
+<p>– Весьма похоже на правду; фламинго и горчица жутко щипучие. Отсюда урок: «Рыбак рыбака видит издалека».</p>
+<p>– Только горчица – не рыбак, не рыба, и даже не птица, – вдруг заговорила виршами Алис.</p>
+<p>– Как всегда верно; сколь же складно ты излагаешь!</p>
+<p>– А кладут её в квас, по-моему.</p>
+<p>– Точно, с помоями, – недослышавшая Княгиня вроде бы готова согласиться со всем, чего скажет Алис. – Только не к вас, а к вам... Отсюда урок: «Чем гуще помои у нам, тем жиже к вас».</p>
+<p>– Ой, вспомнила! – восклицает Алис, проворонившая последние рассужденья Княгини. – Она овощ. Хоть и не похожа, а из ихней семейки.</p>
+<p>– Целиком-полностью с тобой согласна; и отсюда урок: «Стань тем, на чего желаешь быть похожим»... или, проще говоря, «Ввек не воображай, якобы ты не иная, нежели, пожалуй, покажешься другим, дабы прежняя ты или ранее казавшаяся тобою представляла из себя только то, чем ты была, а не мнилась бы им чем-то другим».</p>
+<p>– По-моему, поняла бы лучше, – очень вежливо говорит Алис, – кабы записала на бумажку; со слуха не больно-то доходит.</p>
+<p>– Это ещё семечки по сравненью с тем, чего сумела бы наговорить, если б посчитала необходимым. – довольна Княгиня.</p>
+<p>– Пожалуйста, не затрудняйте себя более длинными выражениями.</p>
+<p>– При чём тут затрудненья! Всё, мною до сих пор сказанное, я тебе дарю.</p>
+<p>«Подарочек вроде как из лавки уценённых товаров!» думает Алис. «Хорошо ещё на день рожденья эдаких не делают!» Но вслух сказать не решилась.</p>
+<p>– Опять мечтаешь? – ещё раз ткнула Княгиня острым подбородочком.</p>
+<p>– У меня имеется право помечтать. – резко отвечает Алис, ощущая уже лёгкую досаду.</p>
+<p>– Такое же, как у поросят полетать; и отсюда ур...</p>
+<p>Но тут к величайшему удивленью голос Княгини сошёл на нет прямо посреди любимого словца, а рука, коей держит под руку, задрожала. Алис подняла взгляд – перед ними, грозно нахмурившись, стоит Дама со скрещенными на груди руками.</p>
+<p>– Прекрасная погода, ваше величество! – едва слышным, слабым голосом произнесла Княгиня.</p>
+<p>– В общем, честно тебя предупреждаю, – кричит Дама, притопывая, – либо отвалишь ты, либо отвалится твоя башка, причём в полмгновенья! Выбирай!</p>
+<p>Княгиня сделала выбор, и в четверть мгновенья скрылась с глаз.</p>
+<p>– Продолжим игру, – обращается Дама к Алис, которая чересчур перепугана, дабы вымолвить хоть словечко, но медленно плетётся за ней к площадке для игры в шары. Остальные гости, воспользовавшись отлучкой Дамы, отдыхали в тенёчке; однако, едва её завидев, торопливо возобновили состязанье, а Дама только вскользь заметила, дескать ещё миг задержки – и пусть прощаются с жизнями. Всю игру Дама не прекращала придираться к участникам и выкрикивать «Отрубить ему голову!» или «Отрубить ей голову!» Приговорённых уводили военные, коим, естественно, следовало прекращать изображать воротца, посему часа через пол ни одних не осталось, а все игроки, за исключеньем Короля, Дамы да Алис, попали под стражу и ждали казней. Тут Дама, весьма запыхавшаяся, соревнованье прекратила и спрашивает Алис: «Ты ещё не видела Черепаха Якобы?»</p>
+<p>– Не-а. Честно говоря, не понимаю, чего вы подразумеваете.</p>
+<p>– Из него варят Якобы Черепаховую Похлёбку, – объясняет Дама.</p>
+<p>– Сроду не видывала и даже про такого не слыхивала.</p>
+<p>– Ну так вперрёд, и он поведает тебе свою судьбу.</p>
+<p>Пока отходили, до Алис донёсся шёпот Короля игрокам: «Все помилованы».</p>
+<p>«Ага, вот здоровско!» думает Алис, ибо до того от количества казней, намеченных Дамой, довольно сильно приуныла.</p>
+<p>Вскоре они пришли к Грифону, крепко спавшему на солнцепёке. (Коль не знаете, кто такой, посмотрите на рисунок – крылатый лев с орлиной головою.)</p>
+<p>«Подъём, лежебока!» воскликнула Дама. «Отведи юную особу к Черепаху Якобы, пусть послу шает про его судьбу. А мне надо вернуться, проследить за кой-какими назначенными казнями». И ушла, бросив Алис наедине с Грифоном. Вид его ей не особо понравился, но в общем-целом, думает, куда безопасней остаться с ним, нежели топать за свирепой Дамой; в общем, ждёт. Грифон сел и продрал глаза; затем пронаблюдал, как Дама скрылась из поля зрения; после фыркнул «Умора!» то ли про себя, то ли обращаясь к Алис.</p>
+<p>– Чего уморительного-то?</p>
+<p>– Да она вон. – говорит Грифон. – Всё ейные грёзы, ваще; отродясь никого, понимаешь ли, не казнили. Вперрёд!</p>
+<p>– Все тут приказывают «Вперрёд!» – думает Алис, медленно за ним ступая. – Да мной всю жизнь сроду по стольку не помыкали, просто всю жизнь!</p>
+<p>Далеко идти не пришлось, вдали уже показался Черепах Якобы, грустно-одиноко сидящий на узеньком уступе скалы; подойдя ближе, Алис услышала вздохи, словно у него вот-вот разорвётся сердце. И глубоко ему посожалела.</p>
+<p>«О чём его печаль?» спрашивает Грифона; тот ответил почти теми же словами: «Всё евойные грёзы, ваще: нету у него никакой, понимаешь ли, печали. Вперрёд!»</p>
+<p>Короче, подходят к Черепаху Якобы, глядящему на них полными слёз глазами, но безмолвному.</p>
+<p>– Энта вот юная особа. – говорит Грифон, – у ей надоба узнать твою судьбу, без дураков.</p>
+<p>– А чё – поведаю. – сдавленным-глухим голосом говорит Черепах Якобы. – садитесь оба да не перебивайте, пока не закончу.</p>
+<p>Ну сели они, и несколько минут не раздаётся ни звука. Алис думает: «Как же он вообще закончит, коль даже не начинает». Но ждёт терпеливо.</p>
+<p>– Уродился-то я, – сказал наконец Черепах Якобы с глубоким вздохом, – Черепахом настоящим.</p>
+<p>Засим последовало весьма долгое молчанье, лишь изредка прерывавшееся клёкотом Грифона «Хджкррх!» да протяжными рыданьями Черепаха Якобы. Несколько раз Алис хотела встать со словами: «Спасибо, сударь, за любопытный рассказ», но почему-то не сомневалась, мол дальнейшее обязательно последует, и сидела тихо-смирно.</p>
+<p>– Детьми, – продолжил в конце концов Черепах Якобы, уже спокойнее, хотя всё ещё временами всхлипывая. – мы ходили в морское училище. Преподавал там старый Черепах – которого все называли Черепучилка...</p>
+<p>– Почему Черепучилка-то, раз его не пучило? – спрашивает Алис.</p>
+<p>– Тем не менее, все называли Черепучилка, ибо Черепашья училка, – гневно отвечает Черепах Якобы. – Вообще-то ты жутко тупая!</p>
+<p>– Стыдно задавать столь убогие вопросы, – добавил Грифон; оба сидят и молча глядят на бедняжку Алис, готовую сквозь землю провалиться.</p>
+<p>После Грифон говорит Черепаху Якобы: «Давай пошароваристей, чувачок! Неча на цельный день растягывать!» и тот сдвинулся с мёртвой точки:</p>
+<p>– Ну да, ходили в морское училище, хоть ты, пожалуй, не поверишь...</p>
+<p>– Я ничего такого не говорила! – перебивает Алис.</p>
+<p>– А сама не веришь, – упёрся Черепах Якобы.</p>
+<p>– Прикуси язычок! – добавляет Грифон, прежде чем Алис успела вновь открыть рот.</p>
+<p>И Черепах Якобы продолжил.</p>
+<p>– Образованье получили наилучшее... представляешь – занятья каждый день...</p>
+<p>– У меня тоже занятья ежедневно, – перебивает Алис, – потому нечего вам так уж нос-то задирать.</p>
+<p>– А имеются у вас там дополнительные за?.. – несколько обеспокоенно начал вопрос Черепах Якобы.</p>
+<p>– Да, туда входят французский и звукообразы, – не дослушала Алис.</p>
+<p>– А стирка?</p>
+<p>– Нет, конечно! – возмущена Алис.</p>
+<p>– Фу! тогда твоё училище не из лучших, – с огромным облегченьем выдохнул Черепах Якобы. – У нас в конце счёта каждый месяц присутствовала запись: «Дополнительно – французский язык, звукообразы и стирка».</p>
+<p>– Вряд ли вы в ней особо нуждались, живя на дне моря-то.</p>
+<p>– Мне на её изученье средств не доставало, – вздыхает Черепах Якобы. – Я постигал только обязательные предметы.</p>
+<p>– Какие же? – осведомляется Алис.</p>
+<p>– Первым делом, само собой, натаскивали Витать и Плясать, а после уж всяческие вычисляемые способы сведения счётов: Нерасположение. Отнимание. Устрашение. Перераспределение.</p>
+<p>– Прежде я про Устрашение вроде б не слыхала, – отважилась заметить Алис. – Что это за действие?</p>
+<p>Грифон от удивленья аж обеими лапами всплеснул: «Иди ты! Отродясь не слыхала про устрашнение!» восклицает, «А чё такое украшение, небось, знаешь?»</p>
+<p>– Ага, – с сомненьем молвит Алис. – в смысле... сделать чего-нибудь... красивей».</p>
+<p>– Ну а коль не врубаешься, чё такое устрашнение, то ты ваще простофиля.</p>
+<p>Алис расхотелось вникать подробней, потому она обратила взор на Черепаха Якобы: «А чего ещё приходилось изучать?»</p>
+<p>– Ну, изучали Зимописи, – загибает тот перепонки на ластах. – Зимописи, древние да современные, с Мореведеньем; затем Чертение – учителем-то подвизался морской чёрт, приплывал обычно раз в неделю: вот он-то и преподавал нам Чертение. Рисовку и Мёртвопись Жиром.</p>
+<p>– Про последнее расскажите поподробней.</p>
+<p>– Ну, сам-то я тебе не изображу, – говорит Черепах Якобы, – закостенел напрочь. А Грифон её не изучал.</p>
+<p>– Время не нашлося, – тот поясняет. – Я к учителю по Нетленке ходил зато. К древнему раку, ну который ещё греку... через реку... Без дураков.</p>
+<p>– А я к нему ни разу не попал, – вздыхает Черепах Якобы. – Поговаривали, преподавал гречку, грецкие орехи, да латунь, латы, латки-заплатки...</p>
+<p>– Про всё, про всё энтакое, – вздыхает в свою очередь Грифон; и оба чуда-юда уткнули морды в лапы.</p>
+<p>– Сколько ж вам в день давали уроков? – спешит Алис отвлечь их от неприятных воспоминаний.</p>
+<p>– В первый день десять. – всхлипывает Черепах Якобы, – на следующий девять, и так далее.</p>
+<p>– Во любопытное расписанье! – воскликнула Алис.</p>
+<p>– Их потому уроками и называют, – объяснил Грифон. – Надо штоб каждый день хотя б один урок пошёл впрок.</p>
+<p>Высказанная мысль для Алис чрезвычайно нова, и прежде чем задать очередной вопрос, она её чуток обдумала: «Значит, на одиннадцатый день в занятьях перерыв?»</p>
+<p>– Шамо шобой, – шмыгает носом Черепах Якобы.</p>
+<p>– А на двенадцатый чего?.. – не терпится Алис.</p>
+<p>– Хватит про уроки, – весьма решительно перебил Г рифон – Теперь поведывай ей про развлеченья.</p>
+<h3 data-heading="ГЛАВА 10. Крупный Морской Перепляс">ГЛАВА 10. Крупный Морской Перепляс</h3>
+<p>Черепах Якобы глубоко вздохнул и утёр тыльной стороной ласта глаза. Глядя на Алис, попытался говорить, но минуту-другую его душили всхлипы. «Прям словно костью подавился», сказал Грифон и принялся того встряхивать да лупить по хребту. Наконец Черепах Якобы, обретя голос, со слезами, бегущими по щекам, продолжил рассказ:</p>
+<p>– Вероятно, ты подолгу в глубине морской не живала. – («Не-а», вякает Алис). – к тому ж, наверно, и крупного морского рака не ведаешь. – (Алис начала «Ну как же, однажды отведывала...», но быстренько окоротив себя, говорит «Не-а, не довелось»), – потому даже представленья не имеешь, как изумителен Крупный Морской Перепляс!</p>
+<p>– Вот именно, – согласна Алис. – А на что он похож?</p>
+<p>– Ну, – Грифон отвечает, – перво-наперво становятся цепочкой вдоль берега...</p>
+<p>– Двумя цепочками! – восклицает Черепах Якобы – Тюлени, черепахи, сёмги, все остальные; затем, очистив пространство от медуз...</p>
+<p>– Вообще-то дело тягомотное. – перебивает Грифон, – ...делаешь два движенья вперёд...</p>
+<p>– А у каждого спутник – крупный морской рак! – кричит Г рифон.</p>
+<p>– Естественно, – кивает Черепах Якобы. – Делаешь два движенья вперёд, подскакивая к тем, кто напротив...</p>
+<p>– ...меняешься морскими раками, и наша цепочка отступает. – продолжил Грифон.</p>
+<p>– И тут, понимаешь ли, – подхватил Черепах Якобы, – все бросают...</p>
+<p>– Раков в море! – завопил, подпрыгнув, Грифон, – ...насколько сумеют подальше...</p>
+<p>– Плывут за ними! – заходится Грифон.</p>
+<p>– Делают в море кувырок! – кричит, распалившись. Черепах Якобы, затейливо сигая вокруг Алис.</p>
+<p>– Снова меняются морскими раками! – верещит Грифон.</p>
+<p>– Затем обратно к берегу, и на том первой проходке конец, – внезапно понижает голос Черепах Якобы; оба чуда-юда, только что мельтешившие, точно безумцы, опять сели тихо-печально да глядят на Алис.</p>
+<p>– Прелестный, судя по всему, перепляс, – робко говорит она.</p>
+<p>– Хочешь посмотреть небольшой кусочек? – спрашивает Черепах Якобы.</p>
+<p>– Очень; честное слово.</p>
+<p>– Ага, давай постараемся осилить первую проходку! – приглашает Черепах Якобы Грифона. – Обойдёмся, понимаешь ли, без морских раков. Кто подпоёт?</p>
+<p>– Ты запевай. Я слова позабыл.</p>
+<p>В общем, начинают торжественный пляс вокруг и вокруг Алис; всю дорогу наступают ей на ноги, вышагивая чересчур близко; покачивают передними лапами-ластами для под держанья равномерности хода; а Черепах Якобы ещё и поёт медленно да печально:</p>
+<p>_<br>
+«Думай, золотце, быстрей», попросил улитку хек.<br>
+«Оттоптал мне хвост дельфин, сзади прущий прям на брег.<br>
+Посмотри, уж собрались все к назначенному часу!<br>
+Ждут на гальке – ну, идёшь, присоединишься к плясу?  </p>
+<p>Ну, идёшь, иль не идёшь, присоединишься к плясу?<br>
+Ну, идёшь, иль не идёшь, присоединишься к плясу?  </p>
+<p>Лишь представь, как замечательно сейчас всё станет тут:<br>
+Нас вдвоём подальше в море вместе с раками метнут!»<br>
+«Слишком жутко далекуще – ведь такой улёт опасен!<br>
+Хек, спасибочки, но нынче не присоединюсь я к плясу».  </p>
+<p>Не идёт, нет, не идёт присоединяться к плясу.<br>
+Не идёт, нет, не идёт присоединяться к плясу.  </p>
+<p>«Далеко ль нас запулят – что за разница? Послушай:<br>
+На противной стороне близкородственная суша.<br>
+Дальше Англия, зато ближе Франция ... Ты лясы<br>
+Не точи, а приходи, присоединяйся к плясу.  </p>
+<p>Ну, идёшь, иль не идёшь, присоединишься к плясу?<br>
+Ну, идёшь, иль не идёшь, присоединишься к плясу?»_</p>
+<p>– Спасибо, наблюдать за переплясом очень занятно, – Алис страшно рада, что тот, наконец, закончен, – и любопытная песенка про хека мне, честное слово, ну прям очень понравилась!</p>
+<p>– Кстати о хеке, – говорит Черепах Якобы. – он... ты его, само собой, ведь видела?</p>
+<p>– Ага, часто видела в таре... – и поспешно сама себя оборвала.</p>
+<p>– Не помню, где находится Тара. Названье вообще-то вроде б ирландское, но раз столь часто с ним встречалась, то, само собой, как выглядит, знаешь.</p>
+<p>– Ещё бы, – задумчиво припоминает Алис. – Хвост держит во рту... а сам весь обсыпан тёртыми сухарями.</p>
+<p>– Насчёт сухарей ты ошибаешься, – говорит Черепах Якобы, – их бы все в море смыло. Но хвост впрямь держит во рту; и знаешь, зачем? – а сам, зевнув, закрыл глаза. – Расскажи ей, зачем, и всё такое. – просит Грифона.</p>
+<p>– Причина проста, – объясняет тот. – Частенько ходит на переплясы с крупными морскими раками. Там его швыряют в море. Приходится долго падать. Короче, крепко затыкает рот хвостом. А вытащить уже не в силах. Вот такие дела.</p>
+<p>– Благодарю вас, весьма увлекательно. Раньше про хека стольких подробностей не ведала.</p>
+<p>– Коль пожелаешь, расскажу ещё, – говорит Грифон. – Знаешь, почему его хеком-то зовут?</p>
+<p>– Даже не задумывалась. А почему?</p>
+<p>– Он ведь родом из трескового семейства, – важно заявил Грифон.</p>
+<p>Чем весьма сильно Алис озадачил.</p>
+<p>«Из трескового семейства!» изумлённо повторила она.</p>
+<p>– Не, ну в смысле, треску-хрусту от них ото всех предостаточно, а у него прям ваще такой особенный: хек!</p>
+<p>– В общем, – Черепах Якобы встревает, – ежели ската скатать, рыбой-топориком подтесать, рыбой-пилой надпилить, да рыбой-молотом сверху хряпнуть, то треск ну прям похожий получится – хрясь, хряк, хек!</p>
+<p>– Кстати о хряках. – подхватывает Алис, чьи мысли всё ещё заняты песней, – я бы велела дельфину бурому, ну мужу морской свиньи-то:</p>
+<p>«Держитесь, пожалуйста, подальше; вы нам мешаете!»</p>
+<p>– Но они ведь его при себе держать вынуждены, – вздыхает Черепах Якобы, – ни одна благоразумная морская живность ваще никуда не ходит без порося.</p>
+<p>– Уж прям никуда? – очень удивлена Алис.</p>
+<p>– Само собой. Шагу’ не ступит. Ну, положим, какая-нибудь рыбина придёт ко мне и скажет, мол собирается на прогулку, дык я обязательно полюбопытствую: «Как, без порося?»</p>
+<p>– Вы, наверно, имеете в виду «без спроса», то бишь «не спроса», то бишь «без спрося», а не «без порося»?</p>
+<p>– Я чего имею то, и в виду. – обиделся Черепах Якобы.</p>
+<p>А Грифон добавил: «Ладушки, давай теперь послушаем про твои приключенья».</p>
+<p>– Запросто поведаю вам приключенья... начиная с сегодняшнего утра, – довольно робко молвит Алис, – а во вчера возвращаться бесполезно, поскольку с тех пор стала совсем другим человеком.</p>
+<p>– Объясни-ка поподробней, – просит Черепах Якобы.</p>
+<p>– Нет-нет! Сперва приключенья. – не терпится Грифону. – объяснения отнимают жуткую кучу время.</p>
+<p>В общем. Алис приступила к рассказу про приключенья с того мгновения, как впервые увидала Белого Кролика. Сначала чуток мандражировала, поскольку чуды-юды плотно придвинулись к ней с обеих сторон и обалденно широко открыли глаза да рты, но постепенно страх исчез. Слушатели не проронили ни звука до той части, где она выразительно читала Гусеницу про отца, а все слова вроде как переделались; тут Черепах Якобы шумно вздохнул и говорит: «Курам на смех».</p>
+<p>– Ну прям почти чудеса в решете. – Грифон поддерживает.</p>
+<p>– Все вирши выскочили не те! – задумчиво продолжает Черепах Якобы. – Хотел бы послушать, как она попыталась бы прочесть чего-нибудь прямо сейчас. Вели ей начинать. – И поглядел на Грифона, будто полагает, мол тот вправе ей приказывать.</p>
+<p>– Встань и прочти «Голос лентяя», – распорядился Грифон.</p>
+<p>– Тутошние обитатели вечно мной помыкают, заставляя выразительно читать! – подумала Алис. – Прям как дома на занятьях. – Однако встала и набрала воздуху, но в голове ещё шумел Морской Перепляс, и она едва понимала, чего говорит, вот слова и произнеслись весьма причудливые:</p>
+<p>_<br>
+Голос крупного рака всем слышен; заявил он морским говорком:<br>
+«Распекчи до чрезмерной румяности, да забыли покрыть сахарком».<br>
+Словно утка, кичливая веками, задирает усатый он нос,<br>
+Дабы, вычистив медные пуговки, ставить клешни носочками врозь.  </p>
+<p>Над сухими песками он весел, не теряет попятную прыть.<br>
+Рад Акулу высокомерную завсегда и везде поддразнить.<br>
+Но во время прилива кипучего, в окружении акульих зубов.<br>
+Зычный голос его слишком робок, да к тому же дрожащ и дубов._</p>
+<p>– Напрочь не похоже на то, чего я учил в детстве, – недоумевает Грифон.</p>
+<p>– Вообще-то раньше слыхивать не доводилось, – изрекает Черепах Якобы. – но звучит как редкостная чушь.</p>
+<p>Алис молчит; уже села, уткнула лицо в ладони да задаёт себе вопрос, войдёт ли всё опять со временем в прежнюю колею.</p>
+<p>– Хотел бы получить кой-какие объясненья, – настаивает Черепах Якобы.</p>
+<p>– Она объяснить не сладит, – поспешно вставил Грифон. – Давай следу’щие строчки.</p>
+<p>– Не, ну насчёт носочков. – не унимается Черепах Якобы. – Как он сдюживает, понимаешь ли, ставить их врозь усатым носом?</p>
+<p>– У плясунов эдакое называется «первая позиция», – Алис отвечает, однако сама жутко озадачена произошедшим и жаждет сменить предмет разговора.</p>
+<p>– Давай следу’щие строчки, – нетерпеливо повторил Грифон. – Со слов «Мимо сада его».</p>
+<p>Алис не решилась перечить (хоть уверена: всё пойдёт вкривь да вкось) и продолжает дрожащим голоском:</p>
+<p>_<br>
+Мимо сада его проходил я и увидел вполглаза итог:<br>
+Под грушевой берёзой в моркови Филип с Барсом курочат пирог.<br>
+Барс съел корку, подливу и мясо, изо всех поднатужившись сил,<br>
+Филин долю свою угощения – блюдо – вмиг, не жуя, проглотил.  </p>
+<p>Вот пирог весь доеден, и Филину как награду за лётную стать<br>
+Разрешили в карман сунуть ложечку, чтоб её не надумал сожрать:<br>
+Ну а Барс сквозь ворчанье-рычание нож и вилку пихает в суму,<br>
+Так закончился званый обеденный пир, похожий скорей на..._</p>
+<p>– Какой смысл произносить всю подобную дребедень, – прервал Черепах Якобы. – раз ты по ходу не объясняешь? Лично я ничего более бестолкового в жизни не слыхивал.</p>
+<p>– Во дела; пожалуй, лучше завязывай, – кивнул Грифон, – ну Алис с превеликим удовольствием и замолкла.</p>
+<p>– А не изобразить ли ещё одну’ проходочку Крупного Морского Перепляса? – Грифон предлагает. – Или ты предпочитаешь, чтоб Черепах Якобы спел?</p>
+<p>– Да уж, лучше песню, коль Черепах Якобы не возражает, – так горячо воскликнула Алис, что Грифон даже обиделся: «Хм! О вкусах не спорят! Пропой ей ‘Черепашью похлёбку’, а, старина?»</p>
+<p>Черепах Якобы, глубоко вздохнув, затягивает сквозь душащие порой рыданья:</p>
+<p>_<br>
+Прекрасная похлёбка, душиста и густа,<br>
+В горяченькой кастрюльке томилась неспроста!<br>
+От лакомства такого смелеет даже робкий!<br>
+Вечерняя похлёбка, прекрасная похлёбка!<br>
+Вечерняя похлёбка, прекрасная похлёбка!<br>
+Прекра-а-а-а-асная похлё-о-о-о-обка!<br>
+Прекра-а-а-а-асная похлё-о-о-о-обка!<br>
+Вече-е-е-е-ерняя похлё-о-о-о-обка,<br>
+Прекрасная, прекрасная похлёбка!  </p>
+<p>Прекрасная похлёбка! Кто ж рыбу станет есть,<br>
+Дичь, змей, лягушек, мясо и остальную снедь?<br>
+Эй, остолоп, не нравится? – Поклёп и стёб и трёп: ка-<br>
+кая же ты всё-таки прекрасная похлёбка!<br>
+Прекра-а-а-а-асная похлё-о-о-о-обка!<br>
+Прекра-а-а-а-асная похлё-о-о-о-обка!<br>
+Вече-е-е-е-ерняя похлё-о-о-о-обка,<br>
+Прекрасная, пре-КРА СНАЯ ПОХЛЁБКА!_</p>
+<p>– Припев ещё раз! – кричит Грифон, и Черепах Якобы уже начал повтор, но издали вдруг долетел возглас: «Суд начинается!»</p>
+<p>– Вперрёд! – завопил Грифон, схватил Алис за руку и, не дожидаясь конца песни, заспешил на зов.</p>
+<p>– Над кем суд-то? – пыхтит на бегу Алис, но Грифон в ответ лишь «Вперрёд!» да припустил быстрее, а сзади всё слабже и слабже доносятся летящие на попутном ветерке грустные слова:</p>
+<p><em><br>
+Вече-е-е-е-ерняя похлё-о-о-о-обка,<br>
+Прекрасная, прекрасная похлёбка!</em></p>
+<h3 data-heading="ГЛАВА 11. Кто украл пирожки?">ГЛАВА 11. Кто украл пирожки?</h3>
+<p>В общем, входят они по-быстрому – а на престоле восседают Король и Дама Червей, вокруг собралась огромная толпа: разнообразные птички да зверушки, а также вся колода карт; перед их величествами стоит закованный в цепи Валет, по обе стороны от него по стражнику; возле Короля Белый Кролик, в одной руке труба, в другой – свиток пергамента. Посреди зала суда установлен стол, на нём огромное блюдо с пирожками, на вид столь вкусными, что увидев их, Алис аж проголодалась. «Хорошо бы суд объявили законченным», думает, «да угостили лёгкой закусочкой!» Но эдаким вроде бы даже не пахнет; пришлось, дабы скоротать время, всё вокруг рассматривать.</p>
+<p>Раньше Алис в суды ни разу не попадала, но читала про них в книжках, и теперь с радостью обнаружила, дескать знает тут названия почти всех людей и предметов.</p>
+<p>«Вон тот – судья», думает, «ибо у него кудряшки накладных волос». А обязанности судьи, между прочим, исполняет Король; поскольку поверх накладных волос на нём венец (ежели хочешь поглядеть, как его величество выглядел, найди рисунок в самом начале книжки), то ему совсем не уютно, к тому ж определённо не к лицу.</p>
+<p>– Вот скамья присяжных заседателей, – думает Алис, – ну вон тех двенадцати созданий (ей пришлось назвать их, видите ли, обобщающим словом «создания» – ведь там сидят и животные, и птицы), которые, вероятно, дали (то ли приняли; вот здоровско – слова Дать и Принять, оказывается, иногда имеют одинаковый смысл) присягу. Затем она повторила несколько раз про себя «присяжные заседатели», причём не без гордости, ибо полагает – и полагает верно, – что весьма мало девочек её возраста вообще понимают значенье сего словосочетания. (Вообще-то вполне достаточно называть их просто «присяжными» или просто «заседателями»).</p>
+<p>Все двенадцать усердно пишут чего-то на грифельных досочках. «Чем они заняты?» шёпотом спросила Алис у Грифона. «Ведь до начала разбирательства записывать ещё нечего».</p>
+<p>– Имена свои строчат, – шепнул тот в ответ, – из страха до конца заседанья их позабыть.</p>
+<p>– Вот тупицы! – громко-возмущённо начала Алис, но сразу же замолчала, поскольку Белый Кролик прикрикнул: «Тихо в суде!», а Король, надев очки, пристально оглядел зал, выясняя, кто тут такой разговорчивый.</p>
+<p>Алис прекрасно видела, словно глядя им через плечо, мол все присяжные записали у себя на грифельных досочках её слова «Вот тупицы!» и даже рассмотрела, дескать один из них не знал, как пишется «тупицы», и спросил у соседа. «До конца суда их доски заполнит жуткая неразбериха», думает.</p>
+<p>У одного из заседателей страшно скрипел карандаш. Ну Алис, конечно же, не выдержала; обошла зал, встала позади того и вскоре, улучив мгновенье, выхватила у него скрипучку. Причём столь быстро – бедняжка присяжный (тот самый хамелеончик Тилл) вообще не понял, чего случилось; всё вокруг облазив и карандаша не обнаружив, вынужден был до конца дня писать пальцем, а толку от эдакого весьма мало, поскольку следов на грифельной доске палец не оставляет.</p>
+<p>– Глашатай, зачитайте обвиненье! – повелел Король. При сём Белый Кролик трижды дунул в трубу. И, развернув свиток, возвестил:</p>
+<p>_<br>
+Дама Червей испекла пирожки<br>
+В знойный весенний день;<br>
+Валет Червей украл пирожки<br>
+Да утащил их в тень!</p>
+<p>_</p>
+<p>– Рассмотрите приговор. – повелел Король присяжным.</p>
+<p>– Рано-рано-рано! – быстренько вмешался Кролик. – До того многим ещё предстоит пред судом предстать!</p>
+<p>– Вызовите первого свидетеля, – повелел Король; Белый Кролик, трижды дунув в трубу, возгласил: «Первый свидетель!»</p>
+<p>Первым свидетелем оказался Маячник. Он вошёл с чашкой в одной руке и куском хлеба, намазанным маслом, в другой.</p>
+<p>«Прошу прощенья, ваше величество», начинает, «что не с пустыми руками, но я не совсем закончил пить чай, а за мной как раз прислали».</p>
+<p>– Следовало закончить, – журит Король. – Ты когда начал-то?</p>
+<p>Маячник глянул на Майского Зайца, сопровождающего его в суд под ручку с Соней.</p>
+<p>«Четырнадцатого мая, по-моему», говорит.</p>
+<p>– Пятнадцатого, – поправил Майский Заяц.</p>
+<p>– Шестнадцатого, – уточнила Соня.</p>
+<p>– Запишите, – повелел Король присяжным; те расторопно нацарапали все три числа на досочках, затем их сложили, а итог для наглядности перевели в косые сажени.</p>
+<p>– Шляпу свою сними, – повелел Король Маячнику.</p>
+<p>– А она не моя...</p>
+<p>– Краденая! – воскликнул Король, поворачиваясь к заседателям; те мгновенно подцепили сие обстоятельство на карандаш.</p>
+<p>– ...я их беру на продажу, – продолжил в качестве объясненья Маячник. – А своих-то у меня нету. Подрабатываю.</p>
+<p>Тут Дама, тоже надев очки, принялась рассматривать Маячника, сразу побледневшего и замаявшегося.</p>
+<p>– Давай показания, – повелел Король, – да не суетись, не то вмиг голова долой.</p>
+<p>Чего свидетеля отнюдь не вооду шевило; он продолжал переминаться с ноги на ногу, маетно поглядывая на Даму, и в замешательстве заместо хлеба с маслом откусил изрядный кусок чашки.</p>
+<p>Одновременно Алис испытала причудливое ощущенье, весьма озадачившее; но вскоре поняла, в чём дело: она снова начинает расти; и сперва подумала, дескать надо встать да покинуть зал суда; но поразмыслив, решила оставаться до тех пор, пока будет хватать места.</p>
+<p>– Не нужно эдак напирать-то, – завозмущалась севшая уже рядом Соня. – Прям дышать сил нет.</p>
+<p>– Я, – промямлила Алис, – не виновата: расту.</p>
+<p>– Здесь расти права не имеешь. – отрезала та.</p>
+<p>– Не болтайте глупости, – уже смелей сказала Алис – Вы ведь знаете: сами тоже растёте.</p>
+<p>– Да, но я расту с приемлемой скоростью, а не столь возмутительным образом – Встала и, угрюмо надувшись, почапала в противоположный конец зала.</p>
+<p>Тем временем Дама не спускала глаз с Маячника, а сразу вслед за тем, как пересела Соня, её величество приказала одному из судейских чинов: «Принесите список певших на последнем творческом вечере!», услышав чего Маячник так затрясся, что аж из башмаков выскочил.</p>
+<p>– Давай показания, – сердито повторил Король, – не то голова долой, маешься уж ты или нет.</p>
+<p>– Ваше величество, человек я небогатый, – дрожащим голосом начинает тот, – и не успел ещё приступить к чаю... не свыше недели или около того... а касательно хлеба с маслом, утоньшавшихся... да мельтешенья мы...</p>
+<p>– Мельтешенья чего? – Король переспрашивает.</p>
+<p>– Начинается с мы.. – Маячник трепещет.</p>
+<p>– Ежу понятно: мельтешенье начинается с «мы»! – резко Король перебивает. – За дурака меня держишь? Дальше!</p>
+<p>– Человек я небогатый, – опять за своё Маячник, – и большинство предметов после того замельтешили... да только Майский Заяц сказал...</p>
+<p>– Я не говорил! – весьма поспешно прерывает тот.</p>
+<p>– Сказал! – настаивает Маячник.</p>
+<p>– Отрицаю! – упёрся Майский Заяц.</p>
+<p>– Он отрицает. – ставит точку Король. – Эту часть пропусти.</p>
+<p>– Лады; во всяком случае, Соня сказала... – Маячник пристально озирается, дабы уловить, не станет ли та тоже отрицать; но Соня ничего не отрицает, поскольку дрыхнет без задних ног.</p>
+<p>– Ну тогда, – продолжает Маячник, – я отрезал ещё хлеба с маслом...</p>
+<p>– Дык чё Соня-то сказала? – спрашивает один из присяжных.</p>
+<p>– Не помню. – трясёт башкой Маячник.</p>
+<p>– Обязан вспомнить. – Король вставляет. – Не то голова долой.</p>
+<p>Несчастный Маячник уронил чашку да хлеб с маслом и опустился на колено: «Ваше величество, человек я небогатый...»</p>
+<p>– Словарный запас у тебя весьма небогатый, – обрывает Король.</p>
+<p>Тут одна из морских свинок захлопала в ладоши, но её немедленно подавили судейские приставы. (Поскольку слово довольно трудное, я просто объясню, как сие делается. У них там большой холщовый мешок, отверстие которого стягивается верёвочкой; туда-то и сунули головой вперёд морскую свинку, а потом на мешок сели да попрыгали.)</p>
+<p>– Наконец собственными глазами увидела. – думает Алис, – а то в ежедневниках часто читала про окончанье судебных разбирательств, дескать «попытки рукоплесканий немедленно подавили судейские приставы», но до сих пор не понимала, в чём тут смысл-то.</p>
+<p>– Коль больше по делу ничего не знаешь, – продолжил Король, – то свободен.</p>
+<p>– А я и так свободен, – Маячник ему. – Не за решёткой ведь.</p>
+<p>– Сядешь ещё у меня. – пригрозил его величество.</p>
+<p>Тут захлопала в ладоши вторая морская свинка: её тоже подавили.</p>
+<p>– Опа, с морскими свинками покончено! – думает Алис. – Теперь дело двинется быстрее.</p>
+<p>– Пойду лучше допью чай, – маетно глядит Маячник на Даму, читающую список певцов.</p>
+<p>– Не возражаю. – кивает Король; и Маячник рысью выскочил из зала суда, даже не озаботившись надеть башмаки.</p>
+<p>– ...да только снаружи отрубите ему голову, – приказала дама одному из приставов; но пока тот дошёл до двери, Маячника уже след простыл.</p>
+<p>– Вызовите следующего свидетеля! – повелел Король.</p>
+<p>Следующим свидетелем оказалась повариха Княгини. В руке она сжимала перечницу, причём Алис сообразила, кто войдёт, прежде чем та ступила в зал суда, ибо возле двери все разом зачихали.</p>
+<p>– Давай показания, – повелел Король.</p>
+<p>– Не дам, – буркнула повариха.</p>
+<p>Король пристально поглядел на Белого Кролика; тот шепчет: «Данного свидетеля вашему величеству надо подвергнуть перекрёстному допросу».</p>
+<p>– Ну, раз надо, значит надо. – печально сказал Король, затем скрестил руки на груди, насупил брови так, что аж глаз почти не видно, и спрашивает низким-замогильным голосом: «Из чего делают пирожки?»</p>
+<p>– По большей части из перца, – бубнит повариха.</p>
+<p>– Из риса. – раздался позади неё сонный голос.</p>
+<p>– Взять Соню! – взвизгнула Дама. – Отрубить ей голову! Вывести из зала суда! Подавить! В каталажку! Усы отрезать!</p>
+<p>Всё смешалось в зале судейском, пока выводили Соню, а чуть только зрители сели по местам, глядь – повариха-то исчезла.</p>
+<p>– С глаз долой – из сердца вон! – с огромным облегченьем молвил Король. – Вызывайте следующего свидетеля. – и тихонько говорит Даме: «Право дело, дорогу ша, следующего свидетеля ты уж сама подвергни перекрёстному допросу. У меня голова разболелась!»</p>
+<p>Алис следила за теребившим список Белым Кроликом: любопытно, кто окажется очередным свидетелем, «... поскольку пока улик собрано не густо», думает.</p>
+<p>Представьте себе её удивленье после того, как Белый Кролик выкрикну л пронзительным голоском имя: «Алис!»</p>
+<h3 data-heading="ГЛАВА 12. Показанья Алис">ГЛАВА 12. Показанья Алис</h3>
+<p>– Здесь! – воскликнула Алис; совсем забыв сгоряча, сколь большой вымахала за последние несколько минут, вскочила так поспешно, что краем юбки зацепила скамью присяжных да смахнула все двенадцать созданий на зрителей внизу, и они лежали теперь, трепыхаясь, по всему полу, весьма сильно напоминая золотых рыбок из опрокину той ею случайно на прошлой неделе круглой стеклянной банки.</p>
+<p>– Ой, простите! – весьма испугавшись, она начала по-быстрому их подбирать, ибо в извилинах крутились случай с золотыми рыбками да смутное представленье, дескать тутошних тоже надо сразу водрузить обратно на скамью, не то погибнут.</p>
+<p>– Разбирательство нельзя продолжать. – очень строго предупреждает Король. – пока все присяжные не сядут надлежащим образом... все, – повторил он со значительным нажимом, сурово глядя на Алис.</p>
+<p>Посмотрев на скамью заседателей, та видит: в спешке усадила хамелеошу кверх тормашками, и бедняжка грустно крутит хвостиком, а перевернуться не в силах. Она сразу его взяла да посадила правильно, «хотя особой разницы нету», думает, «по-моему, толку от него в суде одинаково, что так, что эдак».</p>
+<p>Едва присяжные чуток оклемались от потрясенья с выпаденьем, и им вернули разлетевшиеся грифельные досочки да карандаши, они весьма прилежно начали описывать своё приключение – все, кроме хамелеончика, выглядевшего слишком измождённым, дабы чем-либо заниматься, кроме как сидеть с отвисшей челюстью, уставившись в потолок.</p>
+<p>– Чего тебе известно относительно рассматриваемого дела? – спрашивает Король.</p>
+<p>– Ничего, – отвечает Алис.</p>
+<p>– Вообще ничего? – настырничает Король.</p>
+<p>– Вообще ничего, – подтверждает Алис.</p>
+<p>– Сие чрезвычайно важно. – поворачивается Король к заседателям. Те уже начали запечатлевать его слова на досочках, но Белый Кролик прервал: «Его величество, конечно же, имеет в виду не важно», говорит очень уважительно, однако щурясь и подавая тому лицом знаки.</p>
+<p>– Я, конечно же, имел в виду не важно. – торопливо поправляет себя Король, а сам продолжает бормотать под нос: «важно... неважно... важно... неважно...» будто проверяя, какое слово звучит лучше.</p>
+<p>Кой-кто из присяжных записал «важно», другие – «неважно».</p>
+<p>Стоя близко, Алис видела их досочки, «но вообще-то ни чуточного значенья не имеет», подумала она.</p>
+<p>Тут Король, некоторое время сосредоточенно писавший чего-то в тетрадочке, возгласил: «Тихо!» и зачитал оттуда: «Правило Сорок два. Особы ростом больше версты обязаны зал суда покинуть».</p>
+<p>Все поглядели на Алис.</p>
+<p>– Во мне версты нету, – молвит она.</p>
+<p>– Есть. – прикидывает Король.</p>
+<p>– Почти две версты. – добавляет Дама.</p>
+<p>– В общем, я по-любому не уйду; к тому ж правило незаконное: вы его только что выдумали.</p>
+<p>– Самое старшее в тетрадке, – убеждает Король.</p>
+<p>– Тогда оно, наоборот, шло бы по порядку первым.</p>
+<p>Его величество, побледнев, захлопнул записи.</p>
+<p>«Рас-смотрите приг-овор», повелевает присяжным тихим запинающимся голосом.</p>
+<p>– С позволенья вашего величества, поступила дополнительная улика, – аж подпрыгивает от спешки Белый Кролик. – только-только обнаружена новая бумага.</p>
+<p>– Чего в ней? – спрашивает Дама.</p>
+<p>– Я ещё не разворачивал, но похоже на посланье, написанное подсудимым... кому-то.</p>
+<p>– Наверняка кому-то, – согласен Король. – Разве лишь написано никому, чего случается, понимаешь ли, крайне редко.</p>
+<p>– Дык на чьё имя-то? – спрашивает один из присяжных.</p>
+<p>– Ни на чьё, – Белый Кролик ему. – Собственно говоря, снаружи ничего не указано. – Развернув листок, добавляет: «Вообще-то даже и не письмо, тут вирши, несколько четырёхстрочий».</p>
+<p>– А почерк – подсудимого? – другой заседатель любопытствует.</p>
+<p>– Нет, – Белый Кролик головой мотает, – и это в рассматриваемом деле главная несообразность. (Все присяжные мрачнеют.)</p>
+<p>– Небось, подделал чей-нибудь, почерк-то. – размышляет Король. (Все присяжные проясняются.)</p>
+<p>– С позволенья вашего величества. – подаёт голос Валет, – никто не сумеет доказать, якобы моих рук дело; да в конце даже и подписи нет.</p>
+<p>– Раз не подписал, – Король ему, – то тебе же хуже. Наверняка злоумышленник; иначе имя, как все честные люди, поставил бы.</p>
+<p>Тут раздались всеобщие рукоплесканья: впервые за день Король сказал чего-то впрямь умное.</p>
+<p>– Вина доказана, – итожит Дама.</p>
+<p>– А вот и ничего подобного! – воскликнула Алис. – Вы ведь даже не знаете, о чём вирши!</p>
+<p>– Зачтите их, – повелел Король.</p>
+<p>Белый Кролик напялил очки. «С позволенья вашего величества, откуда начать?» спрашивает.</p>
+<p>– Начни с начала, – степенно повелевает Король, – и продолжай аж до самого конца: а там прекратишь.</p>
+<p>Вот какие Белый Кролик прочёл вслух вирши:</p>
+<p>_<br>
+Мне донесли, зашёл к ней вы<br>
+Ему напомнить о меня;<br>
+Она мне любит, но, увы, –<br>
+Ведь не умеешь плавать я.  </p>
+<p>Он весть им шлём, мол я не взрос<br>
+(Мы знает – это правда);<br>
+Коль протолкну она вопрос,<br>
+Ты станет пуком трав, да?  </p>
+<p>Мы дал ей раз, ему им – две,<br>
+Ты дал нам три иль дальше;<br>
+Вернулось те от ней к тебе,<br>
+Хоть прежде был он нашем.  </p>
+<p>Я случай взять бы иль она:<br>
+Свобода – не водица;<br>
+Он там, а мы на ней сполна<br>
+Устала находиться.  </p>
+<p>Я замечаем: во вражду<br>
+(Тот приступ утрясла мы)<br>
+Ты слыл препятствием между<br>
+Ним, нам и теми самым.  </p>
+<p>Не узнавать она про брешь;<br>
+Навечно мы покрою<br>
+Страшенной тайною промеж<br>
+Самим тебя и мною.</p>
+<p>_</p>
+<p>– Важнейшая улика из до сих пор услышанного, – потирает Король ладошки. – посему теперь пусть присяжные...</p>
+<p>– Если кто-нибудь из них способен вирши объяснить. – перебивает Алис (столь сильно за последние минуты увеличившаяся, что не боится его величество прервать). – тому подарю денежку из своих карманных. Лично по-моему, ни капельки смысла в них нет.</p>
+<p>Все заседатели написали на досочках: «Лично по-ейному, ни капельки смысла в них нет», однако ни один объяснять вирши и не думает.</p>
+<p>– Раз смысла нет, – Король заявляет, – значит, мы избавлены, понимаешь ли, от кучи беспокойств, ибо нет нужды стараться его искать. Впрочем, – расправляет он листок на коленях да косит туда одним глазом, – вроде бы некий смысл всё же проглядывается. «...Ведь не умеешь плавать... » ты ведь плавать не умеешь? – поворачивается к Валету.</p>
+<p>Тот печально мотает головой: «Я чего – похож на пловца?» (Уж на кого-кого, а на пловца точно не похож, ибо сделан полностью из бумаги.)</p>
+<p>– Пока всё сходится, – Король продолжил бормотать под нос вирши: «Мы знает – это правда... » подразумеваемы, конечно, присяжные... «Мы дал ей раз, ему им – две... » ну, здесь, небось, чего сделал, понимаешь ли, с пирожками...</p>
+<p>– Но дальше-то «Вернулось те от ней к тебе». – напоминает Алис.</p>
+<p>– Ну да, вот они, родимые! – ликующе по называет Король пирожки на столе. – Ясней не придумаешь. Поехали дальше... «Тот приступ утрясла... » дорогая, ты ведь всегда всё утрясаешь, а у самой отродясь никаких приступов, по-моему?.. – обращается к Даме.</p>
+<p>– Отрродясь! – свирепо рычит та, запуская чернильницу в хамелеошу. (Несчастный юный Филл бросил писать на досочке пальцем, обнаружив, мол следов от него не остаётся; но теперь спешно возобновил, макая коготок в струящиеся по мордочке чернила, пока те не истекли.)</p>
+<p>– Ладно, теперь утрясай приступленъе, – его величество с улыбкой оглядел зал суда. Ему ответила мёртвая тишина.</p>
+<p>– Игра слов такая! – обиженно добавил Король, и все рассмеялись.</p>
+<p>– Пусть присяжные рассмотрят приговор, – чуть ли не двадцатый раз за день повелел он.</p>
+<p>– Нет-нет! – теперь уж восклицает Дама. – В первую очередь наказанье, а потом уж приговор.</p>
+<p>– Бред и белиберда! – громко возмутилась Алис. – Затея насчёт наказанья первей приговора!</p>
+<p>– Прикуси язык! – багровеет Дама.</p>
+<p>– И не подумаю!</p>
+<p>– Отрубить ей голову! – зычным голосом орёт Дама. Никто даже не пошевелился.</p>
+<p>– Ой, как страшно! – строит рожицу Алис (к тому времени выросшая уже до настоящего размера). – Вы не более чем колода карт!</p>
+<p>Тут все карты взлетели в воздух и посыпались на неё; тихонько вскрикну в – то ли с испугу, то ль от злости, – она норовит их отогнать; глядь – а сама лежит на скамье, голова на коленях у сестры, коя ласково смахивает несколько сухих листиков, перепорхнувших с дерева на лицо Алис.</p>
+<p>– Просыпайся, дорогая! – приговаривает сестрёнка. – Да уж, долго ты почивала!</p>
+<p>– Ух, я видела такой занятный сон! – и Алис рассказывает ей, насколько способна припомнить, все чудесатые приключенья, о которых вы только что прочли; под конец сестра, чмокнув её, говорит: «Сон впрямь любопытный, дорогая, спору нет; а теперь беги на полдник, не то опоздаешь». Ну Алис вскочила да помчалась изо всех сил, восхищённо вспоминая по дороге чудный сон. Убежала – а сестрица сидит молча, поставив руку на подлокотник, оперев голову о ладонь, смотрит на заходящее солнце, думает про маленькую Алис да все её чудные приключенья, пока тоже не задрёмывает и вот чего зрит:</p>
+<p>Перво-наперво саму крошку Алис, да снова маленькие ладошки, обнимающие её коленку, да ясные-горящие очи, смотрящие ей в глаза... слышит все переливы голоса, видит уморительный кивочек, дабы откинуть непослушные волосы, вечно лезущие в глаза... а поскольку слушает – то ли вроде бы слушает – безмолвно, всё окружающее наполняется причудливыми существами из сна младшей сестры.</p>
+<p>У ног шуршит длинная трава – то поспешает Белый Кролик... по ближайшему прудику шлёпает испуганная Мышь-К... доносится перезвяк чашек – то сидят за бесконечным чаепитьем Майский Заяц со товарищи, а пронзительный голос Дамы приговаривает к казни несчастных гостей... опять на коленях у Княгини чихает младенец-поросёнок, а вокруг него расколошмачиваются тарелки да блюда... снова пространство наполняют клёкот Грифона, скрип карандаша у хамелеончика, прерывистое дыханье подавленных морских свинок, мешаясь с отдалёнными всхлипами печального Черепаха Якобы.</p>
+<p>Короче, сидит она, закрыв глаза, и почти верит в Чудную землю, хотя понимает: стоит их распахнуть, как всё превратится в скушную повседневность. Трава шуршит всего лишь на ветру, рябь на прудике – из-за покачиванья камыша... звякающие чашки окажутся побренькивающими колокольцами у овец, а визгливые крики Дамы – голосом пастушка... чих младенца, клёкот Грифона, другие необычные звуки обернутся (она знает) неясными шумами скотного двора... отдалённое мычанье коров займёт место тяжёлых всхлипов Черепаха Якобы.</p>
+<p>Наконец, она представляет, как всё та же младшая сестрёнка, сама со временем став взрослой женщиной, сохранит через зрелые годы скромное-нежное детское сердечко: будет собирать вокруг себя других детишек да делать их очи ясными-горящими при помощи разных причудливых сказок, пожалуй даже давнишней грёзы про Чудную землю; сочувствовать их простодушным печалям и делить радость их незатейливых удовольствий, храня память о собственном детстве с нынешними весёлыми весенне-летними деньками.</p>
+<p>КОНЕЦ.</p>
+    </body>
+</html>
