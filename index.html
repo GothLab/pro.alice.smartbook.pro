@@ -4,1430 +4,217 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>CodePen - A Pen by blacklovefly</title>
+    <title>Smartbook PRO LIGHT</title>
+    <meta name="theme-color" content="#947234">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/192-1.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/512-1.png">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans&amp;subset=cyrillic">
     <link rel="stylesheet" href="assets/css/Kis%20Text%20BT%20OSF%20Web.css">
     <link rel="stylesheet" href="assets/css/Kis%20Text%20BT%20Web.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
-    <link rel="stylesheet" href="assets/css/swiper-icons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/collapse.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/LI.css">
+    <link rel="stylesheet" href="assets/css/menu.css">
     <link rel="stylesheet" href="assets/css/scrollbar.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/Lightbox-Gallery.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/stylesheet.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/text.css">
+    <link rel="stylesheet" href="assets/css/toolbar.css">
 </head>
 
 <body>
-    <div class="toast fade toaster hide" role="alert" data-bs-delay="15000">
-        <div class="toast-header"><img class="me-2"><strong class="me-auto thdr">Describtion</strong><button class="btn-close btn-close-white ms-2 mb-1 close" data-bs-dismiss="toast" style="margin-right: 0px;"></button></div>
-        <div class="toast-body" role="alert" style="padding: 19px;">
-            <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-        </div>
-    </div>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="wiki">
-        <div class="btn-group d-flex" role="group" id="navigation3"><button class="btn btn-dark" type="button w-100" onclick="swiper4.slideTo(0);"><i class="fas fa-cog" style="font-size: 13px;"></i>settings</button><button class="btn btn-dark" type="button w-100" onclick="swiper4.slideTo(1);"><i class="fa fa-comment" style="font-size: 13px;"></i>anotations</button><button class="btn btn-dark" type="button w-100" onclick="swiper4.slideTo(2);"><i class="fas fa-font" style="font-size: 13px;"></i>dictionary</button><button class="btn btn-dark" type="button w-100" onclick="swiper4.slideTo(3);"><i class="far fa-image" style="font-size: 13px;"></i>gallery</button><button class="btn btn-dark" type="button w-100" onclick="swiper4.slideTo(4);"><i class="far fa-bookmark" style="font-size: 13px;"></i>chapters</button><button class="btn btn-dark" type="button w-100" onclick="swiper4.slideTo(5);"><i class="far fa-list-alt" style="font-size: 13px;"></i>translation</button><button class="btn btn-dark" type="button w-100" data-bs-target="#wiki" data-bs-toggle="offcanvas"><i class="fa fa-close" style="font-size: 20px;"></i>close</button></div>
-        <div class="swiper mySwiper4 swiper-v">
-            <div class="swiper-wrapper">
-                <div id="settings" class="swiper-slide settings" style="/*padding: 12px;*/">
-                    <div class="table-responsive">
-                        <table class="table table-dark table-bordered">
-                            <tbody>
-                                <tr>
-                                    <td colspan="6" style="text-align: left;padding-left: 10px;font-family: Lora, serif;--bs-primary: rgb(101,188,225);--bs-primary-rgb: 101,188,225;color: rgb(101,188,225);">• Размер шрифта</td>
-                                </tr>
-                                <tr class="fontsize">
-                                    <td class="setting" style="font-size: 10px;" var="FSI" css="font-size" value="10px">10</td>
-                                    <td class="setting" style="font-size: 12px;" var="FSI" css="font-size" value="12px">12</td>
-                                    <td class="setting" style="font-size: 14px;" var="FSI" css="font-size" value="14px">14</td>
-                                    <td class="setting" style="font-size: 16px;" var="FSI" css="font-size" value="16px">16</td>
-                                    <td class="setting" style="font-size: 18px;" var="FSI" css="font-size" value="18px">18</td>
-                                    <td class="setting yo1" style="font-size: 20px;" var="FSI" css="font-size" value="20px">20</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="6" style="text-align: left;padding-left: 10px;font-family: Lora, serif;--bs-primary: rgb(101,188,225);--bs-primary-rgb: 101,188,225;color: rgb(101,188,225);">• Тяжесть шрифта</td>
-                                </tr>
-                                <tr class="fontsize">
-                                    <td class="setting" style="font-size: 12px;/*font-family: 'Kis Text BT Web';*/" var="FWE" css="font-weight" value="100">100</td>
-                                    <td class="setting" style="font-size: 12px;" var="FWE" css="font-weight" value="200">200</td>
-                                    <td class="setting" style="font-size: 12px;" var="FWE" css="font-weight" value="400">400</td>
-                                    <td class="setting" style="font-size: 12px;" var="FWE" css="font-weight" value="600">600</td>
-                                    <td class="setting" style="font-size: 12px;" var="FWE" css="font-weight" value="800">800</td>
-                                    <td class="setting yo1" style="font-size: 12px;" var="FWE" css="font-weight" value="1000">1000</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="6" style="text-align: left;padding-left: 10px;font-family: Lora, serif;--bs-primary: rgb(101,188,225);--bs-primary-rgb: 101,188,225;color: rgb(101,188,225);">• Цвет шрифта</td>
-                                </tr>
-                                <tr class="fontcolor">
-                                    <td class="setting" var="FCO" css="color" value="#000000" style="color: #000000;">черный</td>
-                                    <td class="setting" var="FCO" css="color" value="#21" style="color: #32363a;">т.серый</td>
-                                    <td class="setting" var="FCO" css="color" value="#6f7982" style="color: #6f7982;">серый</td>
-                                    <td class="setting" var="FCO" css="color" value="#ffd099" style="color: #ffd099;">ваниль</td>
-                                    <td class="setting" var="FCO" css="color" value="#afb6be" style="color: #afb6be;">светлый</td>
-                                    <td class="setting" var="FCO" css="color" value="white">белый</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="6" style="text-align: left;padding-left: 10px;font-family: Lora, serif;--bs-primary: rgb(101,188,225);--bs-primary-rgb: 101,188,225;color: rgb(101,188,225);">• Тип шрифта</td>
-                                </tr>
-                                <tr class="fontstyle">
-                                    <td class="setting" var="FST" css="font-family" value="Lora" style="font-family: Lora, serif;font-size: 10px;">Lora</td>
-                                    <td class="setting" var="FST" css="font-family" value="Kis Text BT Web" style="font-family: 'Kis Text BT Web';">Kis</td>
-                                    <td class="setting" var="FST" css="font-family" value="Time New Roman" style="font-family: Time New Roman;font-size: 10px;">Times</td>
-                                    <td class="setting" var="FST" css="font-family" value="Fira sans" style="font-family: Fira sans;font-size: 10px;">Fira</td>
-                                    <td class="setting" var="FST" css="font-family" value="helvetica" style="font-family: helvetica;font-size: 10px;">Helvetica</td>
-                                    <td class="setting" var="FST" css="font-family" value="Verdana" style="font-family: Verdana;font-size: 10px;">Verdana</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="6" style="text-align: left;padding-left: 10px;font-family: Lora, serif;--bs-primary: rgb(101,188,225);--bs-primary-rgb: 101,188,225;color: rgb(101,188,225);">• Расстояние между строк</td>
-                                </tr>
-                                <tr class="lineheight">
-                                    <td class="setting" var="LHE" css="line-height" value="0.9em">узко</td>
-                                    <td class="setting" var="LHE" css="line-height" value="0.95em">уже</td>
-                                    <td class="setting" var="LHE" css="line-height" value="1em">норма</td>
-                                    <td class="setting" var="LHE" css="line-height" value="1.2em">свободное</td>
-                                    <td class="setting" var="LHE" css="line-height" value="2em">средне</td>
-                                    <td class="setting" var="LHE" css="line-height" value="3em">широко</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="6" style="text-align: left;padding-left: 10px;font-family: Lora, serif;--bs-primary: rgb(101,188,225);--bs-primary-rgb: 101,188,225;color: rgb(101,188,225);">• Расстояние между букв</td>
-                                </tr>
-                                <tr class="fontspacing">
-                                    <td class="setting" var="FSP" css="letter-spacing" value="-1px">узко</td>
-                                    <td class="setting" var="FSP" css="letter-spacing" value="-0.5px">уже</td>
-                                    <td class="setting" var="FSP" css="letter-spacing" value="0">норма</td>
-                                    <td class="setting" var="FSP" css="letter-spacing" value="1px">свободное</td>
-                                    <td class="setting" var="FSP" css="letter-spacing" value="1.5px">средне</td>
-                                    <td class="setting" var="FSP" css="letter-spacing" value="2px">широко</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="6" style="text-align: left;padding-left: 10px;font-family: Lora, serif;--bs-primary: rgb(101,188,225);--bs-primary-rgb: 101,188,225;color: rgb(101,188,225);">• Цвет фона</td>
-                                </tr>
-                                <tr class="bgcolor">
-                                    <td class="setting" var="BGC" css="background-color" value="#212121" style="background: var(--bs-table-bg);">черный</td>
-                                    <td class="setting" var="BGC" css="background-color" value="var(--bs-table-striped-bg)" style="background: var(--bs-table-striped-bg);">т.серый</td>
-                                    <td class="setting" var="BGC" css="background-color" value="var(--bs-gray-700)" style="background: var(--bs-gray-700);">серый</td>
-                                    <td class="setting" var="BGC" css="background-color" value="#ffd099" style="background: #ffd099;">ваниль</td>
-                                    <td class="setting" var="BGC" css="background-color" value="var(--bs-gray-500)" style="background: var(--bs-gray-500);">светлый</td>
-                                    <td class="setting" var="BGC" css="background-color" value="rgb(231,231,231)" style="background: var(--bs-table-active-color);color: rgb(231,231,231);">белый</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="6" style="text-align: left;padding-left: 10px;font-family: Lora, serif;--bs-primary: rgb(101,188,225);--bs-primary-rgb: 101,188,225;color: rgb(101,188,225);">• Рамка</td>
-                                </tr>
-                                <tr class="padding">
-                                    <td class="setting" var="PAD" css="padding" value="5px">узко</td>
-                                    <td class="setting" var="PAD" css="padding" value="10px">уже</td>
-                                    <td class="setting" var="PAD" css="padding" value="16px">норма</td>
-                                    <td class="setting" var="PAD" css="padding" value="24px">свободное</td>
-                                    <td class="setting" var="PAD" css="padding" value="32px">средне</td>
-                                    <td class="setting" var="PAD" css="padding" value="48px">широко</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="6" style="text-align: left;padding-left: 10px;font-family: Lora, serif;--bs-primary: rgb(101,188,225);--bs-primary-rgb: 101,188,225;color: rgb(101,188,225);">• Загрузка</td>
-                                </tr>
-                                <tr>
-                                    <td id="triggaProg" colspan="2">Эпизоды</td>
-                                    <td colspan="2">Главы</td>
-                                    <td id="trigga" colspan="2">Постепенно</td>
-                                </tr>
-                                <tr></tr>
-                                <tr></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div id="anotations" class="swiper-slide anotations">
-                    <div class="card">
-                        <div class="card-body"><img class="img-fluid" src="assets/img/bw/1.webp">
-                            <h4 class="card-title">Title</h4>
-                            <h6 class="text-muted card-subtitle mb-2">Subtitle</h6>
-                            <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br></p>
+    <div>
+        <div class="offcanvas offcanvas-start" tabindex="-1" data-bs-scroll="true" id="menu">
+            <div class="offcanvas-header" style="width: 100%;">
+                <h5 class="offcanvas-title" style="font-family: 'Fira Sans';color: #414141;">Smartbook</h5><button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="accordion" role="tablist" id="accordion-1">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-1" aria-expanded="false" aria-controls="accordion-1 .item-1">Alice's adventures in Wonderland</button></h2>
+                        <div class="accordion-collapse collapse item-1" role="tabpanel" data-bs-parent="#accordion-1">
+                            <div class="accordion-body">
+                                <div class="btn-group-vertical" role="group" style="width: 100%;">
+                                    <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/alice.html" book_id="1" scroll="0" book_ver="0" book_status="0" style="/*display: grid;*/"><span class="year">1895</span><span class="title">Alice's adventures in Wonderland</span><span class="author">Lewis Carroll</span></button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a><a class="dropdown-item" href="#">Menu Item</a></div>
+                                    </div>
+                                    <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/alice.html" book_id="2" scroll="0" book_ver="0" book_status="0" style="/*display: grid;*/"><span class="year">1864</span><span class="title">Alice's adventures Under Ground</span><span class="author">Lewis Carroll</span></button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a><a class="dropdown-item" href="#">Menu Item</a></div>
+                                    </div>
+                                    <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/alice.html" book_id="3" scroll="0" book_ver="0" book_status="0" style="/*display: grid;*/"><span class="year">1890</span><span class="title">Nurcery Alice&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="author">Lewis Carroll</span></button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a><a class="dropdown-item" href="#">Menu Item</a></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-body"><img class="img-fluid" src="assets/img/bw/1.webp">
-                            <h4 class="card-title">Title</h4>
-                            <h6 class="text-muted card-subtitle mb-2">Subtitle</h6>
-                            <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br></p>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-2" aria-expanded="false" aria-controls="accordion-1 .item-2">Переводы</button></h2>
+                        <div class="accordion-collapse collapse item-2" role="tabpanel" data-bs-parent="#accordion-1">
+                            <div class="accordion-body">
+                                <div class="btn-group-vertical" role="group" style="width: 100%;">
+                                    <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/alice.html" book_id="4" scroll="0" book_ver="0" book_status="0" style="/*display: grid;*/"><span class="year">1879</span><span class="title">Соня в царстве дива</span><span class="author">О.И. Тимирязева</span></button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a><a class="dropdown-item" href="#">Menu Item</a></div>
+                                    </div>
+                                    <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/alice.html" book_id="5" scroll="0" book_ver="0" book_status="0" style="/*display: grid;*/"><span class="year">1908</span><span class="title">Приключения Алисы в Стране Чудес</span><span class="author">Матильда Гранстрем</span></button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a><a class="dropdown-item" href="#">Menu Item</a></div>
+                                    </div>
+                                    <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/alice.html" book_id="6" scroll="0" book_ver="0" book_status="0" style="/*display: grid;*/"><span class="year">1909</span><span class="title">Приключенія Алисы въ странѣ чудесъ</span><span class="author">Поликсена Сергеевна Соловьева</span></button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a><a class="dropdown-item" href="#">Menu Item</a></div>
+                                    </div>
+                                    <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/alice.html" book_id="7" scroll="0" book_ver="0" book_status="0" style="/*display: grid;*/"><span class="year">1911</span><span class="title">Приключения Алисы в Стране Чудес</span><span class="author">А.Н.Рождественская</span></button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a><a class="dropdown-item" href="#">Menu Item</a></div>
+                                    </div>
+                                    <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/alice.html" book_id="8" scroll="0" book_ver="0" book_status="0" style="/*display: grid;*/"><span class="year">1923</span><span class="title">Приключения Алисы в Стране Чудес</span><span class="author">Анатолий Френкель</span></button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a><a class="dropdown-item" href="#">Menu Item</a></div>
+                                    </div>
+                                    <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/alice.html" book_id="9" scroll="0" book_ver="0" book_status="0" style="/*display: grid;*/"><span class="year">1940</span><span class="title">Алиса в стране чудес</span><span class="author">Александр Оленич-Гнененко</span></button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a><a class="dropdown-item" href="#">Menu Item</a></div>
+                                    </div>
+                                    <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/alice.html" book_id="10" scroll="0" book_ver="0" book_status="0" style="/*display: grid;*/"><span class="year">1967</span><span class="title">Приключения Алисы в Стране чудес</span><span class="author">Нина Демурова</span></button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a><a class="dropdown-item" href="#">Menu Item</a></div>
+                                    </div>
+                                    <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/alice.html" book_id="11" scroll="0" book_ver="0" book_status="0" style="/*display: grid;*/"><span class="year">1977</span><span class="title">Алиса в Стране чудес</span><span class="author">А. А. Щербаков</span></button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a><a class="dropdown-item" href="#">Menu Item</a></div>
+                                    </div>
+                                    <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/alice.html" book_id="12" scroll="0" book_ver="0" book_status="0" style="/*display: grid;*/"><span class="year">1991</span><span class="title">Алиса в Стране чудес</span><span class="author">Юрий Лифшиц</span></button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a><a class="dropdown-item" href="#">Menu Item</a></div>
+                                    </div>
+                                    <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/alice.html" book_id="13" scroll="0" book_ver="0" book_status="0" style="/*display: grid;*/"><span class="year">1991</span><span class="title">Алиса в Стране Чудес</span><span class="author">Леонид Яхнин</span></button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a><a class="dropdown-item" href="#">Menu Item</a></div>
+                                    </div>
+                                    <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/alice.html" book_id="14" scroll="0" book_ver="0" book_status="0" style="/*display: grid;*/"><span class="year">1992</span><span class="title">Алиса в Стране Чудес</span><span class="author">Александр Владимирович Флоря</span></button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a><a class="dropdown-item" href="#">Menu Item</a></div>
+                                    </div>
+                                    <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/alice.html" book_id="15" scroll="0" book_ver="0" book_status="0" style="/*display: grid;*/"><span class="year">1997</span><span class="title">Приключения Алисы в стране чудес</span><span class="author">Борис Балтер</span></button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a><a class="dropdown-item" href="#">Menu Item</a></div>
+                                    </div>
+                                    <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/alice.html" book_id="16" scroll="0" book_ver="0" book_status="0" style="/*display: grid;*/"><span class="year">2000</span><span class="title">Приключения Алисы в Стране Чудес</span><span class="author">Николай Старилов</span></button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a><a class="dropdown-item" href="#">Menu Item</a></div>
+                                    </div>
+                                    <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/alice.html" book_id="17" scroll="0" book_ver="0" book_status="0" style="/*display: grid;*/"><span class="year">2000</span><span class="title">Алиса в Стране Чудес</span><span class="author">Андрей Кононенко</span></button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a><a class="dropdown-item" href="#">Menu Item</a></div>
+                                    </div>
+                                    <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/alice.html" book_id="18" scroll="0" book_ver="0" book_status="0" style="/*display: grid;*/"><span class="year">2000</span><span class="title">Приключения Алисы в Стране Чудес</span><span class="author">Юрий Нестеренко</span></button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a><a class="dropdown-item" href="#">Menu Item</a></div>
+                                    </div>
+                                    <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/alice.html" book_id="19" scroll="0" book_ver="0" book_status="0" style="/*display: grid;*/"><span class="year">2002</span><span class="title">Алиса в стране чудес</span><span class="author">Олег Хаславский</span></button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a><a class="dropdown-item" href="#">Menu Item</a></div>
+                                    </div>
+                                    <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/alice.html" book_id="20" scroll="0" book_ver="0" book_status="0" style="/*display: grid;*/"><span class="year">2008</span><span class="title">Алиса в Стране Чудес</span><span class="author">Сергей Александрович Махов</span></button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a><a class="dropdown-item" href="#">Menu Item</a></div>
+                                    </div>
+                                    <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/alice.html" book_id="21" scroll="0" book_ver="0" book_status="0" style="/*display: grid;*/"><span class="year">2010</span><span class="title">Алиса в Стране чудес</span><span class="author">О. Павлушенко</span></button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a><a class="dropdown-item" href="#">Menu Item</a></div>
+                                    </div>
+                                    <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/alice.html" book_id="22" scroll="0" book_ver="0" book_status="0" style="/*display: grid;*/"><span class="year">2012</span><span class="title">Приключения Алисы в Стране Чудес</span><span class="author">Алексей Притуляк</span></button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a><a class="dropdown-item" href="#">Menu Item</a></div>
+                                    </div>
+                                    <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/alice.html" book_id="23" scroll="0" book_ver="0" book_status="0" style="/*display: grid;*/"><span class="year">2015</span><span class="title">Приключения Алисы в Стране Чудес</span><span class="author">Д.И.Ермолович</span></button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a><a class="dropdown-item" href="#">Menu Item</a></div>
+                                    </div>
+                                    <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/alice.html" book_id="24" scroll="0" book_ver="0" book_status="0" style="/*display: grid;*/"><span class="year">2016</span><span class="title">Алиса в Стране Чудес</span><span class="author">Сергей Семёнов</span></button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a><a class="dropdown-item" href="#">Menu Item</a></div>
+                                    </div>
+                                    <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/alice.html" book_id="25" scroll="0" book_ver="0" book_status="0" style="/*display: grid;*/"><span class="year">2018</span><span class="title">Алиса в Стране чудес</span><span class="author">С. А. Матвеев</span></button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a><a class="dropdown-item" href="#">Menu Item</a></div>
+                                    </div>
+                                    <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/alice.html" book_id="26" scroll="0" book_ver="0" book_status="0" style="/*display: grid;*/"><span class="year">2019</span><span class="title">Приключения Алисы в Стране Чудес</span><span class="author">Алексей Борисович Козлов</span></button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a><a class="dropdown-item" href="#">Menu Item</a></div>
+                                    </div>
+                                    <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/alice.html" book_id="27" scroll="0" book_ver="0" book_status="0" style="/*display: grid;*/"><span class="year">2020</span><span class="title">Алиса в Стране чудес</span><span class="author">Юрий Владимирович Изотов</span></button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a><a class="dropdown-item" href="#">Menu Item</a></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-body"><img class="img-fluid" src="assets/img/bw/1.webp">
-                            <h4 class="card-title">Title</h4>
-                            <h6 class="text-muted card-subtitle mb-2">Subtitle</h6>
-                            <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br></p>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-3" aria-expanded="false" aria-controls="accordion-1 .item-3">Пересказы</button></h2>
+                        <div class="accordion-collapse collapse item-3" role="tabpanel" data-bs-parent="#accordion-1">
+                            <div class="accordion-body">
+                                <div class="btn-group-vertical" role="group" style="width: 100%;">
+                                    <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/alice.html" book_id="28" scroll="0" book_ver="0" book_status="0" style="/*display: grid;*/"><span class="year">1913</span><span class="title">Алиса в волшебной стране</span><span class="author">Михаил Павлович Чехов</span></button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a><a class="dropdown-item" href="#">Menu Item</a></div>
+                                    </div>
+                                    <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/alice.html" book_id="29" scroll="0" book_ver="0" book_status="0" style="/*display: grid;*/"><span class="year">1923</span><span class="title">Аня в Стране чудес</span><span class="author">Владимир Набоков</span></button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a><a class="dropdown-item" href="#">Menu Item</a></div>
+                                    </div>
+                                    <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/alice.html" book_id="30" scroll="0" book_ver="0" book_status="0" style="/*display: grid;*/"><span class="year">1988</span><span class="title">Алиса в Стране Чудес</span><span class="author">Вл. Орёл</span></button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a><a class="dropdown-item" href="#">Menu Item</a></div>
+                                    </div>
+                                    <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/alice.html" book_id="31" scroll="0" book_ver="0" book_status="0" style="/*display: grid;*/"><span class="year">1972</span><span class="title">Алиса в Стране Чудес</span><span class="author">Борис Заходер</span></button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a><a class="dropdown-item" href="#">Menu Item</a></div>
+                                    </div>
+                                    <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/alice.html" book_id="32" scroll="0" book_ver="0" book_status="0" style="/*display: grid;*/"><span class="year">2005</span><span class="title">Приключения Алисы в Стране Чудес, или Странствие в Странную Страну&nbsp;по страницам престранной пространной истории</span><span class="author">Михаил Блехман</span></button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a><a class="dropdown-item" href="#">Menu Item</a></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-body"><img class="img-fluid" src="assets/img/bw/1.webp">
-                            <h4 class="card-title">Title</h4>
-                            <h6 class="text-muted card-subtitle mb-2">Subtitle</h6>
-                            <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body"><img class="img-fluid" src="assets/img/bw/1.webp">
-                            <h4 class="card-title">Title</h4>
-                            <h6 class="text-muted card-subtitle mb-2">Subtitle</h6>
-                            <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body"><img class="img-fluid" src="assets/img/bw/1.webp">
-                            <h4 class="card-title">Title</h4>
-                            <h6 class="text-muted card-subtitle mb-2">Subtitle</h6>
-                            <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body"><img class="img-fluid" src="assets/img/bw/1.webp">
-                            <h4 class="card-title">Title</h4>
-                            <h6 class="text-muted card-subtitle mb-2">Subtitle</h6>
-                            <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body"><img class="img-fluid" src="assets/img/bw/1.webp">
-                            <h4 class="card-title">Title</h4>
-                            <h6 class="text-muted card-subtitle mb-2">Subtitle</h6>
-                            <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body"><img class="img-fluid" src="assets/img/bw/1.webp">
-                            <h4 class="card-title">Title</h4>
-                            <h6 class="text-muted card-subtitle mb-2">Subtitle</h6>
-                            <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body"><img class="img-fluid" src="assets/img/bw/1.webp">
-                            <h4 class="card-title">Title</h4>
-                            <h6 class="text-muted card-subtitle mb-2">Subtitle</h6>
-                            <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.<br><br></p>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" role="tab"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-4" aria-expanded="true" aria-controls="accordion-1 .item-4">Аннотированное чтение</button></h2>
+                        <div class="accordion-collapse collapse show item-4" role="tabpanel" data-bs-parent="#accordion-1">
+                            <div class="accordion-body">
+                                <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/alice.html" book_id="33" scroll="0" book_ver="0" book_status="0" style="/*display: grid;*/"><span class="year">Smartbook</span><span class="title">Аннотированный перевод</span><span class="author">Аннотированный перевод</span></button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                    <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a><a class="dropdown-item" href="#">Menu Item</a></div>
+                                </div>
+                                <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/alice.html" book_id="34" scroll="0" book_ver="0" book_status="0" style="/*display: grid;*/"><span class="year">Оригинал</span><span class="title">Адаптированный перевод</span><span class="author" style="color: rgb(171, 161, 143);">Адаптированный перевод</span></button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                    <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a><a class="dropdown-item" href="#">Menu Item</a></div>
+                                </div>
+                                <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/alice.html" book_id="35" scroll="0" book_ver="0" book_status="0" style="/*display: grid;*/"><span class="year">Оригинал</span><span class="title">Разбор переводов</span><span class="author">Примечание переводчиков</span></button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                    <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a><a class="dropdown-item" href="#">Menu Item</a></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div id="dictionary" class="swiper-slide">
-                    <div class="table-responsive">
-                        <table class="table table-dark table-borderless">
-                            <tbody>
-                                <tr class="letterTitle">
-                                    <td>A</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>ambidextorus</strong> - asdasdasdasd asd asd asd asd asd asd asd.</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr class="letterTitle">
-                                    <td>B</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr class="letterTitle">
-                                    <td>C</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr class="letterTitle">
-                                    <td>D</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr class="letterTitle">
-                                    <td>E</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr class="letterTitle">
-                                    <td>F</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr class="letterTitle">
-                                    <td>G</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr class="letterTitle">
-                                    <td>H</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr class="letterTitle">
-                                    <td>I</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr class="letterTitle">
-                                    <td>J</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr class="letterTitle">
-                                    <td>K</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr class="letterTitle">
-                                    <td>L</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr class="letterTitle">
-                                    <td>M</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr class="letterTitle">
-                                    <td>N</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr class="letterTitle">
-                                    <td>O</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr class="letterTitle">
-                                    <td>P</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr class="letterTitle">
-                                    <td>Q</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr class="letterTitle">
-                                    <td>R</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr class="letterTitle">
-                                    <td>S</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr class="letterTitle">
-                                    <td>T</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr class="letterTitle">
-                                    <td>U</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr class="letterTitle">
-                                    <td>V</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr class="letterTitle">
-                                    <td>W</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr class="letterTitle">
-                                    <td>X</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr class="letterTitle">
-                                    <td>Y</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr class="letterTitle">
-                                    <td>Z</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Cell 1</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div id="gallery" class="swiper-slide gallery" style="/*padding: 12px;*/">
-                    <div class="btn-group btn-group-lg" role="group" id="gallery-trigger" style="/*margin-bottom: 14px;*/position: initial;"><button class="btn btn-dark" id="sketch" type="button" onclick="sketch()">Наброски</button><button class="btn btn-dark" id="bw" type="button" onclick="bw()">Гравюры</button><button class="btn btn-dark" id="color" type="button" onclick="color()">Цветные</button></div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/1.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
+                <div id="text1" data-role="collapsibleset" data-inset="false"></div>
+                <div>
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-bs-toggle="tab" id="b_tabA" href="#tabA">Frame A</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-bs-toggle="tab" id="b_tabB" href="#tabB">Frame B</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-bs-toggle="tab" href="#tab-1">Settings</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" role="tabpanel" id="tabA"></div>
+                        <div class="tab-pane" role="tabpanel" id="tabB"></div>
+                        <div class="tab-pane" role="tabpanel" id="tab-1">
+                            <p>Tab content.</p>
                         </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/2.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/3.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/4.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/5.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/6.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/7.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/8.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/9.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/10.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/11.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/12.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/13.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/14.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/15.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/16.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/17.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/18.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/19.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/20.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/7.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/8.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/9.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/10.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/11.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/12.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/13.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/14.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/1.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/2.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/3.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/4.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/5.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/6.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/7.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/8.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/9.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/10.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/11.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/12.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/13.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                    <div class="card" style="/*width: 45%;*/"><a class="stretched-link" href="assets/img/bw/1.webp"><img class="img-fluid" src="assets/img/bw/14.webp"></a>
-                        <div class="card-body">
-                            <p class="card-text">I.King and claves</p>
-                        </div>
-                    </div>
-                </div>
-                <div id="chapters" class="swiper-slide chapters" style="/*padding: 12px;*/">
-                    <div class="table-responsive d-flex flex-wrap" id="chapters-1">
-                        <table class="table table-hover table-dark table-bordered">
-                            <thead>
-                                <tr></tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="p0 title">Вступление</td>
-                                </tr>
-                                <tr>
-                                    <td class="p2 title" style="/*background: var(--bs-table-bg);*/--bs-primary: rgb(101,188,225);--bs-primary-rgb: 101,188,225;">I. Down the Rabbit Hole</td>
-                                </tr>
-                                <tr>
-                                    <td>Паденье и варенье</td>
-                                </tr>
-                                <tr>
-                                    <td>Антиподы</td>
-                                </tr>
-                                <tr>
-                                    <td>Кошки и мошки</td>
-                                </tr>
-                                <tr>
-                                    <td>Дверца в сад</td>
-                                </tr>
-                                <tr>
-                                    <td>«Выпей меня», «Съешь меня»</td>
-                                </tr>
-                                <tr>
-                                    <td class="title" style="/*background: var(--bs-table-bg);*/">II. The Pool of Tears</td>
-                                </tr>
-                                <tr>
-                                    <td>«Бедные ножки!..»</td>
-                                </tr>
-                                <tr>
-                                    <td>«Малютка Крокодил…»</td>
-                                </tr>
-                                <tr>
-                                    <td>Алиса уменьшается и падает в море слез</td>
-                                </tr>
-                                <tr>
-                                    <td>Алиса знакомится с Мышью</td>
-                                </tr>
-                                <tr>
-                                    <td class="title">III. The Caucus Race and a Long Tale</td>
-                                </tr>
-                                <tr>
-                                    <td>Мокрая компания и «сухая» книга</td>
-                                </tr>
-                                <tr>
-                                    <td>Бег и награды</td>
-                                </tr>
-                                <tr>
-                                    <td>Хвостатая история</td>
-                                </tr>
-                                <tr>
-                                    <td>Все покидают Алису</td>
-                                </tr>
-                                <tr>
-                                    <td class="title">IV.</td>
-                                </tr>
-                                <tr>
-                                    <td>На побегушках у Кролика</td>
-                                </tr>
-                                <tr>
-                                    <td>Алиса растет в доме</td>
-                                </tr>
-                                <tr>
-                                    <td>Пат, Кролик и рука в окне</td>
-                                </tr>
-                                <tr>
-                                    <td>Кошки и мошки</td>
-                                </tr>
-                                <tr>
-                                    <td>Билль вылетает из трубы</td>
-                                </tr>
-                                <tr></tr>
-                                <tr></tr>
-                                <tr></tr>
-                                <tr></tr>
-                                <tr></tr>
-                                <tr></tr>
-                                <tr></tr>
-                                <tr></tr>
-                                <tr></tr>
-                                <tr></tr>
-                                <tr>
-                                    <td class="title">V.</td>
-                                </tr>
-                                <tr>
-                                    <td>Встреча с Гусеницей</td>
-                                </tr>
-                                <tr>
-                                    <td>«Папа Вильям»</td>
-                                </tr>
-                                <tr>
-                                    <td>Чудесный гриб</td>
-                                </tr>
-                                <tr>
-                                    <td>Длинношеяя Алиса</td>
-                                </tr>
-                                <tr>
-                                    <td class="title">VI.</td>
-                                </tr>
-                                <tr>
-                                    <td>Лакей-лягушонок</td>
-                                </tr>
-                                <tr>
-                                    <td>У Герцогини</td>
-                                </tr>
-                                <tr>
-                                    <td>«Лупите своего сынка!»</td>
-                                </tr>
-                                <tr>
-                                    <td>Поросенок</td>
-                                </tr>
-                                <tr>
-                                    <td>Беседа с Чеширским Котом</td>
-                                </tr>
-                                <tr>
-                                    <td>Улыбка без кота</td>
-                                </tr>
-                                <tr>
-                                    <td class="title">VII.</td>
-                                </tr>
-                                <tr>
-                                    <td>Загадка про ворона и конторку</td>
-                                </tr>
-                                <tr>
-                                    <td>Убить время</td>
-                                </tr>
-                                <tr>
-                                    <td>Рассказ Сони</td>
-                                </tr>
-                                <tr>
-                                    <td class="title">IIX.</td>
-                                </tr>
-                                <tr>
-                                    <td>Перекрашенные розы</td>
-                                </tr>
-                                <tr>
-                                    <td>Знакомство с Червоной Королевой</td>
-                                </tr>
-                                <tr>
-                                    <td>Пропавшие головы</td>
-                                </tr>
-                                <tr>
-                                    <td>Крокет</td>
-                                </tr>
-                                <tr>
-                                    <td>Появление Чеширского Кота</td>
-                                </tr>
-                                <tr>
-                                    <td>Кот и король</td>
-                                </tr>
-                                <tr>
-                                    <td class="title">IX.</td>
-                                </tr>
-                                <tr>
-                                    <td>Морали Герцогини</td>
-                                </tr>
-                                <tr>
-                                    <td>Грифон</td>
-                                </tr>
-                                <tr>
-                                    <td>Черепаха Квази</td>
-                                </tr>
-                                <tr>
-                                    <td>Морская школа</td>
-                                </tr>
-                                <tr>
-                                    <td class="title">X.</td>
-                                </tr>
-                                <tr>
-                                    <td>Как танцуют морскую кадриль</td>
-                                </tr>
-                                <tr>
-                                    <td>Танец и песня</td>
-                                </tr>
-                                <tr>
-                                    <td>О рыбах</td>
-                                </tr>
-                                <tr>
-                                    <td>Алиса читает стихи</td>
-                                </tr>
-                                <tr>
-                                    <td>«Вечерняя Еда»</td>
-                                </tr>
-                                <tr>
-                                    <td class="title">XI.</td>
-                                </tr>
-                                <tr>
-                                    <td>Судья и присяжные</td>
-                                </tr>
-                                <tr>
-                                    <td>Показания Болванщика</td>
-                                </tr>
-                                <tr>
-                                    <td>Показания Кухарки</td>
-                                </tr>
-                                <tr>
-                                    <td class="title">XII</td>
-                                </tr>
-                                <tr>
-                                    <td>Алиса опрокинула присяжных</td>
-                                </tr>
-                                <tr>
-                                    <td>Допрос Алисы</td>
-                                </tr>
-                                <tr>
-                                    <td>Еще улика</td>
-                                </tr>
-                                <tr>
-                                    <td>Письмо</td>
-                                </tr>
-                                <tr>
-                                    <td>Король трактует письмо</td>
-                                </tr>
-                                <tr>
-                                    <td>Пробуждение Алисы</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div id="translations" class="swiper-slide translations" style="/*padding: 12px;*/"><span class="title" style="padding: 10px;display: block;margin-top: 13px;">• Оригинал:</span>
-                    <div class="table-responsive" id="original-1" style="margin-top: 6px;">
-                        <table class="table table-striped table-hover table-dark table-borderless">
-                            <tbody>
-                                <tr data-bs-toggle="tooltip" data-bss-tooltip="">
-                                    <td>Alice's adventures in Wonderland</td>
-                                    <td class="float-start">Тиражируемая копия 1895 года редакции</td>
-                                    <td class="float-end" style="color: #808080;">1785</td>
-                                </tr>
-                                <tr>
-                                    <td>Alice's adventures Underground</td>
-                                    <td>Первоначальная версия приключений</td>
-                                    <td style="color: #808080;">1782</td>
-                                </tr>
-                                <tr>
-                                    <td>Nurcery Alice</td>
-                                    <td>Адаптированная версия для маленьких детей</td>
-                                    <td style="color: #808080;">1790</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div><span class="title" style="padding: 10px;">• Перевод:</span>
-                    <div class="table-responsive" id="translation-1" style="margin-top: 17px;">
-                        <table class="table table-striped table-hover table-dark table-borderless">
-                            <thead>
-                                <tr style="/*position: sticky;*//*top: 0;*/"></tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Smartbook.pro</td>
-                                    <td>«Приключения Алисы в Стране Чудес»</td>
-                                    <td>2021&nbsp;Пересказ</td>
-                                </tr>
-                                <tr>
-                                    <td>Ю.Изотов </td>
-                                    <td>«Алиса в Стране Чудес»</td>
-                                    <td>2020</td>
-                                </tr>
-                                <tr>
-                                    <td>В.Бутромеев</td>
-                                    <td>«Алиса в Стране Чудес»</td>
-                                    <td>2019 /&nbsp;Пересказ</td>
-                                </tr>
-                                <tr>
-                                    <td>Л.Гурбановская</td>
-                                    <td>«Алиса в Стране Чудес»</td>
-                                    <td>2018</td>
-                                </tr>
-                                <tr>
-                                    <td>Е.Клюев</td>
-                                    <td>«Алиса в стране чудес»</td>
-                                    <td>2018</td>
-                                </tr>
-                                <tr>
-                                    <td>Д.Ермолович</td>
-                                    <td>«Приключения Алисы в стране чудес»</td>
-                                    <td>2016</td>
-                                </tr>
-                                <tr>
-                                    <td>С.Семёнов</td>
-                                    <td>«Алиса в стране чудес»</td>
-                                    <td>2016</td>
-                                </tr>
-                                <tr>
-                                    <td>А.Притуляк</td>
-                                    <td>«Приключения Алисы в стране чудес»</td>
-                                    <td>2012</td>
-                                </tr>
-                                <tr>
-                                    <td>М.Блехман</td>
-                                    <td>«Приключения Алисы в Стране Чудес или Странствие в Странную Страну»</td>
-                                    <td>2005</td>
-                                </tr>
-                                <tr>
-                                    <td>А.Флоря</td>
-                                    <td> «Алиса в Стране Чудес»</td>
-                                    <td>1992,2003</td>
-                                </tr>
-                                <tr>
-                                    <td>О.Хаславский</td>
-                                    <td> «Алиса в Стране Чудес»</td>
-                                    <td>2002</td>
-                                </tr>
-                                <tr>
-                                    <td>А.Кононенко</td>
-                                    <td> «Алиса в Стране Чудес»</td>
-                                    <td>Cell 3</td>
-                                </tr>
-                                <tr>
-                                    <td>Н.Старилов</td>
-                                    <td> «Алиса в Стране Чудес»</td>
-                                    <td>Cell 3</td>
-                                </tr>
-                                <tr>
-                                    <td>Ю.Нестеренко</td>
-                                    <td> «Алиса в Стране Чудес»</td>
-                                    <td>Cell 3</td>
-                                </tr>
-                                <tr>
-                                    <td>Б. Балтер</td>
-                                    <td>«Приключения Алисы в стране чудес»</td>
-                                    <td>1997</td>
-                                </tr>
-                                <tr>
-                                    <td>Ю.Лифшиц</td>
-                                    <td>«Алиса в стране чудес»</td>
-                                    <td>1991</td>
-                                </tr>
-                                <tr>
-                                    <td>Л.Яхнин</td>
-                                    <td>«Приключения Алисы в стране чудес»</td>
-                                    <td>1991</td>
-                                </tr>
-                                <tr>
-                                    <td>В.Орёл</td>
-                                    <td>«Приключения Алисы в стране чудес»</td>
-                                    <td>1988</td>
-                                </tr>
-                                <tr>
-                                    <td>А.Щербаков </td>
-                                    <td>«Приключения Алисы в стране чудес»</td>
-                                    <td>1977</td>
-                                </tr>
-                                <tr>
-                                    <td>Б.Заходер </td>
-                                    <td>«Приключения Алисы в стране чудес»</td>
-                                    <td>1972</td>
-                                </tr>
-                                <tr>
-                                    <td>Н.Демурова</td>
-                                    <td>«Приключения Алисы в стране чудес»</td>
-                                    <td>1978</td>
-                                </tr>
-                                <tr>
-                                    <td>А.Оленич-Гнененко</td>
-                                    <td>«Приключения Ани в мире чудес»</td>
-                                    <td>1940</td>
-                                </tr>
-                                <tr>
-                                    <td>А.Д’Актиль </td>
-                                    <td>«Приключения Алисы в стране чудес»</td>
-                                    <td>1923</td>
-                                </tr>
-                                <tr>
-                                    <td>В.Набоков </td>
-                                    <td>«Аня в Стране Чудес»</td>
-                                    <td>1923</td>
-                                </tr>
-                                <tr>
-                                    <td>М.П.Чехов (предположительно) </td>
-                                    <td>«Алиса в волшебной стране»</td>
-                                    <td>1913</td>
-                                </tr>
-                                <tr>
-                                    <td>П.Соловьёва</td>
-                                    <td>«Приключения Алисы в стране чудес»</td>
-                                    <td>1909</td>
-                                </tr>
-                                <tr>
-                                    <td>А.Рождественская</td>
-                                    <td>«Приключения Алисы в волшебной стране»</td>
-                                    <td>1908</td>
-                                </tr>
-                                <tr>
-                                    <td>М.Гранстрем</td>
-                                    <td>«Приключения Ани в мире чудес»</td>
-                                    <td>1908</td>
-                                </tr>
-                                <tr>
-                                    <td>Анонимный перевод</td>
-                                    <td>«Соня в Царстве Дива»</td>
-                                    <td>1879&nbsp;Пересказ</td>
-                                </tr>
-                            </tbody>
-                        </table>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div id="translation" style="/*padding: 16px;*/"><button class="btn btn-dark btn-lg" id="locker" type="button" style="/*padding-right: 12px;*//*padding-left: 12px;*/margin-top: -2px;margin-right: 18px;"><i class="fas fa-unlock" style="font-size: 13px;"></i></button>
-        <div class="swiper mySwiper3 swiper-h" style="/*margin-bottom: 40px;*/">
-            <div class="swiper-wrapper">
-                <div id="translationC" class="swiper-slide translationC"><select class="form-select-lg select">
-                        <optgroup label="• Оригинал">
-                            <option value="12" selected="">1765 • Alice's adventures in Wonderland</option>
-                            <option value="13">1760 • Alice's adventures Underground</option>
-                            <option value="14">Nurcery Alice</option>
-                        </optgroup>
-                        <optgroup label="• Перевод">
-                            <option value="">Н.Демурова</option>
-                            <option value="" selected="">Б.Заходер</option>
-                            <option value="">В.Набоков</option>
-                        </optgroup>
-                        <optgroup label="• Дополнения">
-                            <option value="">Анотации</option>
-                            <option value="">Словарь</option>
-                        </optgroup>
-                    </select>
-                    <div id="T-1">
-                        <p style="padding: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl non magna cursus auctor. Sed porta sagittis nisl id congue. Fusce neque ipsum, euismod sit amet turpis convallis, egestas venenatis erat. Proin nec tellus in neque vene<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl non magna cursus auctor. Sed porta sagittis nisl id congue. Fusce neque ipsum, euismod sit amet turpis convallis, egestas venenatis erat. Proin nec tellus in neque venenatis facilisis in id orci. Pellentesque feugiat volutpat augue, eu euismod odio tempor venenatis. Sed lacinia rhoncus pellentesque. Nulla vitae sapien non lectus dignissim pellentesque. Integer et aliquam elit. Fusce tincidunt faucibus libero, et maximus sapien.<br><br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl non magna cursus auctor. Sed porta sagittis nisl id congue. Fusce neque ipsum, euismod sit amet turpis convallis, egestas venenatis erat. Proin nec tellus in neque venenatis facilisis in id orci. Pellentesque feugiat volutpat augue, eu euismod odio tempor venenatis. Sed lacinia rhoncus pellentesque. Nulla vitae sapien non lectus dignissim pellentesque. Integer et aliquam elit. Fusce tincidunt faucibus libero, et maximus sapien.<br><br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl non magna cursus auctor. Sed porta sagittis nisl id congue. Fusce neque ipsum, euismod sit amet turpis convallis, egestas venenatis erat. Proin nec tellus in neque venenatis facilisis in id orci. Pellentesque feugiat volutpat augue, eu euismod odio tempor venenatis. Sed lacinia rhoncus pellentesque. Nulla vitae sapien non lectus dignissim pellentesque. Integer et aliquam elit. Fusce tincidunt faucibus libero, et maximus sapien.<br><br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl non magna cursus auctor. Sed porta sagittis nisl id congue. Fusce neque ipsum, euismod sit amet turpis convallis, egestas venenatis erat. Proin nec tellus in neque venenatis facilisis in id orci. Pellentesque feugiat volutpat augue, eu euismod odio tempor venenatis. Sed lacinia rhoncus pellentesque. Nulla vitae sapien non lectus dignissim pellentesque. Integer et aliquam elit. Fusce tincidunt faucibus libero, et maximus sapien.<br><br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl non magna cursus auctor. Sed porta sagittis nisl id congue. Fusce neque ipsum, euismod sit amet turpis convallis, egestas venenatis erat. Proin nec tellus in neque venenatis facilisis in id orci. Pellentesque feugiat volutpat augue, eu euismod odio tempor venenatis. Sed lacinia rhoncus pellentesque. Nulla vitae sapien non lectus dignissim pellentesque. Integer et aliquam elit. Fusce tincidunt faucibus libero, et maximus sapien.<br><br>natis facilisis in id orci. Pellentesque feugiat volutpat augue, eu euismod odio tempor venenatis. Sed lacinia rhoncus pellentesque. Nulla vitae sapien non lectus dignissim pellentesque. Integer et aliquam elit. Fusce tincidunt faucibus libero, et maximus sapien.</p>
-                    </div>
-                </div>
-                <div id="translationC-1" class="swiper-slide translationC"><select class="form-select-lg select">
-                        <optgroup label="• Оригинал">
-                            <option value="12" selected="">1765 • Alice's adventures in Wonderland</option>
-                            <option value="13">1760 • Alice's adventures Underground</option>
-                            <option value="14">Nurcery Alice</option>
-                        </optgroup>
-                        <optgroup label="• Перевод">
-                            <option value="" selected="">Н.Демурова</option>
-                            <option value="">Б.Заходер</option>
-                            <option value="">В.Набоков</option>
-                        </optgroup>
-                        <optgroup label="• Дополнения">
-                            <option value="">Анотации</option>
-                            <option value="">Словарь</option>
-                        </optgroup>
-                    </select>
-                    <div id="T-2">
-                        <p style="padding: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl non magna cursus auctor. Sed porta sagittis nisl id congue. Fusce neque ipsum, euismod sit amet turpis convallis, egestas venenatis erat. Proin nec tellus in neque vene<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl non magna cursus auctor. Sed porta sagittis nisl id congue. Fusce neque ipsum, euismod sit amet turpis convallis, egestas venenatis erat. Proin nec tellus in neque venenatis facilisis in id orci. Pellentesque feugiat volutpat augue, eu euismod odio tempor venenatis. Sed lacinia rhoncus pellentesque. Nulla vitae sapien non lectus dignissim pellentesque. Integer et aliquam elit. Fusce tincidunt faucibus libero, et maximus sapien.<br><br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl non magna cursus auctor. Sed porta sagittis nisl id congue. Fusce neque ipsum, euismod sit amet turpis convallis, egestas venenatis erat. Proin nec tellus in neque venenatis facilisis in id orci. Pellentesque feugiat volutpat augue, eu euismod odio tempor venenatis. Sed lacinia rhoncus pellentesque. Nulla vitae sapien non lectus dignissim pellentesque. Integer et aliquam elit. Fusce tincidunt faucibus libero, et maximus sapien.<br><br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl non magna cursus auctor. Sed porta sagittis nisl id congue. Fusce neque ipsum, euismod sit amet turpis convallis, egestas venenatis erat. Proin nec tellus in neque venenatis facilisis in id orci. Pellentesque feugiat volutpat augue, eu euismod odio tempor venenatis. Sed lacinia rhoncus pellentesque. Nulla vitae sapien non lectus dignissim pellentesque. Integer et aliquam elit. Fusce tincidunt faucibus libero, et maximus sapien.<br><br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl non magna cursus auctor. Sed porta sagittis nisl id congue. Fusce neque ipsum, euismod sit amet turpis convallis, egestas venenatis erat. Proin nec tellus in neque venenatis facilisis in id orci. Pellentesque feugiat volutpat augue, eu euismod odio tempor venenatis. Sed lacinia rhoncus pellentesque. Nulla vitae sapien non lectus dignissim pellentesque. Integer et aliquam elit. Fusce tincidunt faucibus libero, et maximus sapien.<br><br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl non magna cursus auctor. Sed porta sagittis nisl id congue. Fusce neque ipsum, euismod sit amet turpis convallis, egestas venenatis erat. Proin nec tellus in neque venenatis facilisis in id orci. Pellentesque feugiat volutpat augue, eu euismod odio tempor venenatis. Sed lacinia rhoncus pellentesque. Nulla vitae sapien non lectus dignissim pellentesque. Integer et aliquam elit. Fusce tincidunt faucibus libero, et maximus sapien.<br><br>natis facilisis in id orci. Pellentesque feugiat volutpat augue, eu euismod odio tempor venenatis. Sed lacinia rhoncus pellentesque. Nulla vitae sapien non lectus dignissim pellentesque. Integer et aliquam elit. Fusce tincidunt faucibus libero, et maximus sapien.</p>
-                    </div>
-                </div>
-                <div id="translationC-2" class="swiper-slide translationC"><select class="form-select-lg select">
-                        <optgroup label="• Оригинал">
-                            <option value="12" selected="">1765 • Alice's adventures in Wonderland</option>
-                            <option value="13">1760 • Alice's adventures Underground</option>
-                            <option value="14">Nurcery Alice</option>
-                        </optgroup>
-                        <optgroup label="• Перевод">
-                            <option value="">Н.Демурова</option>
-                            <option value="">Б.Заходер</option>
-                            <option value="" selected="">В.Набоков</option>
-                        </optgroup>
-                        <optgroup label="• Дополнения">
-                            <option value="">Анотации</option>
-                            <option value="">Словарь</option>
-                        </optgroup>
-                    </select>
-                    <div id="T-3">
-                        <p style="padding: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl non magna cursus auctor. Sed porta sagittis nisl id congue. Fusce neque ipsum, euismod sit amet turpis convallis, egestas venenatis erat. Proin nec tellus in neque vene<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl non magna cursus auctor. Sed porta sagittis nisl id congue. Fusce neque ipsum, euismod sit amet turpis convallis, egestas venenatis erat. Proin nec tellus in neque venenatis facilisis in id orci. Pellentesque feugiat volutpat augue, eu euismod odio tempor venenatis. Sed lacinia rhoncus pellentesque. Nulla vitae sapien non lectus dignissim pellentesque. Integer et aliquam elit. Fusce tincidunt faucibus libero, et maximus sapien.<br><br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl non magna cursus auctor. Sed porta sagittis nisl id congue. Fusce neque ipsum, euismod sit amet turpis convallis, egestas venenatis erat. Proin nec tellus in neque venenatis facilisis in id orci. Pellentesque feugiat volutpat augue, eu euismod odio tempor venenatis. Sed lacinia rhoncus pellentesque. Nulla vitae sapien non lectus dignissim pellentesque. Integer et aliquam elit. Fusce tincidunt faucibus libero, et maximus sapien.<br><br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl non magna cursus auctor. Sed porta sagittis nisl id congue. Fusce neque ipsum, euismod sit amet turpis convallis, egestas venenatis erat. Proin nec tellus in neque venenatis facilisis in id orci. Pellentesque feugiat volutpat augue, eu euismod odio tempor venenatis. Sed lacinia rhoncus pellentesque. Nulla vitae sapien non lectus dignissim pellentesque. Integer et aliquam elit. Fusce tincidunt faucibus libero, et maximus sapien.<br><br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl non magna cursus auctor. Sed porta sagittis nisl id congue. Fusce neque ipsum, euismod sit amet turpis convallis, egestas venenatis erat. Proin nec tellus in neque venenatis facilisis in id orci. Pellentesque feugiat volutpat augue, eu euismod odio tempor venenatis. Sed lacinia rhoncus pellentesque. Nulla vitae sapien non lectus dignissim pellentesque. Integer et aliquam elit. Fusce tincidunt faucibus libero, et maximus sapien.<br><br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed nisl non magna cursus auctor. Sed porta sagittis nisl id congue. Fusce neque ipsum, euismod sit amet turpis convallis, egestas venenatis erat. Proin nec tellus in neque venenatis facilisis in id orci. Pellentesque feugiat volutpat augue, eu euismod odio tempor venenatis. Sed lacinia rhoncus pellentesque. Nulla vitae sapien non lectus dignissim pellentesque. Integer et aliquam elit. Fusce tincidunt faucibus libero, et maximus sapien.<br><br>natis facilisis in id orci. Pellentesque feugiat volutpat augue, eu euismod odio tempor venenatis. Sed lacinia rhoncus pellentesque. Nulla vitae sapien non lectus dignissim pellentesque. Integer et aliquam elit. Fusce tincidunt faucibus libero, et maximus sapien.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-pagination pagination2"></div>
+    <div class="toolbar">
+        <div class="btn-group-vertical btn-group-sm buttons" role="group"><button class="btn btn-dark" id="i_lock" type="button"><i class="fas fa-lock"></i></button><button class="btn btn-dark" id="i_a" type="button">A</button><button class="btn btn-dark" id="i_b" type="button">B</button><button class="btn btn-dark" id="i_menu" type="button" data-bs-target="#menu" data-bs-toggle="offcanvas"><i class="fas fa-th-large"></i></button><button class="btn btn-dark" id="i_prev" type="button"><i class="fas fa-chevron-up"></i></button><button class="btn btn-dark" id="i_next" type="button"><i class="fas fa-chevron-down"></i></button><button class="btn btn-dark" id="i_tooltip" type="button"><i class="fas fa-comment-alt"></i></button></div>
+    </div>
+    <div id="swiperM">
+        <div id="slideA" class="slide">
+            <p id="textA">A</p>
+        </div>
+        <div id="slideB" class="slide">
+            <p id="textB">B</p>
         </div>
     </div>
-    <div class="swiper mySwiper2 swiper-v">
-        <div class="swiper-wrapper">
-            <div id="M-1" class="swiper-slide">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id turpis erat. Maecenas quis facilisis mauris. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum euismod accumsan quam, a consectetur leo pellentesque sit amet. Maecenas ultricies dictum est id luctus. Nam volutpat finibus pharetra. Nunc tortor sapien, vulputate in vestibulum a, aliquam eget libero. Suspendisse lacinia velit lacus, ut convallis mauris maximus non. Cras sit amet tortor laoreet, egestas enim sed, tempus enim. Suspendisse ut eros at nulla iaculis lobortis. Cras odio massa, viverra eu fermentum vitae, porttitor nec velit. Mauris eu suscipit arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.<br><br>Aenean vel congue lectus. In commodo bibendum nisi, id tincidunt ipsum faucibus sit amet. Ut sodales nec diam vel interdum. Nunc sit amet ligula at justo efficitur rhoncus. Curabitur vel scelerisque purus. Donec quam magna, rhoncus ac posuere a, ullamcorper ut dui. Vestibulum magna nibh, mollis vel posuere ac, fermentum ut est. Sed vel lorem vitae sapien accumsan aliquet non id enim. Vivamus imperdiet dui vitae dui faucibus fringilla.<br><br><br><br>Mauris ac interdum urna. Aliquam tempor leo eu efficitur sagittis. Sed faucibus neque at elit consectetur, sagittis pellentesque dui condimentum. Pellentesque eleifend suscipit erat. Vestibulum tempor finibus risus ut commodo. Integer eget imperdiet magna. Sed iaculis facilisis blandit. Nulla tempus bibendum tellus nec tincidunt. Curabitur imperdiet arcu ante, vel fermentum erat tincidunt sit amet. Nam dapibus volutpat libero. Nunc nec nisi aliquet orci pretium lobortis. In laoreet nec libero nec rhoncus. Nunc quis lacus convallis, commodo ligula in, elementum dui. Nulla eget ante turpis. Sed vitae porta ex, sed condimentum nunc. Quisque volutpat dolor sapien, et euismod erat eleifend et.<br><br><br><br>Morbi nulla sapien, ullamcorper sed ultricies id, ultrices sit amet mi. Cras vel posuere risus. Etiam non est eu massa ultricies eleifend pharetra at sem. Quisque ultrices ante lacus, nec consectetur mauris scelerisque nec. Proin eget ante dui. Nulla ex nibh, faucibus non augue vitae, faucibus pulvinar enim. Cras mattis consequat orci, lacinia sodales augue placerat cursus. Morbi eget sollicitudin dolor. Nunc faucibus quis arcu ut maximus. Aenean tempor maximus augue, sit amet blandit turpis tincidunt eu. Quisque dignissim condimentum facilisis. Donec nec risus posuere nulla ornare mattis. Mauris porta sapien at enim blandit, ac efficitur orci varius. Etiam eleifend elementum augue a bibendum.<br><br><br><br>Ut quis varius nunc, at egestas urna. In vehicula purus vitae turpis ornare venenatis. Vestibulum ultricies pulvinar sem in hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin malesuada, enim eu pellentesque tincidunt, neque nibh volutpat justo, nec molestie felis est ac eros. In scelerisque elementum sem, quis suscipit leo sagittis sed. Etiam non quam sit amet enim pharetra ullamcorper ac fringilla dui. Nullam vel diam vitae nibh sagittis pharetra. Nunc lacinia nunc ac risus tempor, a dapibus enim sodales. Praesent at nisi lacus. Nunc ut commodo ipsum. Aliquam commodo felis sit amet tempus tincidunt. Ut elementum erat a efficitur tincidunt. Duis cursus, sem quis molestie aliquam, ex felis tristique eros, id commodo arcu justo in lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-            </div>
-        </div>
-        <div class="swiper-scrollbar"></div>
-    </div>
-    <div class="btn-group-vertical" role="group" id="navigation"><button class="btn btn-dark sub_btn" id="wiki" type="button" data-bs-target="#wiki" data-bs-toggle="offcanvas" onclick="Ginit()"><i class="fas fa-star"></i></button><button class="btn btn-dark" id="totop" type="button" onclick="swiper2.slideTo(0);" style="--bs-dark: rgba(33,37,41,0.11);--bs-dark-rgb: 33,37,41;"><i class="fas fa-chevron-up"></i></button><button class="btn btn-dark" id="prev" type="button" onclick="loadPrev();"><i class="fas fa-chevron-left"></i></button><button class="btn btn-dark" type="button" onclick="loadNext();"><i class="fas fa-chevron-right"></i></button><button class="btn btn-dark" id="tool" type="button"><i class="far fa-comment-alt"></i></button><button class="btn btn-dark" id="trans" type="button"><i class="fas fa-book"></i></button></div>
+    <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
-    <script src="assets/js/core/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/js/Lightbox-Gallery.js"></script>
-    <script src="assets/js/core/inview-1.js"></script>
-    <script src="assets/js/inview.js"></script>
-    <script src="assets/js/swipers.js"></script>
-    <script src="assets/js/core/mixitup.min.js"></script>
-    <script src="assets/js/mixitup.js"></script>
-    <script src="assets/js/BTNS.js"></script>
-    <script src="assets/js/core/jquery%20rule.js"></script>
-    <script src="assets/js/settings.js"></script>
+    <script src="assets/js/Core/localbase.js"></script>
+    <script src="assets/js/Core/app.js"></script>
+    <script src="assets/js/Core/scrollto.js"></script>
+    <script src="assets/js/Core/scryll.esm.js"></script>
+    <script src="assets/js/DB.js"></script>
+    <script src="assets/js/toolbar.js"></script>
+    <script src="assets/js/orientation.js"></script>
+    <script src="assets/js/callout.js"></script>
+    <script src="assets/js/scroll_to_buttons.js"></script>
+    <script src="assets/js/text_loader.js"></script>
 </body>
 
 </html>

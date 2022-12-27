@@ -1,0 +1,29 @@
+#menu li {
+  display: block;
+  /*background: grey;*/
+  /*padding: 8px;*/
+  cursor: pointer;
+  /*color: white;*/
+  /*border: solid 1px black;*/
+}
+
+.offcanvas-body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#menu li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+#menu li a:hover {
+  background: rgba(104,104,104,0.2);
+}
+
+.tab-content a {
+  padding: 4px;
+  border-radius: 4px;
+}
+

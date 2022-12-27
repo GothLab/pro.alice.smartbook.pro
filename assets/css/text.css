@@ -1,0 +1,34 @@
+p {
+  text-align: justify;
+}
+
+#textA, #textB {
+  padding-left: 42px;
+  text-align: justify;
+  color: #b8b8b8;
+  padding-top: 36px;
+  border-left: dotted 1px rgba(171,161,143,0.35);
+  /*padding-left: 36px;*/
+  /*padding-right: 36px;*/
+  font-family: 'Fira Sans';
+  font-size: 14px;
+  padding-right: 36px;
+}
+
+#textA p {
+  text-align: justify!important;
+  word-break: break-word;
+  hyphens: auto;
+  margin-top: 20px;
+  white-space: normal;
+}
+
+h1, h2, h3, h4 {
+  color: #aba18f;
+  text-decoration-thickness: 1px!important;
+  /*text-decoration: underline;*/
+  border-bottom: solid 1px rgba(171,161,143,0.35);
+  text-align: left;
+  font-family: 'Kis Text BT Web';
+}
+

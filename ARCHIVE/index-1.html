@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Smartbook PRO LIGHT</title>
+    <meta name="theme-color" content="#947234">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/192-1.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/512-1.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans&amp;subset=cyrillic">
+    <link rel="stylesheet" href="assets/css/Kis%20Text%20BT%20OSF%20Web.css">
+    <link rel="stylesheet" href="assets/css/Kis%20Text%20BT%20Web.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/collapse.css">
+    <link rel="stylesheet" href="assets/css/dark.css">
+    <link rel="stylesheet" href="assets/css/LI.css">
+    <link rel="stylesheet" href="assets/css/menu.css">
+    <link rel="stylesheet" href="assets/css/scrollbar.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/text.css">
+    <link rel="stylesheet" href="assets/css/toolbar.css">
+</head>
+
+<body class="waves-effect">
+    <div>
+        <div class="offcanvas offcanvas-start" tabindex="-1" data-bs-scroll="true" data-bs-backdrop="false" id="menu">
+            <div class="offcanvas-header" style="width: 100%;">
+                <h5 class="offcanvas-title">Smartbook</h5><button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="accordion" role="tablist" id="accordion-1">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" role="tab"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-1" aria-expanded="true" aria-controls="accordion-1 .item-1">Философия</button></h2>
+                        <div class="accordion-collapse collapse show item-1" role="tabpanel" data-bs-parent="#accordion-1">
+                            <div class="accordion-body">
+                                <div class="btn-group-vertical" role="group" style="width: 100%;">
+                                    <div class="btn-group"><button class="btn btn-dark text-start list_name" type="button" book_href="https://gothlab.github.io/Smartbook-App/assets/books/Phylosophy/hegel_a.html" book_id="1" scroll="0" book_ver="0" book_status="0">Гегель • Эстетика</button><button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" type="button"></button>
+                                        <div class="dropdown-menu dropdown-menu-start"><a class="dropdown-item save" href="#"><i class="fas fa-arrow-down"></i>Скачать</a><a class="dropdown-item delete" href="#"><i class="fas fa-times"></i>Удалить</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-2" aria-expanded="false" aria-controls="accordion-1 .item-2">Экономика</button></h2>
+                        <div class="accordion-collapse collapse item-2" role="tabpanel" data-bs-parent="#accordion-1">
+                            <div class="accordion-body">
+                                <p class="mb-0">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-3" aria-expanded="false" aria-controls="accordion-1 .item-3">История</button></h2>
+                        <div class="accordion-collapse collapse item-3" role="tabpanel" data-bs-parent="#accordion-1">
+                            <div class="accordion-body">
+                                <p class="mb-0">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="text1" data-role="collapsibleset" data-inset="false"></div>
+                <div>
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-bs-toggle="tab" id="b_tabA" href="#tabA">Frame A</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-bs-toggle="tab" id="b_tabB" href="#tabB">Frame B</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-bs-toggle="tab" href="#tab-1">Settings</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" role="tabpanel" id="tabA"></div>
+                        <div class="tab-pane" role="tabpanel" id="tabB"></div>
+                        <div class="tab-pane" role="tabpanel" id="tab-1">
+                            <p>Tab content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="toolbar">
+        <div class="btn-group-vertical btn-group-sm buttons" role="group"><button class="btn btn-dark" id="i_menu" type="button" data-bs-target="#menu" data-bs-toggle="offcanvas"><i class="fas fa-th-large"></i></button><button class="btn btn-dark" id="i_prev" type="button"><i class="fas fa-chevron-up"></i></button><button class="btn btn-dark" id="i_next" type="button"><i class="fas fa-chevron-down"></i></button><button class="btn btn-dark" id="i_tooltip" type="button"><i class="fas fa-comment-alt"></i></button></div>
+        <div class="btn-group-vertical btn-group-sm buttons_main" role="group" id="buttons_main"><button class="btn btn-dark" id="i_a" type="button">A</button><button class="btn btn-dark" id="i_b" type="button">B</button><button class="btn btn-dark" id="i_lock" type="button"><i class="fas fa-lock"></i></button></div>
+    </div>
+    <div class="swiper swiperM">
+        <div class="swiper-wrapper">
+            <div id="slideA" class="swiper-slide swiperM_slide" style="/*background: red;*//*width: 500px;*//*height: 500px;*/">
+                <div class="swiper swiperA">
+                    <div id="swiper-wrapperA" class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <p id="textA" style="text-align: justify;"><a data-bs-toggle="tooltip" data-bss-tooltip="" id="link1" href="#" title="whatever">Link</a>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id turpis erat. Maecenas quis facilisis mauris. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum euismod accumsan quam, a consectetur leo pellentesque sit amet. Maecenas ultricies dictum est id luctus. Nam volutpat finibus pharetra. Nunc tortor sapien, vulputate in vestibulum a, aliquam eget libero. Suspendisse lacinia velit lacus, ut convallis mauris maximus non. Cras sit amet tortor laoreet, egestas enim sed, tempus enim. Suspendisse ut eros at nulla iaculis lobortis. Cras odio massa, viverra eu fermentum vitae, porttitor nec velit. Mauris eu suscipit arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.<br><br><br><br>Aenean vel congue lectus. In commodo bibendum nisi, id tincidunt ipsum faucibus sit amet. Ut sodales nec diam vel interdum. Nunc sit amet ligula at justo efficitur rhoncus. Curabitur vel scelerisque purus. Donec quam magna, rhoncus ac posuere a, ullamcorper ut dui. Vestibulum magna nibh, mollis vel posuere ac, fermentum ut est. Sed vel lorem vitae sapien accumsan aliquet non id enim. Vivamus imperdiet dui vitae dui faucibus fringilla.<br><br><br><a data-bs-toggle="tooltip" data-bss-tooltip="" id="link2" href="#" title="test2">Link</a><br>Mauris ac interdum urna. Aliquam tempor leo eu efficitur sagittis. Sed faucibus neque at elit consectetur, sagittis pellentesque dui condimentum. Pellentesque eleifend suscipit erat. Vestibulum tempor finibus risus ut commodo. Integer eget imperdiet magna. Sed iaculis facilisis blandit. Nulla tempus bibendum tellus nec tincidunt. Curabitur imperdiet arcu ante, vel fermentum erat tincidunt sit amet. Nam dapibus volutpat libero. Nunc nec nisi aliquet orci pretium lobortis. In laoreet nec libero nec rhoncus. Nunc quis lacus convallis, commodo ligula in, elementum dui. Nulla eget ante turpis. Sed vitae porta ex, sed condimentum nunc. Quisque volutpat dolor sapien, et euismod erat eleifend et.<br><br><br><br>Morbi nulla sapien, ullamcorper sed ultricies id, ultrices sit amet mi. Cras vel posuere risus. Etiam non est eu massa ultricies eleifend pharetra at sem. Quisque ultrices ante lacus, nec consectetur mauris scelerisque nec. Proin eget ante dui. Nulla ex nibh, faucibus non augue vitae, faucibus pulvinar enim. Cras mattis consequat orci, lacinia sodales augue placerat cursus. Morbi eget sollicitudin dolor. Nunc faucibus quis arcu ut maximus. Aenean tempor maximus augue, sit amet blandit turpis tincidunt eu. Quisque dignissim condimentum facilisis. Donec nec risus posuere nulla ornare mattis. Mauris porta sapien at enim blandit, ac efficitur orci varius. Etiam eleifend elementum augue a bibendum.<br><br><br><br>Ut quis varius nunc, at egestas urna. In vehicula purus vitae turpis ornare venenatis. Vestibulum ultricies pulvinar sem in hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin malesuada, enim eu pellentesque tincidunt, neque nibh volutpat justo, nec molestie felis est ac eros. In scelerisque elementum sem, quis suscipit leo sagittis sed. Etiam non quam sit amet enim pharetra ullamcorper ac fringilla dui. Nullam vel diam vitae nibh sagittis pharetra. Nunc lacinia nunc ac risus tempor, a dapibus enim sodales. Praesent at nisi lacus. Nunc ut commodo ipsum. Aliquam commodo felis sit amet tempus tincidunt. Ut elementum erat a efficitur tincidunt. Duis cursus, sem quis molestie aliquam, ex felis tristique eros, id commodo arcu justo in lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+                        </div>
+                    </div>
+                    <div id="scrollA" class="swiper-scrollbar"></div>
+                </div>
+            </div>
+            <div id="slideB" class="swiper-slide swiperM_slide" style="/*background: blue;*//*width: 500px;*//*height: 500px;*/">
+                <div class="swiper swiperB waves-effect">
+                    <div id="swiper-wrapperB" class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <p id="textB">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id turpis erat. Maecenas quis facilisis mauris. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum euismod accumsan quam, a consectetur leo pellentesque sit amet. Maecenas ultricies dictum est id luctus. Nam volutpat finibus pharetra. Nunc tortor sapien, vulputate in vestibulum a, aliquam eget libero. Suspendisse lacinia velit lacus, ut convallis mauris maximus non. Cras sit amet tortor laoreet, egestas enim sed, tempus enim. Suspendisse ut eros at nulla iaculis lobortis. Cras odio massa, viverra eu fermentum vitae, porttitor nec velit. Mauris eu suscipit arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.<br><br><br><br>Aenean vel congue lectus. In commodo bibendum nisi, id tincidunt ipsum faucibus sit amet. Ut sodales nec diam vel interdum. Nunc sit amet ligula at justo efficitur rhoncus. Curabitur vel scelerisque purus. Donec quam magna, rhoncus ac posuere a, ullamcorper ut dui. Vestibulum magna nibh, mollis vel posuere ac, fermentum ut est. Sed vel lorem vitae sapien accumsan aliquet non id enim. Vivamus imperdiet dui vitae dui faucibus fringilla.<br><br><br><br>Mauris ac interdum urna. Aliquam tempor leo eu efficitur sagittis. Sed faucibus neque at elit consectetur, sagittis pellentesque dui condimentum. Pellentesque eleifend suscipit erat. Vestibulum tempor finibus risus ut commodo. Integer eget imperdiet magna. Sed iaculis facilisis blandit. Nulla tempus bibendum tellus nec tincidunt. Curabitur imperdiet arcu ante, vel fermentum erat tincidunt sit amet. Nam dapibus volutpat libero. Nunc nec nisi aliquet orci pretium lobortis. In laoreet nec libero nec rhoncus. Nunc quis lacus convallis, commodo ligula in, elementum dui. Nulla eget ante turpis. Sed vitae porta ex, sed condimentum nunc. Quisque volutpat dolor sapien, et euismod erat eleifend et.<br><br><br><br>Morbi nulla sapien, ullamcorper sed ultricies id, ultrices sit amet mi. Cras vel posuere risus. Etiam non est eu massa ultricies eleifend pharetra at sem. Quisque ultrices ante lacus, nec consectetur mauris scelerisque nec. Proin eget ante dui. Nulla ex nibh, faucibus non augue vitae, faucibus pulvinar enim. Cras mattis consequat orci, lacinia sodales augue placerat cursus. Morbi eget sollicitudin dolor. Nunc faucibus quis arcu ut maximus. Aenean tempor maximus augue, sit amet blandit turpis tincidunt eu. Quisque dignissim condimentum facilisis. Donec nec risus posuere nulla ornare mattis. Mauris porta sapien at enim blandit, ac efficitur orci varius. Etiam eleifend elementum augue a bibendum.<br><br><br><br>Ut quis varius nunc, at egestas urna. In vehicula purus vitae turpis ornare venenatis. Vestibulum ultricies pulvinar sem in hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin malesuada, enim eu pellentesque tincidunt, neque nibh volutpat justo, nec molestie felis est ac eros. In scelerisque elementum sem, quis suscipit leo sagittis sed. Etiam non quam sit amet enim pharetra ullamcorper ac fringilla dui. Nullam vel diam vitae nibh sagittis pharetra. Nunc lacinia nunc ac risus tempor, a dapibus enim sodales. Praesent at nisi lacus. Nunc ut commodo ipsum. Aliquam commodo felis sit amet tempus tincidunt. Ut elementum erat a efficitur tincidunt. Duis cursus, sem quis molestie aliquam, ex felis tristique eros, id commodo arcu justo in lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+                        </div>
+                    </div>
+                    <div id="scrollB" class="swiper-scrollbar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/Core/localbase.js"></script>
+    <script src="assets/js/Core/app.js"></script>
+    <script src="assets/js/Core/scrollto.js"></script>
+    <script src="assets/js/Core/scryll.esm.js"></script>
+    <script src="assets/js/DB.js"></script>
+    <script src="assets/js/toolbar.js"></script>
+    <script src="assets/js/orientation.js"></script>
+    <script src="assets/js/callout.js"></script>
+    <script src="assets/js/scroll_to_buttons.js"></script>
+    <script src="assets/js/text_loader.js"></script>
+</body>
+
+</html>

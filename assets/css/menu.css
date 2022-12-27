@@ -1,0 +1,22 @@
+.btn-primary {
+  background: black;
+  border: none;
+  text-align: left;
+  font-size: 12px;
+}
+
+.dropdown-toggle {
+  width: 50px;
+  display: block;
+  text-align: center;
+}
+
+.list_name {
+  width: 100%;
+  font-size: 12px;
+}
+
+.dropdown-menu .fas {
+  padding-right: 12px;
+}
+

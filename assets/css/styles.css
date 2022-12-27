@@ -1,0 +1,56 @@
+.offcanvas-body {
+  flex-grow: 1;
+  padding: 0;
+  overflow-y: auto;
+}
+
+.accordion-body {
+  padding: 0;
+}
+
+.btn {
+  /*width: 100%;*/
+}
+
+.offcanvas-backdrop {
+  z-index: 2;
+}
+
+.nav {
+  /*bottom: 0!important;*/
+  /*position: fixed;*/
+  width: var(--bs-offcanvas-width);
+}
+
+#toc_tabs a {
+  /*width: 50%;*/
+}
+
+body {
+  overflow: hidden;
+}
+
+#slideA, #slideB {
+  width: 50%;
+  /*overflow-y: scroll!important;*/
+  height: 100vh;
+  overflow-x: hidden;
+  box-sizing: content-box;
+}
+
+#slideA {
+  float: left;
+}
+
+#slideB {
+  float: right;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #232323;
+}
+
