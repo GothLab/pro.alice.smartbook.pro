@@ -1,0 +1,8 @@
+body {
+  overflow: auto!IMPORTANT;
+}
+
+.img-fluid {
+  max-height: 200px;
+}
+

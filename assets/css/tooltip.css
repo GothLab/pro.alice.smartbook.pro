@@ -1,0 +1,26 @@
+.tooltip-inner {
+  text-align: left;
+  background: black;
+  text-align: center;
+  font-family: 'Kis Text BT Web';
+  white-space: normal;
+  color: #c8c8c8;
+  /*word-wrap: break-word;*/
+  /*text-justify: initial;*/
+  padding: 9px;
+}
+
+.tooltip-arrow::before {
+  border-right-color: black;
+  border-left-color: black;
+  border-top-color: black;
+  border-bottom-color: black;
+}
+
+.tooltip-arrow::before {
+  border-right-color: black;
+  border-left-color: black;
+  border-top-color: black;
+  border-bottom-color: black;
+}
+

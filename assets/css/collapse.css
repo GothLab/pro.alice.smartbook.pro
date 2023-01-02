@@ -26,6 +26,7 @@
 .author {
   color: #aba18f;
   float: right;
+  text-align: end;
   display: block;
   font-size: 13px;
   font-family: 'Kis Text BT OSF Web';
@@ -84,9 +85,10 @@ a.internal-link {
 
 #accordion-1 .btn-group {
   /*border-bottom: solid 1px white!important;*/
+  border-bottom: dotted rgba(171,161,143,0.46);
 }
 
 .btn-close {
-  visibility: hidden;
+  /*visibility: hidden;*/
 }
 

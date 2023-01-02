@@ -4,18 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "d0963ff0570334b8",
+        "id": "2f2f686cfae43cff",
         "type": "tabs",
         "children": [
           {
-            "id": "d2694d6e862e9c7f",
+            "id": "9f63581c95ce7396",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "html-view",
               "state": {
-                "file": "Alice/Anot/Annotations.md",
-                "mode": "source",
-                "source": false
+                "file": "Alice/Anot/Anotated-1.html"
               }
             }
           }
@@ -85,8 +83,8 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Alice/Anot/Annotations.md",
-                "collapseAll": false,
+                "file": "Alice/Anot/Anotated-1.html",
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -102,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Alice/Anot/Annotations.md",
+                "file": "Alice/Anot/Anotated-1.html",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,11 +123,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Alice/Anot/Annotations.md"
+                "file": "Alice/Anot/Anotated-1.html"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -146,10 +145,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "57cf69fb02205792",
+  "active": "9f63581c95ce7396",
   "lastOpenFiles": [
+    "Alice/Anot/Anotated — копия.html",
+    "Alice/Anot/Anotated.html",
+    "Alice/Anot/Anotated.md",
     "Alice/Anot/Translations.md",
+    "1.webp",
     "Alice/Anot/Annotations.md",
-    "Alice/Anot/Anotated.md"
+    "Alice/ORIG/Alice's Adventures in Wonderland.md",
+    "Alice/ORIG/Alice's Adventures Under Ground.md",
+    "Pasted image 20221230111449.png",
+    "Pasted image 20221230111513.png"
   ]
 }

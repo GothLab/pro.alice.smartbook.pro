@@ -14,6 +14,10 @@
 - [[#XI. Who Stole the Tarts?|XI. Who Stole the Tarts?]]
 - [[#XII. Alice’s Evidence|XII. Alice’s Evidence]]
 
+![[1 2.webp]]
+![[1 3.webp]]
+![[35 copy.webp]]
+![[10 copy.webp]]
 ## Introduction
 
 All in the golden afternoon
@@ -86,6 +90,9 @@ Like pilgrim’s wither’d wreath of flowers
 
 ## I. Down the Rabbit-Hole
 
+![[2.webp]]
+![[2 1.webp]]
+![[11 copy.webp]]
 Alice was beginning to get very [[get tired of – Устать от чего-либо.|tired]] of sitting by her sister on the bank, and of having nothing to do: once or twice she had [[to peep  –  подсмотреть и одновременно первое появление. В русском языке эти два значения –  «выглядывать», «проглядывать».|peeped into]] the [[ —  В английском слово «which» в таких случаях может только подразумеваться.|book her sister was]] reading, but it had no pictures or conversations in it, “and what is the use of a book,” thought Alice “without pictures or conversations?”
 
 So she was [[to consider – обдумывать, размышлять, взвешивать… Алиса – рассудительный и обдумывающий ребенок – это слово неоднократно встретится вам на страницах этой книги.|considering]] in her own mind ([[– настолько хорошо, насколько могла.|as well as she could]], for the hot day made her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be worth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink eyes ran close by her.
@@ -135,6 +142,10 @@ There were doors all round the hall, but they were all locked; and when Alice ha
 
 Suddenly she came upon a little three-legged table, all made of solid glass; there was nothing on it except a tiny golden key, and Alice’s first thought was that it might belong to one of the doors of the hall; but, alas! either the locks were too large, or the key was too small, but at any rate it would not open any of them. However, on the second time round, she came upon a low curtain she had not noticed before, and behind it was a little door about [[Дверца была высотой около 37 сантиметров, то есть немного больше альбомного листа.|fifteen inches high]]: she tried the little golden key in the lock, and to her great delight it fitted!
 
+![[3.webp]]
+![[3 1.webp]]
+![[3 copy.webp]]
+![[34 copy 1.webp]]
 Alice opened the door and found that it led into a small passage, not much larger than a rat-hole: she knelt down and looked along the passage into the loveliest garden you ever saw. How she longed to get out of that dark hall, and wander about among those beds of bright flowers and those cool fountains, but she could not even get her head through the doorway; “and even if my head would go through,” thought poor Alice, “it would be of very little use without my shoulders. Oh, how I wish I could shut up like a telescope! I think I could, if I only knew how to begin.” For, you see, so many out-of-the-way things had happened lately, that Alice had begun to think that very few things indeed were really impossible.
 
 > [!FAQ]-  The loveliest garden you ever saw
@@ -144,6 +155,10 @@ There seemed to be no use in waiting by the little door, so she went back to the
 
 It was all very well to say “Drink me,” but the wise little Alice was not going to do _that_ in a hurry. “No, I’ll look first,” she said, “and see whether it’s marked ‘_poison_’ or not”; for she had read several nice little histories about children who had got burnt, and eaten up by wild beasts and other unpleasant things, all because they _would_ not remember the simple rules their friends had taught them: such as, that a red-hot [[кочерга|poker]] will burn you if you hold it too long; and that if you cut your finger _very_ deeply with a knife, it usually bleeds; and she had never forgotten that, if you drink much from a bottle marked “poison,” it is almost certain to [[Юмористический эффект основан на стилистическом приеме приуменьшения (understatement). Алиса повторяет неоднократно слышанные ею наставления, используя «взрослую» фразеологию, не вдумываясь в значение слов.|disagree with you]], sooner or later.
 
+![[4.webp]]
+![[4 1.webp]]
+![[17 copy.webp]]
+![[33 copy.webp]]
 However, this bottle was _not_ marked “poison,” so Alice [[venture — отважиться|ventured]] to taste it, and finding it very nice, (it had, in fact, a sort of mixed flavour of cherry-tart, [[заварной крем|custard]], pine-apple, roast turkey, [[ириска|toffee]], and hot buttered toast,) she very soon finished it off.
 
 *      *      *      *      *      *      *  
@@ -174,14 +189,18 @@ So she set to work, and very soon finished off the cake.
 
 ## II. The Pool of Tears
 
+![[5.webp]]
+![[5 1.webp]]
+![[14 copy.webp]]
+![[39 copy.webp]]
 “[[curiouser — неправильная форма прилагательного curious. Дети часто употребляют эти формы неправильно.|Curiouser]] and curiouser!” cried Alice (she was so much surprised, that for the moment she quite forgot how to speak good English); “now I’m opening out like the largest telescope that ever was! Good-bye, feet!” (for when she looked down at her feet, they seemed to be almost out of sight, they were getting so far off). “Oh, my poor little feet, I wonder who will put on your shoes and stockings for you now, dears? I’m sure _I_ shan’t be able! I shall be a great deal too far off to trouble myself about you: you must manage the best way you can;—but I must be kind to them,” thought Alice, “or perhaps they won’t walk the way I want to go! Let me see: I’ll give them a new pair of boots every Christmas.”
 
 And she went on planning to herself how she would manage it. “They must go by the carrier,” she thought; “and how funny it’ll seem, sending presents to one’s own feet! And how odd the directions will look!
 
-Alice’s Right Foot, [[Esquire - Первоначально титул эсквайр носили все дворяне, обладавшие собственным гербом, но не бывшие пэрами или рыцарями, то есть весь обширный класс английского джентри.|Esq.,]]
+*Alice’s Right Foot, [[Esquire - Первоначально титул эсквайр носили все дворяне, обладавшие собственным гербом, но не бывшие пэрами или рыцарями, то есть весь обширный класс английского джентри.|Esq.,]]
        Hearthrug,
-         near the Fender,_
-           with Alice’s love.
+         near the Fender,
+           (with Alice’s love.)*
 
 Oh dear, what nonsense I’m talking!”
 
@@ -195,6 +214,11 @@ Poor Alice! It was as much as she could do, lying down on one side, to look thro
 > Иза Баумэн — актриса, исполнявшей роль Алисы в инсценировке сказки рассказывает о том, как однажды во время прогулки, когда автор «Алисы» водил ее по лужайкам возле Крайст-черч и весело болтал с ней, они неожиданно столкнулись с одним преподавателем колледжа, и Льюис Кэрролл мгновенно исчез, а его место занял нервный, озабоченный, заикающийся человек которого она с трудом понимала; таким он и остался до конца прогулки.
 
 After a time she heard a little pattering of feet in the distance, and she hastily dried her eyes to see what was coming. It was the White Rabbit returning, splendidly dressed, with a pair of white kid gloves in [[«Руке», а не «лапе»; Животные у Льюиса Кэрролла антропоморфны то есть уподоблены людям.|one hand ]]and a large fan in the other: he came trotting along in a great hurry, muttering to himself as he came, “Oh! the Duchess, the Duchess! Oh! won’t she be savage if I’ve kept her waiting!” Alice felt so desperate that she was ready to ask help of any one; so, when the Rabbit came near her, she began, in a low, timid voice, “If you please, sir—” The Rabbit started violently, dropped [[В «Приключениях Алисы под землей», первоначальном варианте сказки, Кролик роняет не веер, а букетик цветов. Алиса впоследствии уменьшается, понюхав эти цветы.|the white kid gloves and the fan]], and skurried away into the darkness as hard as he could go.
+
+![[6.webp]]
+![[6 1.webp]]
+![[37 copy 1.webp]]
+![[20 copy.webp]]
 
 > [!FAQ]- Сокровища Кэрролла
 > В 1950 году пасторский дом в Крофте где жила семья Доджсонов перестраивали, и под половицами бывшей детской на втором этаже был обнаружен замечательный тайник. Из более чем столетнего заточения на белый свет извлекли перочинный нож, роговой гребень, осколки фарфора, а главное — левый детский башмак, наперсток и маленькую белую перчатку с левой руки, нимало не пострадавшую от долгого невостребования. Задолго до того, как тайник был открыт, некоторые из его сокровищ уже сверкнули в поэзии Кэрролла.
@@ -268,6 +292,9 @@ As she said this she looked down at her hands, and was surprised to see that she
 
 “That _was_ a narrow escape!” said Alice, a good deal frightened at the sudden change, but very glad to find herself still in existence; “and now for the garden!” and she ran with all speed back to the little door: but, alas! the little door was shut again, and the little golden key was lying on the glass table as before, “and things are worse than ever,” thought the poor child, “for I never was so small as this before, never! And I declare it’s too bad, that it is!”
 
+![[7.webp]]
+![[7 1.webp]]
+![[32 copy.webp]]
 As she said these words her foot slipped, and in another moment, splash! she was up to her chin in salt water. Her first idea was that she had somehow fallen into the sea, “and in that case I can go back by railway,” she said to herself. (Alice had been to the seaside once in her life, and had come to the general conclusion, that wherever you go to on the English coast you find a number of bathing machines in the sea, some children digging in the sand with wooden spades, then a row of lodging houses, and behind them a railway station.) However, she soon made out that she was in the pool of tears which she had wept when she was nine feet high.
 
 > [!FAQ]- Bathing machines
@@ -286,6 +313,9 @@ Just then she heard something splashing about in the pool a little way off, and 
 
 “Not like cats!” cried the Mouse, in a shrill, passionate voice. “Would _you_ like cats if you were me?”
 
+![[8.webp]]
+![[8 1.webp]]
+![[2 copy.webp]]
 “Well, perhaps not,” said Alice in a soothing tone: “don’t be angry about it. And yet I wish I could show you our cat Dinah: I think you’d take a fancy to cats if you could only see her. She is such a dear quiet thing,” Alice went on, half to herself, as she swam lazily about in the pool, “and she sits purring so nicely by the fire, licking her paws and washing her face—and she is such a nice soft thing to nurse—and she’s such a capital one for catching mice—oh, I beg your pardon!” cried Alice again, for this time the Mouse was bristling all over, and she felt certain it must be really offended. “We won’t talk about her any more if you’d rather not.”
 
 “We indeed!” cried [[Мышь а вернее мышонок. Мужского рода, так как в конце 3й главы Алиса говорит про него 'he'. В произведении персонажи высмеивают 'безвольные' мужские и 'стервозные' женские манеры поведения людей.|the Mouse]], who was trembling down to the end of his tail. “As if _I_ would talk on such a subject! Our family always _hated_ cats: nasty, low, vulgar things! Don’t let me hear the name again!”
@@ -302,6 +332,9 @@ It was high time to go, for the pool was getting quite crowded with the birds an
 
 ## III. A Caucus-Race and a Long Tale
 
+![[10.webp]]
+![[10 1.webp]]
+![[1 copy 2.webp]]
 They were indeed a queer-looking party that assembled on the bank—the birds with draggled feathers, the animals with their fur clinging close to them, and all dripping wet, cross, and uncomfortable.
 
 The first question of course was, how to get dry again: they had a consultation about this, and after a few minutes it seemed quite natural to Alice to find herself talking familiarly with them, as if she had known them all her life. Indeed, she had quite a long argument with the Lory, who at last turned sulky, and would only say, “I am older than you, and must know better;” and this Alice would not allow without knowing how old it was, and, as the Lory positively refused to tell its age, there was no more to be said.
@@ -365,6 +398,9 @@ Alice had no idea what to do, and in despair she put her hand in her pocket, and
 
 “Hand it over here,” said the Dodo.
 
+![[9.webp]]
+![[9 1.webp]]
+![[8 copy 1.webp]]
 Then they all crowded round her once more, while the Dodo solemnly presented the thimble, saying “We beg your acceptance of this elegant thimble;” and, when it had finished this short speech, they all cheered.
 
 Alice thought the whole thing very absurd, but they all looked so grave that she did not dare to laugh; and, as she could not think of anything to say, she simply bowed, and took the thimble, looking as solemn as she could.
@@ -473,6 +509,9 @@ By this time she had found her way into a tidy little room with a table in the w
 
 It did so indeed, and much sooner than she had expected: before she had drunk half the bottle, she found her head pressing against the ceiling, and had to stoop to save her neck from being broken. She hastily put down the bottle, saying to herself “That’s quite enough—I hope I shan’t grow any more—As it is, I can’t get out at the door—I do wish I hadn’t drunk quite so much!”
 
+![[11.webp]]
+![[11 1.webp]]
+![[4 copy.webp]]
 Alas! it was too late to wish that! She went on growing, and growing, and very soon had to kneel down on the floor: in another minute there was not even room for this, and she tried the effect of lying down with one elbow against the door, and the other arm curled round her head. Still she went on growing, and, as a last resource, she put one arm out of the window, and one foot up the chimney, and said to herself “Now I can do no more, whatever happens. What _will_ become of me?”
 
 Luckily for Alice, the little magic bottle had now had its full effect, and she grew no larger: still it was very uncomfortable, and, as there seemed to be no sort of chance of her ever getting out of the room again, no wonder she felt unhappy.
@@ -489,6 +528,8 @@ And so she went on, taking first one side and then the other, and making quite a
 
 Presently the Rabbit came up to the door, and tried to open it; but, as the door opened inwards, and Alice’s elbow was pressed hard against it, that attempt proved a failure. Alice heard it say to itself “Then I’ll go round and get in at the window.”
 
+![[12.webp]]
+![[12 1.webp]]
 “_That_ you won’t!” thought Alice, and, after waiting till she fancied she heard the Rabbit just under the window, she suddenly spread out her hand, and made a snatch in the air. She did not get hold of anything, but she heard a little shriek and a fall, and a crash of broken glass, from which she concluded that it was just possible it had fallen into a cucumber-frame, or something of the sort.
 
 Next came an angry voice—the Rabbit’s—“[[уменьш. от Patrick, Patricia. Распроспраненное ирландское имя. В сказке Патрик говорит с ирландским акцентом.|Pat]]! Pat! Where are you?” And then a voice she had never heard before, “Sure then I’m here! [[«Ирландские яблоки» – неофициальное название картошки.|Digging for apples]], yer honour!”
@@ -511,6 +552,8 @@ She waited for some time without hearing anything more: at last came a rumbling 
 
 “Oh! So Bill’s got to come down the chimney, has he?” said Alice to herself. “Shy, they seem to put everything upon Bill! I wouldn’t be in Bill’s place for a good deal: this fireplace is narrow, to be sure; but I _think_ I can kick a little!”
 
+![[13.webp]]
+![[13 1.webp]]
 She drew her foot as far down the chimney as she could, and waited till she heard a little animal (she couldn’t guess of what sort it was) scratching and scrambling about in the chimney close above her: then, saying to herself “This is Bill,” she gave one sharp kick, and waited to see what would happen next.
 
 The first thing she heard was a general chorus of “There goes Bill!” then the Rabbit’s voice along—“Catch him, you by the hedge!” then silence, and then another confusion of voices—“Hold up his head—Brandy now—Don’t choke him—How was it, old fellow? What happened to you? Tell us all about it!”
@@ -535,6 +578,8 @@ It sounded an excellent plan, no doubt, and very neatly and simply arranged; the
 
 An enormous puppy was looking down at her with large round eyes, and feebly stretching out one paw, trying to touch her. “Poor little thing!” said Alice, in a coaxing tone, and she tried hard to whistle to it; but she was terribly frightened all the time at the thought that it might be hungry, in which case it would be very likely to eat her up in spite of all her coaxing.
 
+![[14.webp]]
+![[14 1.webp]]
 Hardly knowing what she did, she picked up a little bit of stick, and held it out to the puppy; whereupon the puppy jumped into the air off all its feet at once, with a yelp of delight, and rushed at the stick, and made believe to worry it; then Alice dodged behind a great thistle, to keep herself from being run over; and the moment she appeared on the other side, the puppy made another rush at the stick, and tumbled head over heels in its hurry to get hold of it; then Alice, thinking it was very like having a game of play with a cart-horse, and expecting every moment to be trampled under its feet, ran round the thistle again; then the puppy began a series of short charges at the stick, running a very little way forwards each time and a long way back, and barking hoarsely all the while, till at last it sat down a good way off, panting, with its tongue hanging out of its mouth, and its great eyes half shut.
 
 This seemed to Alice a good opportunity for making her escape; so she set off at once, and ran till she was quite tired and out of breath, and till the puppy’s bark sounded quite faint in the distance.
@@ -547,6 +592,9 @@ She stretched herself up on tiptoe, and peeped over the edge of the mushroom, an
 
 ## V. Advice from a Caterpillar
 
+![[15.webp]]
+![[15 1.webp]]
+![[12 copy.webp]]
 The Caterpillar and Alice looked at each other for some time in silence: at last the Caterpillar took the hookah out of its mouth, and addressed her in a languid, sleepy voice.
 
 “Who are _you?_” said the Caterpillar.
@@ -599,45 +647,56 @@ Alice thought she might as well wait, as she had nothing else to do, and perhaps
 
 Alice folded her hands, and began:—
 
-“You are old, Father William,” the young man said,  
+![[16.webp]]
+![[16 1.webp]]
+*“You are old, Father William,” the young man said,  
     “And your hair has become very white;  
 And yet you incessantly stand on your head—  
-    Do you think, at your age, it is right?”  
+    Do you think, at your age, it is right?”*  
   
-“In my youth,” Father William replied to his son,  
+*“In my youth,” Father William replied to his son,  
     “I feared it might injure the brain;  
 But, now that I’m perfectly sure I have none,  
-    Why, I do it again and again.”  
-  
-“You are old,” said the youth, “as I mentioned before,  
+    Why, I do it again and again.”*  
+    
+![[17.webp]]    
+  ![[17 1.webp]]
+![[19 copy.webp]]
+*“You are old,” said the youth, “as I mentioned before,  
     And have grown most uncommonly fat;  
 Yet you turned a back-somersault in at the door—  
-    Pray, what is the reason of that?”  
+    Pray, what is the reason of that?”*  
   
-“In my youth,” said the sage, as he shook his grey locks,  
+*“In my youth,” said the sage, as he shook his grey locks,  
     “I kept all my limbs very supple  
 By the use of this ointment—one shilling the box—  
-    Allow me to sell you a couple?”  
+    Allow me to sell you a couple?”*  
   
-“You are old,” said the youth, “and your jaws are too weak  
+![[18.webp]]
+  ![[18 1.webp]]
+*“You are old,” said the youth, “and your jaws are too weak  
     For anything tougher than suet;  
 Yet you finished the goose, with the bones and the beak—  
-    Pray, how did you manage to do it?”  
+    Pray, how did you manage to do it?”*  
   
-“In my youth,” said his father, “I took to the law,  
+*“In my youth,” said his father, “I took to the law,  
     And argued each case with my wife;  
 And the muscular strength, which it gave to my jaw,  
-    Has lasted the rest of my life.”  
-  
-“You are old,” said the youth, “one would hardly suppose  
+    Has lasted the rest of my life.”*  
+
+![[19.webp]]
+  ![[19 1.webp]]
+![[25 copy.webp]]
+*“You are old,” said the youth, “one would hardly suppose  
     That your eye was as steady as ever;  
 Yet you balanced an eel on the end of your nose—  
-    What made you so awfully clever?”  
+    What made you so awfully clever?”*  
   
-“I have answered three questions, and that is enough,”  
+*“I have answered three questions, and that is enough,”  
     Said his father; “don’t give yourself airs!  
 Do you think I can listen all day to such stuff?  
-    Be off, or I’ll kick you down stairs!”
+    Be off, or I’ll kick you down stairs!”*
+    
 
 > [!FAQ]- You are old, Father William
 > Один из непревзойденных шедевров «поэзии чепухи» (nonsense verse), который представляет собой остроумнейшую пародию на позабытое дидактическое стихотворение Роберта Саути (Robert Southey, 1774-1843) под названием Old Man’s Comforts and How He Gained Them.
@@ -772,6 +831,9 @@ It was so long since she had been anything near the right size, that it felt qui
 
 For a minute or two she stood looking at the house, and wondering what to do next, when suddenly a footman in livery came running out of the wood—(she considered him to be a footman because he was in livery: otherwise, judging by his face only, she would have called him a fish)—and rapped loudly at the door with his knuckles. It was opened by another [[лакей|footman]] in [[Ливрея - форменная одежда особого покроя и определённого цвета для лакеев, швейцаров, кучеров и иных слуг |livery]], with a round face, and large eyes like a frog; and both footmen, Alice noticed, had powdered hair that curled all over their heads. She felt very curious to know what it was all about, and crept a little way out of the wood to listen.
 
+![[20.webp]]
+![[20 1.webp]]
+![[24 copy.webp]]
 The Fish-Footman began by producing from under his arm a great letter, nearly as large as himself, and this he handed over to the other, saying, in a solemn tone, “For the Duchess. An invitation from the Queen to play croquet.” The Frog-Footman repeated, in the same solemn tone, only changing the order of the words a little, “From the Queen. An invitation for the Duchess to play croquet.”
 
 Then they both bowed low, and their curls got entangled together.
@@ -806,6 +868,11 @@ The Footman seemed to think this a good opportunity for repeating his remark, wi
 
 “Oh, there’s no use in talking to him,” said Alice desperately: “he’s perfectly idiotic!” And she opened the door and went in.
 
+![[21.webp]]
+![[21 1.webp]]
+![[7 copy.webp]]
+
+![[21 copy.webp]]
 The door led right into a large kitchen, which was full of smoke from one end to the other: the Duchess was sitting on a three-legged stool in the middle, nursing a baby; the cook was leaning over the fire, stirring a large cauldron which seemed to be full of soup.
 
 “There’s certainly too much pepper in that soup!” Alice said to herself, as well as she could for sneezing.
@@ -853,26 +920,26 @@ Alice glanced rather anxiously at the cook, to see if she meant to take the hint
 
 “Oh, don’t bother _me_,” said the Duchess;[[У меня всегда было плохо с математикой.| “I never could abide figures!” ]]And with that she began nursing her child again, singing a sort of lullaby to it as she did so, and giving it a violent shake at the end of every line:
 
-“Speak roughly to your little boy,  
+*“Speak roughly to your little boy,  
     And beat him when he sneezes:  
 He only does it to annoy,  
-    Because he knows it teases.”
+    Because he knows it teases.”*
 
-CHORUS.  
-(In which the cook and the baby joined):
+*CHORUS.  
+(In which the cook and the baby joined):*
 
-“Wow! wow! wow!”
+*“Wow! wow! wow!”*
 
 While the Duchess sang the second verse of the song, she kept tossing the baby violently up and down, and the poor little thing howled so, that Alice could hardly hear the words:—
 
-“I speak severely to my boy,  
+*“I speak severely to my boy,  
     I beat him when he sneezes;  
 For he can thoroughly enjoy  
-    The pepper when he pleases!”
+    The pepper when he pleases!”*
 
 CHORUS.
 
-“Wow! wow! wow!”
+*“Wow! wow! wow!”*
 
 > [!FAQ]- Speak roughly to your little boy
 > Свирепая колыбельная песня, исполняемая Герцогиней, представляет собой пародию на давно забытое, весьма слащавое, сентиментальное и нравоучительное стихотворение Дж. У. Лэнгфорда (G.W. Langford).
@@ -995,6 +1062,8 @@ The baby grunted again, and Alice looked very anxiously into its face to see wha
 
 No, there were no tears. “If you’re going to turn into a pig, my dear,” said Alice, seriously, “I’ll have nothing more to do with you. Mind now!” The poor little thing sobbed again (or grunted, it was impossible to say which), and they went on for some while in silence.
 
+![[22.webp]]
+![[22 1.webp]]
 Alice was just beginning to think to herself, “Now, what am I to do with this creature when I get it home?” when it grunted again, so violently, that she looked down into its face in some alarm. This time there could be _no_ mistake about it: it was neither more nor less than a pig, and she felt that it would be quite absurd for her to carry it further.
 
 So she set the little creature down, and felt quite relieved to see it trot away quietly into the wood. “If it had grown up,” she said to herself, “it would have made a dreadfully ugly child: but it makes rather a handsome pig, I think.” And she began thinking over other children she knew, who might do very well as pigs, and was just saying to herself, “if one only knew the right way to change them—” when she was a little startled by seeing the Cheshire Cat sitting on a bough of a tree a few yards off.
@@ -1034,6 +1103,8 @@ Alice didn’t think that proved it at all; however, she went on “And how do y
 
 “I suppose so,” said Alice.
 
+![[23.webp]]
+![[23 1.webp]]
 “Well, then,” the Cat went on, “you see, a dog growls when it’s angry, and wags its tail when it’s pleased. Now _I_ growl when I’m pleased, and wag my tail when I’m angry. Therefore I’m mad.”
 
 “_I_ call it purring, not growling,” said Alice.
@@ -1054,6 +1125,8 @@ Alice was not much surprised at this, she was getting so used to queer things ha
 
 Alice waited a little, half expecting to see it again, but it did not appear, and after a minute or two she walked on in the direction in which the March Hare was said to live. “I’ve seen hatters before,” she said to herself; “[[ Речь Алисы, как мы уже видели, не всегда правильна, в частности, она не в ладу со степенями сравнения.|the March Hare will be much the most interesting]], and perhaps as this is May it won’t be raving mad—at least not so mad as it was in March.” As she said this, she looked up, and there was the Cat again, sitting on a branch of a tree.
 
+![[24.webp]]
+![[24 1.webp]]
 “Did you say pig, or fig?” said the Cat.
 
 “I said pig,” replied Alice; “and I wish you wouldn’t keep appearing and vanishing so suddenly: you make one quite giddy.”
@@ -1095,6 +1168,9 @@ Alice looked all round the table, but there was nothing on it but tea. “I don�
 
 “You should learn not to make personal remarks,” Alice said with some severity; “it’s very rude.”
 
+![[25.webp]]
+![[25 1.webp]]
+![[6 copy.webp]]
 The Hatter opened his eyes very wide on hearing this; but all he _said_ was, “Why is a raven like a writing-desk?”
 
 > [!FAQ]-   «Why is a raven like a writing desk?»
@@ -1196,8 +1272,11 @@ Alice sighed wearily. “I think you might do something better with the time,”
 
 The Hatter shook his head mournfully. “Not I!” he replied. “We quarrelled last March—just before _he_ went mad, you know—” (pointing with his tea spoon at the March Hare,) “—it was at the great concert given by the Queen of Hearts, and I had to sing
 
-‘Twinkle, twinkle, little bat!  
-How I wonder what you’re at!’
+![[26.webp]]
+![[26 1.webp]]
+![[23 copy.webp]]
+*‘Twinkle, twinkle, little bat!  
+How I wonder what you’re at!’*
 
 You know the song, perhaps?”
 
@@ -1205,9 +1284,9 @@ You know the song, perhaps?”
 
 “It goes on, you know,” the Hatter continued, “in this way:—
 
-‘Up above the world you fly,  
+*‘Up above the world you fly,  
 Like a tea-tray in the sky.  
-                    Twinkle, twinkle—’”
+                    Twinkle, twinkle—’”*
 
 > [!FAQ]- Twinkle, twinkle, little bat!
 > Песенка Шляпника пародирует известное хрестоматийное стихотворение The Star (автор Jane Taylor, 1783-1827).  
@@ -1362,6 +1441,8 @@ The Dormouse had closed its eyes by this time, and was going off into a [[doze o
 
 “Then you shouldn’t talk,” said the Hatter.
 
+![[27.webp]]
+![[27 1.webp]]
 This piece of rudeness was more than Alice could bear: she got up in great disgust, and walked off; the Dormouse fell asleep instantly, and neither of the others took the least notice of her going, though she looked back once or twice, half hoping that they would call after her: the last time she saw them, they were trying to [[Во времена Кэрролла дети нередко держали маленьких зверьков в старых чайниках.|put the Dormouse into the teapot.]]
 
 “At any rate I’ll never go _there_ again!” said Alice as she picked her way through the wood. “It’s the stupidest tea-party I ever was at in all my life!”
@@ -1380,6 +1461,9 @@ On which Seven looked up and said, “That’s right, Five! Always lay the blame
 
 “_You’d_ better not talk!” said Five. “I heard the Queen say only yesterday you deserved to be beheaded!”
 
+![[28.webp]]
+![[28 1.webp]]
+![[28 copy.webp]]
 “What for?” said the one who had spoken first.
 
 “That’s none of _your_ business, Two!” said Seven.
@@ -1412,6 +1496,8 @@ When the procession came opposite to Alice, they all stopped and looked at her, 
 
 “How should _I_ know?” said Alice, surprised at her own courage. “It’s no business of _mine_.”
 
+![[29.webp]]
+![[29 1.webp]]
 The Queen turned crimson with fury, and, after glaring at her for a moment like a wild beast, screamed “Off with her head! Off—”
 
 “Nonsense!” said Alice, very loudly and decidedly, and the Queen was silent.
@@ -1461,6 +1547,9 @@ The soldiers were silent, and looked at Alice, as the question was evidently mea
 
 “She boxed the Queen’s ears—” the Rabbit began. Alice gave a little scream of laughter. “Oh, hush!” the Rabbit whispered in a frightened tone. “The Queen will hear you! You see, she came rather late, and the Queen said—”
 
+![[30.webp]]
+![[30 1.webp]]
+![[31 copy.webp]]
 “Get to your places!” shouted the Queen in a voice of thunder, and people began running about in all directions, tumbling up against each other; however, they got settled down in a minute or two, and the game began. Alice thought she had never seen such a curious croquet-ground in her life; [[…вся площадка для игры в крокет была изрыта (была волнистой, покрытой бороздками; ridge — зд. гребень борозды).|it was all ridges and furrows]]; the balls were live hedgehogs, the mallets live flamingoes, and the soldiers had to double themselves up and to stand on their hands and feet, to make [[зд. воротца (через которые во время игры в крокет ударом молотка прогоняют шар).|the arches.]]
 
 > [!FAQ]- Underground
@@ -1519,6 +1608,8 @@ The moment Alice appeared, she was appealed to by all three to settle the questi
 
 The executioner’s argument was, that you couldn’t cut off a head unless there was a body to cut it off from: that he had never had to do such a thing before, and he wasn’t going to begin at _his_ time of life.
 
+![[31.webp]]
+![[31 1.webp]]
 The King’s argument was, that anything that had a head could be beheaded, and that you weren’t to talk nonsense.
 
 The Queen’s argument was, that if something wasn’t done about it in less than no time she’d have everybody executed, all round. (It was this last remark that had made the whole party look so grave and anxious.)
@@ -1543,6 +1634,9 @@ She had quite forgotten the Duchess by this time, and was a little startled when
 
 “Tut, tut, child!” said the Duchess. “[[Каждое свое высказывание Герцогиня заканчивает словами and the moral of that is и затем несет какую-нибудь околесицу. Автор высмеивает дидактический характер обучения в викторианской Англии, когда детей непрерывно пичкали поучительными наставлениями.|Everything’s got a moral]], if only you can find it.” And she squeezed herself up closer to Alice’s side as she spoke.
 
+![[32.webp]]
+![[32 1.webp]]
+![[30 copy.webp]]
 Alice did not much like keeping so close to her: first, because the Duchess was _very_ ugly; and secondly, because she was exactly the right height to rest her chin upon Alice’s shoulder, and it was an uncomfortably sharp chin. However, she did not like to be rude, so she bore it as well as she could.
 
 “The game’s going on rather better now,” she said, by way of keeping up the conversation a little.
@@ -1630,6 +1724,9 @@ Then the Queen left off, quite out of breath, and said to Alice, “Have you see
 
 As they walked off together, Alice heard the King say in a low voice, to the company generally, “You are all pardoned.” “Come, _that’s_ a good thing!” she said to herself, for she had felt quite unhappy at the number of executions the Queen had ordered.
 
+![[33.webp]]
+![[33 1.webp]]
+![[22 copy.webp]]
 They very soon came upon a Gryphon, lying fast asleep in the sun. (If you don’t know what a Gryphon is, look at the picture.) “Up, lazy thing!” said the Queen, “and take this young lady to see the Mock Turtle, and to hear his history. I must go back and see after some executions I have ordered;” and she walked off, leaving Alice alone with the Gryphon. Alice did not quite like the look of the creature, but on the whole she thought it would be quite as safe to stay with it as to go after that savage Queen: so she waited.
 
 > [!FAQ]-  «Gryphon»
@@ -1657,6 +1754,10 @@ So they sat down, and nobody spoke for some minutes. Alice thought to herself, �
 
 These words were followed by a very long silence, broken only by an occasional exclamation of “Hjckrrh!” from the Gryphon, and the constant heavy sobbing of the Mock Turtle. Alice was very nearly getting up and saying, “Thank you, sir, for your interesting story,” but she could not help thinking there _must_ be more to come, so she sat still and said nothing.
 
+![[34.webp]]
+![[34 1.webp]]
+![[9 copy.webp]]
+![[27 copy.webp]]
 “When we were little,” the Mock Turtle went on at last, more calmly, though still sobbing a little now and then, “we went to school in the sea. The master was an old Turtle—we used to call him Tortoise—”
 
 “Why did you call him Tortoise, if he wasn’t one?” Alice asked.
@@ -1808,6 +1909,8 @@ The Mock Turtle sighed deeply, and drew the back of one flapper across his eyes.
 
 “Come, let’s try the first figure!” said the Mock Turtle to the Gryphon. “We can do without lobsters, you know. Which shall sing?”
 
+![[35.webp]]
+![[35 1.webp]]
 “Oh, _you_ sing,” said the Gryphon. “I’ve forgotten the words.”
 
 So they began solemnly dancing round and round Alice, every now and then treading on her toes when they passed too close, and waving their forepaws to mark the time, while the Mock Turtle sang this, very slowly and sadly:—
@@ -1954,6 +2057,9 @@ So Alice began telling them her adventures from the time when she first saw the 
 
 “Stand up and repeat ‘’_Tis the voice of the sluggard_,’” said the Gryphon.
 
+![[36.webp]]
+![[36 1.webp]]
+![[26 copy.webp]]
 “How the creatures order one about, and make one repeat lessons!” thought Alice; “I might as well be at school at once.” However, she got up, and began to repeat it, but her head was so full of the Lobster Quadrille, that she hardly knew what she was saying, and the words came very queer indeed:—
 
 *“’Tis the voice of the Lobster; I heard him declare,  
@@ -2064,7 +2170,7 @@ While the Panther received knife and fork with a growl,
 
 The Mock Turtle sighed deeply, and began, in a voice sometimes choked with sobs, to sing this:—
 
-“Beautiful Soup, so rich and green,  
+*“Beautiful Soup, so rich and green,  
 Waiting in a hot tureen!  
 Who for such dainties would not stoop?  
 Soup of the evening, beautiful Soup!  
@@ -2072,9 +2178,9 @@ Soup of the evening, beautiful Soup!
     Beau—ootiful Soo—oop!  
     Beau—ootiful Soo—oop!  
 Soo—oop of the e—e—evening,  
-    Beautiful, beautiful Soup!  
+    Beautiful, beautiful Soup!*  
   
-“Beautiful Soup! Who cares for fish,  
+*“Beautiful Soup! Who cares for fish,  
 Game, or any other dish?  
 [[— шуточный перенос ради рифмы: = two pennyworth… of soup — супа на два пенса. Второй строфы пародии Кэрролла с его переносом слова «p-enoyworth» не было в первом варианте сказки.|Who would not give all else for two p]]  
 ennyworth only of beautiful Soup?  
@@ -2082,7 +2188,7 @@ Pennyworth only of beautiful Soup?
     Beau—ootiful Soo—oop!  
     Beau—ootiful Soo—oop!  
 Soo—oop of the e—e—evening,  
-    Beautiful, beauti—FUL SOUP!”
+    Beautiful, beauti—FUL SOUP!”*
 
 > [!FAQ]- “Beautiful Soup” 
 > — Поется на мотив популярной песни Star of the Evening (автор слов и музыки James М. Sayles):  
@@ -2165,10 +2271,15 @@ One of the jurors had a pencil that squeaked. This of course, Alice could _not_
 
 On this the White Rabbit blew three blasts on the trumpet, and then unrolled the parchment scroll, and read as follows:—
 
-“The Queen of Hearts, she made some tarts,  
+![[37.webp]]
+![[37 1.webp]]
+![[42 copy.webp]]
+![[18 copy.webp]]
+![[41 copy.webp]]
+*“The Queen of Hearts, she made some tarts,  
     All on a summer day:  
 The Knave of Hearts, he stole those tarts,  
-    And took them quite away!”
+    And took them quite away!”*
     
 > [!FAQ]- «The Queen of Hearts…» 
 >— старинная детская песенка (nursery rhyme). Кэрролл использует первый куплет этой песенки в качестве обвинительного заключения. Известны два различных окончания этой песенки:  
@@ -2245,6 +2356,9 @@ Just at this moment Alice felt a very curious sensation, which puzzled her a goo
 
 All this time the Queen had never left off staring at the Hatter, and, just as the Dormouse crossed the court, she said to one of the officers of the court, “[[– Имеется в виду эпизод из главы VII, где Сумасшедший Шляпник рассказывает о том, как пел, чтобы как-то убить Время.|Bring me the list of the singers in the last concert!]]” on [[— намек на выражение to shake in one’s shoes — дрожать, трястись от страха.|which the wretched Hatter trembled so, that he shook both his shoes off.]]
 
+![[39.webp]]
+![[39 1.webp]]
+![[29 copy.webp]]
 “Give your evidence,” the King repeated angrily, “or I’ll have you executed, whether you’re nervous or not.”
 
 “I’m a poor man, your Majesty,” the Hatter began, in a trembling voice, “—and I hadn’t begun my tea—not above a week or so—and what with the bread-and-butter getting so thin—and the twinkling of the tea—”
@@ -2292,6 +2406,8 @@ Here one of the guinea-pigs cheered, and was [[— игра слов, to be supp
 
 “Then you may _sit_ down,” the King replied.
 
+![[38 1.webp]]
+![[38 2.webp]]
 Here the other guinea-pig cheered, and was suppressed.
 
 “Come, that finished the guinea-pigs!” thought Alice. “Now we shall get on better.”
@@ -2338,6 +2454,8 @@ Alice watched the White Rabbit as he fumbled over the list, feeling very curious
 
 “Oh, I _beg_ your pardon!” she exclaimed in a tone of great dismay, and began picking them up again as quickly as she could, for the accident of the goldfish kept running in her head, and she had a vague sort of idea that they must be collected at once and put back into the jury-box, or they would die.
 
+![[40 1.webp]]
+![[40 2.webp]]
 “The trial cannot proceed,” said the King in a very grave voice, “until all the jurymen are back in their proper places—_all_,” he repeated with great emphasis, looking hard at Alice as he said so.
 
 Alice looked at the jury-box, and saw that, in her haste, she had put the Lizard in head downwards, and the poor little thing was waving its tail about in a melancholy way, being quite unable to move. She soon got it out again, and put it right; “not that it signifies much,” she said to herself; “I should think it would be _quite_ as much use in the trial one way up as the other.”
@@ -2464,6 +2582,8 @@ The Knave shook his head sadly. “Do I look like it?” he said. (Which he cert
 
 “But, it goes on ‘_they all returned from him to you_,’” said Alice.
 
+![[41.webp]]
+
 “Why, there they are!” said the King triumphantly, pointing to the tarts on the table. “Nothing can be clearer than _that_. Then again—‘_before she had this fit_—’ you never had fits, my dear, I think?” he said to the Queen.
 
 “Never!” said the Queen furiously, throwing an inkstand at the Lizard as she spoke. (The unfortunate little Bill had left off writing on his slate with one finger, as he found it made no mark; but he now hastily began again, using the ink, that was trickling down his face, as long as it lasted.)
@@ -2484,6 +2604,8 @@ The Knave shook his head sadly. “Do I look like it?” he said. (Which he cert
 
 “Who cares for you?” said Alice, (she had grown to her full size by this time.) “You’re nothing but a pack of cards!”
 
+![[42.webp]]
+![[41 1.webp]]
 At this the whole pack rose up into the air, and came flying down upon her: she gave a little scream, half of fright and half of anger, and tried to beat them off, and found herself lying on the bank, with her head in the lap of her sister, who was gently brushing away some dead leaves that had fluttered down from the trees upon her face.
 
 “Wake up, Alice dear!” said her sister; “Why, what a long sleep you’ve had!”
