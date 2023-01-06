@@ -11,24 +11,15 @@
             "id": "9f63581c95ce7396",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "ae090b183eed7e7b",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
-                "file": "Alice/ORIG/Wonderland.md",
+                "file": "Alice/Anot/Anotated.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -94,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Alice/ORIG/Wonderland.md",
+                "file": "Alice/Anot/Anotated.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Alice/ORIG/Wonderland.md",
+                "file": "Alice/Anot/Anotated.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Alice/ORIG/Wonderland.md"
+                "file": "Alice/Anot/Anotated.md"
               }
             }
           }
@@ -156,17 +147,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ae090b183eed7e7b",
+  "active": "9f63581c95ce7396",
   "lastOpenFiles": [
+    "Alice/Anot/Anotated.html",
+    "Alice/Anot/Anotated.md",
+    "1 2.webp.md",
+    "Alice/Anot/Anotated — копия.html",
+    "Alice/Anot/Annotations.md",
+    "Alice/ORIG/Wonderland.md",
     "Alice/ORIG/Wonderland.html",
     "Alice/ORIG/Underground.md",
     "Alice/ORIG/Underground.html",
-    "Alice/ORIG/Nursery.md",
-    "Alice/ORIG/Nursery Alice.html",
-    "Alice/ORIG/Wonderland.md",
-    "Alice/ORIG/Alice's Adventures Under Ground.html",
-    "Alice/TRANSL/Izotov.md",
-    "Alice/TRANSL/Kozlov.md",
-    "Alice/TRANSL/Matveev.md"
+    "Alice/ORIG/Nursery.md"
   ]
 }
