@@ -89,7 +89,7 @@ var target = '#text'+active_frame;
  var toc = $(target).find('ul:first').html();
  $('#tab'+active_frame).html(toc);
 $(target).find('ul:first').remove();
-         $(target).find('br').remove();
+         //$(target).find('br').remove();
          //cleaning toc
     $('#tab'+active_frame).find('br').remove();
 
@@ -183,6 +183,7 @@ $(this).attr('data-bs-toggle','tooltip').attr({
          //
         INVIEW();
          //
+                IMGS();
 
   ////////////////////    
 

@@ -1,4 +1,13 @@
-if (document.querySelectorAll('[data-bss-baguettebox]').length > 0) {
-   baguetteBox.run('[data-bss-baguettebox]', { animation: 'slideIn', afterShow: imagerX });
-}
+function IMGS () {
+        $('.img-fluid').on('click',function(){
 
+parent = $(this).parent().parent();
+
+
+});
+        
+        
+        $('img').not('.main').hide();
+        
+   baguetteBox.run('[data-bss-baguettebox]', { animation: 'fadeIn', afterShow: imagerX });
+}

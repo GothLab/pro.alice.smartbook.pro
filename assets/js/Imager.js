@@ -1,15 +1,13 @@
-var parent;
-
-$('.img-fluid').on('click',function(){
-
-parent = $(this).parent().parent();
+var parent = 0;
 
 
-});
 
 
 function imagerX() {
-        
+        baguetteBox.show(0);
+       setTimeout(function() { 
+
+                   
  var val0 = $(parent).find('a').eq(0).find('img').attr('src');
 
 var val1 = $(parent).find('a').eq(1).find('img').attr('src');
@@ -30,7 +28,10 @@ $('#baguetteBox-figure-0').find('img').attr('src',val0);
         
         $('#baguetteBox-figure-4').find('img').attr('src',val4);       
         
-        //const gallery = baguetteBox.run('.gallery');
-//baguetteBox.show(index, gallery[0]);
+
+               
+               
+    }, 100); 
+    
         
 }
