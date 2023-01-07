@@ -30,7 +30,7 @@ $('#baguetteBox-figure-0').find('img').attr('src',val0);
         
         $('#baguetteBox-figure-4').find('img').attr('src',val4);       
         
-        const gallery = baguetteBox.run('.gallery');
-baguetteBox.show(index, gallery[0]);
+        //const gallery = baguetteBox.run('.gallery');
+//baguetteBox.show(index, gallery[0]);
         
 }
