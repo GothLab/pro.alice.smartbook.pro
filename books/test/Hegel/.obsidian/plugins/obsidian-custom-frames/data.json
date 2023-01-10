@@ -1,0 +1,16 @@
+{
+  "frames": [
+    {
+      "url": "file:///home/bot/Desktop/FILES/.obsidian/plugins/Obsidian-Mindmap-Canvas/index.html#/?mapname=test",
+      "displayName": "Mindmap",
+      "icon": "map",
+      "hideOnMobile": true,
+      "addRibbonIcon": true,
+      "openInCenter": true,
+      "zoomLevel": 1,
+      "forceIframe": false,
+      "customCss": ""
+    }
+  ],
+  "padding": 5
+}
