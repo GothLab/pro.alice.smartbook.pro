@@ -123,12 +123,12 @@ var $t = $(this);
          
          
          //Find all links and convert them to tooltips
- $('#text'+active_frame).find('img').each(function(){
+ $('#textA, #textB').find('img').each(function(){
          
 $(this).addClass('img-fluid');
          
  })
-         $('#text'+active_frame).find('a').each(function(){
+         $('#textA, #textB').find('a').each(function(){
 $(this).attr('data-bs-toggle','tooltip').attr({
       title: $(this).attr('data-href')
     })
@@ -146,7 +146,7 @@ $(this).attr('data-bs-toggle','tooltip').attr({
       
          //heading to link
          
-         $(target).find('h1, h2, h3, h4,h5,h6').each(function(){
+         $('#textA #textB').find('h1, h2, h3, h4,h5,h6').each(function(){
                 
         $(this).attr({
       id: $(this).attr('data-heading')
@@ -161,8 +161,8 @@ $(this).attr('data-bs-toggle','tooltip').attr({
          
          //Add class to all h2 h3
          
-         $('#text'+active_frame).find('h1,h2, h3, h4,h5,h6').addClass('t_link');
-           $('#text'+active_frame).find('.t_link').each(function(index){
+         $('#textA #textB').find('h1,h2, h3, h4,h5,h6').addClass('t_link');
+           $('#textA #textB').find('.t_link').each(function(index){
                    var $t = $(this);
                    $t.addClass('t2_link'+index).attr('index',index);
                    

@@ -6,7 +6,7 @@ $('#i_a').on('click',function(){ swiperM.slideTo(0);});
 $('#i_b').on('click',function(){ swiperM.slideTo(1);})
 */
 /* Fire menu */
-$('#slideB').on('dblclick',function(){
+/*$('#slideB').on('dblclick',function(){
   active_frame = 'B';
           $('#i_menu').click();     
                 const bsTab = new bootstrap.Tab('#b_tabB');
@@ -18,7 +18,7 @@ $('#slideA').on('dblclick',function(){
         const bsTab = new bootstrap.Tab('#b_tabA');
         bsTab.show();
 })
-
+*/
 
 /*
 
