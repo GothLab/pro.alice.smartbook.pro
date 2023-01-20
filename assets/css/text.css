@@ -8,10 +8,11 @@ p {
   color: #b8b8b8;
   padding-top: 36px;
   border-left: dotted 1px rgba(171,161,143,0.35);
+  line-height: 36px;
   /*padding-left: 36px;*/
   /*padding-right: 36px;*/
   font-family: 'Fira Sans';
-  font-size: 14px;
+  font-size: 18px;
   padding-right: 36px;
 }
 

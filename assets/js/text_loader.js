@@ -86,9 +86,9 @@ var target = '#text'+active_frame;
 
  
    //extracting toc      
- var toc = $(target).find('ul:first').html();
+ var toc = $('#textA, #textB').find('ul:first').html();
  $('#tab'+active_frame).html(toc);
-$(target).find('ul:first').remove();
+$('#textA, #textB').find('ul:first').remove();
          //$(target).find('br').remove();
          //cleaning toc
     $('#tab'+active_frame).find('br').remove();
@@ -127,14 +127,14 @@ var $t = $(this);
          
 $(this).addClass('img-fluid');
          
- })
+ });
          $('#textA, #textB').find('a').each(function(){
 $(this).attr('data-bs-toggle','tooltip').attr({
       title: $(this).attr('data-href')
     })
     .removeAttr('aria-label').removeAttr('aria-label-position').removeAttr('target');
     
-})
+});
      //end
          
              $(function () {
@@ -182,6 +182,7 @@ $(this).attr('data-bs-toggle','tooltip').attr({
    LINK_CLICKER();
          //
         INVIEW();
+                
          //
                 IMGS();
 
