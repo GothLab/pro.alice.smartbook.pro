@@ -10,133 +10,63 @@ var CACHE_VERSION = 'v1';
 var CACHE_FILES  = [
    
 
- "./assets/bootstrap/css/bootstrap.min.css",
-
-
-
- "./assets/bootstrap/js/bootstrap.min.js",
-
-
-
- "./assets/css/dark.css",
-
-
-
- "./assets/css/default.css",
-
-
-
- "./assets/css/jquery.treefilter.css",
-
-
-
- "./assets/css/styles.css",
-
-
-
- "./assets/css/swiper-style.css",
-
-
-
- "./assets/css/swiper.css",
-
-
-
- "./assets/css/tree.css",
-
-
-
- "./assets/img/192.png",
-
-
-
- "./assets/img/512.png",
-
-
-
- "./assets/js/app.js",
-
-
-
- "./assets/js/converter.js",
-
-
-
- "./assets/js/converter_links.js",
-
-
-
- "./assets/js/core/app.js",
-
-
-
- "./assets/js/core/jquery.js",
-
-
-
- "./assets/js/core/jquery.treefilter-0.1.0.js",
-
-
-
- "./assets/js/core/localbase.js",
-
-
-
- "./assets/js/core/showdown.js",
-
-
-
- "./assets/js/core/swiper.js",
-
-
-
- "./assets/js/core/tree.js",
-
-
-
- "./assets/js/DB.js",
-
-
-
- "./assets/js/idb.js",
-
-
-
- "./assets/js/jquery.js",
-
-
-
- "./assets/js/loader.js"
-
-
-
-
- "./assets/js/swiper-code.js",
-
-
-
- "./assets/js/swiper.js",
-
-
-
- "./assets/js/tree.js",
-
-
-
- "./assets/js/tree_ex.js",
-
-
-
- "./hegel_a.html",
-
-
-
- "./hg.html",
-
-
-
- "./index.html",
-
+    "./assets/bootstrap/css/bootstrap.min.css",
+    "./assets/bootstrap/js/bootstrap.min.js",
+    "./assets/css/Bagu.css",
+    "./assets/css/collapse.css",
+    "./assets/css/dark.css",
+    "./assets/css/DISABLE.css",
+    "./assets/css/Kis Text BT OSF Web.css",
+    "./assets/css/Kis Text BT Web.css",
+    "./assets/css/LI.css",
+    "./assets/css/menu.css",
+    "./assets/css/scrollbar.css",
+    "./assets/css/styles.css",
+    "./assets/css/text.css",
+    "./assets/css/toolbar.css",
+    "./assets/css/tooltip.css",
+    "./assets/fonts/fa-brands-400.eot",
+    "./assets/fonts/fa-brands-400.svg",
+    "./assets/fonts/fa-brands-400.ttf",
+    "./assets/fonts/fa-brands-400.woff",
+    "./assets/fonts/fa-brands-400.woff2",
+    "./assets/fonts/fa-regular-400.eot",
+    "./assets/fonts/fa-regular-400.svg",
+    "./assets/fonts/fa-regular-400.ttf",
+    "./assets/fonts/fa-regular-400.woff",
+    "./assets/fonts/fa-regular-400.woff2",
+    "./assets/fonts/fa-solid-900.eot",
+    "./assets/fonts/fa-solid-900.svg",
+    "./assets/fonts/fa-solid-900.ttf",
+    "./assets/fonts/fa-solid-900.woff",
+    "./assets/fonts/fa-solid-900.woff2",
+    "./assets/fonts/fontawesome-all.min.css",
+    "./assets/fonts/KisTextBTOSFWeb-Italic.woff",
+    "./assets/fonts/KisTextBTOSFWeb-Italic.woff2",
+    "./assets/fonts/KisTextBTWeb.woff",
+    "./assets/fonts/KisTextBTWeb.woff2",
+    "./assets/img/192-1.png",
+    "./assets/img/192.png",
+    "./assets/img/512-1.png",
+    "./assets/img/512.png",
+    "./assets/js/bs-init.js",
+    "./assets/js/callout.js",
+    "./assets/js/Core/app.js",
+    "./assets/js/Core/Baguuet.js",
+    "./assets/js/Core/localbase.js",
+    "./assets/js/Core/scrollto.js",
+    "./assets/js/Core/scryll.esm.js",
+    "./assets/js/DB.js",
+    "./assets/js/Imager.js",
+    "./assets/js/jquery.min.js",
+    "./assets/js/Lightbox-Gallery.js",
+    "./assets/js/orientation.js",
+    "./assets/js/scroll_to_buttons.js",
+    "./assets/js/text_loader.js",
+    "./assets/js/toolbar.js",
+    "./index.html",
+    "./manifest.json",
+    "./serviceWorker.js",
 
 
 
