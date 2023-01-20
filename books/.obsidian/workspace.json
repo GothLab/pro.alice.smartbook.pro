@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "f3846eba1ddb639b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Alice/Anot/Anotated.md",
+                "file": "Untitled.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Alice/Anot/Anotated.md",
+                "file": "Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Alice/Anot/Anotated.md"
+                "file": "Untitled.md"
               }
             }
           }
@@ -147,17 +160,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9f63581c95ce7396",
+  "active": "f3846eba1ddb639b",
   "lastOpenFiles": [
-    "Alice/Anot/Anotated.html",
+    "test.md",
     "Alice/Anot/Anotated.md",
+    "Alice/Anot/anotated.html",
+    "Alice/Anot/Anotated.html",
     "1 2.webp.md",
     "Alice/Anot/Anotated — копия.html",
     "Alice/Anot/Annotations.md",
     "Alice/ORIG/Wonderland.md",
     "Alice/ORIG/Wonderland.html",
-    "Alice/ORIG/Underground.md",
-    "Alice/ORIG/Underground.html",
-    "Alice/ORIG/Nursery.md"
+    "Alice/ORIG/Underground.md"
   ]
 }

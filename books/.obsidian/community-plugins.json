@@ -6,5 +6,6 @@
   "obsidian-languagetool-plugin",
   "hover-external-link",
   "editing-toolbar",
-  "obsidian-html-plugin"
+  "obsidian-html-plugin",
+  "extract-url"
 ]
