@@ -8,8 +8,11 @@ $('.side-scrollB').on('click',function(){
         console.log('scrolled');
         
 });
+
+
         
-$('.side-scrollA').on('click',function(){
+$('.side-scrollA').each(function(){
+$(this).on('click',function(){
         
        var VH = $(window).height(); 
        var CH = $('#slide'+active_frame).scrollTop();
@@ -18,3 +21,6 @@ $('.side-scrollA').on('click',function(){
         console.log('scrolled');
         
 });
+
+});
+

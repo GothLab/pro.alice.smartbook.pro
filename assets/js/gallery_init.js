@@ -8,7 +8,7 @@ parent = $(this).parent().parent();
         
 $('img').not('.main').hide();
       
-   baguetteBox.run('[data-bss-baguettebox]', { animation: 'fadeIn', afterShow: img_swipe });
+   baguetteBox.run('[data-bss-baguettebox]', { animation: 'fadeIn',preload: 4, afterShow: img_swipe });
 };
 
 
