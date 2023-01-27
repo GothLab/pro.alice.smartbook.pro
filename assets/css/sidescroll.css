@@ -1,0 +1,21 @@
+.side-scroll {
+  width: 10%;
+  height: 100%;
+  /*right: 0;*/
+  background: red;
+  position: fixed;
+  z-index: 2;
+}
+
+.side-scrollA {
+  left: 0;
+  background: rgba(51,51,51,0.12);
+  float: left;
+}
+
+.side-scrollB {
+  right: 0;
+  background: rgba(51,51,51,0.12);
+  float: right;
+}
+

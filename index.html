@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Smartbook PRO LIGH23T</title>
+    <title>Smartbook PRO: Alice's Adventures in Wonderland</title>
     <meta name="theme-color" content="#947234">
     <link rel="icon" type="image/png" sizes="192x192" href="assets/img/192-1.png">
     <link rel="icon" type="image/png" sizes="512x512" href="assets/img/512-1.png">
@@ -15,12 +15,13 @@
     <link rel="stylesheet" href="assets/css/Kis%20Text%20BT%20Web.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/css/Bagu.css">
+    <link rel="stylesheet" href="assets/css/baguette.css">
     <link rel="stylesheet" href="assets/css/collapse.css">
     <link rel="stylesheet" href="assets/css/dark.css">
     <link rel="stylesheet" href="assets/css/LI.css">
     <link rel="stylesheet" href="assets/css/menu.css">
     <link rel="stylesheet" href="assets/css/scrollbar.css">
+    <link rel="stylesheet" href="assets/css/sidescroll.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/text.css">
     <link rel="stylesheet" href="assets/css/toolbar.css">
@@ -28,8 +29,8 @@
 </head>
 
 <body>
-    <div>
-        <div class="offcanvas offcanvas-start" tabindex="-1" data-bs-scroll="true" id="menu">
+    <div id="offcanvas">
+        <div class="offcanvas offcanvas-start" tabindex="-1" data-bs-scroll="true" id="menu" style="backdrop-filter: opacity(1);-webkit-backdrop-filter: opacity(1);">
             <div class="offcanvas-header" style="width: 100%;">
                 <h5 class="offcanvas-title" style="font-family: 'Fira Sans';color: #414141;">Smartbook</h5><button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
@@ -196,6 +197,8 @@
         <div class="btn-group-vertical btn-group-sm buttons" role="group"><button class="btn btn-dark" id="i_lock" type="button"><i class="fas fa-lock"></i></button><button class="btn btn-dark" id="i_a" type="button">A</button><button class="btn btn-dark" id="i_b" type="button">B</button><button class="btn btn-dark" id="i_menu" type="button" data-bs-target="#menu" data-bs-toggle="offcanvas"><i class="fas fa-th-large"></i></button><button class="btn btn-dark" id="i_prev" type="button"><i class="fas fa-chevron-up"></i></button><button class="btn btn-dark" id="i_next" type="button"><i class="fas fa-chevron-down"></i></button></div>
     </div>
     <div id="swiperM">
+        <div id="sidescroll-2" class="side-scrollA side-scroll"></div>
+        <div id="sidescroll-3" class="side-scrollB side-scroll"></div>
         <div id="slideA" class="slide">
             <p id="textA"></p>
         </div>
@@ -207,17 +210,21 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/Core/localbase.js"></script>
     <script src="assets/js/Core/app.js"></script>
+    <script src="assets/js/Core/Baguuet.js"></script>
     <script src="assets/js/Core/scrollto.js"></script>
     <script src="assets/js/Core/scryll.esm.js"></script>
-    <script src="assets/js/DB.js"></script>
-    <script src="assets/js/toolbar.js"></script>
-    <script src="assets/js/orientation.js"></script>
-    <script src="assets/js/callout.js"></script>
-    <script src="assets/js/scroll_to_buttons.js"></script>
-    <script src="assets/js/text_loader.js"></script>
-    <script src="assets/js/Core/Baguuet.js"></script>
-    <script src="assets/js/Imager.js"></script>
-    <script src="assets/js/Lightbox-Gallery.js"></script>
+    <script src="assets/js/Instant/ACTIVEFRAME.js"></script>
+    <script src="assets/js/Instant/DB.js"></script>
+    <script src="assets/js/Instant/TOOLBAR.js"></script>
+    <script src="assets/js/Instant/ORIENTATION.js"></script>
+    <script src="assets/js/Instant/SCROLLPOSITION.js"></script>
+    <script src="assets/js/Instant/SCROLLER.js"></script>
+    <script src="assets/js/Instant/SIDESCROLL.js"></script>
+    <script src="assets/js/callout_init.js"></script>
+    <script src="assets/js/gallery_init.js"></script>
+    <script src="assets/js/toc_init.js"></script>
+    <script src="assets/js/tooltip_init.js"></script>
+    <script src="assets/js/ZENITH.js"></script>
 </body>
 
 </html>
