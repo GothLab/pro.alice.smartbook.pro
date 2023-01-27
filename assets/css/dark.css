@@ -136,10 +136,8 @@ p {
 }
 
 abbr[data-bs-original-title], abbr[title] {
-  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   cursor: help;
-  -webkit-text-decoration-skip-ink: none;
   text-decoration-skip-ink: none;
 }
 
@@ -2523,7 +2521,6 @@ progress {
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ced4da;
-  -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   border-radius: .25rem;
@@ -2615,13 +2612,11 @@ progress {
   border-width: 0;
   border-inline-end-width: 1px;
   border-radius: 0;
-  -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 @media (prefers-reduced-motion:reduce) {
   .form-control::-webkit-file-upload-button {
-    -webkit-transition: none;
     transition: none;
   }
 }
@@ -2736,7 +2731,6 @@ textarea.form-control-lg {
   background-size: 16px 12px;
   border: 1px solid #ced4da;
   border-radius: .25rem;
-  -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
@@ -2797,7 +2791,6 @@ textarea.form-control-lg {
   background-position: center;
   background-size: contain;
   border: 1px solid rgba(0,0,0,.25);
-  -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   -webkit-print-color-adjust: exact;
@@ -2901,7 +2894,6 @@ textarea.form-control-lg {
   height: 1.5rem;
   padding: 0;
   background-color: transparent;
-  -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
@@ -2929,15 +2921,12 @@ textarea.form-control-lg {
   background-color: #0d6efd;
   border: 0;
   border-radius: 1rem;
-  -webkit-transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-  -webkit-appearance: none;
   appearance: none;
 }
 
 @media (prefers-reduced-motion:reduce) {
   .form-range::-webkit-slider-thumb {
-    -webkit-transition: none;
     transition: none;
   }
 }
@@ -3333,7 +3322,6 @@ textarea.form-control-lg {
   text-decoration: none;
   vertical-align: middle;
   cursor: pointer;
-  -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -5536,13 +5524,11 @@ textarea.form-control-lg {
 }
 
 .progress-bar-animated {
-  -webkit-animation: 1s linear infinite progress-bar-stripes;
   animation: 1s linear infinite progress-bar-stripes;
 }
 
 @media (prefers-reduced-motion:reduce) {
   .progress-bar-animated {
-    -webkit-animation: none;
     animation: none;
   }
 }
@@ -6019,7 +6005,6 @@ textarea.form-control-lg {
 
 .btn-close.disabled, .btn-close:disabled {
   pointer-events: none;
-  -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -6748,7 +6733,6 @@ textarea.form-control-lg {
   float: left;
   width: 100%;
   margin-right: -100%;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transition: transform .6s ease-in-out;
 }
@@ -6931,7 +6915,6 @@ textarea.form-control-lg {
   border: .25em solid currentColor;
   border-right-color: transparent;
   border-radius: 50%;
-  -webkit-animation: .75s linear infinite spinner-border;
   animation: .75s linear infinite spinner-border;
 }
 
@@ -6959,7 +6942,6 @@ textarea.form-control-lg {
   background-color: currentColor;
   border-radius: 50%;
   opacity: 0;
-  -webkit-animation: .75s linear infinite spinner-grow;
   animation: .75s linear infinite spinner-grow;
 }
 
@@ -6970,7 +6952,6 @@ textarea.form-control-lg {
 
 @media (prefers-reduced-motion:reduce) {
   .spinner-border, .spinner-grow {
-    -webkit-animation-duration: 1.5s;
     animation-duration: 1.5s;
   }
 }
@@ -8424,20 +8405,17 @@ textarea.form-control-lg {
 }
 
 .user-select-all {
-  -webkit-user-select: all!important;
   -moz-user-select: all!important;
   user-select: all!important;
 }
 
 .user-select-auto {
-  -webkit-user-select: auto!important;
   -moz-user-select: auto!important;
   -ms-user-select: auto!important;
   user-select: auto!important;
 }
 
 .user-select-none {
-  -webkit-user-select: none!important;
   -moz-user-select: none!important;
   -ms-user-select: none!important;
   user-select: none!important;
