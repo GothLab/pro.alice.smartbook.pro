@@ -4,71 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "51ed3b3fbf22d932",
+        "id": "09cff6842365cbae",
         "type": "tabs",
         "children": [
           {
-            "id": "e4629e256fc6b119",
+            "id": "f86572e1d6f9f9a0",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "html-view",
               "state": {
-                "file": "REDBOOK/Marx & Engles/VI.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7b2e49bb5308f919",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "REDBOOK/Marx & Engles/Гражданская война во франции.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "fba39493935424d4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "REDBOOK/Marx & Engles/Гражданская война во франции.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5ecad5bb89bc4f66",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "REDBOOK/Marx & Engles/ФОРМЫ, ПРЕДШЕСТВУЮЩИЕ КАПИТАЛИСТИЧЕСКОМУ ПРОИЗВОДСТВУ.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "21e1dffd8096077f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "REDBOOK/Marx & Engles/Untitled.md",
-                "mode": "source",
-                "source": false
+                "file": "Alice/TRANSL/Demurova.html"
               }
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -134,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "REDBOOK/Marx & Engles/Untitled.md",
+                "file": "Alice/TRANSL/Demurova.html",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "REDBOOK/Marx & Engles/Untitled.md",
+                "file": "Alice/TRANSL/Demurova.html",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "REDBOOK/Marx & Engles/Untitled.md"
+                "file": "Alice/TRANSL/Demurova.html"
               }
             }
           }
@@ -196,17 +145,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "21e1dffd8096077f",
+  "active": "f86572e1d6f9f9a0",
   "lastOpenFiles": [
-    "REDBOOK/Marx & Engles/ФОРМЫ, ПРЕДШЕСТВУЮЩИЕ КАПИТАЛИСТИЧЕСКОМУ ПРОИЗВОДСТВУ.md",
-    "REDBOOK/Marx & Engles/Гражданская война во франции.md",
-    "Untitled 1.md",
-    "REDBOOK/Marx & Engles/VI.md",
-    "REDBOOK/Marx & Engles/test.md",
-    "REDBOOK/Marx & Engles/V.md",
-    "Untitled.md",
     "Alice/Anot/Anotated.md",
-    "test.md",
-    "Alice/Anot/anotated.html"
+    "Alice/Anot/Translations.md",
+    "Alice/Anot/1anotated.html",
+    "Alice/Anot/anotated.html",
+    "Alice/FREE/Zahoder.html",
+    "Alice/FREE/Orel.html",
+    "Alice/FREE/Nabokov.html",
+    "Alice/FREE/Nabokov.md",
+    "Alice/FREE/Chehov.html",
+    "Alice/FREE/Blehman.html"
   ]
 }
