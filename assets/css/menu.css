@@ -14,9 +14,22 @@
 .list_name {
   width: 100%;
   font-size: 12px;
+  /*border-bottom: solid white 1px;*/
 }
 
 .dropdown-menu .fas {
   padding-right: 12px;
+}
+
+.tab-content {
+  padding: 24px;
+  overflow: scroll;
+}
+
+.tab-content li {
+  border-bottom: dotted 1px #aba18f;
+  padding: 5px;
+  /*color: red;*/
+  font-family: 'Kis Text BT Web';
 }
 

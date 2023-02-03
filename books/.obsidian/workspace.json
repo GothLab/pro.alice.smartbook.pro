@@ -4,35 +4,71 @@
     "type": "split",
     "children": [
       {
-        "id": "2f2f686cfae43cff",
+        "id": "51ed3b3fbf22d932",
         "type": "tabs",
         "children": [
           {
-            "id": "9f63581c95ce7396",
+            "id": "e4629e256fc6b119",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Alice/Anot/Anotated.md",
+                "file": "REDBOOK/Marx & Engles/VI.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "f3846eba1ddb639b",
+            "id": "7b2e49bb5308f919",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Untitled.md",
+                "file": "REDBOOK/Marx & Engles/Гражданская война во франции.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "fba39493935424d4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "REDBOOK/Marx & Engles/Гражданская война во франции.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5ecad5bb89bc4f66",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "REDBOOK/Marx & Engles/ФОРМЫ, ПРЕДШЕСТВУЮЩИЕ КАПИТАЛИСТИЧЕСКОМУ ПРОИЗВОДСТВУ.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "21e1dffd8096077f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "REDBOOK/Marx & Engles/Untitled.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -82,8 +118,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "1cddd16b9940d236",
@@ -99,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Untitled.md",
+                "file": "REDBOOK/Marx & Engles/Untitled.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Untitled.md",
+                "file": "REDBOOK/Marx & Engles/Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Untitled.md"
+                "file": "REDBOOK/Marx & Engles/Untitled.md"
               }
             }
           }
@@ -161,17 +196,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f3846eba1ddb639b",
+  "active": "21e1dffd8096077f",
   "lastOpenFiles": [
-    "test.md",
+    "REDBOOK/Marx & Engles/ФОРМЫ, ПРЕДШЕСТВУЮЩИЕ КАПИТАЛИСТИЧЕСКОМУ ПРОИЗВОДСТВУ.md",
+    "REDBOOK/Marx & Engles/Гражданская война во франции.md",
+    "Untitled 1.md",
+    "REDBOOK/Marx & Engles/VI.md",
+    "REDBOOK/Marx & Engles/test.md",
+    "REDBOOK/Marx & Engles/V.md",
+    "Untitled.md",
     "Alice/Anot/Anotated.md",
-    "Alice/Anot/anotated.html",
-    "Alice/Anot/Anotated.html",
-    "1 2.webp.md",
-    "Alice/Anot/Anotated — копия.html",
-    "Alice/Anot/Annotations.md",
-    "Alice/ORIG/Wonderland.md",
-    "Alice/ORIG/Wonderland.html",
-    "Alice/ORIG/Underground.md"
+    "test.md",
+    "Alice/Anot/anotated.html"
   ]
 }

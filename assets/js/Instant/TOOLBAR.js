@@ -8,15 +8,18 @@ var lock = 0;
 const myScryll = scryll('#slideA', '#slideB');
   myScryll.kill();
 $('#i_lock').on('click',function(){
+
+        
         
 if (lock == 0) {
         lock = 1;
     myScryll.init();
+        $('#i_lock').addClass('ACT2');
 } 
         else {
         lock = 0;
   myScryll.kill();
-        
+            $('#i_lock').removeClass('ACT2');
         
 }
         
@@ -76,3 +79,6 @@ $('#slideA').hide();
 //on doubleclick show menu
 
 $('#textA, #textB').on('dblclick',function(){$('#i_menu').click();})
+
+
+

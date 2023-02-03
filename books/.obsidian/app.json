@@ -1,5 +1,6 @@
 {
   "promptDelete": false,
   "readableLineLength": false,
-  "strictLineBreaks": true
+  "strictLineBreaks": true,
+  "newFileLocation": "current"
 }
