@@ -23,7 +23,7 @@ HREF = $(el).parent().parent().find('.list_name').attr('book_href');
         
         
         // SAVE TO DB FUNCTION
-        $.get( "https://gothlab.github.io/Smartbook-App/assets/books/content/content.md", function( data ) {
+        $.get( HREF, function( data ) {
 
  TEXT = data;
  db.collection('books').add({

@@ -21,7 +21,7 @@
 
 ## A Nursery Darling.
 
-*A Mother’s breast:
+A Mother’s breast:
 Safe refuge from her childish fears,
 From childish troubles, childish tears,
 Mists that enshroud her dawning years!
@@ -37,7 +37,7 @@ Again, again, their message sweet!
 Full to the brim with girlish glee,
 A child, a very child is she,
 Whose dream of Heaven is still to be
-A: Home: for Home is Bliss.*
+A: Home: for Home is Bliss.
 
 ---
 

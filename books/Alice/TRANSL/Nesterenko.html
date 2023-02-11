@@ -58,40 +58,23 @@
 .ͼ1 .cm-textfield {vertical-align: middle; color: inherit; font-size: 70%; border: 1px solid silver; padding: .2em .5em;}
 .ͼ2 .cm-textfield {background-color: white;}
 .ͼ3 .cm-textfield {border: 1px solid #555; background-color: inherit;}
+.ͼ1 .cm-tooltip {z-index: 100; box-sizing: border-box;}
+.ͼ2 .cm-tooltip {border: 1px solid #bbb; background-color: #f5f5f5;}
+.ͼ2 .cm-tooltip-section:not(:first-child) {border-top: 1px solid #bbb;}
+.ͼ3 .cm-tooltip {background-color: #333338; color: white;}
+.ͼ1 .cm-tooltip-arrow:before, .ͼ1 .cm-tooltip-arrow:after {content: ''; position: absolute; width: 0; height: 0; border-left: 7px solid transparent; border-right: 7px solid transparent;}
+.ͼ1 .cm-tooltip-above .cm-tooltip-arrow:before {border-top: 7px solid #bbb;}
+.ͼ1 .cm-tooltip-above .cm-tooltip-arrow:after {border-top: 7px solid #f5f5f5; bottom: 1px;}
+.ͼ1 .cm-tooltip-above .cm-tooltip-arrow {bottom: -7px;}
+.ͼ1 .cm-tooltip-below .cm-tooltip-arrow:before {border-bottom: 7px solid #bbb;}
+.ͼ1 .cm-tooltip-below .cm-tooltip-arrow:after {border-bottom: 7px solid #f5f5f5; top: 1px;}
+.ͼ1 .cm-tooltip-below .cm-tooltip-arrow {top: -7px;}
+.ͼ1 .cm-tooltip-arrow {height: 7px; width: 14px; position: absolute; z-index: -1; overflow: hidden;}
+.ͼ3 .cm-tooltip .cm-tooltip-arrow:before {border-top-color: #333338; border-bottom-color: #333338;}
+.ͼ3 .cm-tooltip .cm-tooltip-arrow:after {border-top-color: transparent; border-bottom-color: transparent;}
 .ͼ1 .cm-foldPlaceholder {background-color: #eee; border: 1px solid #ddd; color: #888; border-radius: .2em; margin: 0 1px; padding: 0 1px; cursor: pointer;}
 .ͼ1 .cm-foldGutter span {padding: 0 1px; cursor: pointer;}
 .ͼq .cm-content {white-space: pre-wrap; word-break: break-word; overflow-wrap: anywhere; padding: 0;}
- .custom-frames-view {
-	padding: 0 !important;
-	overflow: hidden !important;
-}
-
-.custom-frames-view-file {
-	padding: 0;
-	overflow: auto;
-}
-
-.custom-frames-frame {
-	width: 100%;
-	height: 100%;
-	border: none;
-	background-color: white;
-	background-clip: content-box;
-}
-
-.custom-frames-add {
-	margin-left: 10px;
-}
-
-.custom-frames-show {
-	margin-bottom: 18px;
-}
-
-.custom-frames-support {
-	max-width: 50%;
-	width: 400px;
-	height: auto;
-}
  .setting-item.ex-setting-item {
     border-top: unset;
     padding-top: 0;
@@ -102,6 +85,165 @@
 } 
 .pandoc-plugin-error {
     color: red;
+}
+ .lt-underline {
+  cursor: pointer;
+  transition: background-color 100ms ease-out;
+}
+
+.lt-underline.lt-minor {
+  box-shadow: inset 0 -2px #e9b35f;
+}
+
+.lt-underline.lt-major {
+  box-shadow: inset 0 -2px #da615c;
+}
+
+.lt-underline.lt-style {
+  box-shadow: inset 0 -2px #8981f3;
+}
+
+.lt-underline.lt-minor:hover {
+  background-color: #e9b35f21;
+}
+
+.lt-underline.lt-major:hover {
+  background-color: #da615c21;
+}
+
+.lt-underline.lt-style:hover {
+  background-color: #8981f321;
+}
+
+@keyframes lineInserted {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.lt-predictions-container-glass.cm-tooltip,
+.lt-predictions-container.cm-tooltip,
+.lt-predictions-container-glass,
+.lt-predictions-container {
+  position: absolute;
+  animation-duration: 150ms;
+  animation-name: lineInserted;
+  font-family: var(--default-font);
+  font-size: 0.93rem;
+  padding: 12px 0 0;
+  background-color: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  width: 300px;
+  line-height: 1.5;
+  z-index: var(--layer-popover);
+  overflow: hidden;
+}
+
+.lt-predictions-container-glass {
+  background: hsla(0, 0%, 100%, 0.25);
+  backdrop-filter: blur(12px);
+}
+
+.lt-predictions-container > button {
+  transition-delay: 0.5s;
+}
+
+.lt-buttoncontainer:not(:empty) {
+  padding: 10px 12px 0;
+}
+
+.lt-buttoncontainer > button {
+  border: 1px solid var(--background-modifier-border);
+  font-size: 1rem;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  padding: 4px 10px;
+}
+
+.lt-title {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  padding: 0 12px;
+}
+
+.lt-message {
+  padding: 0 12px;
+  display: block;
+}
+
+.lt-ignorecontainer {
+  padding-top: 10px;
+  display: flex;
+}
+
+.lt-status-bar-btn {
+  height: 100%;
+  display: flex;
+  cursor: pointer;
+  line-height: 1;
+  align-items: center;
+}
+
+.lt-status-bar-check-icon {
+  display: block;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+
+.lt-ignore-btn {
+  margin: 0;
+  padding: 12px;
+  display: flex;
+  width: 100%;
+  text-align: left;
+  border-radius: 0;
+  align-items: center;
+  line-height: 1;
+  border-top: 1px solid var(--background-modifier-border);
+}
+
+.lt-ignore-btn > span {
+  display: flex;
+}
+
+.lt-ignore-btn > span:last-child {
+  margin-left: 5px;
+}
+
+.lt-minor .lt-title > span {
+  box-shadow: inset 0 -2px #e9b35f88;
+}
+
+.lt-major .lt-title > span {
+  box-shadow: inset 0 -2px #da615c88;
+}
+
+.lt-style .lt-title > span {
+  box-shadow: inset 0 -2px #8981f388;
+}
+
+.lt-loading > svg {
+  animation-name: spin;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
  /* 
  *  Originally copied from dist/tippy.css in the tippy.js package.
@@ -208,9 +350,7 @@
   z-index: 1;
   overflow-wrap: anywhere;
 }
- 
-
-#cMenuToolbarModalBar {
+ #cMenuToolbarModalBar {
   width: auto;
   height: auto;
   padding: 3px;
@@ -298,27 +438,27 @@ cMenuToolbar SETTING ITEMS
   padding: 18px 0 18px 0;
 }
 
-.sortable-fallback {
+.cMenuToolbarSettingsTabsContainer .sortable-fallback {
   cursor: grabbing;
   box-shadow: 0px 3px 32px rgb(31 38 135 / 15%);
 }
 
-.sortable-grab {
+.cMenuToolbarSettingsTabsContainer .sortable-grab {
   cursor: grabbing !important;
 }
 
-.sortable-ghost {
+.cMenuToolbarSettingsTabsContainer .sortable-ghost {
   opacity: 0.4;
   cursor: grabbing;
 }
 
-.sortable-chosen {
+.cMenuToolbarSettingsTabsContainer .sortable-chosen {
   cursor: grabbing;
   padding: 18px 0 18px 18px;
-  background-color: var(--background-primary);
+  background-color: var(--color-base-10,--background-primary);
 }
 
-.sortable-drag {
+.cMenuToolbarSettingsTabsContainer .sortable-drag {
   cursor: grabbing;
   box-shadow: 0px 3px 32px rgb(31 38 135 / 15%);
 }
@@ -351,7 +491,7 @@ box-shadow: none;
 
 }
 .cMenuToolbarDefaultAesthetic {
-background-color: var(--background-primary);
+background-color: var(--color-base-10,--background-primary);
 }
 
 
@@ -566,7 +706,7 @@ body.theme-dark .modal-container.cMenuToolbar-Modal  .modal  input[type='range']
   justify-items: center;  
   border: none;
   backdrop-filter: none;
-  background-color: var(--background-primary);
+  background-color: var(--color-base-10,--background-primary);
   box-shadow: 0 3px 6px -4px rgb(0 0 0 / 12%), 0 6px 16px 0 rgb(0 0 0 / 8%), 0 9px 28px 8px rgb(0 0 0 / 5%);
  }
 
@@ -629,7 +769,7 @@ font-size: 10px;
 
 :is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar)  button[class^=cMenuToolbarCommandsubItem]  >.subitem
 {
-    background-color: var(--background-primary);
+    background-color: var(--color-base-10,--background-primary);
     border-radius: 4px;
     border: 1px solid var(--background-modifier-border);
     box-shadow: 0 2px 8px var(--background-modifier-box-shadow);
@@ -705,7 +845,10 @@ background-image: url("data:image/svg+xml,%3Csvg width='4' height='4' version='1
  :is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar):not(.top) button.cMenuToolbarCommandsubItem-font-color .x-color-picker-wrapper
 {
   top:auto;
-bottom:calc(100% + 1.8em);
+bottom:calc(100%);
+}
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar):not(.top) button[class^=cMenuToolbarCommandsubItem]:not(.cMenuToolbarSecond) >.subitem {
+  bottom: calc(100% + 2.8em);
 }
 
  
@@ -729,11 +872,11 @@ bottom:calc(100% + 1.8em);
  transition: all 0.3s linear;
  -webkit-transition:  all 0.3s linear;
 }
-:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button[class^=cMenuToolbarCommandsubItem] >.subitem:hover  {
+/* :is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button[class^=cMenuToolbarCommandsubItem] >.subitem:hover  {
   visibility:visible;
   transition: all 0.3s linear;
   -webkit-transition:  all 0.3s linear;
- }
+ } */
 
  .cMenuToolbarCommandsubItem-font-color button
 {
@@ -851,7 +994,7 @@ flex: 0;
   font-weight: 400;
   font-family: Source Sans Pro,sans-serif;
   border-radius: 4px;
-  background-color: var(--background-primary);
+  background-color: var(--color-base-10,--background-primary);
 }
 .markdown-source-view.mod-cm6 .x-color-picker-wrapper table.x-color-picker-table#x-color-picker-table {
   width: unset;
@@ -903,6 +1046,15 @@ background-color:transparent !important;
     -webkit-transition:  all 0.2s linear;
     
 }
+#cMenuToolbarModalBar.top.autohide {
+    opacity: 0;    
+}
+ 
+
+#cMenuToolbarModalBar.top.autohide:hover  {
+    opacity: 1 ;  
+}
+  
 
 #cMenuToolbarModalBar.top :is(.cMenuToolbarCommandItem,button[class^=cMenuToolbarCommandsubItem]):not(.cMenuToolbar-Divider-Line)
 {
@@ -942,7 +1094,7 @@ font-size: 10px;
     align-items: center;
     width: fit-content;
     z-index: var(--layer-status-bar); 
-    background-color: var(--background-primary);
+    background-color: var(--color-base-10,--background-primary);
       background-clip: padding-box;
       border-radius: 6px;
       box-shadow: 0 3px 6px -4px rgba(0,0,0,.12),0 6px 16px 0 rgba(0,0,0,.08),0 9px 28px 8px rgba(0,0,0,.05);
@@ -1063,29 +1215,55 @@ margin-left: 4px;
 {
   opacity: 0;
 }
- undefined
+:is(.cm-line,p) span[style^="background:rgba"]
+{
+ color: var(--text-normal);
+}
+:is(.cm-line,p) span[style^="background:#"]
+ {
+  color: black;
+ } .custom-css-setting {
+	height: 70%;
+}
+
+.custom-css-setting > * {
+	height: 100%;
+	width: 60em;
+}
+
+.custom-css-setting > * > textarea{
+	width:40em;
+	height: 100%;
+}
+  img {
+
+max-width: 100px;
+max-height: 100px;
+
+}
+undefined
 </style>
     </head>
     <body>
 <h2 data-heading="Приключения Алисы в Стране Чудес">Приключения Алисы в Стране Чудес</h2>
 <p>Перевод: Юрий Нестеренко (2000)</p>
 <ul>
-<li><a aria-label-position="top" aria-label="Глава I. Вниз по кроличьей норе" data-href="#Глава I. Вниз по кроличьей норе" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%20I.%20%D0%92%D0%BD%D0%B8%D0%B7%20%D0%BF%D0%BE%20%D0%BA%D1%80%D0%BE%D0%BB%D0%B8%D1%87%D1%8C%D0%B5%D0%B9%20%D0%BD%D0%BE%D1%80%D0%B5" class="internal-link" target="_blank" rel="noopener">Глава I. Вниз по кроличьей норе</a></li>
-<li><a aria-label-position="top" aria-label="Глава II. Озеро слез" data-href="#Глава II. Озеро слез" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%20II.%20%D0%9E%D0%B7%D0%B5%D1%80%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B7" class="internal-link" target="_blank" rel="noopener">Глава II. Озеро слез</a></li>
-<li><a aria-label-position="top" aria-label="Глава III. Предвыборный марафон и длинная история" data-href="#Глава III. Предвыборный марафон и длинная история" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%20III.%20%D0%9F%D1%80%D0%B5%D0%B4%D0%B2%D1%8B%D0%B1%D0%BE%D1%80%D0%BD%D1%8B%D0%B9%20%D0%BC%D0%B0%D1%80%D0%B0%D1%84%D0%BE%D0%BD%20%D0%B8%20%D0%B4%D0%BB%D0%B8%D0%BD%D0%BD%D0%B0%D1%8F%20%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F" class="internal-link" target="_blank" rel="noopener">Глава III. Предвыборный марафон и длинная история</a></li>
-<li><a aria-label-position="top" aria-label="Глава IV. Как маленький Билл чуть не разбиллся" data-href="#Глава IV. Как маленький Билл чуть не разбиллся" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%20IV.%20%D0%9A%D0%B0%D0%BA%20%D0%BC%D0%B0%D0%BB%D0%B5%D0%BD%D1%8C%D0%BA%D0%B8%D0%B9%20%D0%91%D0%B8%D0%BB%D0%BB%20%D1%87%D1%83%D1%82%D1%8C%20%D0%BD%D0%B5%20%D1%80%D0%B0%D0%B7%D0%B1%D0%B8%D0%BB%D0%BB%D1%81%D1%8F" class="internal-link" target="_blank" rel="noopener">Глава IV. Как маленький Билл чуть не разбиллся</a></li>
-<li><a aria-label-position="top" aria-label="Глава V. Совет гусеницы" data-href="#Глава V. Совет гусеницы" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%20V.%20%D0%A1%D0%BE%D0%B2%D0%B5%D1%82%20%D0%B3%D1%83%D1%81%D0%B5%D0%BD%D0%B8%D1%86%D1%8B" class="internal-link" target="_blank" rel="noopener">Глава V. Совет гусеницы</a></li>
-<li><a aria-label-position="top" aria-label="Глава VI. Поросенок и перец" data-href="#Глава VI. Поросенок и перец" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%20VI.%20%D0%9F%D0%BE%D1%80%D0%BE%D1%81%D0%B5%D0%BD%D0%BE%D0%BA%20%D0%B8%20%D0%BF%D0%B5%D1%80%D0%B5%D1%86" class="internal-link" target="_blank" rel="noopener">Глава VI. Поросенок и перец</a></li>
-<li><a aria-label-position="top" aria-label="Глава VII. Безумное чаепитие" data-href="#Глава VII. Безумное чаепитие" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%20VII.%20%D0%91%D0%B5%D0%B7%D1%83%D0%BC%D0%BD%D0%BE%D0%B5%20%D1%87%D0%B0%D0%B5%D0%BF%D0%B8%D1%82%D0%B8%D0%B5" class="internal-link" target="_blank" rel="noopener">Глава VII. Безумное чаепитие</a></li>
-<li><a aria-label-position="top" aria-label="Глава VIII. Крокет Королевы" data-href="#Глава VIII. Крокет Королевы" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%20VIII.%20%D0%9A%D1%80%D0%BE%D0%BA%D0%B5%D1%82%20%D0%9A%D0%BE%D1%80%D0%BE%D0%BB%D0%B5%D0%B2%D1%8B" class="internal-link" target="_blank" rel="noopener">Глава VIII. Крокет Королевы</a></li>
-<li><a aria-label-position="top" aria-label="Глава IX. Рассказ Якобы Черепахи" data-href="#Глава IX. Рассказ Якобы Черепахи" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%20IX.%20%D0%A0%D0%B0%D1%81%D1%81%D0%BA%D0%B0%D0%B7%20%D0%AF%D0%BA%D0%BE%D0%B1%D1%8B%20%D0%A7%D0%B5%D1%80%D0%B5%D0%BF%D0%B0%D1%85%D0%B8" class="internal-link" target="_blank" rel="noopener">Глава IX. Рассказ Якобы Черепахи</a></li>
-<li><a aria-label-position="top" aria-label="Глава Х. Омаровая кадриль" data-href="#Глава Х. Омаровая кадриль" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%20%D0%A5.%20%D0%9E%D0%BC%D0%B0%D1%80%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BA%D0%B0%D0%B4%D1%80%D0%B8%D0%BB%D1%8C" class="internal-link" target="_blank" rel="noopener">Глава Х. Омаровая кадриль</a></li>
-<li><a aria-label-position="top" aria-label="Глава XI. Кто украл торты?" data-href="#Глава XI. Кто украл торты?" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%20XI.%20%D0%9A%D1%82%D0%BE%20%D1%83%D0%BA%D1%80%D0%B0%D0%BB%20%D1%82%D0%BE%D1%80%D1%82%D1%8B?" class="internal-link" target="_blank" rel="noopener">Глава XI. Кто украл торты?</a></li>
-<li><a aria-label-position="top" aria-label="Глава XII. Показания Алисы" data-href="#Глава XII. Показания Алисы" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%20XII.%20%D0%9F%D0%BE%D0%BA%D0%B0%D0%B7%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%90%D0%BB%D0%B8%D1%81%D1%8B" class="internal-link" target="_blank" rel="noopener">Глава XII. Показания Алисы</a></li>
-<li><a aria-label-position="top" aria-label="Примечания переводчика" data-href="#Примечания переводчика" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4%D1%87%D0%B8%D0%BA%D0%B0" class="internal-link" target="_blank" rel="noopener">Примечания переводчика</a></li>
+<li><a aria-label-position="top" aria-label="Глава I. Вниз по кроличьей норе" data-href="#Глава I. Вниз по кроличьей норе" href="E:\GITHUB\pro.alice.smartbook.pro\books\Alice\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%20I.%20%D0%92%D0%BD%D0%B8%D0%B7%20%D0%BF%D0%BE%20%D0%BA%D1%80%D0%BE%D0%BB%D0%B8%D1%87%D1%8C%D0%B5%D0%B9%20%D0%BD%D0%BE%D1%80%D0%B5" class="internal-link" target="_blank" rel="noopener">Глава I. Вниз по кроличьей норе</a></li>
+<li><a aria-label-position="top" aria-label="Глава II. Озеро слез" data-href="#Глава II. Озеро слез" href="E:\GITHUB\pro.alice.smartbook.pro\books\Alice\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%20II.%20%D0%9E%D0%B7%D0%B5%D1%80%D0%BE%20%D1%81%D0%BB%D0%B5%D0%B7" class="internal-link" target="_blank" rel="noopener">Глава II. Озеро слез</a></li>
+<li><a aria-label-position="top" aria-label="Глава III. Предвыборный марафон и длинная история" data-href="#Глава III. Предвыборный марафон и длинная история" href="E:\GITHUB\pro.alice.smartbook.pro\books\Alice\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%20III.%20%D0%9F%D1%80%D0%B5%D0%B4%D0%B2%D1%8B%D0%B1%D0%BE%D1%80%D0%BD%D1%8B%D0%B9%20%D0%BC%D0%B0%D1%80%D0%B0%D1%84%D0%BE%D0%BD%20%D0%B8%20%D0%B4%D0%BB%D0%B8%D0%BD%D0%BD%D0%B0%D1%8F%20%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F" class="internal-link" target="_blank" rel="noopener">Глава III. Предвыборный марафон и длинная история</a></li>
+<li><a aria-label-position="top" aria-label="Глава IV. Как маленький Билл чуть не разбиллся" data-href="#Глава IV. Как маленький Билл чуть не разбиллся" href="E:\GITHUB\pro.alice.smartbook.pro\books\Alice\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%20IV.%20%D0%9A%D0%B0%D0%BA%20%D0%BC%D0%B0%D0%BB%D0%B5%D0%BD%D1%8C%D0%BA%D0%B8%D0%B9%20%D0%91%D0%B8%D0%BB%D0%BB%20%D1%87%D1%83%D1%82%D1%8C%20%D0%BD%D0%B5%20%D1%80%D0%B0%D0%B7%D0%B1%D0%B8%D0%BB%D0%BB%D1%81%D1%8F" class="internal-link" target="_blank" rel="noopener">Глава IV. Как маленький Билл чуть не разбиллся</a></li>
+<li><a aria-label-position="top" aria-label="Глава V. Совет гусеницы" data-href="#Глава V. Совет гусеницы" href="E:\GITHUB\pro.alice.smartbook.pro\books\Alice\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%20V.%20%D0%A1%D0%BE%D0%B2%D0%B5%D1%82%20%D0%B3%D1%83%D1%81%D0%B5%D0%BD%D0%B8%D1%86%D1%8B" class="internal-link" target="_blank" rel="noopener">Глава V. Совет гусеницы</a></li>
+<li><a aria-label-position="top" aria-label="Глава VI. Поросенок и перец" data-href="#Глава VI. Поросенок и перец" href="E:\GITHUB\pro.alice.smartbook.pro\books\Alice\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%20VI.%20%D0%9F%D0%BE%D1%80%D0%BE%D1%81%D0%B5%D0%BD%D0%BE%D0%BA%20%D0%B8%20%D0%BF%D0%B5%D1%80%D0%B5%D1%86" class="internal-link" target="_blank" rel="noopener">Глава VI. Поросенок и перец</a></li>
+<li><a aria-label-position="top" aria-label="Глава VII. Безумное чаепитие" data-href="#Глава VII. Безумное чаепитие" href="E:\GITHUB\pro.alice.smartbook.pro\books\Alice\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%20VII.%20%D0%91%D0%B5%D0%B7%D1%83%D0%BC%D0%BD%D0%BE%D0%B5%20%D1%87%D0%B0%D0%B5%D0%BF%D0%B8%D1%82%D0%B8%D0%B5" class="internal-link" target="_blank" rel="noopener">Глава VII. Безумное чаепитие</a></li>
+<li><a aria-label-position="top" aria-label="Глава VIII. Крокет Королевы" data-href="#Глава VIII. Крокет Королевы" href="E:\GITHUB\pro.alice.smartbook.pro\books\Alice\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%20VIII.%20%D0%9A%D1%80%D0%BE%D0%BA%D0%B5%D1%82%20%D0%9A%D0%BE%D1%80%D0%BE%D0%BB%D0%B5%D0%B2%D1%8B" class="internal-link" target="_blank" rel="noopener">Глава VIII. Крокет Королевы</a></li>
+<li><a aria-label-position="top" aria-label="Глава IX. Рассказ Якобы Черепахи" data-href="#Глава IX. Рассказ Якобы Черепахи" href="E:\GITHUB\pro.alice.smartbook.pro\books\Alice\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%20IX.%20%D0%A0%D0%B0%D1%81%D1%81%D0%BA%D0%B0%D0%B7%20%D0%AF%D0%BA%D0%BE%D0%B1%D1%8B%20%D0%A7%D0%B5%D1%80%D0%B5%D0%BF%D0%B0%D1%85%D0%B8" class="internal-link" target="_blank" rel="noopener">Глава IX. Рассказ Якобы Черепахи</a></li>
+<li><a aria-label-position="top" aria-label="Глава Х. Омаровая кадриль" data-href="#Глава Х. Омаровая кадриль" href="E:\GITHUB\pro.alice.smartbook.pro\books\Alice\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%20%D0%A5.%20%D0%9E%D0%BC%D0%B0%D1%80%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BA%D0%B0%D0%B4%D1%80%D0%B8%D0%BB%D1%8C" class="internal-link" target="_blank" rel="noopener">Глава Х. Омаровая кадриль</a></li>
+<li><a aria-label-position="top" aria-label="Глава XI. Кто украл торты?" data-href="#Глава XI. Кто украл торты?" href="E:\GITHUB\pro.alice.smartbook.pro\books\Alice\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%20XI.%20%D0%9A%D1%82%D0%BE%20%D1%83%D0%BA%D1%80%D0%B0%D0%BB%20%D1%82%D0%BE%D1%80%D1%82%D1%8B?" class="internal-link" target="_blank" rel="noopener">Глава XI. Кто украл торты?</a></li>
+<li><a aria-label-position="top" aria-label="Глава XII. Показания Алисы" data-href="#Глава XII. Показания Алисы" href="E:\GITHUB\pro.alice.smartbook.pro\books\Alice\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%20XII.%20%D0%9F%D0%BE%D0%BA%D0%B0%D0%B7%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%90%D0%BB%D0%B8%D1%81%D1%8B" class="internal-link" target="_blank" rel="noopener">Глава XII. Показания Алисы</a></li>
+<li><a aria-label-position="top" aria-label="Примечания переводчика" data-href="#Примечания переводчика" href="E:\GITHUB\pro.alice.smartbook.pro\books\Alice\TRANSL\index.html#%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4%D1%87%D0%B8%D0%BA%D0%B0" class="internal-link" target="_blank" rel="noopener">Примечания переводчика</a></li>
 </ul>
 <h3 data-heading="Вступление">Вступление</h3>
-<p>_Сияет полдень золотой,<br>
+<p>Сияет полдень золотой,<br>
 Мы медленно плывем;<br>
 Непросто маленьким рукам<br>
 Управиться с веслом,<br>
@@ -1126,7 +1304,7 @@ margin-left: 4px;
 И сохрани в том уголке,<br>
 Где дети прячут сны,<br>
 Как пилигрим хранит цветок<br>
-Далекой стороны._</p>
+Далекой стороны.</p>
 <h3 data-heading="Глава I. Вниз по кроличьей норе">Глава I. Вниз по кроличьей норе</h3>
 <p>Алисе начинало уже надоедать сидеть с сестрой на берегу без всякого занятия; пару раз она заглянула было в книжку, которую читала сестра, но там не было ни картинок, ни разговоров; "а зачем нужна книжка, - подумала Алиса, - в которой ни картинок, ни разговоров?"</p>
 <p>Так что она прикидывала в уме (насколько вообще это было возможно в столь жаркий день, когда клонит в сон и мысли путаются), способно ли удовольствие от плетения гирлянды из маргариток перевесить нежелание вставать и собирать маргаритки, как вдруг мимо нее пробежал белый кролик с розовыми глазами.</p>
@@ -1296,41 +1474,41 @@ margin-left: 4px;
 </li>
 </ul>
 <p>"Про хвост? Он действительно длинный, - подумала Алиса, с удивлением разглядывая хвост Мыши, - однако что же в нем печального?" И поскольку она все пыталась разрешить эту загадку, пока Мышь излагала свою историю, то и сам рассказ в представлении Алисы выглядел примерно так:</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Хищник сказывал<br>
-мышке, Ее<br>
-встретив<br>
-в домишке: "Эй,<br>
-пойдем-ка,<br>
-тебя я<br>
-Привлекаю<br>
-к суду!<br>
-Отклоняю<br>
-протест я,<br>
-Налагаю<br>
-арест я,<br>
-Потому что<br>
-с утра я<br>
-Себе дел<br>
-не найду.<br>
-Мышка<br>
-молвит<br>
-пройдохе<a aria-label-position="top" aria-label="https://wysotsky.com/0011/1049-10.htm#fn_09" rel="noopener" class="external-link" href="https://wysotsky.com/0011/1049-10.htm#fn_09" target="_blank">9</a>:<br>
-"Ваши<br>
-доводы<br>
-плохи, Без<br>
-судьи и<br>
-присяжных<br>
-Зря устроим<br>
-возню!"<br>
-Хищник<br>
-рявкнул:<br>
-"Неважно!<br>
-Я и суд, и<br>
-присяжные!<br>
-Разберу<br>
-твое дело,<br>
-Осужу и<br>
-казню!"</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Хищник сказывал
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;мышке, Ее
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;встретив
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;в домишке: "Эй,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;пойдем-ка,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;тебя я
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Привлекаю
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;к суду!
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Отклоняю
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;протест я,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Налагаю
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;арест я,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Потому что
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;с утра я
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Себе дел
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;не найду.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Мышка
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;молвит
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;пройдохе<a aria-label-position="top" aria-label="https://wysotsky.com/0011/1049-10.htm#fn_09" rel="noopener" class="external-link" href="https://wysotsky.com/0011/1049-10.htm#fn_09" target="_blank">9</a>:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Ваши
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;доводы
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;плохи, Без
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;судьи и
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;присяжных
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Зря устроим
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;возню!"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Хищник
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;рявкнул:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Неважно!
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Я и суд, и
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;присяжные!
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Разберу
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;твое дело,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Осужу и
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;казню!"</p>
 <ul>
 <li>
 <p>Ты не слушаешь! - строго сказала Мышь Алисе. - О чем это ты задумалась?</p>
@@ -2955,14 +3133,14 @@ margin-left: 4px;
 </ul>
 <p>"Как же эти существа любят командовать и заставлять отвечать уроки! - подумала Алиса. - Можно подумать, я в школе!"</p>
 <p>Тем не менее, она поднялась и начала декламировать, но голова ее была полна Омаровой Кадрилью, так что она сама не знала толком, что говорит, и слова, разумеется, получились очень странными:</p>
-<p>_Это голос омара; я слышу сей голос:<br>
+<p>Это голос омара; я слышу сей голос:<br>
 "Не варите так красно! Попудрите волос!"<br>
 Поправляет он пуговиц ряд и ремень<br>
 Своим носом, носки развернув набекрень.  </p>
 <p>Если после отлива песок всюду сух,<br>
 Он ругает Акулу презрительно вслух,<br>
 Но когда приплывают акулы в прилив,<br>
-Его голос дрожащий не столь горделив._  </p>
+Его голос дрожащий не столь горделив.</p>
 <p>&nbsp;</p>
 <ul>
 <li>
@@ -2991,14 +3169,14 @@ margin-left: 4px;
 </li>
 </ul>
 <p>Алиса не осмелилась ослушаться и, хотя и была уверена, что все опять получится неправильно, продолжила дрожащим голосом:</p>
-<p>_Я в саду его видел, даю вам зарок,<br>
+<p>Я в саду его видел, даю вам зарок,<br>
 Как Сова и Пантера делили пирог:<br>
 Мигом съела Пантера пирог со стола,<br>
 А Сове только блюдце пустое дала.  </p>
 <p>И в придачу была еще ложка одна,<br>
 Как великая милость, Сове отдана;<br>
 А Пантере нож с вилкой достались сперва,<br>
-Ну а после уже, на закуску - ..._  </p>
+Ну а после уже, на закуску - ... </p>
 <p>&nbsp;</p>
 <ul>
 <li>
@@ -3395,7 +3573,7 @@ margin-left: 4px;
 </li>
 </ul>
 <p>Вот стихи, которые прочитал Белый Кролик:</p>
-<p>_Они твердят: бывая с ним,<br>
+<p>Они твердят: бывая с ним,<br>
 Меня назвали вы.<br>
 "Он мил, - она сказала им, -<br>
 Но не пловец, увы."  </p>
@@ -3418,7 +3596,7 @@ margin-left: 4px;
 <p>Что ей так нравятся они,<br>
 Пускай не знает свет.<br>
 Ему - ни слова! Сохрани<br>
-Меж нами наш секрет._  </p>
+Меж нами наш секрет.  </p>
 <p>&nbsp;</p>
 <ul>
 <li>
@@ -3494,7 +3672,7 @@ margin-left: 4px;
 <p><a aria-label-position="top" aria-label="https://wysotsky.com/0011/1049-10.htm#rn_03" rel="noopener" class="external-link" href="https://wysotsky.com/0011/1049-10.htm#rn_03" target="_blank">3</a>&nbsp;9 футов - это не так уж много, меньше трех метров; чтобы наплакать&nbsp;<em>столько</em>, размер явно недостаточный. Впрочем, не будем забывать, что дело происходит в Стране Чудес.  </p>
 <p><a aria-label-position="top" aria-label="https://wysotsky.com/0011/1049-10.htm#rn_04" rel="noopener" class="external-link" href="https://wysotsky.com/0011/1049-10.htm#rn_04" target="_blank">4</a>&nbsp;У Кэрролла именно так - "руке", а не "лапе"; впрочем, столь респектабельный (хоть и пугливый) Кролик вполне этого заслуживает.  </p>
 <p><a aria-label-position="top" aria-label="https://wysotsky.com/0011/1049-10.htm#rn_05" rel="noopener" class="external-link" href="https://wysotsky.com/0011/1049-10.htm#rn_05" target="_blank">5</a>&nbsp;Стихотворение Исаака Уоттса (Isaac Watts, 1674-1748); как и большинство пародируемых Кэрроллом в этой книге, относится к дидактическим стишкам, которыми в изобилии пичкали британских детей.  </p>
-<p>_Трудолюбивая пчела<br>
+<p>Трудолюбивая пчела<br>
 Проводит с пользой день,<br>
 И взятку с каждого цветка<br>
 Ей собирать не лень.  </p>
@@ -3509,7 +3687,7 @@ margin-left: 4px;
 <p>Пускай в учебе и в трудах<br>
 Проходят день за днем,<br>
 Чтоб о растраченных годах<br>
-Мне не жалеть потом._  </p>
+Мне не жалеть потом.  </p>
 <p><a aria-label-position="top" aria-label="https://wysotsky.com/0011/1049-10.htm#rn_06" rel="noopener" class="external-link" href="https://wysotsky.com/0011/1049-10.htm#rn_06" target="_blank">6</a>&nbsp;Это вовсе не привычные нам кабинки для переодевания (хотя они играли и эту роль), а громоздкое сооружение викторианской эпохи, призванное ограждать купальщика от нескромных чужих взоров. Потому-то и располагались эти кабинки не на пляже, а в море, куда их затаскивали лошадьми.  </p>
 <p><a aria-label-position="top" aria-label="https://wysotsky.com/0011/1049-10.htm#rn_07" rel="noopener" class="external-link" href="https://wysotsky.com/0011/1049-10.htm#rn_07" target="_blank">7</a>&nbsp;Где моя кошка? (фр.)  </p>
 <p><a aria-label-position="top" aria-label="https://wysotsky.com/0011/1049-10.htm#rn_08" rel="noopener" class="external-link" href="https://wysotsky.com/0011/1049-10.htm#rn_08" target="_blank">8</a>&nbsp;У всех этих созданий есть реальные прототипы. Утка (Duck) - каноник Дакворт (Duckworth), друг Льюиса Кэррола, сопровождавший его и девочек Лиддел на речной прогулке. Додо - название вымершей птицы дронт и одновременно прозвище самого Кэрролла, который заикался, называя свое настоящее имя: "До-До-Доджсон". Лори - разновидность австралийских попугаев, но в данном случае это еще и Лорина, старшая из сестер Лиддел (так что неудивительно, что у Алисы позже "конечно же" возник спор с Лори; "железный аргумент", приведенный Лори в этом споре, также взят из реальной жизни). Орленок (Eaglet) - Эдит Лиддел, младшая сестра (поэтому в некоторых переводах Орленок носит имя "Эд", хотя у Кэрролла этого нет).  </p>
@@ -3548,7 +3726,7 @@ margin-left: 4px;
 <p><a aria-label-position="top" aria-label="https://wysotsky.com/0011/1049-10.htm#rn_17" rel="noopener" class="external-link" href="https://wysotsky.com/0011/1049-10.htm#rn_17" target="_blank">17</a>&nbsp;Заметим, что у Голубки весьма своеобразное представление о том, что змеям&nbsp;<em>подходит</em>&nbsp;и&nbsp;<em>по нраву</em>&nbsp;- представление это прямо противоположно точке зрения самих змей; ведь Голубка пытается найти место, куда змеи не могли бы добраться. Неудивительно, что "Алиса все больше и больше недоумевала".  </p>
 <p><a aria-label-position="top" aria-label="https://wysotsky.com/0011/1049-10.htm#rn_18" rel="noopener" class="external-link" href="https://wysotsky.com/0011/1049-10.htm#rn_18" target="_blank">18</a>&nbsp;Кэрролл обыгрывает английскую поговорку "Улыбается, как чеширский кот". О ее происхождении имеются две гипотезы. Одни лингвисты полагают, что она возникла из-за трактирных вывесок в Чешире, изображавших скалившего зубы леопарда; другие - что дело в чеширских сырах, которые одно время выпускали в форме головы улыбающегося кота.  </p>
 <p><a aria-label-position="top" aria-label="https://wysotsky.com/0011/1049-10.htm#rn_19" rel="noopener" class="external-link" href="https://wysotsky.com/0011/1049-10.htm#rn_19" target="_blank">19</a>&nbsp;Здесь пародируется слащаво-нравоучительное стихотворение Дж. Лэнгфорда (G. Langford)  </p>
-<p>_Будь мягче; лучше управлять<br>
+<p>Будь мягче; лучше управлять<br>
 Не страхом, а любовью;<br>
 Будь мягче, чтоб не позволять<br>
 Бесчинствовать злословью.  </p>
@@ -3579,12 +3757,12 @@ margin-left: 4px;
 <p>Будь мягче; невеликий труд,<br>
 Коль в сердце человечность,<br>
 То радость и добро придут,<br>
-Что подтверждает вечность._  </p>
+Что подтверждает вечность.  </p>
 <p><a aria-label-position="top" aria-label="https://wysotsky.com/0011/1049-10.htm#rn_20" rel="noopener" class="external-link" href="https://wysotsky.com/0011/1049-10.htm#rn_20" target="_blank">20</a>&nbsp;В Англии существуют поговорки "безумен, как шляпник" и "безумен, как мартовский заяц". С зайцем все понятно - в марте у них брачный период - а вот почему шляпник? Оказывается, на протяжении долгого времени (даже еще и в XX веке) шляпники использовали при обработке фетра ртуть и часто становились жертвами ртутного отравления, при котором действительно поражается психика.  </p>
 <p><a aria-label-position="top" aria-label="https://wysotsky.com/0011/1049-10.htm#rn_21" rel="noopener" class="external-link" href="https://wysotsky.com/0011/1049-10.htm#rn_21" target="_blank">21</a>&nbsp;В предисловии к более позднему изданию Кэрролл дал ответ на эту загадку, основанный на сложном каламбуре: "Тем, что он может производить notes, которые при этом весьма flat". Здесь используются 3 значения слова notes - заметки, музыкальные ноты и карканье, и 2 значения flat - плоский и (применительно к нотам) фальшивый. Можно предложить и более простые отгадки, например - "на нем тоже имеются перья". Тем не менее, весьма вероятно, что изначально эта загадка мыслилась как не имеющая ответа.  </p>
 <p><a aria-label-position="top" aria-label="https://wysotsky.com/0011/1049-10.htm#rn_22" rel="noopener" class="external-link" href="https://wysotsky.com/0011/1049-10.htm#rn_22" target="_blank">22</a>&nbsp;Имеется в виду английское выражение "Старик Время".  </p>
 <p><a aria-label-position="top" aria-label="https://wysotsky.com/0011/1049-10.htm#rn_23" rel="noopener" class="external-link" href="https://wysotsky.com/0011/1049-10.htm#rn_23" target="_blank">23</a>&nbsp;Имеется в виду стихотворение Джэйн Тэйлор (Jane Taylor, 1783-1827)  </p>
-<p>_Звездочка, гори, гори,<br>
+<p>Звездочка, гори, гори,<br>
 С высоты на мир смотри.<br>
 Как брильянт ты в вышине,<br>
 Что ты есть, понять бы мне!  </p>
@@ -3603,7 +3781,7 @@ margin-left: 4px;
 <p>Что ты есть, мне не понять,<br>
 Но, как тьма придет, опять<br>
 Путь скитальцу озари -<br>
-Звездочка, гори, гори._  </p>
+Звездочка, гори, гори. </p>
 <p><a aria-label-position="top" aria-label="https://wysotsky.com/0011/1049-10.htm#rn_24" rel="noopener" class="external-link" href="https://wysotsky.com/0011/1049-10.htm#rn_24" target="_blank">24</a>&nbsp;Именно шесть, а не пять. Обычай пить чай в пять (five o'clock) установился в Англии позже. В семействе Лиддел чай пили в шесть часов.  </p>
 <p><a aria-label-position="top" aria-label="https://wysotsky.com/0011/1049-10.htm#rn_25" rel="noopener" class="external-link" href="https://wysotsky.com/0011/1049-10.htm#rn_25" target="_blank">25</a>&nbsp;Снова имеются в виду сестры Лиддел: Элси - L.C. - Lorina Charlotte, Лэси - Lacie - анаграмма имени Alice, Тилли - Matilda - прозвище Эдит.  </p>
 <p><a aria-label-position="top" aria-label="https://wysotsky.com/0011/1049-10.htm#rn_26" rel="noopener" class="external-link" href="https://wysotsky.com/0011/1049-10.htm#rn_26" target="_blank">26</a>&nbsp;Вообще-то пришлось, и совсем недавно. Но, может быть, просто во время процессии Королева пребывала в намного лучшем расположении духа?  </p>
@@ -3662,7 +3840,7 @@ margin-left: 4px;
 Звезда вечерняя, красивая звезда.</em>  </p>
 <p><strong>Припев</strong>  </p>
 <p><a aria-label-position="top" aria-label="https://wysotsky.com/0011/1049-10.htm#rn_36" rel="noopener" class="external-link" href="https://wysotsky.com/0011/1049-10.htm#rn_36" target="_blank">36</a>&nbsp;Единственная песенка, которую Кэрролл приводит, не пародируя. Впрочем, хоть форма и не меняется, смысл выворачивается наизнанку: в песне Валет виновен, а Король умен, в книге же все наоборот. Вот полный текст этой детской песенки:  </p>
-<p>_Дама Червей в честь летних дней<br>
+<p>Дама Червей в честь летних дней<br>
 Наделала тортов,<br>
 Валет Червей был всех наглей,<br>
 Их - хвать, и был таков.  </p>
@@ -3677,7 +3855,7 @@ margin-left: 4px;
 <p>И всяк искал: кто ж тот нахал?<br>
 Лишь не искал валет -<br>
 Он губы тер, признав позор,<br>
-Не знал, что сока нет._  </p>
+Не знал, что сока нет.  </p>
 <p><a aria-label-position="top" aria-label="https://wysotsky.com/0011/1049-10.htm#rn_37" rel="noopener" class="external-link" href="https://wysotsky.com/0011/1049-10.htm#rn_37" target="_blank">37</a>&nbsp;По итогам судебного заседания присяжные выносят вердикт - виновен или не виновен обвиняемый. Суд выносит обвинительный приговор (определяет наказание) лишь после вердикта "виновен", иначе подсудимого оправдывают. Разумеется, вердикт присяжных выносится лишь в конце заседания, после того, как выслушаны свидетели, прокурор и адвокат (заметим, что двое последних на процессе над Валетом вообще не присутствуют).</p>
     </body>
 </html>

@@ -76,3 +76,8 @@ body {
   color: rgba(225,211,138,0.56)!important;
 }
 
+.img-fluid {
+  max-height: 100%;
+  max-width: 100%;
+}
+

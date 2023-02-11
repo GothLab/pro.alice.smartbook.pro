@@ -58,40 +58,23 @@
 .ͼ1 .cm-textfield {vertical-align: middle; color: inherit; font-size: 70%; border: 1px solid silver; padding: .2em .5em;}
 .ͼ2 .cm-textfield {background-color: white;}
 .ͼ3 .cm-textfield {border: 1px solid #555; background-color: inherit;}
+.ͼ1 .cm-tooltip {z-index: 100; box-sizing: border-box;}
+.ͼ2 .cm-tooltip {border: 1px solid #bbb; background-color: #f5f5f5;}
+.ͼ2 .cm-tooltip-section:not(:first-child) {border-top: 1px solid #bbb;}
+.ͼ3 .cm-tooltip {background-color: #333338; color: white;}
+.ͼ1 .cm-tooltip-arrow:before, .ͼ1 .cm-tooltip-arrow:after {content: ''; position: absolute; width: 0; height: 0; border-left: 7px solid transparent; border-right: 7px solid transparent;}
+.ͼ1 .cm-tooltip-above .cm-tooltip-arrow:before {border-top: 7px solid #bbb;}
+.ͼ1 .cm-tooltip-above .cm-tooltip-arrow:after {border-top: 7px solid #f5f5f5; bottom: 1px;}
+.ͼ1 .cm-tooltip-above .cm-tooltip-arrow {bottom: -7px;}
+.ͼ1 .cm-tooltip-below .cm-tooltip-arrow:before {border-bottom: 7px solid #bbb;}
+.ͼ1 .cm-tooltip-below .cm-tooltip-arrow:after {border-bottom: 7px solid #f5f5f5; top: 1px;}
+.ͼ1 .cm-tooltip-below .cm-tooltip-arrow {top: -7px;}
+.ͼ1 .cm-tooltip-arrow {height: 7px; width: 14px; position: absolute; z-index: -1; overflow: hidden;}
+.ͼ3 .cm-tooltip .cm-tooltip-arrow:before {border-top-color: #333338; border-bottom-color: #333338;}
+.ͼ3 .cm-tooltip .cm-tooltip-arrow:after {border-top-color: transparent; border-bottom-color: transparent;}
 .ͼ1 .cm-foldPlaceholder {background-color: #eee; border: 1px solid #ddd; color: #888; border-radius: .2em; margin: 0 1px; padding: 0 1px; cursor: pointer;}
 .ͼ1 .cm-foldGutter span {padding: 0 1px; cursor: pointer;}
 .ͼq .cm-content {white-space: pre-wrap; word-break: break-word; overflow-wrap: anywhere; padding: 0;}
- .custom-frames-view {
-	padding: 0 !important;
-	overflow: hidden !important;
-}
-
-.custom-frames-view-file {
-	padding: 0;
-	overflow: auto;
-}
-
-.custom-frames-frame {
-	width: 100%;
-	height: 100%;
-	border: none;
-	background-color: white;
-	background-clip: content-box;
-}
-
-.custom-frames-add {
-	margin-left: 10px;
-}
-
-.custom-frames-show {
-	margin-bottom: 18px;
-}
-
-.custom-frames-support {
-	max-width: 50%;
-	width: 400px;
-	height: auto;
-}
  .setting-item.ex-setting-item {
     border-top: unset;
     padding-top: 0;
@@ -102,6 +85,165 @@
 } 
 .pandoc-plugin-error {
     color: red;
+}
+ .lt-underline {
+  cursor: pointer;
+  transition: background-color 100ms ease-out;
+}
+
+.lt-underline.lt-minor {
+  box-shadow: inset 0 -2px #e9b35f;
+}
+
+.lt-underline.lt-major {
+  box-shadow: inset 0 -2px #da615c;
+}
+
+.lt-underline.lt-style {
+  box-shadow: inset 0 -2px #8981f3;
+}
+
+.lt-underline.lt-minor:hover {
+  background-color: #e9b35f21;
+}
+
+.lt-underline.lt-major:hover {
+  background-color: #da615c21;
+}
+
+.lt-underline.lt-style:hover {
+  background-color: #8981f321;
+}
+
+@keyframes lineInserted {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.lt-predictions-container-glass.cm-tooltip,
+.lt-predictions-container.cm-tooltip,
+.lt-predictions-container-glass,
+.lt-predictions-container {
+  position: absolute;
+  animation-duration: 150ms;
+  animation-name: lineInserted;
+  font-family: var(--default-font);
+  font-size: 0.93rem;
+  padding: 12px 0 0;
+  background-color: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  width: 300px;
+  line-height: 1.5;
+  z-index: var(--layer-popover);
+  overflow: hidden;
+}
+
+.lt-predictions-container-glass {
+  background: hsla(0, 0%, 100%, 0.25);
+  backdrop-filter: blur(12px);
+}
+
+.lt-predictions-container > button {
+  transition-delay: 0.5s;
+}
+
+.lt-buttoncontainer:not(:empty) {
+  padding: 10px 12px 0;
+}
+
+.lt-buttoncontainer > button {
+  border: 1px solid var(--background-modifier-border);
+  font-size: 1rem;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  padding: 4px 10px;
+}
+
+.lt-title {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  padding: 0 12px;
+}
+
+.lt-message {
+  padding: 0 12px;
+  display: block;
+}
+
+.lt-ignorecontainer {
+  padding-top: 10px;
+  display: flex;
+}
+
+.lt-status-bar-btn {
+  height: 100%;
+  display: flex;
+  cursor: pointer;
+  line-height: 1;
+  align-items: center;
+}
+
+.lt-status-bar-check-icon {
+  display: block;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+
+.lt-ignore-btn {
+  margin: 0;
+  padding: 12px;
+  display: flex;
+  width: 100%;
+  text-align: left;
+  border-radius: 0;
+  align-items: center;
+  line-height: 1;
+  border-top: 1px solid var(--background-modifier-border);
+}
+
+.lt-ignore-btn > span {
+  display: flex;
+}
+
+.lt-ignore-btn > span:last-child {
+  margin-left: 5px;
+}
+
+.lt-minor .lt-title > span {
+  box-shadow: inset 0 -2px #e9b35f88;
+}
+
+.lt-major .lt-title > span {
+  box-shadow: inset 0 -2px #da615c88;
+}
+
+.lt-style .lt-title > span {
+  box-shadow: inset 0 -2px #8981f388;
+}
+
+.lt-loading > svg {
+  animation-name: spin;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
  /* 
  *  Originally copied from dist/tippy.css in the tippy.js package.
@@ -208,9 +350,7 @@
   z-index: 1;
   overflow-wrap: anywhere;
 }
- 
-
-#cMenuToolbarModalBar {
+ #cMenuToolbarModalBar {
   width: auto;
   height: auto;
   padding: 3px;
@@ -298,27 +438,27 @@ cMenuToolbar SETTING ITEMS
   padding: 18px 0 18px 0;
 }
 
-.sortable-fallback {
+.cMenuToolbarSettingsTabsContainer .sortable-fallback {
   cursor: grabbing;
   box-shadow: 0px 3px 32px rgb(31 38 135 / 15%);
 }
 
-.sortable-grab {
+.cMenuToolbarSettingsTabsContainer .sortable-grab {
   cursor: grabbing !important;
 }
 
-.sortable-ghost {
+.cMenuToolbarSettingsTabsContainer .sortable-ghost {
   opacity: 0.4;
   cursor: grabbing;
 }
 
-.sortable-chosen {
+.cMenuToolbarSettingsTabsContainer .sortable-chosen {
   cursor: grabbing;
   padding: 18px 0 18px 18px;
-  background-color: var(--background-primary);
+  background-color: var(--color-base-10,--background-primary);
 }
 
-.sortable-drag {
+.cMenuToolbarSettingsTabsContainer .sortable-drag {
   cursor: grabbing;
   box-shadow: 0px 3px 32px rgb(31 38 135 / 15%);
 }
@@ -351,7 +491,7 @@ box-shadow: none;
 
 }
 .cMenuToolbarDefaultAesthetic {
-background-color: var(--background-primary);
+background-color: var(--color-base-10,--background-primary);
 }
 
 
@@ -566,7 +706,7 @@ body.theme-dark .modal-container.cMenuToolbar-Modal  .modal  input[type='range']
   justify-items: center;  
   border: none;
   backdrop-filter: none;
-  background-color: var(--background-primary);
+  background-color: var(--color-base-10,--background-primary);
   box-shadow: 0 3px 6px -4px rgb(0 0 0 / 12%), 0 6px 16px 0 rgb(0 0 0 / 8%), 0 9px 28px 8px rgb(0 0 0 / 5%);
  }
 
@@ -629,7 +769,7 @@ font-size: 10px;
 
 :is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar)  button[class^=cMenuToolbarCommandsubItem]  >.subitem
 {
-    background-color: var(--background-primary);
+    background-color: var(--color-base-10,--background-primary);
     border-radius: 4px;
     border: 1px solid var(--background-modifier-border);
     box-shadow: 0 2px 8px var(--background-modifier-box-shadow);
@@ -705,7 +845,10 @@ background-image: url("data:image/svg+xml,%3Csvg width='4' height='4' version='1
  :is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar):not(.top) button.cMenuToolbarCommandsubItem-font-color .x-color-picker-wrapper
 {
   top:auto;
-bottom:calc(100% + 1.8em);
+bottom:calc(100%);
+}
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar):not(.top) button[class^=cMenuToolbarCommandsubItem]:not(.cMenuToolbarSecond) >.subitem {
+  bottom: calc(100% + 2.8em);
 }
 
  
@@ -729,11 +872,11 @@ bottom:calc(100% + 1.8em);
  transition: all 0.3s linear;
  -webkit-transition:  all 0.3s linear;
 }
-:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button[class^=cMenuToolbarCommandsubItem] >.subitem:hover  {
+/* :is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button[class^=cMenuToolbarCommandsubItem] >.subitem:hover  {
   visibility:visible;
   transition: all 0.3s linear;
   -webkit-transition:  all 0.3s linear;
- }
+ } */
 
  .cMenuToolbarCommandsubItem-font-color button
 {
@@ -851,7 +994,7 @@ flex: 0;
   font-weight: 400;
   font-family: Source Sans Pro,sans-serif;
   border-radius: 4px;
-  background-color: var(--background-primary);
+  background-color: var(--color-base-10,--background-primary);
 }
 .markdown-source-view.mod-cm6 .x-color-picker-wrapper table.x-color-picker-table#x-color-picker-table {
   width: unset;
@@ -903,6 +1046,15 @@ background-color:transparent !important;
     -webkit-transition:  all 0.2s linear;
     
 }
+#cMenuToolbarModalBar.top.autohide {
+    opacity: 0;    
+}
+ 
+
+#cMenuToolbarModalBar.top.autohide:hover  {
+    opacity: 1 ;  
+}
+  
 
 #cMenuToolbarModalBar.top :is(.cMenuToolbarCommandItem,button[class^=cMenuToolbarCommandsubItem]):not(.cMenuToolbar-Divider-Line)
 {
@@ -942,7 +1094,7 @@ font-size: 10px;
     align-items: center;
     width: fit-content;
     z-index: var(--layer-status-bar); 
-    background-color: var(--background-primary);
+    background-color: var(--color-base-10,--background-primary);
       background-clip: padding-box;
       border-radius: 6px;
       box-shadow: 0 3px 6px -4px rgba(0,0,0,.12),0 6px 16px 0 rgba(0,0,0,.08),0 9px 28px 8px rgba(0,0,0,.05);
@@ -1063,29 +1215,55 @@ margin-left: 4px;
 {
   opacity: 0;
 }
- undefined
+:is(.cm-line,p) span[style^="background:rgba"]
+{
+ color: var(--text-normal);
+}
+:is(.cm-line,p) span[style^="background:#"]
+ {
+  color: black;
+ } .custom-css-setting {
+	height: 70%;
+}
+
+.custom-css-setting > * {
+	height: 100%;
+	width: 60em;
+}
+
+.custom-css-setting > * > textarea{
+	width:40em;
+	height: 100%;
+}
+  img {
+
+max-width: 100px;
+max-height: 100px;
+
+}
+undefined
 </style>
     </head>
     <body>
 <h2 data-heading="Алиса в Стране Чудес">Алиса в Стране Чудес</h2>
 <p>Перевод: Андрей Кононенко (2000)</p>
 <ul>
-<li><a aria-label-position="top" aria-label="Рождественское поздравление (_от Феи_)" data-href="#Рождественское поздравление (_от Феи_)" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%A0%D0%BE%D0%B6%D0%B4%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%B5%20%D0%BF%D0%BE%D0%B7%D0%B4%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20(_%D0%BE%D1%82%20%D0%A4%D0%B5%D0%B8_)" class="internal-link" target="_blank" rel="noopener">Рождественское поздравление (_от Феи_)</a></li>
-<li><a aria-label-position="top" aria-label="Глава 1. Падение в кроличью нору" data-href="#Глава 1. Падение в кроличью нору" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%201.%20%D0%9F%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BA%D1%80%D0%BE%D0%BB%D0%B8%D1%87%D1%8C%D1%8E%20%D0%BD%D0%BE%D1%80%D1%83" class="internal-link" target="_blank" rel="noopener">Глава 1. Падение в кроличью нору</a></li>
-<li><a aria-label-position="top" aria-label="Глава 2. Море слез" data-href="#Глава 2. Море слез" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%202.%20%D0%9C%D0%BE%D1%80%D0%B5%20%D1%81%D0%BB%D0%B5%D0%B7" class="internal-link" target="_blank" rel="noopener">Глава 2. Море слез</a></li>
-<li><a aria-label-position="top" aria-label="Глава 3. Гонка за лидером и рассказ про подлый хвост" data-href="#Глава 3. Гонка за лидером и рассказ про подлый хвост" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%203.%20%D0%93%D0%BE%D0%BD%D0%BA%D0%B0%20%D0%B7%D0%B0%20%D0%BB%D0%B8%D0%B4%D0%B5%D1%80%D0%BE%D0%BC%20%D0%B8%20%D1%80%D0%B0%D1%81%D1%81%D0%BA%D0%B0%D0%B7%20%D0%BF%D1%80%D0%BE%20%D0%BF%D0%BE%D0%B4%D0%BB%D1%8B%D0%B9%20%D1%85%D0%B2%D0%BE%D1%81%D1%82" class="internal-link" target="_blank" rel="noopener">Глава 3. Гонка за лидером и рассказ про подлый хвост</a></li>
-<li><a aria-label-position="top" aria-label="Глава 4. Взлет ли, падение ли..." data-href="#Глава 4. Взлет ли, падение ли..." href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%204.%20%D0%92%D0%B7%D0%BB%D0%B5%D1%82%20%D0%BB%D0%B8,%20%D0%BF%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BB%D0%B8..." class="internal-link" target="_blank" rel="noopener">Глава 4. Взлет ли, падение ли...</a></li>
-<li><a aria-label-position="top" aria-label="Глава 5. Совет Сороконожки" data-href="#Глава 5. Совет Сороконожки" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%205.%20%D0%A1%D0%BE%D0%B2%D0%B5%D1%82%20%D0%A1%D0%BE%D1%80%D0%BE%D0%BA%D0%BE%D0%BD%D0%BE%D0%B6%D0%BA%D0%B8" class="internal-link" target="_blank" rel="noopener">Глава 5. Совет Сороконожки</a></li>
-<li><a aria-label-position="top" aria-label="Глава 6. Поросенок и перец" data-href="#Глава 6. Поросенок и перец" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%206.%20%D0%9F%D0%BE%D1%80%D0%BE%D1%81%D0%B5%D0%BD%D0%BE%D0%BA%20%D0%B8%20%D0%BF%D0%B5%D1%80%D0%B5%D1%86" class="internal-link" target="_blank" rel="noopener">Глава 6. Поросенок и перец</a></li>
-<li><a aria-label-position="top" aria-label="Глава 7. Безумное чаепитие" data-href="#Глава 7. Безумное чаепитие" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%207.%20%D0%91%D0%B5%D0%B7%D1%83%D0%BC%D0%BD%D0%BE%D0%B5%20%D1%87%D0%B0%D0%B5%D0%BF%D0%B8%D1%82%D0%B8%D0%B5" class="internal-link" target="_blank" rel="noopener">Глава 7. Безумное чаепитие</a></li>
-<li><a aria-label-position="top" aria-label="Глава 8. Королевский крокет" data-href="#Глава 8. Королевский крокет" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%208.%20%D0%9A%D0%BE%D1%80%D0%BE%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D1%80%D0%BE%D0%BA%D0%B5%D1%82" class="internal-link" target="_blank" rel="noopener">Глава 8. Королевский крокет</a></li>
-<li><a aria-label-position="top" aria-label="Глава 9. История Минтакраба" data-href="#Глава 9. История Минтакраба" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%209.%20%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F%20%D0%9C%D0%B8%D0%BD%D1%82%D0%B0%D0%BA%D1%80%D0%B0%D0%B1%D0%B0" class="internal-link" target="_blank" rel="noopener">Глава 9. История Минтакраба</a></li>
-<li><a aria-label-position="top" aria-label="Глава 10. Омаровая кадриль" data-href="#Глава 10. Омаровая кадриль" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%2010.%20%D0%9E%D0%BC%D0%B0%D1%80%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BA%D0%B0%D0%B4%D1%80%D0%B8%D0%BB%D1%8C" class="internal-link" target="_blank" rel="noopener">Глава 10. Омаровая кадриль</a></li>
-<li><a aria-label-position="top" aria-label="Глава 11. Кто украл пироги" data-href="#Глава 11. Кто украл пироги" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%2011.%20%D0%9A%D1%82%D0%BE%20%D1%83%D0%BA%D1%80%D0%B0%D0%BB%20%D0%BF%D0%B8%D1%80%D0%BE%D0%B3%D0%B8" class="internal-link" target="_blank" rel="noopener">Глава 11. Кто украл пироги</a></li>
-<li><a aria-label-position="top" aria-label="Глава 12. Показания Алисы" data-href="#Глава 12. Показания Алисы" href="E:\GITHUB\Smartbook-App\assets\books\Alice in Wonderland\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%2012.%20%D0%9F%D0%BE%D0%BA%D0%B0%D0%B7%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%90%D0%BB%D0%B8%D1%81%D1%8B" class="internal-link" target="_blank" rel="noopener">Глава 12. Показания Алисы</a></li>
+<li><a aria-label-position="top" aria-label="Рождественское поздравление (_от Феи_)" data-href="#Рождественское поздравление (_от Феи_)" href="E:\GITHUB\pro.alice.smartbook.pro\books\Alice\TRANSL\index.html#%D0%A0%D0%BE%D0%B6%D0%B4%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%B5%20%D0%BF%D0%BE%D0%B7%D0%B4%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20(_%D0%BE%D1%82%20%D0%A4%D0%B5%D0%B8_)" class="internal-link" target="_blank" rel="noopener">Рождественское поздравление (_от Феи_)</a></li>
+<li><a aria-label-position="top" aria-label="Глава 1. Падение в кроличью нору" data-href="#Глава 1. Падение в кроличью нору" href="E:\GITHUB\pro.alice.smartbook.pro\books\Alice\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%201.%20%D0%9F%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B2%20%D0%BA%D1%80%D0%BE%D0%BB%D0%B8%D1%87%D1%8C%D1%8E%20%D0%BD%D0%BE%D1%80%D1%83" class="internal-link" target="_blank" rel="noopener">Глава 1. Падение в кроличью нору</a></li>
+<li><a aria-label-position="top" aria-label="Глава 2. Море слез" data-href="#Глава 2. Море слез" href="E:\GITHUB\pro.alice.smartbook.pro\books\Alice\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%202.%20%D0%9C%D0%BE%D1%80%D0%B5%20%D1%81%D0%BB%D0%B5%D0%B7" class="internal-link" target="_blank" rel="noopener">Глава 2. Море слез</a></li>
+<li><a aria-label-position="top" aria-label="Глава 3. Гонка за лидером и рассказ про подлый хвост" data-href="#Глава 3. Гонка за лидером и рассказ про подлый хвост" href="E:\GITHUB\pro.alice.smartbook.pro\books\Alice\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%203.%20%D0%93%D0%BE%D0%BD%D0%BA%D0%B0%20%D0%B7%D0%B0%20%D0%BB%D0%B8%D0%B4%D0%B5%D1%80%D0%BE%D0%BC%20%D0%B8%20%D1%80%D0%B0%D1%81%D1%81%D0%BA%D0%B0%D0%B7%20%D0%BF%D1%80%D0%BE%20%D0%BF%D0%BE%D0%B4%D0%BB%D1%8B%D0%B9%20%D1%85%D0%B2%D0%BE%D1%81%D1%82" class="internal-link" target="_blank" rel="noopener">Глава 3. Гонка за лидером и рассказ про подлый хвост</a></li>
+<li><a aria-label-position="top" aria-label="Глава 4. Взлет ли, падение ли..." data-href="#Глава 4. Взлет ли, падение ли..." href="E:\GITHUB\pro.alice.smartbook.pro\books\Alice\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%204.%20%D0%92%D0%B7%D0%BB%D0%B5%D1%82%20%D0%BB%D0%B8,%20%D0%BF%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BB%D0%B8..." class="internal-link" target="_blank" rel="noopener">Глава 4. Взлет ли, падение ли...</a></li>
+<li><a aria-label-position="top" aria-label="Глава 5. Совет Сороконожки" data-href="#Глава 5. Совет Сороконожки" href="E:\GITHUB\pro.alice.smartbook.pro\books\Alice\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%205.%20%D0%A1%D0%BE%D0%B2%D0%B5%D1%82%20%D0%A1%D0%BE%D1%80%D0%BE%D0%BA%D0%BE%D0%BD%D0%BE%D0%B6%D0%BA%D0%B8" class="internal-link" target="_blank" rel="noopener">Глава 5. Совет Сороконожки</a></li>
+<li><a aria-label-position="top" aria-label="Глава 6. Поросенок и перец" data-href="#Глава 6. Поросенок и перец" href="E:\GITHUB\pro.alice.smartbook.pro\books\Alice\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%206.%20%D0%9F%D0%BE%D1%80%D0%BE%D1%81%D0%B5%D0%BD%D0%BE%D0%BA%20%D0%B8%20%D0%BF%D0%B5%D1%80%D0%B5%D1%86" class="internal-link" target="_blank" rel="noopener">Глава 6. Поросенок и перец</a></li>
+<li><a aria-label-position="top" aria-label="Глава 7. Безумное чаепитие" data-href="#Глава 7. Безумное чаепитие" href="E:\GITHUB\pro.alice.smartbook.pro\books\Alice\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%207.%20%D0%91%D0%B5%D0%B7%D1%83%D0%BC%D0%BD%D0%BE%D0%B5%20%D1%87%D0%B0%D0%B5%D0%BF%D0%B8%D1%82%D0%B8%D0%B5" class="internal-link" target="_blank" rel="noopener">Глава 7. Безумное чаепитие</a></li>
+<li><a aria-label-position="top" aria-label="Глава 8. Королевский крокет" data-href="#Глава 8. Королевский крокет" href="E:\GITHUB\pro.alice.smartbook.pro\books\Alice\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%208.%20%D0%9A%D0%BE%D1%80%D0%BE%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D1%80%D0%BE%D0%BA%D0%B5%D1%82" class="internal-link" target="_blank" rel="noopener">Глава 8. Королевский крокет</a></li>
+<li><a aria-label-position="top" aria-label="Глава 9. История Минтакраба" data-href="#Глава 9. История Минтакраба" href="E:\GITHUB\pro.alice.smartbook.pro\books\Alice\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%209.%20%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F%20%D0%9C%D0%B8%D0%BD%D1%82%D0%B0%D0%BA%D1%80%D0%B0%D0%B1%D0%B0" class="internal-link" target="_blank" rel="noopener">Глава 9. История Минтакраба</a></li>
+<li><a aria-label-position="top" aria-label="Глава 10. Омаровая кадриль" data-href="#Глава 10. Омаровая кадриль" href="E:\GITHUB\pro.alice.smartbook.pro\books\Alice\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%2010.%20%D0%9E%D0%BC%D0%B0%D1%80%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BA%D0%B0%D0%B4%D1%80%D0%B8%D0%BB%D1%8C" class="internal-link" target="_blank" rel="noopener">Глава 10. Омаровая кадриль</a></li>
+<li><a aria-label-position="top" aria-label="Глава 11. Кто украл пироги" data-href="#Глава 11. Кто украл пироги" href="E:\GITHUB\pro.alice.smartbook.pro\books\Alice\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%2011.%20%D0%9A%D1%82%D0%BE%20%D1%83%D0%BA%D1%80%D0%B0%D0%BB%20%D0%BF%D0%B8%D1%80%D0%BE%D0%B3%D0%B8" class="internal-link" target="_blank" rel="noopener">Глава 11. Кто украл пироги</a></li>
+<li><a aria-label-position="top" aria-label="Глава 12. Показания Алисы" data-href="#Глава 12. Показания Алисы" href="E:\GITHUB\pro.alice.smartbook.pro\books\Alice\TRANSL\index.html#%D0%93%D0%BB%D0%B0%D0%B2%D0%B0%2012.%20%D0%9F%D0%BE%D0%BA%D0%B0%D0%B7%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%90%D0%BB%D0%B8%D1%81%D1%8B" class="internal-link" target="_blank" rel="noopener">Глава 12. Показания Алисы</a></li>
 </ul>
 <h3 data-heading="Вступление">Вступление</h3>
-<p>_По речке ясным летним днем<br>
+<p>По речке ясным летним днем<br>
 Плыли мы в лодчонке.<br>
 С азартом налегли на весла<br>
 Детские ручонки.<br>
@@ -1129,7 +1307,7 @@ margin-left: 4px;
 В ней чудеса, превращенья<br>
 Все придуманы мной.<br>
 И вся команда вечером<br>
-Направилась домой._</p>
+Направилась домой.</p>
 <h4 data-heading="Рождественское поздравление (_от Феи_)">Рождественское поздравление (<em>от Феи</em>)</h4>
 <p>_Дитя, коль феи могут отложить<br>
 На время шалости и игры в прятки,<br>
@@ -1150,7 +1328,7 @@ margin-left: 4px;
 <p>Поэтому забыв и шутки, и игру<br>
 На две минуты в это торжество,<br>
 Тебе желаем радости в Новом году,<br>
-И, конечно, веселья в Рождество!_  </p>
+И, конечно, веселья в Рождество!</p>
 <p>Рождество, 1867 г.</p>
 <h3 data-heading="Глава 1. Падение в кроличью нору">Глава 1. Падение в кроличью нору</h3>
 <p>Алиса уже несколько часов подряд сидела с сестрой на скамейке и не знала, чем бы ей заняться. Тепло ласкового июльского солнышка и легкий шелест листвы нагоняли на нее скуку и сонливость. Алиса раза два заглянула через плечо сестры в ее книжку, но там не было ни картинок, ни шуток. "Ну как можно читать несмешную книжку, да еще и без картинок? " - подумала Алиса.</p>
@@ -1186,7 +1364,7 @@ margin-left: 4px;
 <p>Спустя некоторое время Алиса услышала приближающийся мягкий топот чьих-то ног. Она наскоро протерла рукавом глаза, чтобы рассмотреть кто это. А это возвращался уже нарядно одетый Белый Кролик, неся в одной руке пару изящных белых перчаток, а в другой - большой веер. Он ужасно спешил, все время повторяя на ходу: " Ой-ей-ей! Герцогиня&nbsp;<em>просто</em>&nbsp;рассвирепеет, если я&nbsp;заставлю ее ждать. Ай-яй-яй!" Алиса находилась в таком отчаянном положении, что готова была попросить о помощи первого встречного. Поэтому, когда Кролик проходил мимо, она робко, потихонечку окликнула его: "Не будете ли Вы так любезны..." Кролик обернулся, и его глаза мгновенно наполнились таким ужасом, что он выронил перчатки и веер и побежал прочь со всех ног (а точнее со всех лап).</p>
 <p>Алиса подняла перчатки и веер. Поскольку в зале стало душно, она стала обмахиваться веером, а тем самым завела разговор сама с собой: "Боже мойКакой сегодня ужасный день! А ведь еще вчера я жила нормальной, спокойной жизнью. Неужели все так сильно изменилось за ночь? Позвольте, но сегодня&nbsp;утром я-то проснулась&nbsp;<em>прежней</em>! Хотя нет, чувствовала я себя как-то уже не так. Ну, хорошо, если я- уже не я, тогда кто я? Как&nbsp;<em>все</em>&nbsp;запутанно!" И Алиса стала перебирать в уме всех своих сверстниц, в которых она могла превратиться.</p>
 <p>"Я точно знаю, что я не Аня," - сказала Алиса. - "По крайней мере у меня, в отличии от нее, волосы не курчавые. И конечно же я не Яна. В отличии от нее в школе я учусь хорошо, а потому знаю много того, чего она не знает. А она... У-у-у! Да она почти ничего и не знает! Так что&nbsp;<em>я</em>&nbsp;- это я, а&nbsp;<em>она</em>&nbsp;- это она. А я... О, Боже! Как все сложно! Кстати, надо проверить знаю ли я&nbsp;то, что знаю, то есть то, что до этого знала, в смысле... В общем так: пятью пять - тридцать пять, шестью шесть- сорок шесть, семью семь - ...О, Господи! Так я и до ста не доберусь. Впрочем, таблицу умножения знают все. Лучше взять что-нибудь из географии. Вот, например: Москва - столица Лондона, Лондон - столица Рима, а Рим - ...нет,&nbsp;<em>все</em>&nbsp;совсем не так! Похоже я стала Яной. Может стишок какой вспомню? Ага, пожалуйста!&nbsp;<em>"Ворона и Лиса"</em>." Алиса скрестила руки на груди и стала бойко, прям как на уроке, читать наизусть. Однако голос ее звучал несколько хрипловато, да и слова выходили какие-то странные:</p>
-<p>_Уж сколько раз твердили миру,<br>
+<p>Уж сколько раз твердили миру,<br>
 Что нет прекрасней крокодила!<br>
 Ряды белых облаков,<br>
 Нил течет среди холмов.  </p>
@@ -1197,7 +1375,7 @@ margin-left: 4px;
 <p>У крокодила все на диво -<br>
 Лапки, брюшко так красивы!<br>
 Нырять он может глубоко<br>
-И улыбаться широко._  </p>
+И улыбаться широко.  </p>
 <p>&nbsp;</p>
 <p>"Опять не то!" - всхлипнула Алиса, и слезы опять заблестели у нее в глазах, - "Неужели я и в самом деле превратилась в Яну и мне придется жить в ее убогой лачуге, без игрушек...? А сколько теперь мне придется учить заново! Если я Яна, то уж лучше останусь здесь, под землей. Пусть тогда приходят за мной и зовут оттуда, сверху: "Дорогая, мы ждем тебя, поднимайся&nbsp;скорее к нам!" А я даже не взгляну на них и скажу: "Не-е-етСперва назовите, кто я теперь такая." И если мне понравится моя новая личность, тогда поднимусь, а если нет, то буду ждать здесь, внизу, пока не превращусь в кого-нибудь получше. Но..."</p>
 <p>"Боже ты мой!" - Алиса не выдержала и расплакалась. - "Какая разница кто я, лишь бы хоть&nbsp;<em>кто-нибудь</em>&nbsp;пришел за мнойЯ так устала сидеть одна-одинешенька в этой дурацкой норе!"</p>
@@ -1249,7 +1427,7 @@ margin-left: 4px;
 <p>После церемонии награждения стали есть конфеты. Это вызвало много шума и замешательство. Большие птицы недовольно галдели, так как не распробовали вкуса конфет, а те, кто был поменьше, поперхнулись и их хлопали по спинам. В конце концов все завершилось и они снова уселись вокруг Мыши и стали просить ее рассказать что-нибудь еще.</p>
 <p>"Помните, вы обещали рассказать мне, почему так ненавидите&nbsp;<strong>К</strong>&nbsp;и&nbsp;<strong>С</strong>," - последние слова Алиса произнесла как можно тише, боясь что Мышь опять обидится. Мышь повернулась к Алисе и сказала с дрожью в голосе, грустно и тяжело вздыхая: "Мой длинный рассказ про то, ...что ...он, прохвост подлый, однажды... В общем, дело было так."</p>
 <p>"Рассказ про хвост длинный - это понятно, но как может быть хвост подлым?" - размышляла Алиса вслух, глядя на хвост Мыши и пытаясь вообразить подлый хвост. Поэтому рассказ мыши представлялся ей примерно так:</p>
-<p>_Однажды от жары Мышонок<br>
+<p>Однажды от жары Мышонок<br>
 В погребе прохладном захотел укрыться,<br>
 И надобно ж беде случиться,<br>
 Что там голодный старый рыскал Кот.<br>
@@ -1271,7 +1449,7 @@ margin-left: 4px;
 <li>Но я...  </li>
 <li>Короче, приговорен ты к "вышке"!<br>
 Таков был суд для бедной серой<br>
-мышки._  </li>
+мышки.  </li>
 </ul>
 <p>"Ты совсем не слушаешь! О чем ты только думаешь?" - строго сказала Мышь Алисе.</p>
 <p>"Извините," - робко ответила Алиса - "если не ошибаюсь, вы остановились на третьем изгибе хвоста."</p>
@@ -1433,14 +1611,15 @@ margin-left: 4px;
 <p>"Ну, я попыталась рассказать&nbsp;<em>"Ворону и Лису"</em>, а вышло что-то несуразное!" - уточнила Алиса с грустью в голосе.</p>
 <p>"Расскажи&nbsp;<em>"Бородино"</em>", - задумчиво пробормотала Сороконожка.</p>
 <p>Алиса сложила руки за спину и начала:</p>
-<p>_- Скажи-ка, дядя, ведь недаром<br>
+<ul>
+<li>Скажи-ка, дядя, ведь недаром<br>
 Ты, лысину намазав салом,<br>
 Стоишь на голове?<br>
 Редки власа твои седые,<br>
 Но возникают и в года младые<br>
 От этого болезни головные.<br>
-А каково ж тебе?!  </p>
-<ul>
+А каково ж тебе?!<br>
+</li>
 <li>Сынок, здесь логика простая:<br>
 Болеть не будет голова пустая.<br>
 Со мною не тягайся тут.<br>
@@ -1496,7 +1675,7 @@ margin-left: 4px;
 Вопросы глупые весь день,<br>
 Сидеть с тобою здесь как пень.<br>
 Уж надвигается ночная тень,<br>
-Пора б покушать!_  </li>
+Пора б покушать!</li>
 </ul>
 <p>&nbsp;</p>
 <p>"Неправильно", - фыркнула Сороконожка. "Боюсь,&nbsp;<em>не совсем</em>&nbsp;правильно", - робко поправила Алиса, - "некоторые слова чуточку изменены". "Неправильно от начала до конца", - решительно провозгласила Сороконожка, после чего на некоторое время повисло молчание.</p>
@@ -1850,7 +2029,7 @@ margin-left: 4px;
 <p>"Я никогда не видела ни его... ни его головы", - добавила Алиса.</p>
 <p>"Тогда пошли, и он расскажет тебе свою историю", - сказала Королева.</p>
 <p>Когда они уходили, Алиса услышала, как Король потихонечку сказал толпе арестантов: "Вы все помилованы". "А вот&nbsp;<em>это</em>&nbsp;уже хорошо!" - подумала Алиса, ее страшно угнетало количество намеченных Королевой казней.</p>
-<p>Вскоре они наткнулись на Грифона (для тех, кто не знает, объясняю - крылатого льва с орлиной головой), дремавшего на солнышке. "Вставай, лежебокаПроводи эту девочку к Минтакрабу, пусть послушает его историю. А мне нужно вернуться посмотреть ряд казней, назначенных мною на сегодня", - сказала Королева и удалилась, оставив Алису один на один с Грифоном. Внешность этого создания Алисе конечно не нравилась, однако с ним было куда безопаснее, чем со свирепой Королевой. Поэтому Алиса покорно ждала.</p>
+<p>Вскоре они наткнулись на Грифона (для тех, кто не знает, объясняю - крылатого льва с орлиной головой), дремавшего на солнышке. "Вставай, лежебока. Проводи эту девочку к Минтакрабу, пусть послушает его историю. А мне нужно вернуться посмотреть ряд казней, назначенных мною на сегодня", - сказала Королева и удалилась, оставив Алису один на один с Грифоном. Внешность этого создания Алисе конечно не нравилась, однако с ним было куда безопаснее, чем со свирепой Королевой. Поэтому Алиса покорно ждала.</p>
 <p>Грифон встал, протер глаза и, проводив взглядом Королеву, пока та не скрылась из виду, хихикнул. "Смехота!" - сказал он то ли себе, то ли Алисе.</p>
 <p>"<em>Что</em>&nbsp;смехота?" - спросила Алиса.</p>
 <p>"Да вон&nbsp;<em>она</em>", - ответил Грифон, - "Это все ее фантазия. Знаешь, ведь она никого и не казнит. Пошли!"</p>
@@ -1923,7 +2102,7 @@ margin-left: 4px;
 <p>"Что ж, давай попробуем первую фигуру!" - сказал Минтакраб Грифону, - "Ты же знаешь, мы и без омаров можем обойтись. Кто будет петь?"</p>
 <p>"Ай, ты пой", - ответил Грифон, - "Я слова забыл".</p>
 <p>И так они начали свою торжественную пляску, описывая круг за кругом вокруг Алисы. При этом они то и дело оттаптывали ей ноги, когда уж слишком приближались, и, дирижируя, размахивали передними лапами. Минтакраб же между прочим еще и пел медленно и уныло:</p>
-<p>_На берегу пустынных волн<br>
+<p>На берегу пустынных волн<br>
 Плясал народ веселья полн.<br>
 То вынырнет на брег, то занырнет глубоко.<br>
 Улитка и Лещ<br>
@@ -1969,7 +2148,7 @@ margin-left: 4px;
 <p>Я знаю, ты можешь, конечно же можешь<br>
 до брега другого доплыть!<br>
 Я знаю, ты хочешь, неужто не хочешь<br>
-там хороводы водить?_  </p>
+там хороводы водить?</p>
 <p>&nbsp;</p>
 <p>"Спасибо, мне очень понравился танец и особенно эта забавная песенка про леща", - сказала Алиса, сильно радуясь тому, что наконец-то эта свистопляска закончилась.</p>
 <p>"Ах да, к стати о леще", - пробормотал Минтакраб, - "Ты конечно же видела его?"</p>
@@ -2001,7 +2180,7 @@ margin-left: 4px;
 <p>"Все не так", - задумчиво пробормотал Минтакраб и обратился к Грифону, - "Я хотел бы, чтобы она и сейчас чего-нибудь почитала наизусть. Скажи ей, а?!" При этом он умоляюще посмотрел на Грифона так, как будто тот обладал некой властью над Алисой.</p>
 <p>"Встань и прочти "<em>Лягушка и Вол"</em>!" - сказал Грифон повелительным тоном.</p>
 <p>"Как же все эти создания любят приказывать и спрашивать уроки!" - подумала Алиса, - "Все равно, что в школе!" Тем не менее, она встала и начала читать. Однако Омаровая кадриль так затуманила ей голову, что Алиса с трудом осознавала, что говорит. А слова, и правда, выходили весьма странные:</p>
-<p>_Омар, издалека увидевши Кита,<br>
+<p>Омар, издалека увидевши Кита,<br>
 Затеял в смелости с ним поравняться.<br>
 Отлив. Акула уплыла.<br>
 И ну для храбрости принаряжаться,  </p>
@@ -2018,7 +2197,7 @@ margin-left: 4px;
 И от усилий покраснел,<br>
 До вечера он распинался.<br>
 Прилив. Акулу проглядел,<br>
-И от Омара хвост остался._  </p>
+И от Омара хвост остался.</p>
 <p>&nbsp;</p>
 <p>"Это несколько отличается от того, что я учил в детстве", - заметил Грифон.</p>
 <p>"А я вообще никогда такого не слышал", - возмутился Минтакраб, - "Просто бессмыслица какая-то!"</p>
@@ -2038,7 +2217,7 @@ margin-left: 4px;
 Расщедрившись ложку Сове отдала,<br>
 Сама же и ножик, и вилку взяла.<br>
 Час для последнего блюда настал.<br>
-Уж сам догадайся, десертом кто стал...</em>  </p>
+Уж сам догадайся, десертом кто стал...</em></p>
 <p>&nbsp;</p>
 <p>"Ну и что толку продолжать нести всю эту чушь?" - перебил Минтакраб, - "Не объяснив одного, приниматься за другое?! Такой путаницы я еще не слышал!"</p>
 <p>"Да уж, тебе лучше перестать", - согласился Грифон, чему Алиса была только рада.</p>
@@ -2183,7 +2362,7 @@ margin-left: 4px;
 <p>Кролик надел очки и спросил: "Откуда начать, ваше величество?"</p>
 <p>"Начни с начала", - мрачно ответил Король, - "И продолжай, пока не доберешься до конца. Тогда и остановишься".</p>
 <p>В зале суда стояла гробовая тишина, пока Белый Кролик читал стихи:</p>
-<p>_Они сказали мне о том,<br>
+<p>Они сказали мне о том,<br>
 Что обсуждали мы вдвоем,<br>
 Как я хорош, с тобой и с нею,<br>
 Вот только плавать не умею.  </p>
@@ -2206,7 +2385,7 @@ margin-left: 4px;
 <p>Но вы ему не говорите,<br>
 То что всем он рассказал,<br>
 В секрете от него держите,<br>
-Чтоб никто не знал._  </p>
+Чтоб никто не знал.</p>
 <p>&nbsp;</p>
 <p>"Это самая важная часть показаний, которые мы слышали!" - воскликнул Король, радостно потирая руки, - "Так что пусть присяжные..."</p>
 <p>"Миллион тому, кто объяснит эти стихи", - вмешалась Алиса (к этому времени она уж так выросла, что ничуть не боялась перебить Короля), - "Не думаю, что в них есть хоть капля смысла".</p>
