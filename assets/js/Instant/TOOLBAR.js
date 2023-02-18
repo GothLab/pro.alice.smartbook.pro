@@ -30,9 +30,11 @@ if (lock == 0) {
 // buttons set active frame
 $('#b_tabA').on('click',function(){
         active_frame = 'A';
+	$('#i_a').click();
 });
 $('#b_tabB').on('click',function(){
         active_frame = 'B';
+	$('#i_b').click();
 });
 
 // buttons set active frame
@@ -76,6 +78,17 @@ $('#slideA').hide();
 
 
 
+$('#i_b').on('dblclick',function(){
+
+	size_check();
+	
+});
+
+$('#i_a').on('dblclick',function(){
+
+	size_check();
+	
+});
 //on doubleclick show menu
 
 $('#textA, #textB').on('dblclick',function(){$('#i_menu').click();})

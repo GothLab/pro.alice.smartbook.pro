@@ -14,7 +14,7 @@ p {
   /*padding-right: 36px;*/
   font-family: 'Fira Sans';
   font-size: 18px;
-  padding-right: 36px;
+  padding-right: 72px;
 }
 
 #textA p {
@@ -54,5 +54,11 @@ body {
   border-bottom: solid 1px rgba(171,161,143,0.35);
   /*text-align: left;*/
   font-family: 'Kis Text BT Web';
+}
+
+#pro {
+  font-weight: 100!important;
+  color: #8b8b8b!important;
+  font-size: 5px!important;
 }
 
