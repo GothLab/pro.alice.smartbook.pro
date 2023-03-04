@@ -1,8 +1,0 @@
-{
-  "removeFrontMatter": true,
-  "convertSvgToBitmap": true,
-  "useCustomStylesheet": true,
-  "embedExternalLinks": false,
-  "formatAsTables": false,
-  "styleSheet": ""
-}
