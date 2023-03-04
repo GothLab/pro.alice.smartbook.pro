@@ -1,5 +1,5 @@
 
-// MENU ON CLICK LOAD
+// MENU ON CLICK LOAD START 
 $('.list_name').on('click',function(){
   
 // GET CLICKED ITEM BOOK HREF
@@ -22,7 +22,11 @@ if (localStorage.getItem('scroll_p'+ID) === null) {
 localStorage.setItem('scroll_p'+ID,'0');
 };
 
+ $(target).load(href,function(){
+           afterLoad();
+});     
 
+/*
 //FUNCTION TO CHECK IF CURR ID IS DOWNLOADED AND LOAD FROM DB AND IF NOT LOAD FROM INTERNET        
 var STATUS = localStorage.getItem('d_id'+ID);
 var STATUS2 = parseInt(STATUS);
@@ -38,8 +42,8 @@ else {
            afterLoad();
 });         
 }
-        
-}); // END OF DECLARATION
+  */      
+}); // END OF DECLARATION ON CLICK
 ////////////////////////
 
         
